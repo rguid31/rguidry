@@ -1,0 +1,18 @@
+/* Custom Styles */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Simple animation for section headers */
+h2 {
+    transition: color 0.3s ease-in-out;
+}
+
+h2:hover {
+    color: #2563eb; /* A nice blue shade */
+}
