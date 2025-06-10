@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Engineering & Data Analyst Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Link to your new stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-900">
+                <!-- Logo and Name -->
+                <a href="#" class="flex items-center space-x-3">
+                    <img src="images/rg-logomark.svg" alt="RG Logo" class="h-10 rounded-lg">
+                    <span>Ryan Guidry</span>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-300">About</a>
+                <a href="#portfolio" class="text-gray-600 hover:text-blue-600 transition duration-300">Portfolio</a>
+                <a href="#experience" class="text-gray-600 hover:text-blue-600 transition duration-300">Experience</a>
+                <a href="#skills" class="text-gray-600 hover:text-blue-600 transition duration-300">Skills</a>
+                <a href="mailto:inquireryan@gmail.com" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <!-- Mobile Menu Button can be added here -->
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Landing Page Section -->
+        <section id="hero" class="text-center py-20">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">Engineering & Data Analysis</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                <strong>Personal Value Statement:</strong> Passionate about transforming complex data into actionable insights and building robust engineering solutions that drive innovation and efficiency.
+            </p>
+            <a href="#portfolio" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-blue-700 transition duration-300">View My Work</a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white rounded-2xl shadow-md my-12 p-8 md:p-16">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+                <!-- Headshot Image -->
+                <div class="md:col-span-1">
+                    <img src="images/profile-photo.jpg" alt="Ryan Guidry's Headshot" class="rounded-full shadow-lg mx-auto w-48 h-48 md:w-64 md:h-64 object-cover">
+                </div>
+                <!-- About Me Text -->
+                <div class="md:col-span-2 text-center md:text-left">
+                    <h2 class="text-3xl font-bold mb-6">About Me</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        Hello! I'm a dedicated and curious professional with a background in both engineering and data analytics. My goal is to bridge the gap between technical implementation and strategic decision-making. I thrive in collaborative environments and am always eager to learn new technologies and methodologies to solve challenging problems.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Education -->
+        <section id="education" class="py-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Education</h2>
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-md">
+                <h3 class="text-xl font-semibold text-gray-900">B.S. in Chemical Engineering (Incomplete - 131.0/139.0 hrs)</h3>
+                <p class="text-blue-600">Louisiana State University A&M | Baton Rouge, Louisiana</p>
+                <p class="text-gray-500 mt-1">Attended: 2014-2023</p>
+                <p class="text-gray-600 mt-4">Relevant coursework: Thermodynamics, Heat and Mass Transfer, Process Simulation, Chemical Reaction Engineering, Statistical Analysis.</p>
+            </div>
+        </section>
+        
+        <!-- Certifications -->
+        <section id="certifications" class="py-16 bg-gray-100 rounded-2xl my-12 p-8 md:p-12">
+            <h2 class="text-3xl font-bold text-center mb-8">Certifications</h2>
+            <div class="max-w-4xl mx-auto">
+                 <div class="bg-white p-6 rounded-lg shadow-sm mb-4">
+                    <h3 class="text-xl font-semibold text-gray-900">Google Data Analytics Professional Certificate</h3>
+                    <p class="text-blue-600">Google (Coursera)</p>
+                    <p class="text-gray-500 mt-1">Issued: January 2024</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900">Another Certification Name</h3>
+                    <p class="text-blue-600">Issuing Organization</p>
+                    <p class="text-gray-500 mt-1">Issued: Month Year</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-16">
+            <h2 class="text-3xl font-bold text-center mb-12">Portfolio</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                    <img src="https://placehold.co/600x400/e2e8f0/4a5568?text=Project+1" alt="Project 1 Screenshot" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Project Title 1</h3>
+                        <p class="text-gray-600 mb-4">A brief, compelling description of the project, the problem it solved, and the technologies used.</p>
+                        <a href="#" class="text-blue-600 font-semibold hover:underline">View Details &rarr;</a>
+                    </div>
+                </div>
+                <!-- Portfolio Item 2 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                    <img src="https://placehold.co/600x400/dbeafe/1e40af?text=Project+2" alt="Project 2 Screenshot" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Project Title 2</h3>
+                        <p class="text-gray-600 mb-4">A brief, compelling description of the project, the problem it solved, and the technologies used.</p>
+                        <a href="#" class="text-blue-600 font-semibold hover:underline">View Details &rarr;</a>
+                    </div>
+                </div>
+                <!-- Portfolio Item 3 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                   <img src="https://placehold.co/600x400/d1fae5/065f46?text=Project+3" alt="Project 3 Screenshot" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Project Title 3</h3>
+                        <p class="text-gray-600 mb-4">A brief, compelling description of the project, the problem it solved, and the technologies used.</p>
+                        <a href="#" class="text-blue-600 font-semibold hover:underline">View Details &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience Section -->
+        <section id="experience" class="py-16 bg-white rounded-2xl shadow-md my-12 p-8 md:p-12">
+            <h2 class="text-3xl font-bold text-center mb-12">Professional Experience</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+                <!-- 12 Tiles with Company Logos -->
+                <div class="flex justify-center p-4 bg-gray-100 rounded-lg"><img src="https://placehold.co/150x80/cccccc/333333?text=Company+1" alt="Company 1 Logo" class="h-12 object-contain"></div>
+                <div class="flex justify-center p-4 bg-gray-100 rounded-lg"><img src="https://placehold.co/150x80/cccccc/333333?text=Company+2" alt="Company 2 Logo" class="h-12 object-contain"></div>
+                <div class="flex justify-center p-4 bg-gray-100 rounded-lg"><img src="https://placehold.co/150x80/cccccc/333333?text=Company+3" alt="Company 3 Logo" class="h-12 object-contain"></div>
+                <div class="flex justify-center p-4 bg-gray-100 rounded-lg"><img src="https://placehold.co/150x80/cccccc/333333?text=Company+4" alt="Company 4 Logo" class="h-12 object-contain"></div>
+                <div class="flex justify-center p-4 bg-gray-100 rounded-lg"><img src="https://placehold.co/150x80/cccccc/333333?text=Company+5" alt="Company 5 Logo" class="h-12 object-contain"></div>
+                <div class="flex justify-center p-4 bg-gray-100 rounded-lg"><img src="https://placehold.co/150x80/cccccc/333333?text=Company+6" alt="Company 6 Logo" class="h-12 object-contain"></div>
+                <div class="flex justify-center p-4 bg-gray-100 rounded-lg"><img src="https://placehold.co/150x80/cccccc/333333?text=Company+7" alt="Company 7 Logo" class="h-12 object-contain"></div>
+                <div class="flex justify-center p-4 bg-gray-100 rounded-lg"><img src="https://placehold.co/150x80/cccccc/333333?text=Company+8" alt="Company 8 Logo" class="h-12 object-contain"></div>
+                <div class="flex justify-center p-4 bg-gray-100 rounded-lg"><img src="https://placehold.co/150x80/cccccc/333333?text=Company+9" alt="Company 9 Logo" class="h-12 object-contain"></div>
+                <div class="flex justify-center p-4 bg-gray-100 rounded-lg"><img src="https://placehold.co/150x80/cccccc/333333?text=Company+10" alt="Company 10 Logo" class="h-12 object-contain"></div>
+                <div class="flex justify-center p-4 bg-gray-100 rounded-lg"><img src="https://placehold.co/150x80/cccccc/333333?text=Company+11" alt="Company 11 Logo" class="h-12 object-contain"></div>
+                <div class="flex justify-center p-4 bg-gray-100 rounded-lg"><img src="https://placehold.co/150x80/cccccc/333333?text=Company+12" alt="Company 12 Logo" class="h-12 object-contain"></div>
+            </div>
+        </section>
+
+        <!-- Volunteer Experience Section -->
+        <section id="volunteer" class="py-16">
+             <h2 class="text-3xl font-bold text-center mb-8">Volunteer Experience</h2>
+             <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900">Volunteer Role 1</h3>
+                    <p class="text-blue-600">Organization Name</p>
+                    <p class="text-gray-600 mt-2">Briefly describe your responsibilities and impact. Highlight skills like teamwork, leadership, or specific tasks performed.</p>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900">Volunteer Role 2</h3>
+                    <p class="text-blue-600">Another Organization</p>
+                    <p class="text-gray-600 mt-2">Briefly describe your responsibilities and impact. Highlight skills like teamwork, leadership, or specific tasks performed.</p>
+                </div>
+             </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 bg-gray-100 rounded-2xl my-12 p-8 md:p-12">
+            <h2 class="text-3xl font-bold text-center mb-8">Technical Skills</h2>
+            <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+                <span class="bg-blue-100 text-blue-800 text-md font-medium px-4 py-2 rounded-full">Python</span>
+                <span class="bg-blue-100 text-blue-800 text-md font-medium px-4 py-2 rounded-full">Pandas & NumPy</span>
+                <span class="bg-green-100 text-green-800 text-md font-medium px-4 py-2 rounded-full">SQL</span>
+                <span class="bg-yellow-100 text-yellow-800 text-md font-medium px-4 py-2 rounded-full">JavaScript</span>
+                <span class="bg-gray-200 text-gray-800 text-md font-medium px-4 py-2 rounded-full">HTML & CSS</span>
+                <span class="bg-purple-100 text-purple-800 text-md font-medium px-4 py-2 rounded-full">Tableau</span>
+                <span class="bg-red-100 text-red-800 text-md font-medium px-4 py-2 rounded-full">Power BI</span>
+                <span class="bg-indigo-100 text-indigo-800 text-md font-medium px-4 py-2 rounded-full">Git & GitHub</span>
+            </div>
+        </section>
+
+        <!-- My Personality Profile Section -->
+        <section id="personality" class="py-16">
+            <h2 class="text-3xl font-bold text-center mb-12">My Personality Profile</h2>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-3">Overview</h3>
+                    <p class="text-gray-600">Based on assessments like Myers-Briggs (e.g., INTJ) or Big Five, I am an analytical and systematic thinker who enjoys diving deep into data to uncover patterns and solutions.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-3">Strengths & Challenges</h3>
+                    <p class="text-gray-600"><strong>Strengths:</strong> Detail-oriented, logical reasoning, persistent problem-solving.</p>
+                    <p class="text-gray-600 mt-2"><strong>Challenges:</strong> Can be overly focused on details, working on balancing big-picture thinking with granular analysis.</p>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-sm md:col-span-2">
+                    <h3 class="text-xl font-semibold mb-3">Keyword Cloud</h3>
+                    <div class="flex flex-wrap gap-3">
+                       <span class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">Analytical</span>
+                       <span class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">Data-Driven</span>
+                       <span class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">Problem-Solver</span>
+                       <span class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">Curious</span>
+                       <span class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">Collaborative</span>
+                       <span class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">Efficient</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm md:col-span-2 flex justify-center items-center">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-center">Personality Wheel</h3>
+                        <!-- Placeholder for a personality wheel image -->
+                        <img src="https://placehold.co/300x300/e0f2fe/0ea5e9?text=Personality+Wheel" alt="Personality Wheel graphic" class="rounded-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-16">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <h2 class="text-3xl font-bold mb-4">Let's Connect</h2>
+            <p class="text-gray-400 mb-6">I'm currently available for new opportunities. Feel free to reach out!</p>
+            <a href="mailto:inquireryan@gmail.com" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-blue-700 transition duration-300 inline-block mb-10">
+                Email Me
+            </a>
+            
+            <div class="flex justify-center space-x-6">
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                </a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="https://unsplash.com/@yourusername" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 9V0h4v9h7v4h-7v11H0V13h10V9z" /></svg>
+                </a>
+                <a href="https://x.com/yourusername" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+                </a>
+                <a href="https://medium.com/@yourusername" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.62.51l5.42 9.47c.06.1.1.22.1.34v8.83c0 .24-.16.45-.39.52-.06.02-.12.03-.18.03a.5.5 0 01-.4-.18L6.3 13.9V5.62s0-.05-.02-.08L5.62.5zM19.8 4.79l-4.94 4.94c-.1.1-.15.24-.15.39v5.32c0 .28.22.5.5.5a.5.5 0 00.35-.15L21.5 9.87V5.14c0-.28-.22-.5-.5-.5a.5.5 0 00-.35.15zM23.5.51a.5.5 0 00-.5.5v2.88l-3.3 3.3V5.14a.5.5 0 00-1 .08L14.47.51a.5.5 0 00-.86.5l3.86 6.7c.1.18.15.38.15.58v6.98a.5.5 0 001 .08l5.42-9.47c.06-.1.1-.22.1-.34V1.01a.5.5 0 00-.5-.5z"/></svg>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm mt-10">&copy; <span id="year"></span> Your Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Link to your new script file -->
+    <script src="script.js"></script>
+</body>
+</html>
