@@ -15,6 +15,14 @@
 
     <!-- Link to your new stylesheet -->
     <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "rxo9fqpdyr");
+    </script>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -23,16 +31,17 @@
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold text-gray-900">
                 <!-- Logo and Name -->
-                <a href="#" class="flex items-center space-x-3">
+                <a href="index.html" class="flex items-center space-x-3">
                     <img src="/images/ui/rg-logomark.svg" alt="RG Logo" class="h-10 rounded-lg">
                     <span>Ryan Guidry</span>
                 </a>
             </div>
             <div class="hidden md:flex items-center space-x-6">
-                <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-300">About</a>
-                <a href="#portfolio" class="text-gray-600 hover:text-blue-600 transition duration-300">Portfolio</a>
-                <a href="#experience" class="text-gray-600 hover:text-blue-600 transition duration-300">Experience</a>
-                <a href="#skills" class="text-gray-600 hover:text-blue-600 transition duration-300">Skills</a>
+                <a href="index.html#about" class="text-gray-600 hover:text-blue-600 transition duration-300">About</a>
+                <a href="index.html#portfolio" class="text-gray-600 hover:text-blue-600 transition duration-300">Portfolio</a>
+                <a href="index.html#experience" class="text-gray-600 hover:text-blue-600 transition duration-300">Experience</a>
+                <a href="index.html#skills" class="text-gray-600 hover:text-blue-600 transition duration-300">Skills</a>
+                <a href="resources.html" class="text-gray-600 hover:text-blue-600 transition duration-300">Resources</a>
                 <a href="mailto:inquireryan@gmail.com" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">Contact</a>
             </div>
             <div class="md:hidden">
@@ -72,21 +81,21 @@
         </section>
 
         <!-- Content Wrapper -->
-        <div class="relative z-10 bg-white">
+        <div class="relative z-10 bg-white rounded-2xl overflow-hidden">
             <!-- Rest of your content -->
 
             <!-- About Me Section -->
-            <section id="about" class="py-20 bg-white rounded-2xl shadow-md my-12 p-8 md:p-16">
+        <section id="about" class="py-20 bg-white rounded-2xl shadow-md my-12 p-8 md:p-16">
                 <div class="max-w-6xl mx-auto">
                     <!-- Headshot Image - Centered at top -->
                     <div class="flex justify-center mb-12">
                         <img src="images/general/profile-photo.jpg" alt="Ryan Guidry's Headshot" 
                              class="rounded-full shadow-lg w-72 h-72 md:w-96 md:h-96 object-cover border-4 border-white">
-                    </div>
+                </div>
                     
                     <!-- About Me Text - Full width below image -->
                     <div class="text-center max-w-3xl mx-auto">
-                        <h2 class="text-3xl font-bold mb-6">About Me</h2>
+                    <h2 class="text-3xl font-bold mb-6">About Me</h2>
                         <p class="text-gray-600 leading-relaxed mb-4">
                             I'm a results-driven professional who combines chemical engineering expertise with cutting-edge data analysis to deliver impactful solutions. My journey from engineering to data science has equipped me with a unique perspective: the ability to translate complex technical concepts into actionable business insights.
                         </p>
@@ -109,21 +118,25 @@
                                 Deeper Dive into My Story →
                             </a>
                         </div>
-                    </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
 
-            <!-- Education -->
+        <!-- Education -->
             <section id="education" class="py-16 bg-white rounded-2xl shadow-md my-12 p-8 md:p-12">
                 <h2 class="text-3xl font-bold text-center mb-12">Education</h2>
                 <div class="max-w-6xl mx-auto">
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
-                        <div class="flex flex-col md:flex-row items-center gap-6 mb-6">
-                            <div class="flex-shrink-0">
-                                <img src="images/education/lsu.png" alt="LSU A&M Logo" class="h-24 w-24 object-contain bg-white rounded-xl p-2 shadow-sm">
-                            </div>
-                            <div class="text-center md:text-left">
+                    <!-- LSU Mathematics -->
+                    <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <button class="group bg-white rounded-xl shadow-md p-4.5 hover:shadow-lg transition-shadow duration-200">
+                                <div class="aspect-square w-32 flex items-center justify-center">
+                                    <img src="images/education/lsu.png" alt="LSU A&M Logo" 
+                                         class="w-full h-full object-contain bg-white rounded-xl p-2 shadow-sm group-hover:scale-105 transition-transform duration-200">
+                                </div>
+                            </button>
+                            <div>
                                 <h3 class="text-2xl font-bold text-gray-900 mb-2">Bachelor of Science in Mathematics</h3>
                                 <p class="text-blue-600 text-lg mb-1">Louisiana State University A&M</p>
                                 <p class="text-gray-600 mb-2">Baton Rouge, Louisiana</p>
@@ -132,12 +145,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm mt-6">
-                        <div class="flex flex-col md:flex-row items-center gap-6 mb-6">
-                            <div class="flex-shrink-0">
-                                <img src="images/education/lsu.png" alt="LSU A&M Logo" class="h-24 w-24 object-contain bg-white rounded-xl p-2 shadow-sm">
-                            </div>
-                            <div class="text-center md:text-left">
+                    <!-- LSU Chemical Engineering -->
+                    <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <button class="group bg-white rounded-xl shadow-md p-4.5 hover:shadow-lg transition-shadow duration-200">
+                                <div class="aspect-square w-32 flex items-center justify-center">
+                                    <img src="images/education/lsu.png" alt="LSU A&M Logo" 
+                                         class="w-full h-full object-contain bg-white rounded-xl p-2 shadow-sm group-hover:scale-105 transition-transform duration-200">
+                                </div>
+                            </button>
+                            <div>
                                 <h3 class="text-2xl font-bold text-gray-900 mb-2">Bachelor of Science in Chemical Engineering</h3>
                                 <p class="text-blue-600 text-lg mb-1">Louisiana State University A&M</p>
                                 <p class="text-gray-600 mb-2">Baton Rouge, Louisiana</p>
@@ -146,18 +163,21 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            
-            <!-- Certifications -->
-            <section id="certifications" class="py-16 bg-gray-100 rounded-2xl my-12 p-8 md:p-12">
-                <h2 class="text-3xl font-bold text-center mb-8">Certifications</h2>
+            </div>
+        </section>
+        
+        <!-- Certifications -->
+        <section id="certifications" class="py-16 bg-gray-100 rounded-2xl my-12 p-8 md:p-12">
+            <h2 class="text-3xl font-bold text-center mb-8">Certifications</h2>
                 <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="bg-white p-8 rounded-xl shadow-md">
                         <div class="flex flex-col items-center text-center">
-                            <div class="flex justify-center p-6 bg-gray-50 rounded-xl mb-4 w-32 h-32">
-                                <img src="images/certifications/gdapc.png" alt="Google Data Analytics Professional Certificate Logo" class="h-24 object-contain">
-                            </div>
+                            <button class="group bg-white rounded-xl shadow-md p-4.5 hover:shadow-lg transition-shadow duration-200 mb-4">
+                                <div class="aspect-square w-32 flex items-center justify-center">
+                                    <img src="images/certifications/gdapc.png" alt="Google Data Analytics Professional Certificate Logo" 
+                                         class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200">
+                                </div>
+                            </button>
                             <h3 class="text-xl font-semibold text-gray-900 mb-2">Google Data Analytics Professional Certificate</h3>
                             <p class="text-blue-600 mb-1">Google (Coursera)</p>
                             <p class="text-gray-500 mb-4">Completed: February 2025</p>
@@ -172,9 +192,12 @@
                     </div>
                     <div class="bg-white p-8 rounded-xl shadow-md">
                         <div class="flex flex-col items-center text-center">
-                            <div class="flex justify-center p-6 bg-gray-50 rounded-xl mb-4 w-32 h-32">
-                                <img src="images/certifications/google-ai.png" alt="Google AI Essentials Logo" class="h-24 object-contain">
-                            </div>
+                            <button class="group bg-white rounded-xl shadow-md p-4.5 hover:shadow-lg transition-shadow duration-200 mb-4">
+                                <div class="aspect-square w-32 flex items-center justify-center">
+                                    <img src="images/certifications/google-ai.png" alt="Google AI Essentials Logo" 
+                                         class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200">
+                                </div>
+                            </button>
                             <h3 class="text-xl font-semibold text-gray-900 mb-2">Google AI Essentials Certificate</h3>
                             <p class="text-blue-600 mb-1">Google (Coursera)</p>
                             <p class="text-gray-500 mb-4">Completed: February 2025</p>
@@ -189,9 +212,12 @@
                     </div>
                     <div class="bg-white p-8 rounded-xl shadow-md">
                         <div class="flex flex-col items-center text-center">
-                            <div class="flex justify-center p-6 bg-gray-50 rounded-xl mb-4 w-32 h-32">
-                                <img src="images/certifications/osha.png" alt="OSHA Logo" class="h-24 object-contain">
-                            </div>
+                            <button class="group bg-white rounded-xl shadow-md p-4.5 hover:shadow-lg transition-shadow duration-200 mb-4">
+                                <div class="aspect-square w-32 flex items-center justify-center">
+                                    <img src="images/certifications/osha.png" alt="OSHA Logo" 
+                                         class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200">
+                                </div>
+                            </button>
                             <h3 class="text-xl font-semibold text-gray-900 mb-2">Basic Orientation Plus (BOP)</h3>
                             <p class="text-blue-600 mb-1">OSHA / Gulf South Safety Council</p>
                             <p class="text-gray-500">Issued: 2023</p>
@@ -199,22 +225,25 @@
                     </div>
                     <div class="bg-white p-8 rounded-xl shadow-md">
                         <div class="flex flex-col items-center text-center">
-                            <div class="flex justify-center p-6 bg-gray-50 rounded-xl mb-4 w-32 h-32">
-                                <img src="images/certifications/tsa.png" alt="TSA Logo" class="h-24 object-contain">
-                            </div>
+                            <button class="group bg-white rounded-xl shadow-md p-4.5 hover:shadow-lg transition-shadow duration-200 mb-4">
+                                <div class="aspect-square w-32 flex items-center justify-center">
+                                    <img src="images/certifications/tsa.png" alt="TSA Logo" 
+                                         class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200">
+                                </div>
+                            </button>
                             <h3 class="text-xl font-semibold text-gray-900 mb-2">Transportation Worker Identification Credential (TWIC)</h3>
                             <p class="text-blue-600 mb-1">Transportation Security Administration</p>
                             <p class="text-gray-500">Issued: 2022</p>
-                        </div>
-                    </div>
                 </div>
-            </section>
+                </div>
+            </div>
+        </section>
 
-            <!-- Portfolio Section -->
+        <!-- Portfolio Section -->
             <section id="portfolio" class="py-16 bg-white rounded-2xl shadow-md my-12 p-8 md:p-12">
-                <h2 class="text-3xl font-bold text-center mb-12">Portfolio</h2>
+            <h2 class="text-3xl font-bold text-center mb-12">Portfolio</h2>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                    <!-- Portfolio Item 1 -->
+                <!-- Portfolio Item 1 -->
                     <button onclick="openModal('interactive-media-modal')" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 text-left">
                         <div class="relative overflow-hidden">
                             <img src="images/portfolio/interactive-media.png" alt="Interactive Media Project Screenshot" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
@@ -260,7 +289,7 @@
                                 <p class="text-white p-4 text-sm">Click to view details</p>
                             </div>
                         </div>
-                        <div class="p-6">
+                    <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Production Cost Analysis via Plant Data</h3>
                             <p class="text-gray-600 mb-4 line-clamp-3">Utilized Pi ProcessBook and Pi DataLink to acquire and analyze plant data, correlating trends between acid neutralization and annual production costs to identify inefficiencies.</p>
                             <div class="flex flex-wrap gap-2">
@@ -457,8 +486,8 @@
             </div>
 
             <!-- Experience Section -->
-            <section id="experience" class="py-16 bg-white rounded-2xl shadow-md my-12 p-8 md:p-12">
-                <h2 class="text-3xl font-bold text-center mb-12">Professional Experience</h2>
+        <section id="experience" class="py-16 bg-white rounded-2xl shadow-md my-12 p-8 md:p-12">
+            <h2 class="text-3xl font-bold text-center mb-12">Professional Experience</h2>
                 
                 <!-- Experience Grid -->
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
@@ -852,17 +881,22 @@
                             <li>Organized and filed documents into computer databases and physical libraries for easy access.</li>
                         </ul>
                     </div>
-                </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Volunteer Experience Section -->
+        <!-- Volunteer Experience Section -->
             <section id="volunteer" class="py-16 bg-white rounded-2xl shadow-md my-12 p-8 md:p-12">
                 <h2 class="text-3xl font-bold text-center mb-12">Volunteer Experience</h2>
                 <div class="space-y-8 max-w-7xl mx-auto">
                     <!-- LANDONi Music -->
                     <div class="bg-white rounded-xl shadow-lg p-6">
                         <div class="flex items-center gap-6 mb-4">
-                            <img src="images/experience/volunteer/landoni.png" alt="LANDONi Music Logo" class="h-24 w-24 object-contain bg-gray-50 rounded-lg p-2">
+                            <button class="group bg-white rounded-xl shadow-md p-4.5 hover:shadow-lg transition-shadow duration-200">
+                                <div class="aspect-square w-32 flex items-center justify-center">
+                                    <img src="images/experience/volunteer/landoni.png" alt="LANDONi Music Logo" 
+                                         class="w-full h-full object-contain bg-white rounded-xl p-2 shadow-sm group-hover:scale-105 transition-transform duration-200">
+                                </div>
+                            </button>
                             <div>
                                 <h3 class="text-2xl font-bold text-gray-900">Creative Marketing & Brand Development Specialist</h3>
                                 <p class="text-lg text-gray-700">LANDONi Music</p>
@@ -880,23 +914,28 @@
                     <!-- Google Local Guide -->
                     <div class="bg-white rounded-xl shadow-lg p-6">
                         <div class="flex items-center gap-6 mb-4">
-                            <img src="images/experience/volunteer/google-maps.png" alt="Google Maps Logo" class="h-24 w-24 object-contain bg-gray-50 rounded-lg p-2">
+                            <button class="group bg-white rounded-xl shadow-md p-4.5 hover:shadow-lg transition-shadow duration-200">
+                                <div class="aspect-square w-32 flex items-center justify-center">
+                                    <img src="images/experience/volunteer/google-maps.png" alt="Google Maps Logo" 
+                                         class="w-full h-full object-contain bg-white rounded-xl p-2 shadow-sm group-hover:scale-105 transition-transform duration-200">
+                                </div>
+                            </button>
                             <div>
                                 <h3 class="text-2xl font-bold text-gray-900">Local Guide Level 5</h3>
                                 <p class="text-lg text-gray-700">Google</p>
                                 <p class="text-gray-600">Remote | 2019 – Present</p>
                             </div>
-                        </div>
+                </div>
                         <ul class="list-disc list-inside space-y-3 text-gray-700">
                             <li>Attained Level 5 status by consistently contributing comprehensive reviews, photos, and updates on local businesses, enhancing Google Maps user experience, accuracy, and discoverability.</li>
                             <li>Leveraged in-depth local knowledge to consistently contribute high-quality content as a Level 5 Google Local Guide, resulting in improved accuracy and discoverability of local establishments on Google Maps.</li>
                         </ul>
-                    </div>
-                 </div>
-            </section>
+                </div>
+             </div>
+        </section>
 
-            <!-- Skills Section -->
-            <section id="skills" class="py-16 bg-gray-100 rounded-2xl my-12 p-8 md:p-12">
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 bg-gray-100 rounded-2xl my-12 p-8 md:p-12">
                 <h2 class="text-3xl font-bold text-center mb-12">Technical Skills</h2>
                 <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                     <div>
@@ -909,7 +948,7 @@
                             <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">Equipment Design</span>
                             <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">Process Optimization</span>
             </div>
-                    </div>
+                </div>
                     <div>
                         <h3 class="text-xl font-semibold mb-4">Data & AI</h3>
                         <div class="flex flex-wrap justify-center gap-2">
@@ -922,7 +961,7 @@
                             <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Data Visualization</span>
                             <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Predictive Analytics</span>
                             <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Natural Language Processing</span>
-                        </div>
+                </div>
                     </div>
                     <div>
                         <h3 class="text-xl font-semibold mb-4">Web Development</h3>
@@ -959,9 +998,9 @@
                         <a href="mailto:inquireryan@gmail.com" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-blue-700 transition duration-300 inline-block">
                             Email Me
                         </a>
-                    </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
         </div>
 
@@ -976,66 +1015,60 @@
                     <h3 class="text-lg font-semibold mb-4">Navigation</h3>
                     <ul class="space-y-2">
                         <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
-                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition duration-300">Portfolio</a></li>
-                        <li><a href="#experience" class="text-gray-400 hover:text-white transition duration-300">Experience</a></li>
-                        <li><a href="#skills" class="text-gray-400 hover:text-white transition duration-300">Skills</a></li>
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
+                        <li><a href="index.html#portfolio" class="text-gray-400 hover:text-white transition duration-300">Portfolio</a></li>
+                        <li><a href="index.html#experience" class="text-gray-400 hover:text-white transition duration-300">Experience</a></li>
+                        <li><a href="index.html#skills" class="text-gray-400 hover:text-white transition duration-300">Skills</a></li>
                     </ul>
                 </div>
                 <div class="text-center">
                     <h3 class="text-lg font-semibold mb-4">Connect</h3>
-                    <p class="text-gray-400 mb-4">Data Analyst & Chemical Engineer</p>
-                    <p class="text-gray-400">Transforming data into strategic solutions</p>
+                    <div class="flex justify-center space-x-6 mb-4">
+                        <a href="https://linkedin.com/in/rmguidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="LinkedIn Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/rguid31" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="GitHub Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="https://unsplash.com/@ryne_guidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="Unsplash Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M7.5 6.75V0h9v6.75h-9zm9 3.75H24V24H0V10.5h7.5v6.75h9V10.5z"/>
+                            </svg>
+                        </a>
+                        <a href="https://medium.com/@guidry_ryan" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="Medium Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 .38-.16.85-.44 1.12l-3.13 3.09c-.28.27-.7.27-1 0l-3.13-3.09c-.28-.27-.44-.74-.44-1.12s.16-.85.44-1.12l3.13-3.09c.28-.27.7-.27 1 0l3.13 3.09c.28.27.44.74.44 1.12zM0 12c0 .38.16.85.44 1.12l3.13 3.09c.28.27.7.27 1 0l3.13-3.09c.28-.27.44-.74.44-1.12s-.16-.85-.44-1.12L4.57 7.79c-.28-.27-.7-.27-1 0L.44 10.88C.16 11.15 0 11.62 0 12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://x.com/ryne_guidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="X (Twitter) Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">
+                        <a href="mailto:inquireryan@gmail.com" class="hover:text-white transition duration-300">inquireryan@gmail.com</a>
+                    </p>
                 </div>
                 <div class="text-center md:text-right">
                     <h3 class="text-lg font-semibold mb-4">Legal</h3>
                     <ul class="space-y-2">
                         <li><a href="privacy.html" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
                         <li><a href="sitemap.html" class="text-gray-400 hover:text-white transition duration-300">Sitemap</a></li>
+                        <li><a href="resources.html" class="text-gray-400 hover:text-white transition duration-300">Resources</a></li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Social Media Links -->
-            <div class="flex justify-center space-x-6 mb-8">
-                <a href="https://linkedin.com/in/rmguidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="LinkedIn Profile">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                </a>
-                <a href="https://github.com/rguid31" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="GitHub Profile">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
-                    </svg>
-                </a>
-                <a href="https://unsplash.com/@ryne_guidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="Unsplash Profile">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M7.5 6.75V0h9v6.75h-9zm9 3.75H24V24H0V10.5h7.5v6.75h9V10.5z"/>
-                    </svg>
-                </a>
-                <a href="https://medium.com/@guidry_ryan" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="Medium Profile">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 .38-.16.85-.44 1.12l-3.13 3.09c-.28.27-.7.27-1 0l-3.13-3.09c-.28-.27-.44-.74-.44-1.12s.16-.85.44-1.12l3.13-3.09c.28-.27.7-.27 1 0l3.13 3.09c.28.27.44.74.44 1.12zM0 12c0 .38.16.85.44 1.12l3.13 3.09c.28.27.7.27 1 0l3.13-3.09c.28-.27.44-.74.44-1.12s-.16-.85-.44-1.12L4.57 7.79c-.28-.27-.7-.27-1 0L.44 10.88C.16 11.15 0 11.62 0 12z"/>
-                    </svg>
-                </a>
-                <a href="https://x.com/ryne_guidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="X (Twitter) Profile">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                    </svg>
-                </a>
-            </div>
-
-            <!-- Copyright and Back to Top -->
-            <div class="flex flex-col items-center">
-                <div class="text-gray-400 text-sm mb-4">
+            <!-- Copyright -->
+            <div class="flex justify-center items-center mb-4">
+                <div class="text-gray-400 text-sm text-center">
                     <p>&copy; 2025 Ryan Guidry 🦄. All rights reserved 💜.</p>
                 </div>
-                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="text-gray-400 hover:text-white transition duration-300 flex items-center space-x-1">
-                    <span>Back to Top</span>
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
-                    </svg>
-                </button>
             </div>
         </div>
     </footer>
