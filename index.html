@@ -77,13 +77,15 @@
 
             <!-- About Me Section -->
             <section id="about" class="py-20 bg-white rounded-2xl shadow-md my-12 p-8 md:p-16">
-                <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-                    <!-- Headshot Image -->
-                    <div class="md:col-span-1">
-                        <img src="images/general/profile-photo.jpg" alt="Ryan Guidry's Headshot" class="rounded-full shadow-lg mx-auto w-48 h-48 md:w-64 md:h-64 object-cover">
+                <div class="max-w-6xl mx-auto">
+                    <!-- Headshot Image - Centered at top -->
+                    <div class="flex justify-center mb-12">
+                        <img src="images/general/profile-photo.jpg" alt="Ryan Guidry's Headshot" 
+                             class="rounded-full shadow-lg w-72 h-72 md:w-96 md:h-96 object-cover border-4 border-white">
                     </div>
-                    <!-- About Me Text -->
-                    <div class="md:col-span-2 text-center md:text-left">
+                    
+                    <!-- About Me Text - Full width below image -->
+                    <div class="text-center max-w-3xl mx-auto">
                         <h2 class="text-3xl font-bold mb-6">About Me</h2>
                         <p class="text-gray-600 leading-relaxed mb-4">
                             I'm a results-driven professional who combines chemical engineering expertise with cutting-edge data analysis to deliver impactful solutions. My journey from engineering to data science has equipped me with a unique perspective: the ability to translate complex technical concepts into actionable business insights.
@@ -97,11 +99,13 @@
                             <li>Hands-on IT support and technical implementation experience</li>
                             <li>A passion for transforming raw data into strategic insights</li>
                         </ul>
-                        <p class="text-gray-600 leading-relaxed">
+                        <p class="text-gray-600 leading-relaxed mb-8">
                             Whether you're looking to optimize processes, uncover hidden patterns in your data, or implement innovative technical solutions, I'm here to help turn business challenges into opportunities.
                         </p>
-                        <div class="mt-8 text-center md:text-left">
-                            <a href="about.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 shadow-md hover:shadow-lg">
+                        <!-- Centered button -->
+                        <div class="flex justify-center">
+                            <a href="about.html" 
+                               class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 shadow-md hover:shadow-lg text-lg">
                                 Deeper Dive into My Story →
                             </a>
                         </div>
