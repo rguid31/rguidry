@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <!-- Definitions -->
+  <defs>
+    <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f9f9f9"/>
+      <stop offset="100%" stop-color="#f0f0f0"/>
+    </linearGradient>
+    
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3498db" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#2980b9" stop-opacity="0.8"/>
+    </linearGradient>
+    
+    <filter id="shadowEffect" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    
+    <filter id="textGlow">
+      <feFlood flood-color="white" result="flood"/>
+      <feComposite in="flood" in2="SourceGraphic" operator="in" result="mask"/>
+      <feGaussianBlur in="mask" stdDeviation="1" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Background and border -->
+  <rect x="0" y="0" width="500" height="500" fill="url(#backgroundGradient)" rx="10" ry="10" filter="url(#shadowEffect)"/>
+  
+  <!-- Radar background grid with white fill for better text visibility -->
+  <circle cx="250" cy="250" r="200" fill="rgba(255, 255, 255, 0.7)" stroke="#e0e0e0" stroke-width="1"/>
+  <circle cx="250" cy="250" r="150" fill="none" stroke="#e0e0e0" stroke-width="1"/>
+  <circle cx="250" cy="250" r="100" fill="none" stroke="#e0e0e0" stroke-width="1"/>
+  <circle cx="250" cy="250" r="50" fill="none" stroke="#e0e0e0" stroke-width="1"/>
+  
+  <!-- Radar axes -->
+  <line x1="250" y1="50" x2="250" y2="450" stroke="#ccc" stroke-width="1"/>
+  <line x1="50" y1="250" x2="450" y2="250" stroke="#ccc" stroke-width="1"/>
+  <line x1="98.22" y1="98.22" x2="401.78" y2="401.78" stroke="#ccc" stroke-width="1"/>
+  <line x1="401.78" y1="98.22" x2="98.22" y2="401.78" stroke="#ccc" stroke-width="1"/>
+  
+  <!-- Radar plot data shape -->
+  <path d="M 250 70 L 410 150 L 430 250 L 400 370 L 250 360 L 100 330 L 70 250 L 90 130 Z" 
+        fill="url(#blueGradient)" 
+        stroke="#3498db" 
+        stroke-width="3"
+        opacity="0.7"/>
+  
+  <!-- Label backgrounds for better text visibility -->
+  <rect x="210" y="15" width="80" height="30" rx="15" ry="15" fill="white" fill-opacity="0.9"/>
+  <rect x="455" y="235" width="110" height="30" rx="15" ry="15" fill="white" fill-opacity="0.9"/>
+  <rect x="210" y="460" width="80" height="30" rx="15" ry="15" fill="white" fill-opacity="0.9"/>
+  <rect x="5" y="235" width="120" height="30" rx="15" ry="15" fill="white" fill-opacity="0.9"/>
+  <rect x="375" y="85" width="100" height="30" rx="15" ry="15" fill="white" fill-opacity="0.9"/>
+  <rect x="45" y="85" width="100" height="30" rx="15" ry="15" fill="white" fill-opacity="0.9"/>
+  <rect x="45" y="375" width="100" height="30" rx="15" ry="15" fill="white" fill-opacity="0.9"/>
+  <rect x="375" y="375" width="90" height="30" rx="15" ry="15" fill="white" fill-opacity="0.9"/>
+  
+  <!-- Attribute labels with enhanced visibility -->
+  <text x="250" y="35" font-family="Poppins, Arial" font-size="16" fill="#2c3e50" text-anchor="middle" font-weight="bold">Analytical (90%)</text>
+  <text x="465" y="250" font-family="Poppins, Arial" font-size="16" fill="#2c3e50" text-anchor="start" alignment-baseline="middle" font-weight="bold">Task-Focused (80%)</text>
+  <text x="250" y="475" font-family="Poppins, Arial" font-size="16" fill="#2c3e50" text-anchor="middle" font-weight="bold">Methodical (85%)</text>
+  <text x="35" y="250" font-family="Poppins, Arial" font-size="16" fill="#2c3e50" text-anchor="end" alignment-baseline="middle" font-weight="bold">Detail-Oriented (95%)</text>
+  <text x="415" y="105" font-family="Poppins, Arial" font-size="16" fill="#2c3e50" text-anchor="middle" font-weight="bold">Independent (75%)</text>
+  <text x="85" y="105" font-family="Poppins, Arial" font-size="16" fill="#2c3e50" text-anchor="middle" font-weight="bold">Logical (90%)</text>
+  <text x="85" y="395" font-family="Poppins, Arial" font-size="16" fill="#2c3e50" text-anchor="middle" font-weight="bold">Dependable (85%)</text>
+  <text x="415" y="395" font-family="Poppins, Arial" font-size="16" fill="#2c3e50" text-anchor="middle" font-weight="bold">Precise (90%)</text>
+  
+  <!-- Data points with glow effect -->
+  <circle cx="250" cy="70" r="8" fill="#3498db" stroke="white" stroke-width="2" filter="url(#shadowEffect)"/>
+  <circle cx="410" cy="150" r="8" fill="#3498db" stroke="white" stroke-width="2" filter="url(#shadowEffect)"/>
+  <circle cx="430" cy="250" r="8" fill="#3498db" stroke="white" stroke-width="2" filter="url(#shadowEffect)"/>
+  <circle cx="400" cy="370" r="8" fill="#3498db" stroke="white" stroke-width="2" filter="url(#shadowEffect)"/>
+  <circle cx="250" cy="360" r="8" fill="#3498db" stroke="white" stroke-width="2" filter="url(#shadowEffect)"/>
+  <circle cx="100" cy="330" r="8" fill="#3498db" stroke="white" stroke-width="2" filter="url(#shadowEffect)"/>
+  <circle cx="70" cy="250" r="8" fill="#3498db" stroke="white" stroke-width="2" filter="url(#shadowEffect)"/>
+  <circle cx="90" cy="130" r="8" fill="#3498db" stroke="white" stroke-width="2" filter="url(#shadowEffect)"/>
+  
+  <!-- Center text label with enhanced visibility -->
+  <circle cx="250" cy="250" r="70" fill="white" fill-opacity="0.9" stroke="#e0e0e0" stroke-width="1"/>
+  
+  <!-- Title with background for better visibility -->
+  <rect x="125" y="10" width="250" height="40" rx="20" ry="20" fill="white" fill-opacity="0.9" stroke="#3498db" stroke-width="1"/>
+  <text x="250" y="36" font-family="Poppins, Arial" font-size="20" font-weight="bold" fill="#2c3e50" text-anchor="middle">Professional Attributes</text>
+  
+  <!-- Legend with background -->
+  <rect x="320" y="420" width="170" height="70" fill="white" stroke="#e0e0e0" stroke-width="1" rx="10" ry="10" filter="url(#shadowEffect)"/>
+  <rect x="335" y="435" width="30" height="15" fill="url(#blueGradient)" stroke="#3498db" stroke-width="1"/>
+  <text x="380" y="447" font-family="Poppins, Arial" font-size="14" fill="#2c3e50" alignment-baseline="middle" font-weight="500">Your Attribute Profile</text>
+  <circle cx="350" cy="470" r="6" fill="#3498db" stroke="white" stroke-width="2"/>
+  <text x="380" y="473" font-family="Poppins, Arial" font-size="14" fill="#2c3e50" alignment-baseline="middle" font-weight="500">Strength Markers</text>
+  
+  <!-- Central text explanation -->
+  <text x="250" y="240" font-family="Poppins, Arial" font-size="16" font-weight="bold" fill="#2c3e50" text-anchor="middle">Personal</text>
+  <text x="250" y="265" font-family="Poppins, Arial" font-size="16" font-weight="bold" fill="#2c3e50" text-anchor="middle">Attributes</text>
+  <text x="250" y="290" font-family="Poppins, Arial" font-size="16" font-weight="bold" fill="#2c3e50" text-anchor="middle">Profile</text>
+</svg>

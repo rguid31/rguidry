@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Ryan Guidry | Engineering & Data Analyst Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Link to your stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Add this in the head section, after the existing stylesheets -->
+    <style>
+        /* Remove all carousel-related styles */
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-900">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <img src="images/ui/rg-logomark.svg" alt="RG Logo" class="h-10 rounded-lg">
+                    <span>Ryan Guidry</span>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 transition duration-300">Home</a>
+                <a href="about.html" class="text-blue-600 font-semibold">About</a>
+                <a href="index.html#portfolio" class="text-gray-600 hover:text-blue-600 transition duration-300">Portfolio</a>
+                <a href="index.html#experience" class="text-gray-600 hover:text-blue-600 transition duration-300">Experience</a>
+                <a href="index.html#skills" class="text-gray-600 hover:text-blue-600 transition duration-300">Skills</a>
+                <a href="mailto:inquireryan@gmail.com" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- Hero Section -->
+        <section class="max-w-6xl mx-auto text-center mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">My Journey: From Chemical Engineering to Data Science</h1>
+                    <p class="text-xl text-gray-600 leading-relaxed">
+                        Discover how my unique background in chemical engineering, combined with a passion for data analysis and technology, shapes my approach to solving complex problems.
+                    </p>
+                </div>
+                <div class="relative">
+                    <!-- Replace this placeholder with your professional photo -->
+                    <!-- Recommended size: 800x600px or larger -->
+                    <!-- Save your photo as: images/about/hero-photo.jpg -->
+                    <img 
+                        src="images/about/hero-photo.jpg" 
+                        alt="Ryan Guidry - Professional Headshot" 
+                        class="w-full h-full object-cover rounded-2xl"
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- My Story Section -->
+        <section class="max-w-6xl mx-auto mb-16">
+            <div class="bg-white rounded-2xl shadow-md p-8 md:p-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-8">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6">My Story</h2>
+                        <div class="prose prose-lg max-w-none">
+                            <p class="text-gray-600 mb-6">
+                                My journey began in chemical engineering, where I developed a strong foundation in systematic problem-solving and technical analysis. During my studies at Louisiana State University, I discovered my passion for data analysis and its power to transform complex information into actionable insights.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <!-- Replace this placeholder with your university/campus photo -->
+                        <!-- Recommended size: 800x600px -->
+                        <!-- Save your photo as: images/about/campus-photo.jpg -->
+                        <img 
+                            src="images/about/campus-photo.jpg" 
+                            alt="Louisiana State University Campus" 
+                            class="w-full h-full object-cover rounded-2xl"
+                        >
+                    </div>
+                </div>
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-gray-600 mb-6">
+                        What started as a curiosity about process optimization and data-driven decision making evolved into a career transition. I recognized that my engineering background, combined with my growing expertise in data analysis, positioned me uniquely to bridge the gap between technical implementation and strategic business decisions.
+                    </p>
+                    <p class="text-gray-600">
+                        Today, I leverage this unique combination of skills to help organizations transform their data into strategic advantages, while maintaining the precision and methodical approach I developed as an engineer.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Attributes Chart Section -->
+        <section class="max-w-6xl mx-auto mb-16">
+            <div class="bg-white rounded-2xl shadow-md p-8 md:p-12">
+                <h2 class="text-3xl font-bold mb-6 text-center">Professional Attributes</h2>
+                <p class="text-xl text-gray-600 mb-8 text-center">
+                    Understanding my core professional attributes helps explain my approach to work and collaboration. Here's how I see my key strengths and characteristics.
+                </p>
+                
+                <!-- Chart Container -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-6 md:p-8 mb-8">
+                    <div class="relative h-96 md:h-[500px] mb-6">
+                        <canvas id="radarChart"></canvas>
+                    </div>
+                    <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-5 h-5 bg-blue-200 border-2 border-blue-600 rounded"></div>
+                            <span class="font-medium text-gray-700">Your Attribute Profile</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-4 h-4 bg-blue-700 rounded-full"></div>
+                            <span class="font-medium text-gray-700">Strength Markers</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Attributes Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="bg-gray-50 rounded-lg p-4 text-center">
+                        <div class="text-sm font-semibold text-gray-600 mb-1">Logical</div>
+                        <div class="text-2xl font-bold text-blue-600">90%</div>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-4 text-center">
+                        <div class="text-sm font-semibold text-gray-600 mb-1">Independent</div>
+                        <div class="text-2xl font-bold text-blue-600">75%</div>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-4 text-center">
+                        <div class="text-sm font-semibold text-gray-600 mb-1">Task-Oriented</div>
+                        <div class="text-2xl font-bold text-blue-600">80%</div>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-4 text-center">
+                        <div class="text-sm font-semibold text-gray-600 mb-1">Precise</div>
+                        <div class="text-2xl font-bold text-blue-600">90%</div>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-4 text-center">
+                        <div class="text-sm font-semibold text-gray-600 mb-1">Methodical</div>
+                        <div class="text-2xl font-bold text-blue-600">85%</div>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-4 text-center">
+                        <div class="text-sm font-semibold text-gray-600 mb-1">Dependable</div>
+                        <div class="text-2xl font-bold text-blue-600">85%</div>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-4 text-center">
+                        <div class="text-sm font-semibold text-gray-600 mb-1">Analytical</div>
+                        <div class="text-2xl font-bold text-blue-600">95%</div>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-4 text-center">
+                        <div class="text-sm font-semibold text-gray-600 mb-1">Detail-Focused</div>
+                        <div class="text-2xl font-bold text-blue-600">88%</div>
+                    </div>
+                </div>
+
+                <!-- Download Profile Button -->
+                <div class="text-center">
+                    <a href="files/insights-discovery-profile.pdf" download class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 shadow-md hover:shadow-lg">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        Read my full Insights Discovery Profile
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values & Approach Section -->
+        <section class="max-w-6xl mx-auto mb-16">
+            <div class="bg-white rounded-2xl shadow-md p-8 md:p-12">
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6">My Values & Approach</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h3 class="text-xl font-semibold mb-4">Core Values</h3>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start">
+                                        <span class="text-blue-600 mr-2">•</span>
+                                        <div>
+                                            <strong class="text-gray-900">Analytical Excellence</strong>
+                                            <p class="text-gray-600">Commitment to thorough analysis and data-driven decision making</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-blue-600 mr-2">•</span>
+                                        <div>
+                                            <strong class="text-gray-900">Continuous Learning</strong>
+                                            <p class="text-gray-600">Dedication to staying current with emerging technologies and methodologies</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-blue-600 mr-2">•</span>
+                                        <div>
+                                            <strong class="text-gray-900">Collaborative Innovation</strong>
+                                            <p class="text-gray-600">Belief in the power of teamwork and diverse perspectives</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-4">Problem-Solving Approach</h3>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start">
+                                        <span class="text-blue-600 mr-2">•</span>
+                                        <div>
+                                            <strong class="text-gray-900">Systematic Analysis</strong>
+                                            <p class="text-gray-600">Breaking down complex problems into manageable components</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-blue-600 mr-2">•</span>
+                                        <div>
+                                            <strong class="text-gray-900">Data-Driven Insights</strong>
+                                            <p class="text-gray-600">Using quantitative and qualitative data to inform decisions</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-blue-600 mr-2">•</span>
+                                        <div>
+                                            <strong class="text-gray-900">Strategic Implementation</strong>
+                                            <p class="text-gray-600">Focusing on practical, scalable solutions that drive results</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <!-- Replace this placeholder with your team/work photo -->
+                        <!-- Recommended size: 800x600px -->
+                        <!-- Save your photo as: images/about/team-photo.jpg -->
+                        <img 
+                            src="images/about/team-photo.jpg" 
+                            alt="Team Collaboration" 
+                            class="w-full h-full object-cover rounded-2xl"
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Transition Section -->
+        <section class="max-w-6xl mx-auto mb-16">
+            <div class="bg-white rounded-2xl shadow-md p-8 md:p-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="relative">
+                        <!-- Replace this placeholder with your project/achievement photo -->
+                        <!-- Recommended size: 800x600px -->
+                        <!-- Save your photo as: images/about/project-photo.jpg -->
+                        <img 
+                            src="images/about/project-photo.jpg" 
+                            alt="Project Achievement" 
+                            class="w-full h-full object-cover rounded-2xl"
+                        >
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6">Career Transition</h2>
+                        <div class="prose prose-lg max-w-none">
+                            <p class="text-gray-600 mb-6">
+                                My transition from chemical engineering to data analysis wasn't just a career change—it was a natural evolution of my skills and interests. The analytical mindset and problem-solving approach I developed in engineering provided a strong foundation for my work in data science.
+                            </p>
+                            <div class="grid md:grid-cols-2 gap-8 mt-8">
+                                <div>
+                                    <h3 class="text-xl font-semibold mb-4">Engineering Background</h3>
+                                    <ul class="space-y-2 text-gray-600">
+                                        <li>• Process optimization and systems thinking</li>
+                                        <li>• Technical problem-solving and analysis</li>
+                                        <li>• Project management and implementation</li>
+                                        <li>• Safety and compliance focus</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold mb-4">Data Science Evolution</h3>
+                                    <ul class="space-y-2 text-gray-600">
+                                        <li>• Advanced data analysis and visualization</li>
+                                        <li>• Machine learning and AI applications</li>
+                                        <li>• Business intelligence and reporting</li>
+                                        <li>• Technical implementation and support</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Interests Section -->
+        <section class="max-w-6xl mx-auto mb-16">
+            <div class="bg-white rounded-2xl shadow-md p-8 md:p-12">
+                <h2 class="text-3xl font-bold mb-8 text-center">Beyond the Professional</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Replace these placeholders with your hobby/interest photos -->
+                    <!-- Recommended size: 600x600px (square) -->
+                    <!-- Save your photos as: images/about/hobby-1.jpg, hobby-2.jpg, hobby-3.jpg -->
+                    <div class="relative">
+                        <img 
+                            src="images/about/hobby-1.jpg" 
+                            alt="Photography Hobby" 
+                            class="w-full h-full object-cover rounded-xl"
+                        >
+                    </div>
+                    <div class="relative">
+                        <img 
+                            src="images/about/hobby-2.jpg" 
+                            alt="Technology Exploration" 
+                            class="w-full h-full object-cover rounded-xl"
+                        >
+                    </div>
+                    <div class="relative">
+                        <img 
+                            src="images/about/hobby-3.jpg" 
+                            alt="Community Engagement" 
+                            class="w-full h-full object-cover rounded-xl"
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personality Profile Section -->
+        <section class="max-w-6xl mx-auto mb-16">
+            <div class="bg-white rounded-2xl shadow-md p-8 md:p-12">
+                <h2 class="text-3xl font-bold mb-6 text-center">My Profile</h2>
+                <div class="max-w-3xl mx-auto">
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-8 text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Reforming Observer</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            This profile combines the analytical, precise nature of the Observer with the purposeful, results-driven focus of the Reformer. It signifies a style that is logical, methodical, and dedicated to delivering high-quality, well-considered solutions.
+                        </p>
+                    </div>
+
+                    <!-- Strengths & Value -->
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div class="bg-white rounded-xl shadow-sm p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-4">Key Strengths</h3>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="text-blue-600 mr-2">•</span>
+                                    <div><strong>Logical & Analytical:</strong> Thrives on understanding underlying principles and using analysis to solve problems.</div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-600 mr-2">•</span>
+                                    <div><strong>Dependable:</strong> My word is my bond; works diligently to complete tasks and achieve high standards.</div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-600 mr-2">•</span>
+                                    <div><strong>Effective & Efficient:</strong> Constantly seeks ways to work more effectively and will work late to get the job done.</div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-600 mr-2">•</span>
+                                    <div><strong>Focused:</strong> Can concentrate for long periods and remains single-minded and persistent.</div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-600 mr-2">•</span>
+                                    <div><strong>Fair & Principled:</strong> Believes in fair-mindedness when implementing systems and evaluates people on their results.</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-sm p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-4">Value to the Team</h3>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="text-blue-600 mr-2">•</span>
+                                    <div>Ensures reflection, analysis, and precision</div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-600 mr-2">•</span>
+                                    <div>Thinks clearly and logically under pressure</div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-600 mr-2">•</span>
+                                    <div>Identifies the key elements of important situations</div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-600 mr-2">•</span>
+                                    <div>Brings a common-sense, practical approach</div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-600 mr-2">•</span>
+                                    <div>Encourages independent thinking</div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-600 mr-2">•</span>
+                                    <div>Maintains "fair play" and commits to realistic goals</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Communication Style -->
+                    <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">How to Communicate with Me</h3>
+                        <p class="text-gray-600 mb-6">To ensure the most effective collaboration, consider the following approaches:</p>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <div><strong>Be prepared and structured:</strong> Present information in an organized way, supported by facts and evidence.</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <div><strong>Focus on logic, not emotion:</strong> Ask "what do you think?" rather than "how do you feel?".</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <div><strong>Allow time for reflection:</strong> Avoid rushing for an immediate decision; my best contributions come after analysis.</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <div><strong>Be direct and purposeful:</strong> Avoid exaggeration and keep conversations focused on the topic at hand.</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                <div><strong>Respect the need for focus:</strong> Allow for periods of independent work and avoid unnecessary social trivia.</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Color Dynamics -->
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6 text-center">Color Dynamics</h3>
+                        
+                        <!-- Color Definitions -->
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="text-blue-600 font-medium mb-2">Cool Blue</h4>
+                                <p class="text-sm text-gray-600">Analytical, precise, and objective. Values logic, data, and systematic thinking.</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="text-red-600 font-medium mb-2">Fiery Red</h4>
+                                <p class="text-sm text-gray-600">Results-driven and purposeful. Focuses on action, goals, and decisive leadership.</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="text-green-600 font-medium mb-2">Earth Green</h4>
+                                <p class="text-sm text-gray-600">Supportive and caring. Emphasizes relationships, harmony, and collaboration.</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="text-yellow-600 font-medium mb-2">Sunshine Yellow</h4>
+                                <p class="text-sm text-gray-600">Dynamic and sociable. Brings energy, creativity, and enthusiasm to interactions.</p>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-semibold text-center mb-4">Conscious Persona</h4>
+                                <div class="space-y-3">
+                                    <div class="bg-gray-50 p-3 rounded-lg">
+                                        <div class="flex justify-between items-center">
+                                            <span class="text-blue-600 font-medium">Cool Blue</span>
+                                            <span class="font-semibold">64%</span>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray-50 p-3 rounded-lg">
+                                        <div class="flex justify-between items-center">
+                                            <span class="text-red-600 font-medium">Fiery Red</span>
+                                            <span class="font-semibold">60%</span>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray-50 p-3 rounded-lg">
+                                        <div class="flex justify-between items-center">
+                                            <span class="text-green-600 font-medium">Earth Green</span>
+                                            <span class="font-semibold">47%</span>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray-50 p-3 rounded-lg">
+                                        <div class="flex justify-between items-center">
+                                            <span class="text-yellow-600 font-medium">Sunshine Yellow</span>
+                                            <span class="font-semibold">43%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-center mb-4">Less Conscious Persona</h4>
+                                <div class="space-y-3">
+                                    <div class="bg-gray-50 p-3 rounded-lg">
+                                        <div class="flex justify-between items-center">
+                                            <span class="text-blue-600 font-medium">Cool Blue</span>
+                                            <span class="font-semibold">57%</span>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray-50 p-3 rounded-lg">
+                                        <div class="flex justify-between items-center">
+                                            <span class="text-red-600 font-medium">Fiery Red</span>
+                                            <span class="font-semibold">53%</span>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray-50 p-3 rounded-lg">
+                                        <div class="flex justify-between items-center">
+                                            <span class="text-green-600 font-medium">Earth Green</span>
+                                            <span class="font-semibold">40%</span>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray-50 p-3 rounded-lg">
+                                        <div class="flex justify-between items-center">
+                                            <span class="text-yellow-600 font-medium">Sunshine Yellow</span>
+                                            <span class="font-semibold">36%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="max-w-6xl mx-auto text-center">
+            <div class="bg-blue-600 rounded-2xl shadow-md p-8 md:p-12 text-white">
+                <h2 class="text-3xl font-bold mb-6">Let's Connect</h2>
+                <p class="text-xl mb-8">
+                    Interested in learning more about how we can work together? I'm always excited to discuss new opportunities and collaborations.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="mailto:inquireryan@gmail.com" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition duration-300">Get in Touch</a>
+                    <a href="index.html#portfolio" class="bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-800 transition duration-300">View My Work</a>
+                    <a href="profile.html" class="bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400 transition duration-300">Deep Dive Profile</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-16">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-2xl font-bold mb-4">Let's Connect</h2>
+                <p class="text-gray-400 mb-8">I'm always open to discussing new opportunities and collaborations.</p>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="https://github.com/rguid31" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/></svg>
+                    </a>
+                    <a href="https://linkedin.com/in/rmguidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="https://unsplash.com/@ryne_guidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 6.75V0h9v6.75h-9zm9 3.75H24V24H0V10.5h7.5v6.75h9V10.5z"/></svg>
+                    </a>
+                    <a href="https://medium.com/@guidry_ryan" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 .38-.16.85-.44 1.12l-3.13 3.09c-.28.27-.7.27-1 0l-3.13-3.09c-.28-.27-.44-.74-.44-1.12s.16-.85.44-1.12l3.13-3.09c.28-.27.7-.27 1 0l3.13 3.09c.28.27.44.74.44 1.12zM0 12c0 .38.16.85.44 1.12l3.13 3.09c.28.27.7.27 1 0l3.13-3.09c.28-.27.44-.74.44-1.12s-.16-.85-.44-1.12L4.57 7.79c-.28-.27-.7-.27-1 0L.44 10.88C.16 11.15 0 11.62 0 12z"/></svg>
+                    </a>
+                    <a href="https://x.com/ryne_guidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                </div>
+                <p class="text-gray-400">&copy; <script>document.write(new Date().getFullYear())</script> Ryan Guidry. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Remove carousel JavaScript -->
+    <script>
+        // Remove carousel JavaScript
+    </script>
+<script>
+    // Radar Chart Configuration
+    const ctx = document.getElementById('radarChart').getContext('2d');
+    
+    const data = {
+        labels: [
+            'Logical',
+            'Independent', 
+            'Task-Oriented',
+            'Precise',
+            'Methodical',
+            'Dependable',
+            'Analytical',
+            'Detail-Focused'
+        ],
+        datasets: [{
+            label: 'Professional Attributes',
+            data: [90, 75, 80, 90, 85, 85, 95, 88],
+            fill: true,
+            backgroundColor: 'rgba(96, 165, 250, 0.25)',
+            borderColor: '#2563eb',
+            borderWidth: 3,
+            pointBackgroundColor: '#1d4ed8',
+            pointBorderColor: '#1d4ed8',
+            pointBorderWidth: 2,
+            pointRadius: 5,
+            pointHoverRadius: 7
+        }]
+    };
+    
+    const config = {
+        type: 'radar',
+        data: data,
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                r: {
+                    beginAtZero: true,
+                    max: 100,
+                    ticks: {
+                        stepSize: 20,
+                        color: '#6b7280',
+                        font: {
+                            size: 12
+                        }
+                    },
+                    grid: {
+                        color: '#e0e7ff',
+                        lineWidth: 1
+                    },
+                    angleLines: {
+                        color: '#e0e7ff',
+                        lineWidth: 1
+                    },
+                    pointLabels: {
+                        font: {
+                            size: 14,
+                            weight: 600
+                        },
+                        color: '#374151'
+                    }
+                }
+            }
+        }
+    };
+    
+    new Chart(ctx, config);
+    </script>
+</body>
+</html>

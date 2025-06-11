@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Engineering & Data Analyst Portfolio</title>
+    <title>Ryan Guidry | Engineering & Data Analyst Portfolio</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -41,235 +41,998 @@
         </nav>
     </header>
 
-    <main class="container mx-auto px-6 py-12">
+    <main class="container mx-auto px-6">
 
         <!-- Landing Page Section -->
-        <section id="hero" class="text-center py-20">
-            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">Engineering & Data Analysis</h1>
-            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-                <strong>Personal Value Statement:</strong> Passionate about transforming complex data into actionable insights and building robust engineering solutions that drive innovation and efficiency.
-            </p>
-            <a href="#portfolio" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-blue-700 transition duration-300">View My Work</a>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="py-20 bg-white rounded-2xl shadow-md my-12 p-8 md:p-16">
-            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-                <!-- Headshot Image -->
-                <div class="md:col-span-1">
-                    <img src="images/general/profile-photo.jpg" alt="Ryan Guidry's Headshot" class="rounded-full shadow-lg mx-auto w-48 h-48 md:w-64 md:h-64 object-cover">
-                </div>
-                <!-- About Me Text -->
-                <div class="md:col-span-2 text-center md:text-left">
-                    <h2 class="text-3xl font-bold mb-6">About Me</h2>
-                    <p class="text-gray-600 leading-relaxed">
-                        Hello! I'm a dedicated and curious professional with a background in both engineering and data analytics. My goal is to bridge the gap between technical implementation and strategic decision-making. I thrive in collaborative environments and am always eager to learn new technologies and methodologies to solve challenging problems.
-                    </p>
+        <section id="hero" class="relative min-h-screen w-full flex flex-col justify-center items-center text-center py-20">
+            <!-- Background Image Container -->
+            <div class="fixed top-0 left-0 w-screen h-screen -z-10">
+                <!-- Abstract analytical background image -->
+                <img 
+                    src="images/background/analytical-bg.jpg" 
+                    alt="Abstract Analytical Background" 
+                    class="absolute top-0 left-0 w-full h-full object-cover object-center"
+                    style="min-width: 100vw; min-height: 100vh; width: 100vw; height: 100vh;"
+                >
+                <!-- Gradient overlay for better text readability -->
+                <div class="absolute inset-0 bg-gradient-to-b from-gray-900/90 via-gray-900/70 to-gray-900/90"></div>
+            </div>
+            
+            <!-- Content Container -->
+            <div class="relative z-10 max-w-4xl mx-auto px-4">
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Transforming Data into Strategic Solutions | Engineering Innovation Meets Data Science</h1>
+                <p class="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-8 leading-relaxed">
+                    Chemical Engineer turned Data Analyst, bringing a unique blend of technical expertise and analytical thinking to solve complex business challenges. Discover how I bridge the gap between engineering precision and data-driven insights.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <a href="#portfolio" class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition duration-300 shadow-lg hover:shadow-xl">Explore My Work</a>
+                    <a href="#contact" class="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold text-lg border-2 border-white/20 hover:bg-white/20 transition duration-300 shadow-lg hover:shadow-xl">Let's Connect</a>
                 </div>
             </div>
         </section>
 
+        <!-- Content Wrapper -->
+        <div class="relative z-10 bg-white">
+            <!-- Rest of your content -->
 
-        <!-- Education -->
-        <section id="education" class="py-16">
-            <h2 class="text-3xl font-bold text-center mb-8">Education</h2>
-            <div class="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-md">
-                <div class="flex items-center gap-4 mb-4">
-                    <img src="images/education/lsu.png" alt="LSU A&M Logo" class="h-12 object-contain">
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-900">B.S. in Chemical Engineering (Incomplete - 131.0/139.0 hrs)</h3>
-                        <p class="text-blue-600">Louisiana State University A&M | Baton Rouge, Louisiana</p>
-                        <p class="text-gray-500 mt-1">Attended: 2014-2023</p>
+            <!-- About Me Section -->
+            <section id="about" class="py-20 bg-white rounded-2xl shadow-md my-12 p-8 md:p-16">
+                <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+                    <!-- Headshot Image -->
+                    <div class="md:col-span-1">
+                        <img src="images/general/profile-photo.jpg" alt="Ryan Guidry's Headshot" class="rounded-full shadow-lg mx-auto w-48 h-48 md:w-64 md:h-64 object-cover">
                     </div>
-                </div>
-                <p class="text-gray-600 mt-4">Relevant coursework: Thermodynamics, Heat and Mass Transfer, Process Simulation, Chemical Reaction Engineering, Statistical Analysis.</p>
-            </div>
-        </section>
-        
-        <!-- Certifications -->
-        <section id="certifications" class="py-16 bg-gray-100 rounded-2xl my-12 p-8 md:p-12">
-            <h2 class="text-3xl font-bold text-center mb-8">Certifications</h2>
-            <div class="max-w-4xl mx-auto">
-                 <div class="bg-white p-6 rounded-lg shadow-sm mb-4">
-                    <h3 class="text-xl font-semibold text-gray-900">Google Data Analytics Professional Certificate</h3>
-                    <p class="text-blue-600">Google (Coursera)</p>
-                    <p class="text-gray-500 mt-1">Issued: January 2024</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-gray-900">Another Certification Name</h3>
-                    <p class="text-blue-600">Issuing Organization</p>
-                    <p class="text-gray-500 mt-1">Issued: Month Year</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="py-16">
-            <h2 class="text-3xl font-bold text-center mb-12">Portfolio</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Portfolio Item 1 -->
-                <div class="bg-white rounded-2xl shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                    <img src="images/portfolio/interactive-media.png" alt="Project 1 Screenshot" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Project Title 1</h3>
-                        <p class="text-gray-600 mb-4">A brief, compelling description of the project, the problem it solved, and the technologies used.</p>
-                        <a href="#" class="text-blue-600 font-semibold hover:underline">View Details &rarr;</a>
-                    </div>
-                </div>
-                <!-- Portfolio Item 2 -->
-                <div class="bg-white rounded-2xl shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                    <img src="images/portfolio//automation.png" alt="Project 2 Screenshot" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Project Title 2</h3>
-                        <p class="text-gray-600 mb-4">A brief, compelling description of the project, the problem it solved, and the technologies used.</p>
-                        <a href="#" class="text-blue-600 font-semibold hover:underline">View Details &rarr;</a>
-                    </div>
-                </div>
-                <!-- Portfolio Item 3 -->
-                <div class="bg-white rounded-2xl shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                   <img src="images/portfolio/data-analytics.png" alt="Project 3 Screenshot" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Project Title 3</h3>
-                        <p class="text-gray-600 mb-4">A brief, compelling description of the project, the problem it solved, and the technologies used.</p>
-                        <a href="#" class="text-blue-600 font-semibold hover:underline">View Details &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Professional Experience Section -->
-        <section id="experience" class="py-16 bg-white rounded-2xl shadow-md my-12 p-8 md:p-12">
-            <h2 class="text-3xl font-bold text-center mb-12">Professional Experience</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center max-w-7xl mx-auto">
-                <!-- 12 Tiles with Company Logos -->
-                <div class="flex justify-center p-8 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-300 h-40"><img src="images/experience/professional/outlier-ai.png" alt="Outlier AI Logo" class="h-28 object-contain"></div>
-                <div class="flex justify-center p-8 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-300 h-40"><img src="images/experience/professional/tracerco.png" alt="Tracerco Logo" class="h-28 object-contain"></div>
-                <div class="flex justify-center p-8 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-300 h-40"><img src="images/experience/professional/acbl.png" alt="ACBL Logo" class="h-28 object-contain"></div>
-                <div class="flex justify-center p-8 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-300 h-40"><img src="images/experience/professional/emerson.png" alt="Emerson Logo" class="h-28 object-contain"></div>
-                <div class="flex justify-center p-8 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-300 h-40"><img src="images/experience/professional/total.png" alt="Total Quality Logo" class="h-28 object-contain"></div>
-                <div class="flex justify-center p-8 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-300 h-40"><img src="images/experience/professional/dwl-logo.png" alt="DWL Logo" class="h-28 object-contain"></div>
-                <div class="flex justify-center p-8 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-300 h-40"><img src="images/experience/professional/nalco.png" alt="Nalco Logo" class="h-28 object-contain"></div>
-                <div class="flex justify-center p-8 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-300 h-40"><img src="images/experience/professional/cornerstone.png" alt="Cornerstone Logo" class="h-28 object-contain"></div>
-                <div class="flex justify-center p-8 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-300 h-40"><img src="images/experience/professional/daiquiris.png" alt="Daiquiris Logo" class="h-28 object-contain"></div>
-                <div class="flex justify-center p-8 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-300 h-40"><img src="images/experience/professional/gp.png" alt="GP Logo" class="h-28 object-contain"></div>
-                <div class="flex justify-center p-8 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-300 h-40"><img src="images/experience/professional/home-servicing.png" alt="Home Servicing Logo" class="h-28 object-contain"></div>
-                <div class="flex justify-center p-8 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-300 h-40"><img src="images/experience/professional/scpps.jpg" alt="SCPPS Logo" class="h-28 object-contain"></div>
-            </div>
-        </section>
-
-        <!-- Volunteer Experience Section -->
-        <section id="volunteer" class="py-16">
-             <h2 class="text-3xl font-bold text-center mb-8">Volunteer Experience</h2>
-             <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="flex justify-center p-4 bg-gray-100 rounded-lg h-20 w-20"><img src="images/experience/volunteer/google-maps.png" alt="Google Maps Logo" class="h-12 object-contain"></div>
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-900">Google Local Guide Level 5</h3>
-                            <p class="text-blue-600">Google | Remote | 2019 – Present</p>
+                    <!-- About Me Text -->
+                    <div class="md:col-span-2 text-center md:text-left">
+                        <h2 class="text-3xl font-bold mb-6">About Me</h2>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            I'm a results-driven professional who combines chemical engineering expertise with cutting-edge data analysis to deliver impactful solutions. My journey from engineering to data science has equipped me with a unique perspective: the ability to translate complex technical concepts into actionable business insights.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            What sets me apart? I bring together:
+                        </p>
+                        <ul class="text-gray-600 leading-relaxed list-disc list-inside space-y-2 mb-4">
+                            <li>Engineering precision and systematic problem-solving</li>
+                            <li>Advanced data analysis and visualization expertise</li>
+                            <li>Hands-on IT support and technical implementation experience</li>
+                            <li>A passion for transforming raw data into strategic insights</li>
+                        </ul>
+                        <p class="text-gray-600 leading-relaxed">
+                            Whether you're looking to optimize processes, uncover hidden patterns in your data, or implement innovative technical solutions, I'm here to help turn business challenges into opportunities.
+                        </p>
+                        <div class="mt-8 text-center md:text-left">
+                            <a href="about.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 shadow-md hover:shadow-lg">
+                                Deeper Dive into My Story →
+                            </a>
                         </div>
                     </div>
-                    <ul class="text-gray-600 mt-2 list-disc list-inside space-y-2">
-                        <li>Attained Level 5 status by consistently contributing comprehensive reviews, photos, and updates on local businesses, enhancing Google Maps user experience, accuracy, and discoverability.</li>
-                        <li>Leveraged in-depth local knowledge to consistently contribute high-quality content as a Level 5 Google Local Guide, resulting in improved accuracy and discoverability of local establishments on Google Maps.</li>
-                    </ul>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="flex justify-center p-4 bg-gray-100 rounded-lg h-20 w-20"><img src="images/experience/volunteer/landoni.png" alt="LANDONi Music Logo" class="h-12 object-contain"></div>
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-900">Creative Marketing & Brand Development Specialist</h3>
-                            <p class="text-blue-600">LANDONi Music | New Orleans, LA | March 2020 – March 2022</p>
+            </section>
+
+
+            <!-- Education -->
+            <section id="education" class="py-16 bg-white rounded-2xl shadow-md my-12 p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-center mb-12">Education</h2>
+                <div class="max-w-6xl mx-auto">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                        <div class="flex flex-col md:flex-row items-center gap-6 mb-6">
+                            <div class="flex-shrink-0">
+                                <img src="images/education/lsu.png" alt="LSU A&M Logo" class="h-24 w-24 object-contain bg-white rounded-xl p-2 shadow-sm">
+                            </div>
+                            <div class="text-center md:text-left">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Bachelor of Science in Mathematics</h3>
+                                <p class="text-blue-600 text-lg mb-1">Louisiana State University A&M</p>
+                                <p class="text-gray-600 mb-2">Baton Rouge, Louisiana</p>
+                                <p class="text-gray-500">Attended: Fall 2025 - Present</p>
+                                <p class="text-gray-500">In Progress</p>
+                            </div>
                         </div>
                     </div>
-                    <ul class="text-gray-600 mt-2 list-disc list-inside space-y-2">
-                        <li>Designed and launched an interactive media portfolio website, increasing web traffic by 15% and audience engagement by 20%.</li>
-                        <li>Managed online presence across social media and streaming platforms, boosting followers by 35% and streaming revenue by 20%.</li>
-                        <li>Oversaw social media strategy, content creation, artist branding, album artwork design, and merchandise/event management, enhancing overall revenue.</li>
-                        <li>Led a COVID-19 relief fundraising campaign (custom mask sales donated to Direct Relief), increasing brand awareness and community engagement.</li>
-                    </ul>
-                </div>
-             </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="py-16 bg-gray-100 rounded-2xl my-12 p-8 md:p-12">
-            <h2 class="text-3xl font-bold text-center mb-8">Technical Skills</h2>
-            <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-                <span class="bg-blue-100 text-blue-800 text-md font-medium px-4 py-2 rounded-full">Python</span>
-                <span class="bg-blue-100 text-blue-800 text-md font-medium px-4 py-2 rounded-full">Pandas & NumPy</span>
-                <span class="bg-green-100 text-green-800 text-md font-medium px-4 py-2 rounded-full">SQL</span>
-                <span class="bg-yellow-100 text-yellow-800 text-md font-medium px-4 py-2 rounded-full">JavaScript</span>
-                <span class="bg-gray-200 text-gray-800 text-md font-medium px-4 py-2 rounded-full">HTML & CSS</span>
-                <span class="bg-purple-100 text-purple-800 text-md font-medium px-4 py-2 rounded-full">Tableau</span>
-                <span class="bg-red-100 text-red-800 text-md font-medium px-4 py-2 rounded-full">Power BI</span>
-                <span class="bg-indigo-100 text-indigo-800 text-md font-medium px-4 py-2 rounded-full">Git & GitHub</span>
-            </div>
-        </section>
-
-        <!-- My Personality Profile Section -->
-        <section id="personality" class="py-16">
-            <h2 class="text-3xl font-bold text-center mb-12">My Personality Profile</h2>
-            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold mb-3">Overview</h3>
-                    <p class="text-gray-600">Based on assessments like Myers-Briggs (e.g., INTJ) or Big Five, I am an analytical and systematic thinker who enjoys diving deep into data to uncover patterns and solutions.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold mb-3">Strengths & Challenges</h3>
-                    <p class="text-gray-600"><strong>Strengths:</strong> Detail-oriented, logical reasoning, persistent problem-solving.</p>
-                    <p class="text-gray-600 mt-2"><strong>Challenges:</strong> Can be overly focused on details, working on balancing big-picture thinking with granular analysis.</p>
-                </div>
-                 <div class="bg-white p-6 rounded-lg shadow-sm md:col-span-2">
-                    <h3 class="text-xl font-semibold mb-3">Keyword Cloud</h3>
-                    <div class="flex flex-wrap gap-3">
-                       <span class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">Analytical</span>
-                       <span class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">Data-Driven</span>
-                       <span class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">Problem-Solver</span>
-                       <span class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">Curious</span>
-                       <span class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">Collaborative</span>
-                       <span class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">Efficient</span>
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm mt-6">
+                        <div class="flex flex-col md:flex-row items-center gap-6 mb-6">
+                            <div class="flex-shrink-0">
+                                <img src="images/education/lsu.png" alt="LSU A&M Logo" class="h-24 w-24 object-contain bg-white rounded-xl p-2 shadow-sm">
+                            </div>
+                            <div class="text-center md:text-left">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Bachelor of Science in Chemical Engineering</h3>
+                                <p class="text-blue-600 text-lg mb-1">Louisiana State University A&M</p>
+                                <p class="text-gray-600 mb-2">Baton Rouge, Louisiana</p>
+                                <p class="text-gray-500">Attended: Aug 2014 – Dec 2023</p>
+                                <p class="text-gray-500">Incomplete (Credit Hours: 131/139)</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-sm md:col-span-2 flex justify-center items-center">
+            </section>
+            
+            <!-- Certifications -->
+            <section id="certifications" class="py-16 bg-gray-100 rounded-2xl my-12 p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-center mb-8">Certifications</h2>
+                <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="flex justify-center p-6 bg-gray-50 rounded-xl mb-4 w-32 h-32">
+                                <img src="images/certifications/gdapc.png" alt="Google Data Analytics Professional Certificate Logo" class="h-24 object-contain">
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Google Data Analytics Professional Certificate</h3>
+                            <p class="text-blue-600 mb-1">Google (Coursera)</p>
+                            <p class="text-gray-500 mb-4">Completed: February 2025</p>
+                            <a href="files/certifications/google-data-analytics.pdf" target="_blank" class="inline-flex items-center gap-2 bg-blue-50 text-blue-600 hover:bg-blue-100 px-4 py-2 rounded-lg font-medium transition-colors duration-200 shadow-sm hover:shadow">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                </svg>
+                                View Certification
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="flex justify-center p-6 bg-gray-50 rounded-xl mb-4 w-32 h-32">
+                                <img src="images/certifications/google-ai.png" alt="Google AI Essentials Logo" class="h-24 object-contain">
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Google AI Essentials Certificate</h3>
+                            <p class="text-blue-600 mb-1">Google (Coursera)</p>
+                            <p class="text-gray-500 mb-4">Completed: February 2025</p>
+                            <a href="files/certifications/google-ai-essentials.pdf" target="_blank" class="inline-flex items-center gap-2 bg-blue-50 text-blue-600 hover:bg-blue-100 px-4 py-2 rounded-lg font-medium transition-colors duration-200 shadow-sm hover:shadow">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                </svg>
+                                View Certification
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="flex justify-center p-6 bg-gray-50 rounded-xl mb-4 w-32 h-32">
+                                <img src="images/certifications/osha.png" alt="OSHA Logo" class="h-24 object-contain">
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Basic Orientation Plus (BOP)</h3>
+                            <p class="text-blue-600 mb-1">OSHA / Gulf South Safety Council</p>
+                            <p class="text-gray-500">Issued: 2023</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="flex justify-center p-6 bg-gray-50 rounded-xl mb-4 w-32 h-32">
+                                <img src="images/certifications/tsa.png" alt="TSA Logo" class="h-24 object-contain">
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Transportation Worker Identification Credential (TWIC)</h3>
+                            <p class="text-blue-600 mb-1">Transportation Security Administration</p>
+                            <p class="text-gray-500">Issued: 2022</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Portfolio Section -->
+            <section id="portfolio" class="py-16 bg-white rounded-2xl shadow-md my-12 p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-center mb-12">Portfolio</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                    <!-- Portfolio Item 1 -->
+                    <button onclick="openModal('interactive-media-modal')" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 text-left">
+                        <div class="relative overflow-hidden">
+                            <img src="images/portfolio/interactive-media.png" alt="Interactive Media Project Screenshot" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <p class="text-white p-4 text-sm">Click to view details</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Cross-disciplinary Interactive Media Portfolio</h3>
+                            <p class="text-gray-600 mb-4 line-clamp-3">Engineered a dynamic, responsive web platform that seamlessly integrates creative content with technical functionality. Leveraged modern web technologies to create an immersive user experience, resulting in a 15% increase in web traffic and 20% higher engagement.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Web Development</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">UI/UX Design</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Data Analytics</span>
+                            </div>
+                        </div>
+                    </button>
+
+                    <!-- Portfolio Item 2 -->
+                    <button onclick="openModal('automation-modal')" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 text-left">
+                        <div class="relative overflow-hidden">
+                            <img src="images/portfolio/automation.png" alt="IT Automation Project Screenshot" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <p class="text-white p-4 text-sm">Click to view details</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">IT Automation: Windows Server Update Service</h3>
+                            <p class="text-gray-600 mb-4 line-clamp-3">Led initiative to automate Windows updates across 1200 virtual machines by establishing a WSUS, streamlining enforcement of security measures and reducing manual labor.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">IT Infrastructure</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Automation</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">System Administration</span>
+                            </div>
+                        </div>
+                    </button>
+
+                    <!-- Portfolio Item 3 -->
+                    <button onclick="openModal('data-analytics-modal')" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 text-left">
+                        <div class="relative overflow-hidden">
+                            <img src="images/portfolio/data-analytics.png" alt="Data Analytics Project Screenshot" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <p class="text-white p-4 text-sm">Click to view details</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Production Cost Analysis via Plant Data</h3>
+                            <p class="text-gray-600 mb-4 line-clamp-3">Utilized Pi ProcessBook and Pi DataLink to acquire and analyze plant data, correlating trends between acid neutralization and annual production costs to identify inefficiencies.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Data Analysis</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Process Optimization</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Cost Analysis</span>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Portfolio Modals -->
+            <div id="interactive-media-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+                <div class="bg-white rounded-2xl p-8 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Cross-disciplinary Interactive Media Portfolio</h3>
+                            <p class="text-lg text-gray-700">LANDONi Music</p>
+                            <p class="text-gray-600">March 2020 – March 2022</p>
+                        </div>
+                        <button onclick="closeModal('interactive-media-modal')" class="text-gray-400 hover:text-gray-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <img src="images/portfolio/interactive-media.png" alt="Interactive Media Project Screenshot" class="w-full rounded-lg shadow-md mb-6">
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Web Development</span>
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">UI/UX Design</span>
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Data Analytics</span>
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Social Media</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4">Project Overview</h4>
+                            <p class="text-gray-700 mb-6">Engineered a dynamic, responsive web platform that seamlessly integrates creative content with technical functionality. The project focused on creating an immersive user experience while maintaining high performance and accessibility standards.</p>
+                            
+                            <h4 class="text-lg font-semibold mb-4">Key Achievements</h4>
+                            <ul class="list-disc list-inside space-y-3 text-gray-700 mb-6">
+                                <li>Increased web traffic by 15% and audience engagement by 20%</li>
+                                <li>Boosted social media followers by 35% and streaming revenue by 20%</li>
+                                <li>Implemented data-driven design decisions and analytics tracking</li>
+                                <li>Led successful COVID-19 relief fundraising campaign</li>
+                            </ul>
+
+                            <h4 class="text-lg font-semibold mb-4">Technologies Used</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+                                <li>HTML5, CSS3, JavaScript</li>
+                                <li>React.js for dynamic content</li>
+                                <li>Google Analytics for tracking</li>
+                                <li>Social Media APIs integration</li>
+                            </ul>
+
+                            <div class="flex gap-4">
+                                <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300 inline-flex items-center gap-2">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                    View Code
+                                </a>
+                                <a href="#" class="bg-gray-100 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-200 transition duration-300 inline-flex items-center gap-2">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                    Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="automation-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+                <div class="bg-white rounded-2xl p-8 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">IT Automation: Windows Server Update Service</h3>
+                            <p class="text-lg text-gray-700">Emerson Automation Solutions</p>
+                            <p class="text-gray-600">June 2022 – August 2022</p>
+                        </div>
+                        <button onclick="closeModal('automation-modal')" class="text-gray-400 hover:text-gray-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <img src="images/portfolio/automation.png" alt="IT Automation Project Screenshot" class="w-full rounded-lg shadow-md mb-6">
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">IT Infrastructure</span>
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Automation</span>
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">System Administration</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4">Project Overview</h4>
+                            <p class="text-gray-700 mb-6">Led the implementation of a Windows Server Update Service (WSUS) to automate and streamline the update process across 1200 virtual machines, significantly improving security compliance and reducing manual maintenance overhead.</p>
+                            
+                            <h4 class="text-lg font-semibold mb-4">Key Achievements</h4>
+                            <ul class="list-disc list-inside space-y-3 text-gray-700 mb-6">
+                                <li>Successfully implemented WSUS across 1200 virtual machines</li>
+                                <li>Reduced manual update time by 85%</li>
+                                <li>Improved security compliance through automated patch management</li>
+                                <li>Created detailed documentation for system maintenance</li>
+                            </ul>
+
+                            <h4 class="text-lg font-semibold mb-4">Technologies Used</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+                                <li>Windows Server 2019</li>
+                                <li>WSUS (Windows Server Update Services)</li>
+                                <li>PowerShell Scripting</li>
+                                <li>Microsoft SQL Server</li>
+                            </ul>
+
+                            <div class="flex gap-4">
+                                <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300 inline-flex items-center gap-2">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                    View Documentation
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="data-analytics-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+                <div class="bg-white rounded-2xl p-8 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Production Cost Analysis via Plant Data</h3>
+                            <p class="text-lg text-gray-700">Cornerstone Chemical</p>
+                            <p class="text-gray-600">December 2017 – January 2018</p>
+                        </div>
+                        <button onclick="closeModal('data-analytics-modal')" class="text-gray-400 hover:text-gray-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <img src="images/portfolio/data-analytics.png" alt="Data Analytics Project Screenshot" class="w-full rounded-lg shadow-md mb-6">
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Data Analysis</span>
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Process Optimization</span>
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Cost Analysis</span>
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Process Engineering</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4">Project Overview</h4>
+                            <p class="text-gray-700 mb-6">Conducted comprehensive analysis of plant data to identify correlations between acid neutralization processes and production costs, leading to significant operational improvements and cost savings.</p>
+                            
+                            <h4 class="text-lg font-semibold mb-4">Key Achievements</h4>
+                            <ul class="list-disc list-inside space-y-3 text-gray-700 mb-6">
+                                <li>Identified inefficiencies in acid neutralization process</li>
+                                <li>Correlated process variables with production costs</li>
+                                <li>Verified P&ID accuracy for combustion reactor operations</li>
+                                <li>Analyzed equipment failure mechanisms</li>
+                            </ul>
+
+                            <h4 class="text-lg font-semibold mb-4">Technologies Used</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+                                <li>Pi ProcessBook for data acquisition</li>
+                                <li>Pi DataLink for data analysis</li>
+                                <li>Statistical analysis tools</li>
+                                <li>Process engineering software</li>
+                            </ul>
+
+                            <div class="flex gap-4">
+                                <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300 inline-flex items-center gap-2">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+                                    </svg>
+                                    View Analysis
+                                </a>
+                                <a href="#" class="bg-gray-100 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-200 transition duration-300 inline-flex items-center gap-2">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                    </svg>
+                                    View Report
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience Section -->
+            <section id="experience" class="py-16 bg-white rounded-2xl shadow-md my-12 p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-center mb-12">Professional Experience</h2>
+                
+                <!-- Experience Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                    <!-- Outlier AI (June 2024 – Present) -->
+                    <button onclick="openModal('outlier-modal')" class="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+                        <div class="aspect-square flex items-center justify-center">
+                            <img src="images/experience/professional/outlier-ai.png" alt="Outlier AI Logo" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-105 transition-transform duration-200">
+                        </div>
+                    </button>
+
+                    <!-- ACBL (October 2023 – March 2024) -->
+                    <button onclick="openModal('acbl-modal')" class="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+                        <div class="aspect-square flex items-center justify-center">
+                            <img src="images/experience/professional/acbl.png" alt="ACBL Logo" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-105 transition-transform duration-200">
+                        </div>
+                    </button>
+
+                    <!-- Tracerco (April 2024 – May 2024) -->
+                    <button onclick="openModal('tracerco-modal')" class="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+                        <div class="aspect-square flex items-center justify-center">
+                            <img src="images/experience/professional/tracerco.png" alt="Tracerco Logo" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-105 transition-transform duration-200">
+                        </div>
+                    </button>
+
+                    <!-- Emerson (June 2022 – August 2022) -->
+                    <button onclick="openModal('emerson-modal')" class="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+                        <div class="aspect-square flex items-center justify-center">
+                            <img src="images/experience/professional/emerson.png" alt="Emerson Logo" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-105 transition-transform duration-200">
+                        </div>
+                    </button>
+
+                    <!-- TotalEnergies (June 2021 – August 2021) -->
+                    <button onclick="openModal('total-modal')" class="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+                        <div class="aspect-square flex items-center justify-center">
+                            <img src="images/experience/professional/total.png" alt="TotalEnergies Logo" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-105 transition-transform duration-200">
+                        </div>
+                    </button>
+
+                    <!-- DWL Technology (May 2019 – September 2019) -->
+                    <button onclick="openModal('dwl-modal')" class="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+                        <div class="aspect-square flex items-center justify-center">
+                            <img src="images/experience/professional/dwl-logo.png" alt="DWL Technology Logo" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-105 transition-transform duration-200">
+                        </div>
+                    </button>
+
+                    <!-- Nalco Champion (May 2018 – August 2018) -->
+                    <button onclick="openModal('nalco-modal')" class="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+                        <div class="aspect-square flex items-center justify-center">
+                            <img src="images/experience/professional/nalco.png" alt="Nalco Champion Logo" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-105 transition-transform duration-200">
+                        </div>
+                    </button>
+
+                    <!-- Cornerstone Chemical (December 2017 – January 2018) -->
+                    <button onclick="openModal('cornerstone-modal')" class="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+                        <div class="aspect-square flex items-center justify-center">
+                            <img src="images/experience/professional/cornerstone.png" alt="Cornerstone Chemical Logo" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-105 transition-transform duration-200">
+                        </div>
+                    </button>
+
+                    <!-- New Orleans Original Daiquiris (July 2017 – September 2017) -->
+                    <button onclick="openModal('daiquiris-modal')" class="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+                        <div class="aspect-square flex items-center justify-center">
+                            <img src="images/experience/professional/daiquiris.png" alt="New Orleans Original Daiquiris Logo" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-105 transition-transform duration-200">
+                        </div>
+                    </button>
+
+                    <!-- Georgia-Pacific (December 2016 – January 2017) -->
+                    <button onclick="openModal('gp-modal')" class="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+                        <div class="aspect-square flex items-center justify-center">
+                            <img src="images/experience/professional/gp.png" alt="Georgia-Pacific Logo" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-105 transition-transform duration-200">
+                        </div>
+                    </button>
+
+                    <!-- Home Servicing (May 2015 – August 2015) -->
+                    <button onclick="openModal('home-servicing-modal')" class="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+                        <div class="aspect-square flex items-center justify-center">
+                            <img src="images/experience/professional/home-servicing.png" alt="Home Servicing, LLC Logo" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-105 transition-transform duration-200">
+                        </div>
+                    </button>
+
+                    <!-- SCPPS (May 2013 – August 2013, May 2014 – August 2014) -->
+                    <button onclick="openModal('scpps-modal')" class="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+                        <div class="aspect-square flex items-center justify-center">
+                            <img src="images/experience/professional/scpps.jpg" alt="SCPPS Logo" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-105 transition-transform duration-200">
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Experience Modals -->
+                <!-- Outlier AI Modal -->
+                <div id="outlier-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex items-center gap-4">
+                                <img src="images/experience/professional/outlier-ai.png" alt="Outlier AI Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900">AI Math Specialist</h3>
+                                    <p class="text-lg text-gray-700">Outlier AI</p>
+                                    <p class="text-gray-600">Baton Rouge, LA | June 2024 – Present</p>
+                                </div>
+                            </div>
+                            <button onclick="closeModal('outlier-modal')" class="text-gray-400 hover:text-gray-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="list-disc list-inside space-y-3 text-gray-700">
+                            <li>Supported AI model development through precise generation and refinement of training data, ensuring adherence to system standards and improving model performance.</li>
+                            <li>Performed rigorous evaluations and systematic troubleshooting of AI model responses to enhance accuracy and system reliability.</li>
+                            <li>Trained AI models by rating, reviewing, and rewriting responses from AI models to enhance their accuracy.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tracerco Modal -->
+                <div id="tracerco-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex items-center gap-4">
+                                <img src="images/experience/professional/tracerco.png" alt="Tracerco Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900">Field Technician</h3>
+                                    <p class="text-lg text-gray-700">Tracerco</p>
+                                    <p class="text-gray-600">Baton Rouge, LA | April 2024 – May 2024</p>
+                                </div>
+                            </div>
+                            <button onclick="closeModal('tracerco-modal')" class="text-gray-400 hover:text-gray-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="list-disc list-inside space-y-3 text-gray-700">
+                            <li>Acted as a subject matter expert in scanning and instrumentation technologies, optimizing operational procedures for maximum efficiency.</li>
+                            <li>Provided technical leadership in scanning, tracer technologies, nucleonic instrumentation, and subsea technologies.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Emerson Modal -->
+                <div id="emerson-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex items-center gap-4">
+                                <img src="images/experience/professional/emerson.png" alt="Emerson Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900">Intern, Application Engineer (AUTOSOL/PSS)</h3>
+                                    <p class="text-lg text-gray-700">Emerson Automation Solutions</p>
+                                    <p class="text-gray-600">Baton Rouge, LA | June 2022 – August 2022</p>
+                                </div>
+                            </div>
+                            <button onclick="closeModal('emerson-modal')" class="text-gray-400 hover:text-gray-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="list-disc list-inside space-y-3 text-gray-700">
+                            <li>Successfully implemented and meticulously configured the AgileOps software suite on diverse customer control system platforms, including precise configuration of Microsoft SQL and MS Server.</li>
+                            <li>Led initiative to automate Windows updates across 1200 virtual machines by establishing a WSUS.</li>
+                            <li>Developed Excel macros to enhance user experience and refine usability.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- TotalEnergies Modal -->
+                <div id="total-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex items-center gap-4">
+                                <img src="images/experience/professional/total.png" alt="TotalEnergies Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900">Intern, Project Development Engineer</h3>
+                                    <p class="text-lg text-gray-700">TotalEnergies</p>
+                                    <p class="text-gray-600">Port Arthur, TX | June 2021 – August 2021</p>
+                                </div>
+                            </div>
+                            <button onclick="closeModal('total-modal')" class="text-gray-400 hover:text-gray-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="list-disc list-inside space-y-3 text-gray-700">
+                            <li>Led pre-FEED planning for a project to increase condensate splitter unit utilization by defining design scope and creating project schedule.</li>
+                            <li>Conducted feasibility studies for CSU modifications to improve corrosion control and pump reliability.</li>
+                            <li>Created a working model of refinery's Cooling Water System (CWS) piping network using SimSci Pipephase software.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- DWL Technology Modal -->
+                <div id="dwl-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex items-center gap-4">
+                                <img src="images/experience/professional/dwl-logo.png" alt="DWL Technology Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900">Intern, Industrial Equipment Sales</h3>
+                                    <p class="text-lg text-gray-700">DWL Technology, LLC</p>
+                                    <p class="text-gray-600">Walker, LA | May 2019 – September 2019</p>
+                                </div>
+                            </div>
+                            <button onclick="closeModal('dwl-modal')" class="text-gray-400 hover:text-gray-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="list-disc list-inside space-y-3 text-gray-700">
+                            <li>Managed, organized, inventoried, and sold surplus industrial engineering parts and chemical laboratory glassware.</li>
+                            <li>Established an e-commerce sales presence, achieving 100% positive customer feedback and Top-Rated Seller status on eBay.</li>
+                            <li>Managed e-commerce sales metrics and KPIs to improve listing SEO and increase overall sales performance.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Nalco Champion Modal -->
+                <div id="nalco-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex items-center gap-4">
+                                <img src="images/experience/professional/nalco.png" alt="Nalco Champion Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900">Intern, Oilfield Chemical Sales</h3>
+                                    <p class="text-lg text-gray-700">NALCO Champion</p>
+                                    <p class="text-gray-600">Houston, TX | May 2018 – August 2018</p>
+                                </div>
+                            </div>
+                            <button onclick="closeModal('nalco-modal')" class="text-gray-400 hover:text-gray-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="list-disc list-inside space-y-3 text-gray-700">
+                            <li>Conducted daily upstream oilfield surveys across diverse customer sites, providing specialized chemical additive recommendations to enhance equipment integrity and implement preventative maintenance protocols.</li>
+                            <li>Revamped pipeline corrosion monitoring services by implementing advanced microbial analysis procedures and computer modeling of chemical flow dynamics, enabling accurate forecasting of flowline failures through data correlation.</li>
+                            <li>Prioritized safety and risk management by conducting comprehensive site assessments and integrating safety protocols into customer service objectives.</li>
+                            <li>Leveraged technical expertise in process safety, data analysis, and chemical engineering to optimize customer solutions and drive operational excellence.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- SCPPS Modal -->
+                <div id="scpps-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex items-center gap-4">
+                                <img src="images/experience/professional/scpps.jpg" alt="SCPPS Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900">Computer Technician</h3>
+                                    <p class="text-lg text-gray-700">St. Charles Parish Public Schools</p>
+                                    <p class="text-gray-600">Luling, LA | May 2013 – August 2013, May 2014 – August 2014</p>
+                                </div>
+                            </div>
+                            <button onclick="closeModal('scpps-modal')" class="text-gray-400 hover:text-gray-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="list-disc list-inside space-y-3 text-gray-700">
+                            <li>Provided technical support and troubleshooting for hardware, software, and network issues.</li>
+                            <li>Managed user accounts, permissions, and assisted with data backup, recovery, and security protocols.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ACBL Modal -->
+                <div id="acbl-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex items-center gap-4">
+                                <img src="images/experience/professional/acbl.png" alt="ACBL Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900">Safety and Training Coordinator</h3>
+                                    <p class="text-lg text-gray-700">American Commercial Barge Line (ACBL)</p>
+                                    <p class="text-gray-600">Harahan, LA | October 2023 – March 2024</p>
+                                </div>
+                            </div>
+                            <button onclick="closeModal('acbl-modal')" class="text-gray-400 hover:text-gray-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="list-disc list-inside space-y-3 text-gray-700">
+                            <li>Pioneered a proactive culture surrounding safety initiatives, resulting in improved compliance ratings and lower incident rates.</li>
+                            <li>Executed detailed risk assessments and strategic hazard mitigation plans, enhancing workplace safety across operational processes.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Cornerstone Chemical Modal -->
+                <div id="cornerstone-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex items-center gap-4">
+                                <img src="images/experience/professional/cornerstone.png" alt="Cornerstone Chemical Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900">Intern, Process Engineering</h3>
+                                    <p class="text-lg text-gray-700">Cornerstone Chemical Company</p>
+                                    <p class="text-gray-600">Waggaman, LA | December 2017 – January 2018</p>
+                                </div>
+                            </div>
+                            <button onclick="closeModal('cornerstone-modal')" class="text-gray-400 hover:text-gray-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="list-disc list-inside space-y-3 text-gray-700">
+                            <li>Utilized Pi ProcessBook and Pi DataLink to analyze plant data, focusing on acid neutralization processes and production cost optimization.</li>
+                            <li>Collaborated with lead process engineer to verify P&ID accuracy and gain comprehensive understanding of combustion reactor symbology and operations.</li>
+                            <li>Conducted detailed examination of industrial turbines and compressors to identify and understand equipment failure mechanisms.</li>
+                            <li>Developed expertise in data analysis, process engineering, and equipment troubleshooting while ensuring compliance with safety and environmental standards.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- New Orleans Original Daiquiris Modal -->
+                <div id="daiquiris-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex items-center gap-4">
+                                <img src="images/experience/professional/daiquiris.png" alt="New Orleans Original Daiquiris Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900">Bartender</h3>
+                                    <p class="text-lg text-gray-700">New Orleans Original Daiquiris</p>
+                                    <p class="text-gray-600">Baton Rouge, LA | July 2017 – September 2017</p>
+                                </div>
+                            </div>
+                            <button onclick="closeModal('daiquiris-modal')" class="text-gray-400 hover:text-gray-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="list-disc list-inside space-y-3 text-gray-700">
+                            <li>Developed customer relations through effective social interaction and assurance of customer satisfaction in a fast-paced environment.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Georgia-Pacific Modal -->
+                <div id="gp-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex items-center gap-4">
+                                <img src="images/experience/professional/gp.png" alt="Georgia-Pacific Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900">Intern, Chemical Sales Engineer</h3>
+                                    <p class="text-lg text-gray-700">Georgia-Pacific LLC</p>
+                                    <p class="text-gray-600">Hasbrouck Heights, NJ | December 2016 – January 2017</p>
+                                </div>
+                            </div>
+                            <button onclick="closeModal('gp-modal')" class="text-gray-400 hover:text-gray-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="list-disc list-inside space-y-3 text-gray-700">
+                            <li>Created PFDs of paper making processes at various mills for optimal additive injection locations.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Home Servicing Modal -->
+                <div id="home-servicing-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex items-center gap-4">
+                                <img src="images/experience/professional/home-servicing.png" alt="Home Servicing, LLC Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900">Mortgage Lender</h3>
+                                    <p class="text-lg text-gray-700">Home Servicing, LLC</p>
+                                    <p class="text-gray-600">Baton Rouge, LA | May 2015 – August 2015</p>
+                                </div>
+                            </div>
+                            <button onclick="closeModal('home-servicing-modal')" class="text-gray-400 hover:text-gray-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="list-disc list-inside space-y-3 text-gray-700">
+                            <li>Communicated with homeowners and agents regarding property taxes, insurance payments, and mortgages.</li>
+                            <li>Organized and filed documents into computer databases and physical libraries for easy access.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Volunteer Experience Section -->
+            <section id="volunteer" class="py-16 bg-white rounded-2xl shadow-md my-12 p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-center mb-12">Volunteer Experience</h2>
+                <div class="space-y-8 max-w-7xl mx-auto">
+                    <!-- LANDONi Music -->
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <div class="flex items-center gap-6 mb-4">
+                            <img src="images/experience/volunteer/landoni.png" alt="LANDONi Music Logo" class="h-24 w-24 object-contain bg-gray-50 rounded-lg p-2">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900">Creative Marketing & Brand Development Specialist</h3>
+                                <p class="text-lg text-gray-700">LANDONi Music</p>
+                                <p class="text-gray-600">New Orleans, LA | March 2020 – March 2022</p>
+                            </div>
+                        </div>
+                        <ul class="list-disc list-inside space-y-3 text-gray-700">
+                            <li>Designed and launched an interactive media portfolio website, increasing web traffic by 15% and audience engagement by 20%.</li>
+                            <li>Managed online presence across social media and streaming platforms, boosting followers by 35% and streaming revenue by 20%.</li>
+                            <li>Oversaw social media strategy, content creation, artist branding, album artwork design, and merchandise/event management, enhancing overall revenue.</li>
+                            <li>Led a COVID-19 relief fundraising campaign (custom mask sales donated to Direct Relief), increasing brand awareness and community engagement.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Google Local Guide -->
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <div class="flex items-center gap-6 mb-4">
+                            <img src="images/experience/volunteer/google-maps.png" alt="Google Maps Logo" class="h-24 w-24 object-contain bg-gray-50 rounded-lg p-2">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900">Local Guide Level 5</h3>
+                                <p class="text-lg text-gray-700">Google</p>
+                                <p class="text-gray-600">Remote | 2019 – Present</p>
+                            </div>
+                        </div>
+                        <ul class="list-disc list-inside space-y-3 text-gray-700">
+                            <li>Attained Level 5 status by consistently contributing comprehensive reviews, photos, and updates on local businesses, enhancing Google Maps user experience, accuracy, and discoverability.</li>
+                            <li>Leveraged in-depth local knowledge to consistently contribute high-quality content as a Level 5 Google Local Guide, resulting in improved accuracy and discoverability of local establishments on Google Maps.</li>
+                        </ul>
+                    </div>
+                 </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="py-16 bg-gray-100 rounded-2xl my-12 p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-center mb-12">Technical Skills</h2>
+                <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                     <div>
-                        <h3 class="text-xl font-semibold mb-4 text-center">Personality Wheel</h3>
-                        <!-- Placeholder for a personality wheel image -->
-                        <img src="https://placehold.co/300x300/e0f2fe/0ea5e9?text=Personality+Wheel" alt="Personality Wheel graphic" class="rounded-full">
+                        <h3 class="text-xl font-semibold mb-4">Engineering</h3>
+                        <div class="flex flex-wrap justify-center gap-2">
+                            <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">Unit Operations</span>
+                            <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">Process Safety</span>
+                            <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">P&ID Analysis</span>
+                            <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">Process Economics</span>
+                            <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">Equipment Design</span>
+                            <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">Process Optimization</span>
+            </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Data & AI</h3>
+                        <div class="flex flex-wrap justify-center gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Data Analysis</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">AI Augmentation</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">SQL</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Tableau</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Machine Learning</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Data Visualization</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Predictive Analytics</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Natural Language Processing</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Web Development</h3>
+                        <div class="flex flex-wrap justify-center gap-2">
+                            <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">HTML</span>
+                            <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">CSS</span>
+                            <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">React</span>
+                            <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Next.js</span>
+                            <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Git & GitHub</span>
+                        </div>
+                    </div>
+                        <div>
+                        <h3 class="text-xl font-semibold mb-4">IT & Systems</h3>
+                        <div class="flex flex-wrap justify-center gap-2">
+                            <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">Windows Server</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">WSUS</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">Hardware Support</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">Software Config</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">MS SQL Server</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">Troubleshooting</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="py-16 bg-white rounded-2xl shadow-md my-12 p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-center mb-12">Contact Me</h2>
+                <div class="max-w-2xl mx-auto">
+                    <div class="bg-white p-8 rounded-lg shadow-sm text-center">
+                        <h3 class="text-xl font-semibold mb-3">Let's Connect</h3>
+                        <p class="text-gray-600 mb-6">I'm currently available for new opportunities. Feel free to reach out!</p>
+                        <a href="mailto:inquireryan@gmail.com" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-blue-700 transition duration-300 inline-block">
+                            Email Me
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
 
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white mt-16">
-        <div class="container mx-auto px-6 py-12 text-center">
-            <h2 class="text-3xl font-bold mb-4">Let's Connect</h2>
-            <p class="text-gray-400 mb-6">I'm currently available for new opportunities. Feel free to reach out!</p>
-            <a href="mailto:inquireryan@gmail.com" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-blue-700 transition duration-300 inline-block mb-10">
-                Email Me
-            </a>
-            
-            <div class="flex justify-center space-x-6">
-                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+    <footer id="contact" class="bg-gray-900 text-white mt-16">
+        <div class="container mx-auto px-6 py-12">
+            <!-- Quick Navigation -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center md:text-left">
+                    <h3 class="text-lg font-semibold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition duration-300">Portfolio</a></li>
+                        <li><a href="#experience" class="text-gray-400 hover:text-white transition duration-300">Experience</a></li>
+                        <li><a href="#skills" class="text-gray-400 hover:text-white transition duration-300">Skills</a></li>
+                    </ul>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                    <p class="text-gray-400 mb-4">Data Analyst & Chemical Engineer</p>
+                    <p class="text-gray-400">Transforming data into strategic solutions</p>
+                </div>
+                <div class="text-center md:text-right">
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+                        <li><a href="sitemap.html" class="text-gray-400 hover:text-white transition duration-300">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://linkedin.com/in/rmguidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="LinkedIn Profile">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
                 </a>
-                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <a href="https://github.com/rguid31" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="GitHub Profile">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+                    </svg>
                 </a>
-                <a href="https://unsplash.com/@yourusername" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 9V0h4v9h7v4h-7v11H0V13h10V9z" /></svg>
+                <a href="https://unsplash.com/@ryne_guidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="Unsplash Profile">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M7.5 6.75V0h9v6.75h-9zm9 3.75H24V24H0V10.5h7.5v6.75h9V10.5z"/>
+                    </svg>
                 </a>
-                <a href="https://x.com/yourusername" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+                <a href="https://medium.com/@guidry_ryan" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="Medium Profile">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 .38-.16.85-.44 1.12l-3.13 3.09c-.28.27-.7.27-1 0l-3.13-3.09c-.28-.27-.44-.74-.44-1.12s.16-.85.44-1.12l3.13-3.09c.28-.27.7-.27 1 0l3.13 3.09c.28.27.44.74.44 1.12zM0 12c0 .38.16.85.44 1.12l3.13 3.09c.28.27.7.27 1 0l3.13-3.09c.28-.27.44-.74.44-1.12s-.16-.85-.44-1.12L4.57 7.79c-.28-.27-.7-.27-1 0L.44 10.88C.16 11.15 0 11.62 0 12z"/>
+                    </svg>
                 </a>
-                <a href="https://medium.com/@yourusername" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.62.51l5.42 9.47c.06.1.1.22.1.34v8.83c0 .24-.16.45-.39.52-.06.02-.12.03-.18.03a.5.5 0 01-.4-.18L6.3 13.9V5.62s0-.05-.02-.08L5.62.5zM19.8 4.79l-4.94 4.94c-.1.1-.15.24-.15.39v5.32c0 .28.22.5.5.5a.5.5 0 00.35-.15L21.5 9.87V5.14c0-.28-.22-.5-.5-.5a.5.5 0 00-.35.15zM23.5.51a.5.5 0 00-.5.5v2.88l-3.3 3.3V5.14a.5.5 0 00-1 .08L14.47.51a.5.5 0 00-.86.5l3.86 6.7c.1.18.15.38.15.58v6.98a.5.5 0 001 .08l5.42-9.47c.06-.1.1-.22.1-.34V1.01a.5.5 0 00-.5-.5z"/></svg>
+                <a href="https://x.com/ryne_guidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="X (Twitter) Profile">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
                 </a>
             </div>
-            <p class="text-gray-500 text-sm mt-10">&copy; <span id="year"></span> Your Name. All Rights Reserved.</p>
+
+            <!-- Copyright and Back to Top -->
+            <div class="flex flex-col items-center">
+                <div class="text-gray-400 text-sm mb-4">
+                    <p>&copy; 2025 Ryan Guidry 🦄. All rights reserved 💜.</p>
+                </div>
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="text-gray-400 hover:text-white transition duration-300 flex items-center space-x-1">
+                    <span>Back to Top</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+                    </svg>
+                </button>
+            </div>
         </div>
     </footer>
 
@@ -277,3 +1040,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
