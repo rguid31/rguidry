@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Ryan Guidry</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/svg+xml" href="images/ui/rg-logomark.svg">
+    <link rel="icon" type="image/svg+xml" href="images/ui/rg-logomark.svg" loading="lazy">
     <link rel="stylesheet" href="style.css">
 
     <script type="text/javascript">
@@ -22,7 +22,7 @@
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold text-gray-900">
                 <a href="index.html" class="flex items-center space-x-3">
-                    <img src="images/ui/rg-logomark.svg" alt="RG Logo" class="h-10 rounded-lg">
+                    <img src="images/ui/rg-logomark.svg" alt="RG Logo" class="h-10 rounded-lg" loading="lazy">
                     <span>Ryan Guidry</span>
                 </a>
             </div>
@@ -94,6 +94,9 @@
                         <li>Improve website functionality and user experience</li>
                         <li>Remember your preferences</li>
                     </ul>
+                    <p class="text-gray-600 mb-4">
+                        We partner with Microsoft Clarity and Microsoft Advertising to capture how you use and interact with our website through behavioral metrics, heatmaps, and session replay to improve and market our products/services. Website usage data is captured using first and third-party cookies and other tracking technologies to determine the popularity of products/services and online activity. Additionally, we use this information for site optimization, fraud/security purposes, and advertising. For more information about how Microsoft collects and uses your data, visit the <a href="https://privacy.microsoft.com/en-us/privacystatement" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700">Microsoft Privacy Statement</a>.
+                    </p>
                     <p class="text-gray-600">
                         You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer.
                     </p>
@@ -201,17 +204,12 @@
                 </a>
             </div>
 
-            <!-- Copyright and Back to Top -->
-            <div class="flex flex-col items-center">
-                <div class="text-gray-400 text-sm mb-4">
+            <!-- Copyright -->
+            <div class="flex justify-center items-center mb-4">
+                <div class="text-gray-400 text-sm text-center">
+                    <p class="mb-2">We improve our products and advertising by using Microsoft Clarity to see how you use our website. By using our site, you agree that we and Microsoft can collect and use this data. Our privacy statement <a href="privacy.html" class="text-blue-400 hover:text-white transition duration-300">here</a> has more details.</p>
                     <p>&copy; 2025 Ryan Guidry 🦄. All rights reserved 💜.</p>
                 </div>
-                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="text-gray-400 hover:text-white transition duration-300 flex items-center space-x-1">
-                    <span>Back to Top</span>
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
-                    </svg>
-                </button>
             </div>
         </div>
     </footer>

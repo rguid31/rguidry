@@ -16,3 +16,8 @@ h2 {
 h2:hover {
     color: #2563eb; /* A nice blue shade */
 }
+
+.active-nav-link {
+    color: #3B82F6; /* A shade of blue, matching your existing blue */
+    font-weight: 600; /* Make it a bit bolder */
+}
