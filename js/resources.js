@@ -162,54 +162,53 @@ document.addEventListener("DOMContentLoaded", () => {
       ArrowRight: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>`,
     };
   
-    const grid = document.getElementById("resources-grid");
+    const grid = document.querySelector(".resources-grid");
   
     if (grid) {
-      resources.forEach((resource) => {
-        // Create a list of content items
-        const contentList = resource.content
-          .map(
-            (item) => `
-          <li>
-            <span class="card-list-icon">•</span>
-            <span>${item}</span>
-          </li>
-        `
-          )
-          .join("");
-  
-        // Create the full card HTML
-        const cardHTML = `
-          <div class="card ${resource.color}">
-            <div class="card-header">
-              <div class="card-header-top">
-                <div class="card-icon-title">
-                  <div class="card-icon-wrapper ${resource.iconColor}">
-                    ${icons[resource.icon]}
-                  </div>
-                  <span class="card-badge">
-                    ${resource.id === 9 ? "BONUS" : `Topic ${resource.id}`}
-                  </span>
+        // Create all cards HTML at once
+        const cardsHTML = resources.map(resource => {
+            // Create a list of content items
+            const contentList = resource.content
+                .map(item => `
+                    <li>
+                        <span class="card-list-icon">•</span>
+                        <span>${item}</span>
+                    </li>
+                `)
+                .join("");
+    
+            // Create the card HTML
+            return `
+                <div class="card ${resource.color}">
+                    <div class="card-header">
+                        <div class="card-header-top">
+                            <div class="card-icon-title">
+                                <div class="card-icon-wrapper ${resource.iconColor}">
+                                    ${icons[resource.icon]}
+                                </div>
+                                <span class="card-badge">
+                                    ${resource.id === 9 ? "BONUS" : `Topic ${resource.id}`}
+                                </span>
+                            </div>
+                            <span class="card-external-link">
+                                ${icons.ExternalLink}
+                            </span>
+                        </div>
+                        <h3 class="card-title">${resource.title}</h3>
+                        <p class="card-description">${resource.description}</p>
+                    </div>
+                    <div class="card-content">
+                        <ul>${contentList}</ul>
+                        <button class="card-button" onclick="location.href='resources/${resource.path}'">
+                            Explore Resources
+                            <span class="card-button-icon">•</span>
+                        </button>
+                    </div>
                 </div>
-                <span class="card-external-link">
-                  ${icons.ExternalLink}
-                </span>
-              </div>
-              <h3 class="card-title">${resource.title}</h3>
-              <p class="card-description">${resource.description}</p>
-            </div>
-            <div class="card-content">
-              <ul>${contentList}</ul>
-              <button class="card-button" onclick="location.href='resources/${resource.path}'">
-                Explore Resources
-                <span class="card-button-icon">•</span>
-              </button>
-            </div>
-          </div>
-        `;
-  
-        // Add the new card to the grid
-        grid.innerHTML += cardHTML;
-      });
+            `;
+        }).join("");
+
+        // Add all cards to the grid at once
+        grid.innerHTML = cardsHTML;
     }
   });
