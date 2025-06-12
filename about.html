@@ -17,6 +17,9 @@
     <!-- Link to your stylesheet -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- Add main.js for navigation and scroll effects -->
+    <script src="js/main.js" defer></script>
+
     <!-- Add this in the head section, after the existing stylesheets -->
     <style>
         /* Remove all carousel-related styles */
@@ -182,77 +185,44 @@
             </div>
         </section>
 
-        <!-- Values & Approach Section -->
-        <section class="max-w-6xl mx-auto mb-16">
+        <!-- My Values & Approach Section -->
+        <section class="max-w-6xl mx-auto mb-16" aria-labelledby="values-heading">
             <div class="bg-white rounded-2xl shadow-md p-8 md:p-12">
                 <div class="grid md:grid-cols-2 gap-8 mb-8">
-                    <div>
-                        <h2 class="text-3xl font-bold mb-6">My Values & Approach</h2>
+                    <article>
+                        <header>
+                            <h2 id="values-heading" class="text-3xl font-bold mb-6">My Values & Approach</h2>
+                        </header>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div>
+                            <section>
                                 <h3 class="text-xl font-semibold mb-4">Core Values</h3>
-                                <ul class="space-y-4">
+                                <ul class="space-y-4" role="list">
                                     <li class="flex items-start">
-                                        <span class="text-blue-600 mr-2">•</span>
+                                        <span class="text-blue-600 mr-2" aria-hidden="true">•</span>
                                         <div>
                                             <strong class="text-gray-900">Analytical Excellence</strong>
                                             <p class="text-gray-600">Commitment to thorough analysis and data-driven decision making</p>
                                         </div>
                                     </li>
                                     <li class="flex items-start">
-                                        <span class="text-blue-600 mr-2">•</span>
+                                        <span class="text-blue-600 mr-2" aria-hidden="true">•</span>
                                         <div>
                                             <strong class="text-gray-900">Continuous Learning</strong>
                                             <p class="text-gray-600">Dedication to staying current with emerging technologies and methodologies</p>
                                         </div>
                                     </li>
-                                    <li class="flex items-start">
-                                        <span class="text-blue-600 mr-2">•</span>
-                                        <div>
-                                            <strong class="text-gray-900">Collaborative Innovation</strong>
-                                            <p class="text-gray-600">Belief in the power of teamwork and diverse perspectives</p>
-                                        </div>
-                                    </li>
                                 </ul>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold mb-4">Problem-Solving Approach</h3>
-                                <ul class="space-y-4">
-                                    <li class="flex items-start">
-                                        <span class="text-blue-600 mr-2">•</span>
-                                        <div>
-                                            <strong class="text-gray-900">Systematic Analysis</strong>
-                                            <p class="text-gray-600">Breaking down complex problems into manageable components</p>
-                                        </div>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-blue-600 mr-2">•</span>
-                                        <div>
-                                            <strong class="text-gray-900">Data-Driven Insights</strong>
-                                            <p class="text-gray-600">Using quantitative and qualitative data to inform decisions</p>
-                                        </div>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-blue-600 mr-2">•</span>
-                                        <div>
-                                            <strong class="text-gray-900">Strategic Implementation</strong>
-                                            <p class="text-gray-600">Focusing on practical, scalable solutions that drive results</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                            </section>
                         </div>
-                    </div>
-                    <div class="relative">
-                        <!-- Replace this placeholder with your team/work photo -->
-                        <!-- Recommended size: 800x600px -->
-                        <!-- Save your photo as: images/about/team-photo.jpg -->
+                    </article>
+                    <figure class="relative">
                         <img 
                             src="images/about/team-photo.jpg" 
                             alt="Team Collaboration" 
-                            class="w-full h-full object-cover rounded-2xl" loading="lazy"
+                            class="w-full h-full object-cover rounded-2xl" 
+                            loading="lazy"
                         >
-                    </div>
+                    </figure>
                 </div>
             </div>
         </section>

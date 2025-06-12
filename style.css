@@ -1,23 +1,308 @@
-/* Custom Styles */
+/* Base Styles and Reset */
+/* -------------------- */
 body {
     font-family: 'Inter', sans-serif;
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+    padding-top: 4.5rem;  /* Adjust based on nav height */
 }
 
-/* Smooth scrolling for anchor links */
+/* Smooth Scrolling and Animations */
+/* ----------------------------- */
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
 }
 
-/* Simple animation for section headers */
-h2 {
+/* Section Header Animations */
+.section__title {
     transition: color 0.3s ease-in-out;
 }
 
-h2:hover {
-    color: #2563eb; /* A nice blue shade */
+.section__title:hover {
+    color: #2563eb; /* Blue highlight on hover for section headers */
 }
 
-.active-nav-link {
-    color: #3B82F6; /* A shade of blue, matching your existing blue */
-    font-weight: 600; /* Make it a bit bolder */
+/* Navigation Styles */
+/* --------------- */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: rgba(255, 255, 255, 0.85);  /* More transparent white */
+    backdrop-filter: blur(12px);  /* Stronger blur effect */
+    -webkit-backdrop-filter: blur(12px);  /* For Safari support */
+    border-bottom: 1px solid rgba(229, 231, 235, 0.5);  /* More transparent border */
+    transition: all 0.3s ease;
+    --scroll-progress: 0;
+    --scroll-transform: scaleX(0);
+}
+
+/* Progress bar container */
+.nav::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;  /* Position it at the bottom of the nav */
+    left: 0;
+    width: 100%;
+    height: 2px;  /* Height of the progress bar */
+    background: linear-gradient(to right, #2563EB, #4F46E5);  /* Gradient color */
+    transform-origin: 0 50%;  /* Scale from left to right */
+    transform: var(--scroll-transform);
+    transition: transform 0.1s ease-out;  /* Smooth transition for progress updates */
+    will-change: transform;  /* Optimize for animations */
+}
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.nav__link {
+    color: #4B5563;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav__link:hover {
+    color: #2563EB;
+}
+
+.nav__link--contact {
+    background-color: #2563EB;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.nav__link--contact:hover {
+    background-color: #1D4ED8;
+    color: white;
+}
+
+/* Mobile Menu Animation and Layout */
+/* ----------------------------- */
+.nav-mobile {
+    background-color: white;
+    border-top: 1px solid #e5e7eb;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-mobile--hidden {
+    display: none;
+}
+
+/* Responsive Design and Mobile Optimizations */
+/* ---------------------------------------- */
+@media (max-width: 768px) {
+    /* Touch Target Optimization */
+    /* Ensures all interactive elements meet minimum size requirements for touch */
+    .btn,
+    .nav__link {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Typography Scaling */
+    /* Adjusts text sizes for better readability on mobile */
+    .hero__title {
+        font-size: 1.75rem;
+        line-height: 2rem;
+    }
+
+    .section__title {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+    }
+
+    .section__subtitle {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+
+    /* Container Spacing */
+    /* Adds consistent padding for mobile containers */
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Section Spacing */
+    /* Improves vertical rhythm between sections on mobile */
+    .section {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Responsive Images */
+    /* Ensures images scale properly on mobile */
+    .img--responsive {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Mobile Color Contrast */
+    /* Enhances readability and accessibility on mobile */
+    .btn--primary {
+        background-color: #2563eb;
+    }
+
+    .text--secondary {
+        color: #4b5563;
+    }
+
+    /* Touch Feedback */
+    /* Provides visual feedback for touch interactions */
+    .btn:active,
+    .nav__link:active {
+        opacity: 0.8;
+    }
+}
+
+/* Layout Prevention */
+/* --------------- */
+/* Prevents horizontal scroll on mobile devices */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Improve form elements on mobile */
+input, textarea, select {
+    font-size: 16px; /* Prevents iOS zoom on focus */
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+}
+
+/* Add safe area insets for modern mobile browsers */
+@supports (padding: max(0px)) {
+    body {
+        padding-left: min(0vmin, env(safe-area-inset-left));
+        padding-right: min(0vmin, env(safe-area-inset-right));
+        padding-bottom: min(0vmin, env(safe-area-inset-bottom));
+    }
+}
+
+/* Button Styles */
+/* ----------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn--primary {
+    background-color: #3B82F6;
+    color: white;
+}
+
+.btn--primary:hover {
+    background-color: #2563eb;
+}
+
+.btn--secondary {
+    background-color: #F3F4F6;
+    color: #1F2937;
+}
+
+.btn--secondary:hover {
+    background-color: #E5E7EB;
+}
+
+/* Card Styles */
+/* --------- */
+.card {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card__content {
+    padding: 1.5rem;
+}
+
+.card__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1F2937;
+    margin-bottom: 0.5rem;
+}
+
+.card__description {
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/* Modal Styles */
+/* ---------- */
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.modal--active {
+    display: flex;
+}
+
+.modal__content {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal__header {
+    margin-bottom: 1rem;
+}
+
+.modal__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1F2937;
+}
+
+.modal__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem;
+    color: #6B7280;
+    transition: color 0.3s ease;
+}
+
+.modal__close:hover {
+    color: #1F2937;
+}
+
+/* Optional: Add shadow when scrolling */
+.nav--scrolled {
+    background-color: rgba(255, 255, 255, 0.95);  /* Slightly more opaque when scrolled */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }

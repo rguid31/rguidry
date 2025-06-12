@@ -18,6 +18,9 @@
 
         <link rel="stylesheet" href="css/resources.css">
     
+        <!-- Add main.js for navigation and scroll effects -->
+        <script src="js/main.js" defer></script>
+
         <script src="js/resources.js" defer></script>
 
         <script type="text/javascript">
@@ -48,10 +51,25 @@
                 <a href="resources.html" class="text-gray-600 hover:text-blue-600 transition duration-300">Resources</a>
                 <a href="mailto:inquireryan@gmail.com" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">Contact</a>
             </div>
-            <div class="md:hidden">
-                <!-- Mobile Menu Button can be added here -->
-            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Toggle mobile menu">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path class="mobile-menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path class="mobile-menu-close hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
         </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-100">
+            <div class="container mx-auto px-6 py-4 space-y-4">
+                <a href="index.html#about" class="block py-2 text-gray-600 hover:text-blue-600 transition duration-300">About</a>
+                <a href="index.html#portfolio" class="block py-2 text-gray-600 hover:text-blue-600 transition duration-300">Portfolio</a>
+                <a href="index.html#experience" class="block py-2 text-gray-600 hover:text-blue-600 transition duration-300">Experience</a>
+                <a href="index.html#skills" class="block py-2 text-gray-600 hover:text-blue-600 transition duration-300">Skills</a>
+                <a href="resources.html" class="block py-2 text-gray-600 hover:text-blue-600 transition duration-300">Resources</a>
+                <a href="mailto:inquireryan@gmail.com" class="block py-2 bg-blue-600 text-white px-4 rounded-lg hover:bg-blue-700 transition duration-300 text-center">Contact</a>
+            </div>
+        </div>
     </header>
 
     <main class="container mx-auto px-6">
@@ -75,27 +93,15 @@
         </section>
 
         <!-- Resources Grid Section -->
-        <section class="resources-grid-container">
+        <section class="resources-grid-container" aria-labelledby="resources-heading">
             <div class="max-w-7xl">
-                <h2 style="font-size: 1.875rem; font-weight: 700; color: #1f2937; margin-bottom: 2rem; text-align: center;">Ready to Start Exploring?</h2>
-                <p style="font-size: 1rem; color: #4b5563; text-align: center; margin-bottom: 3rem;">Each resource has been handpicked and tested. Your next breakthrough is just one click away.</p>
-                <div id="resources-grid" class="resources-grid">
+                <header>
+                    <h2 id="resources-heading" class="text-3xl font-bold text-center mb-4">Ready to Start Exploring?</h2>
+                    <p class="text-gray-600 text-center mb-8">Each resource has been handpicked and tested. Your next breakthrough is just one click away.</p>
+                </header>
+                <nav id="resources-grid" class="resources-grid" aria-label="Resource categories">
                     <!-- Resource cards will be injected here by JavaScript -->
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="max-w-7xl cta-content">
-                <h2 class="cta-title">Unlock Your Potential. Start Your Journey.</h2>
-                <p class="cta-description">Dive into my curated resources and discover endless possibilities tailored for your growth.</p>
-                <button class="cta-button">
-                    Begin your exploration
-                    <span class="cta-button-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                    </span>
-                </button>
+                </nav>
             </div>
         </section>
 
@@ -115,6 +121,7 @@
                         <li><a href="index.html#portfolio" class="text-gray-400 hover:text-white transition duration-300">Portfolio</a></li>
                         <li><a href="index.html#experience" class="text-gray-400 hover:text-white transition duration-300">Experience</a></li>
                         <li><a href="index.html#skills" class="text-gray-400 hover:text-white transition duration-300">Skills</a></li>
+                        <li><a href="resources.html" class="text-white">Resources</a></li>
                     </ul>
                 </div>
                 <div class="text-center">
@@ -155,7 +162,6 @@
                     <ul class="space-y-2">
                         <li><a href="privacy.html" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
                         <li><a href="sitemap.html" class="text-gray-400 hover:text-white transition duration-300">Sitemap</a></li>
-                        <li><a href="resources.html" class="text-gray-400 hover:text-white transition duration-300">Resources</a></li>
                     </ul>
                 </div>
             </div>
@@ -170,8 +176,44 @@
         </div>
     </footer>
 
-    <!-- Link to your main script file -->
+    <!-- Scripts -->
     <script src="script.js"></script>
+    <script>
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuIcon.classList.toggle('hidden');
+            mobileMenuClose.classList.toggle('hidden');
+            
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = mobileMenu.classList.contains('hidden') ? '' : 'hidden';
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuIcon.classList.remove('hidden');
+                mobileMenuClose.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuIcon.classList.remove('hidden');
+                mobileMenuClose.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
 
 </body>
 </html>

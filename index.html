@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Ryan Guidry - Data Analyst & Chemical Engineer">
     <title>Ryan Guidry | Engineering & Data Analyst Portfolio</title>
     
     <!-- Tailwind CSS -->
@@ -16,6 +18,9 @@
     <!-- Link to your new stylesheet -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- Add main.js for navigation and scroll effects -->
+    <script src="js/main.js" defer></script>
+
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -27,8 +32,8 @@
 <body class="bg-gray-50 text-gray-800">
 
     <!-- Header & Navigation -->
-    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <header class="nav">
+        <nav class="nav__container">
             <div class="text-2xl font-bold text-gray-900">
                 <!-- Logo and Name -->
                 <a href="index.html" class="flex items-center space-x-3">
@@ -37,15 +42,30 @@
                 </a>
             </div>
             <div class="hidden md:flex items-center space-x-6">
-                <a href="index.html#about" class="text-gray-600 hover:text-blue-600 transition duration-300">About</a>
-                <a href="index.html#portfolio" class="text-gray-600 hover:text-blue-600 transition duration-300">Portfolio</a>
-                <a href="index.html#experience" class="text-gray-600 hover:text-blue-600 transition duration-300">Experience</a>
-                <a href="index.html#skills" class="text-gray-600 hover:text-blue-600 transition duration-300">Skills</a>
-                <a href="resources.html" class="text-gray-600 hover:text-blue-600 transition duration-300">Resources</a>
-                <a href="mailto:inquireryan@gmail.com" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">Contact</a>
+                <a href="index.html#about" class="nav__link">About</a>
+                <a href="index.html#portfolio" class="nav__link">Portfolio</a>
+                <a href="index.html#experience" class="nav__link">Experience</a>
+                <a href="index.html#skills" class="nav__link">Skills</a>
+                <a href="resources.html" class="nav__link">Resources</a>
+                <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact">Contact</a>
             </div>
-            <div class="md:hidden">
-                <!-- Mobile Menu Button can be added here -->
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Toggle mobile menu">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path class="mobile-menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path class="mobile-menu-close hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <nav id="mobile-menu" class="nav-mobile nav-mobile--hidden md:hidden" aria-label="Mobile navigation">
+            <div class="container mx-auto px-6 py-4 space-y-4">
+                <a href="index.html#about" class="nav__link block py-2">About</a>
+                <a href="index.html#portfolio" class="nav__link block py-2">Portfolio</a>
+                <a href="index.html#experience" class="nav__link block py-2">Experience</a>
+                <a href="index.html#skills" class="nav__link block py-2">Skills</a>
+                <a href="resources.html" class="nav__link block py-2">Resources</a>
+                <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact block py-2 text-center">Contact</a>
             </div>
         </nav>
     </header>
@@ -84,87 +104,70 @@
             <!-- Rest of your content -->
 
             <!-- About Me Section -->
-        <section id="about" class="py-20 bg-white rounded-2xl shadow-md my-12 p-8 md:p-16">
-                <div class="max-w-6xl mx-auto">
-                    <!-- Headshot Image - Centered at top -->
-                    <div class="flex justify-center mb-12">
-                        <img src="images/general/profile-photo.jpg" alt="Ryan Guidry's Headshot" 
-                             class="rounded-full shadow-lg w-72 h-72 md:w-96 md:h-96 object-cover border-4 border-white" loading="lazy">
-                </div>
+        <section id="about" class="py-16 bg-white rounded-2xl shadow-md my-12 p-8 md:p-12">
+            <div class="max-w-6xl mx-auto">
+                <!-- Headshot Image - Centered at top -->
+                <header class="flex justify-center mb-12">
+                    <img src="images/general/profile-photo.jpg" 
+                         alt="Ryan Guidry's Headshot" 
+                         class="rounded-full shadow-lg w-72 h-72 md:w-96 md:h-96 object-cover border-4 border-white" 
+                         loading="lazy">
+                </header>
                     
-                    <!-- About Me Text - Full width below image -->
-                    <div class="text-center max-w-3xl mx-auto">
-                    <h2 class="text-3xl font-bold mb-6">About Me</h2>
-                        <p class="text-gray-600 leading-relaxed mb-4">
-                            I'm a results-driven professional who combines chemical engineering expertise with cutting-edge data analysis to deliver impactful solutions. My journey from engineering to data science has equipped me with a unique perspective: the ability to translate complex technical concepts into actionable business insights.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed mb-4">
-                            What sets me apart? I bring together:
-                        </p>
-                        <ul class="text-gray-600 leading-relaxed list-disc list-inside space-y-2 mb-4">
-                            <li>Engineering precision and systematic problem-solving</li>
-                            <li>Advanced data analysis and visualization expertise</li>
-                            <li>Hands-on IT support and technical implementation experience</li>
-                            <li>A passion for transforming raw data into strategic insights</li>
-                        </ul>
-                        <p class="text-gray-600 leading-relaxed mb-8">
-                            Whether you're looking to optimize processes, uncover hidden patterns in your data, or implement innovative technical solutions, I'm here to help turn business challenges into opportunities.
-                        </p>
-                        <!-- Centered button -->
-                        <div class="flex justify-center">
-                            <a href="about.html" 
-                               class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 shadow-md hover:shadow-lg text-lg">
-                                Deeper Dive into My Story →
-                            </a>
-                        </div>
-                </div>
+                <!-- About Me Content -->
+                <article class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl font-bold mb-8">About Me</h2>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        I'm a results-driven professional who combines chemical engineering expertise with cutting-edge data analysis to deliver impactful solutions.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        My journey from engineering to data science has equipped me with a unique perspective: the ability to translate complex technical concepts into actionable business insights.
+                    </p>
+                    <h3 class="text-2xl font-bold mb-6">What sets me apart? I bring together:</h3>
+                    <ul class="text-gray-600 leading-relaxed list-disc list-inside space-y-3 mb-6">
+                        <li>Engineering precision and systematic problem-solving</li>
+                        <li>Advanced data analysis and visualization expertise</li>
+                        <li>Hands-on IT support and technical implementation experience</li>
+                        <li>A passion for transforming raw data into strategic insights</li>
+                    </ul>
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        Whether you're looking to optimize processes, uncover hidden patterns in your data, or implement innovative technical solutions, I'm here to help turn business challenges into opportunities.
+                    </p>
+                    <!-- Call to Action -->
+                    <nav class="flex justify-center">
+                        <a href="about.html" 
+                           class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 shadow-md hover:shadow-lg text-lg">
+                            Deeper Dive into My Story →
+                        </a>
+                    </nav>
+                </article>
             </div>
         </section>
 
 
         <!-- Education -->
-            <section id="education" class="py-16 bg-white rounded-2xl shadow-md my-12 p-8 md:p-12">
-                <h2 class="text-3xl font-bold text-center mb-12">Education</h2>
-                <div class="max-w-6xl mx-auto">
-                    <!-- LSU Mathematics -->
-                    <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
-                        <div class="flex items-center space-x-4 mb-4">
-                            <button class="group bg-white rounded-xl shadow-md p-4.5 hover:shadow-lg transition-shadow duration-200">
-                                <div class="aspect-square w-32 flex items-center justify-center">
-                                    <img src="images/education/lsu.png" alt="LSU A&M Logo" 
-                                         class="w-full h-full object-contain bg-white rounded-xl p-2 shadow-sm group-hover:scale-105 transition-transform duration-200" loading="lazy">
-                                </div>
-                            </button>
-                            <div>
-                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Bachelor of Science in Mathematics</h3>
-                                <p class="text-blue-600 text-lg mb-1">Louisiana State University A&M</p>
-                                <p class="text-gray-600 mb-2">Baton Rouge, Louisiana</p>
-                                <p class="text-gray-500">Attended: Fall 2025 - Present</p>
-                                <p class="text-gray-500">In Progress</p>
-                            </div>
-                        </div>
+        <section id="education" class="py-20 bg-white rounded-2xl shadow-md my-12 p-8 md:p-16">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-8">Education</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4">Louisiana State University</h3>
+                        <p class="text-gray-600 mb-2">Bachelor of Science in Chemical Engineering</p>
+                        <p class="text-gray-500">2014 - 2018</p>
                     </div>
-                    <!-- LSU Chemical Engineering -->
-                    <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
-                        <div class="flex items-center space-x-4 mb-4">
-                            <button class="group bg-white rounded-xl shadow-md p-4.5 hover:shadow-lg transition-shadow duration-200">
-                                <div class="aspect-square w-32 flex items-center justify-center">
-                                    <img src="images/education/lsu.png" alt="LSU A&M Logo" 
-                                         class="w-full h-full object-contain bg-white rounded-xl p-2 shadow-sm group-hover:scale-105 transition-transform duration-200" loading="lazy">
-                                </div>
-                            </button>
-                            <div>
-                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Bachelor of Science in Chemical Engineering</h3>
-                                <p class="text-blue-600 text-lg mb-1">Louisiana State University A&M</p>
-                                <p class="text-gray-600 mb-2">Baton Rouge, Louisiana</p>
-                                <p class="text-gray-500">Attended: Aug 2014 – Dec 2023</p>
-                                <p class="text-gray-500">Incomplete (Credit Hours: 131/139)</p>
-                            </div>
-                        </div>
+                    <div class="relative">
+                        <img 
+                            src="images/education/lsu-campus.jpg" 
+                            alt="Louisiana State University Campus" 
+                            class="w-full h-full object-cover rounded-2xl" 
+                            loading="lazy"
+                        >
                     </div>
+                </div>
             </div>
         </section>
-        
+
+
         <!-- Certifications -->
         <section id="certifications" class="py-16 bg-gray-100 rounded-2xl my-12 p-8 md:p-12">
             <h2 class="text-3xl font-bold text-center mb-8">Certifications</h2>
@@ -219,7 +222,7 @@
                             </button>
                             <h3 class="text-xl font-semibold text-gray-900 mb-2">Basic Orientation Plus (BOP)</h3>
                             <p class="text-blue-600 mb-1">OSHA / Gulf South Safety Council</p>
-                            <p class="text-gray-500">Issued: 2023</p>
+                            <p class="text-gray-500 mb-4">Issued: 2023</p>
                         </div>
                     </div>
                     <div class="bg-white p-8 rounded-xl shadow-md">
@@ -239,67 +242,67 @@
         </section>
 
         <!-- Portfolio Section -->
-            <section id="portfolio" class="py-16 bg-white rounded-2xl shadow-md my-12 p-8 md:p-12">
+        <section id="portfolio" class="py-16 bg-white rounded-2xl shadow-md my-12 p-8 md:p-12">
             <h2 class="text-3xl font-bold text-center mb-12">Portfolio</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
                 <!-- Portfolio Item 1 -->
-                    <button onclick="openModal('interactive-media-modal')" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 text-left">
-                        <div class="relative overflow-hidden">
-                            <img src="images/portfolio/interactive-media.png" alt="Interactive Media Project Screenshot" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                                <p class="text-white p-4 text-sm">Click to view details</p>
-                            </div>
+                <button onclick="openModal('interactive-media-modal')" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 text-left flex flex-col">
+                    <div class="relative overflow-hidden w-full">
+                        <img src="images/portfolio/interactive-media.png" alt="Interactive Media Project Screenshot" class="w-full h-48 md:h-56 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <p class="text-white p-4 text-sm">Click to view details</p>
                         </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Cross-disciplinary Interactive Media Portfolio</h3>
-                            <p class="text-gray-600 mb-4 line-clamp-3">Engineered a dynamic, responsive web platform that seamlessly integrates creative content with technical functionality. Leveraged modern web technologies to create an immersive user experience, resulting in a 15% increase in web traffic and 20% higher engagement.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Web Development</span>
-                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">UI/UX Design</span>
-                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Data Analytics</span>
-                            </div>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Cross-disciplinary Interactive Media Portfolio</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">Engineered a dynamic, responsive web platform that seamlessly integrates creative content with technical functionality. Leveraged modern web technologies to create an immersive user experience, resulting in a 15% increase in web traffic and 20% higher engagement.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Web Development</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">UI/UX Design</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Data Analytics</span>
                         </div>
-                    </button>
+                    </div>
+                </button>
 
-                    <!-- Portfolio Item 2 -->
-                    <button onclick="openModal('automation-modal')" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 text-left">
-                        <div class="relative overflow-hidden">
-                            <img src="images/portfolio/automation.png" alt="IT Automation Project Screenshot" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                                <p class="text-white p-4 text-sm">Click to view details</p>
-                            </div>
+                <!-- Portfolio Item 2 -->
+                <button onclick="openModal('automation-modal')" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 text-left flex flex-col">
+                    <div class="relative overflow-hidden w-full">
+                        <img src="images/portfolio/automation.png" alt="IT Automation Project Screenshot" class="w-full h-48 md:h-56 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <p class="text-white p-4 text-sm">Click to view details</p>
                         </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">IT Automation: Windows Server Update Service</h3>
-                            <p class="text-gray-600 mb-4 line-clamp-3">Led initiative to automate Windows updates across 1200 virtual machines by establishing a WSUS, streamlining enforcement of security measures and reducing manual labor.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">IT Infrastructure</span>
-                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Automation</span>
-                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">System Administration</span>
-                            </div>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold mb-2">IT Automation: Windows Server Update Service</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">Led initiative to automate Windows updates across 1200 virtual machines by establishing a WSUS, streamlining enforcement of security measures and reducing manual labor.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">IT Infrastructure</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Automation</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">System Administration</span>
                         </div>
-                    </button>
+                    </div>
+                </button>
 
-                    <!-- Portfolio Item 3 -->
-                    <button onclick="openModal('data-analytics-modal')" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 text-left">
-                        <div class="relative overflow-hidden">
-                            <img src="images/portfolio/data-analytics.png" alt="Data Analytics Project Screenshot" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                                <p class="text-white p-4 text-sm">Click to view details</p>
-                            </div>
+                <!-- Portfolio Item 3 -->
+                <button onclick="openModal('data-analytics-modal')" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 text-left flex flex-col">
+                    <div class="relative overflow-hidden w-full">
+                        <img src="images/portfolio/data-analytics.png" alt="Data Analytics Project Screenshot" class="w-full h-48 md:h-56 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <p class="text-white p-4 text-sm">Click to view details</p>
                         </div>
-                    <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Production Cost Analysis via Plant Data</h3>
-                            <p class="text-gray-600 mb-4 line-clamp-3">Utilized Pi ProcessBook and Pi DataLink to acquire and analyze plant data, correlating trends between acid neutralization and annual production costs to identify inefficiencies.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Data Analysis</span>
-                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Process Optimization</span>
-                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Cost Analysis</span>
-                            </div>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Production Cost Analysis via Plant Data</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">Utilized Pi ProcessBook and Pi DataLink to acquire and analyze plant data, correlating trends between acid neutralization and annual production costs to identify inefficiencies.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Data Analysis</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Process Optimization</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Cost Analysis</span>
                         </div>
-                    </button>
-                </div>
-            </section>
+                    </div>
+                </button>
+            </div>
+        </section>
 
             <!-- Portfolio Modals -->
             <div id="interactive-media-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
@@ -577,8 +580,8 @@
 
                 <!-- Experience Modals -->
                 <!-- Outlier AI Modal -->
-                <div id="outlier-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                <div id="outlier-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'outlier-modal')">
+                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
                         <div class="flex justify-between items-start mb-6">
                             <div class="flex items-center gap-4">
                                 <img src="images/experience/professional/outlier-ai.png" alt="Outlier AI Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
@@ -603,8 +606,8 @@
                 </div>
 
                 <!-- Tracerco Modal -->
-                <div id="tracerco-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                <div id="tracerco-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'tracerco-modal')">
+                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
                         <div class="flex justify-between items-start mb-6">
                             <div class="flex items-center gap-4">
                                 <img src="images/experience/professional/tracerco.png" alt="Tracerco Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
@@ -628,8 +631,8 @@
                 </div>
 
                 <!-- Emerson Modal -->
-                <div id="emerson-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                <div id="emerson-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'emerson-modal')">
+                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
                         <div class="flex justify-between items-start mb-6">
                             <div class="flex items-center gap-4">
                                 <img src="images/experience/professional/emerson.png" alt="Emerson Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
@@ -654,8 +657,8 @@
                 </div>
 
                 <!-- TotalEnergies Modal -->
-                <div id="total-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                <div id="total-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'total-modal')">
+                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
                         <div class="flex justify-between items-start mb-6">
                             <div class="flex items-center gap-4">
                                 <img src="images/experience/professional/total.png" alt="TotalEnergies Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
@@ -680,8 +683,8 @@
                 </div>
 
                 <!-- DWL Technology Modal -->
-                <div id="dwl-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                <div id="dwl-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'dwl-modal')">
+                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
                         <div class="flex justify-between items-start mb-6">
                             <div class="flex items-center gap-4">
                                 <img src="images/experience/professional/dwl-logo.png" alt="DWL Technology Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
@@ -733,8 +736,8 @@
                 </div>
 
                 <!-- SCPPS Modal -->
-                <div id="scpps-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                <div id="scpps-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'scpps-modal')">
+                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
                         <div class="flex justify-between items-start mb-6">
                             <div class="flex items-center gap-4">
                                 <img src="images/experience/professional/scpps.jpg" alt="SCPPS Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
@@ -758,8 +761,8 @@
                 </div>
 
                 <!-- ACBL Modal -->
-                <div id="acbl-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                <div id="acbl-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'acbl-modal')">
+                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
                         <div class="flex justify-between items-start mb-6">
                             <div class="flex items-center gap-4">
                                 <img src="images/experience/professional/acbl.png" alt="ACBL Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
@@ -783,8 +786,8 @@
                 </div>
 
                 <!-- Cornerstone Chemical Modal -->
-                <div id="cornerstone-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                <div id="cornerstone-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'cornerstone-modal')">
+                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
                         <div class="flex justify-between items-start mb-6">
                             <div class="flex items-center gap-4">
                                 <img src="images/experience/professional/cornerstone.png" alt="Cornerstone Chemical Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
@@ -810,8 +813,8 @@
                 </div>
 
                 <!-- New Orleans Original Daiquiris Modal -->
-                <div id="daiquiris-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                <div id="daiquiris-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'daiquiris-modal')">
+                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
                         <div class="flex justify-between items-start mb-6">
                             <div class="flex items-center gap-4">
                                 <img src="images/experience/professional/daiquiris.png" alt="New Orleans Original Daiquiris Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
@@ -834,8 +837,8 @@
                 </div>
 
                 <!-- Georgia-Pacific Modal -->
-                <div id="gp-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                <div id="gp-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'gp-modal')">
+                    <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
                         <div class="flex justify-between items-start mb-6">
                             <div class="flex items-center gap-4">
                                 <img src="images/experience/professional/gp.png" alt="Georgia-Pacific Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
@@ -880,59 +883,11 @@
                             <li>Organized and filed documents into computer databases and physical libraries for easy access.</li>
                         </ul>
                     </div>
-            </div>
+                </div>
+
         </section>
 
         <!-- Volunteer Experience Section -->
-            <section id="volunteer" class="py-16 bg-white rounded-2xl shadow-md my-12 p-8 md:p-12">
-                <h2 class="text-3xl font-bold text-center mb-12">Volunteer Experience</h2>
-                <div class="space-y-8 max-w-7xl mx-auto">
-                    <!-- LANDONi Music -->
-                    <div class="bg-white rounded-xl shadow-lg p-6">
-                        <div class="flex items-center gap-6 mb-4">
-                            <button class="group bg-white rounded-xl shadow-md p-4.5 hover:shadow-lg transition-shadow duration-200">
-                                <div class="aspect-square w-32 flex items-center justify-center">
-                                    <img src="images/experience/volunteer/landoni.png" alt="LANDONi Music Logo" 
-                                         class="w-full h-full object-contain bg-white rounded-xl p-2 shadow-sm group-hover:scale-105 transition-transform duration-200">
-                                </div>
-                            </button>
-                            <div>
-                                <h3 class="text-2xl font-bold text-gray-900">Creative Marketing & Brand Development Specialist</h3>
-                                <p class="text-lg text-gray-700">LANDONi Music</p>
-                                <p class="text-gray-600">New Orleans, LA | March 2020 – March 2022</p>
-                            </div>
-                        </div>
-                        <ul class="list-disc list-inside space-y-3 text-gray-700">
-                            <li>Designed and launched an interactive media portfolio website, increasing web traffic by 15% and audience engagement by 20%.</li>
-                            <li>Managed online presence across social media and streaming platforms, boosting followers by 35% and streaming revenue by 20%.</li>
-                            <li>Oversaw social media strategy, content creation, artist branding, album artwork design, and merchandise/event management, enhancing overall revenue.</li>
-                            <li>Led a COVID-19 relief fundraising campaign (custom mask sales donated to Direct Relief), increasing brand awareness and community engagement.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Google Local Guide -->
-                    <div class="bg-white rounded-xl shadow-lg p-6">
-                        <div class="flex items-center gap-6 mb-4">
-                            <button class="group bg-white rounded-xl shadow-md p-4.5 hover:shadow-lg transition-shadow duration-200">
-                                <div class="aspect-square w-32 flex items-center justify-center">
-                                    <img src="images/experience/volunteer/google-maps.png" alt="Google Maps Logo" 
-                                         class="w-full h-full object-contain bg-white rounded-xl p-2 shadow-sm group-hover:scale-105 transition-transform duration-200">
-                                </div>
-                            </button>
-                            <div>
-                                <h3 class="text-2xl font-bold text-gray-900">Local Guide Level 5</h3>
-                                <p class="text-lg text-gray-700">Google</p>
-                                <p class="text-gray-600">Remote | 2019 – Present</p>
-                            </div>
-                </div>
-                        <ul class="list-disc list-inside space-y-3 text-gray-700">
-                            <li>Attained Level 5 status by consistently contributing comprehensive reviews, photos, and updates on local businesses, enhancing Google Maps user experience, accuracy, and discoverability.</li>
-                            <li>Leveraged in-depth local knowledge to consistently contribute high-quality content as a Level 5 Google Local Guide, resulting in improved accuracy and discoverability of local establishments on Google Maps.</li>
-                        </ul>
-                </div>
-             </div>
-        </section>
-
         <!-- Skills Section -->
         <section id="skills" class="py-16 bg-gray-100 rounded-2xl my-12 p-8 md:p-12">
                 <h2 class="text-3xl font-bold text-center mb-12">Technical Skills</h2>
@@ -1018,6 +973,7 @@
                         <li><a href="index.html#portfolio" class="text-gray-400 hover:text-white transition duration-300">Portfolio</a></li>
                         <li><a href="index.html#experience" class="text-gray-400 hover:text-white transition duration-300">Experience</a></li>
                         <li><a href="index.html#skills" class="text-gray-400 hover:text-white transition duration-300">Skills</a></li>
+                        <li><a href="resources.html" class="text-gray-400 hover:text-white transition duration-300">Resources</a></li>
                     </ul>
                 </div>
                 <div class="text-center">
@@ -1058,7 +1014,6 @@
                     <ul class="space-y-2">
                         <li><a href="privacy.html" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
                         <li><a href="sitemap.html" class="text-gray-400 hover:text-white transition duration-300">Sitemap</a></li>
-                        <li><a href="resources.html" class="text-gray-400 hover:text-white transition duration-300">Resources</a></li>
                     </ul>
                 </div>
             </div>
@@ -1075,6 +1030,44 @@
 
     <!-- Link to your new script file -->
     <script src="script.js"></script>
+
+    <!-- Add this before closing body tag -->
+    <script>
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuIcon.classList.toggle('hidden');
+            mobileMenuClose.classList.toggle('hidden');
+            
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = mobileMenu.classList.contains('hidden') ? '' : 'hidden';
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuIcon.classList.remove('hidden');
+                mobileMenuClose.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuIcon.classList.remove('hidden');
+                mobileMenuClose.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
 </body>
 </html>
 

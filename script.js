@@ -23,4 +23,52 @@ window.onload = function() {
             });
         });
     });
+
+    // Add click event listener to close modals when clicking outside
+    document.addEventListener('click', function(e) {
+        const modals = document.querySelectorAll('[id$="-modal"]');
+        modals.forEach(modal => {
+            if (e.target === modal) {
+                closeModal(modal.id);
+            }
+        });
+    });
+
+    // Add escape key listener to close modals
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            const openModal = document.querySelector('[id$="-modal"]:not(.hidden)');
+            if (openModal) {
+                closeModal(openModal.id);
+            }
+        }
+    });
 };
+
+// Function to open a modal
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+}
+
+// Function to close a modal
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = ''; // Restore background scrolling
+    }
+}
+
+// Function to close a modal when clicking the backdrop
+function closeModalOnBackdrop(event, modalId) {
+    // Only close if the click was directly on the backdrop (modal element)
+    if (event.target.id === modalId) {
+        closeModal(modalId);
+    }
+}
