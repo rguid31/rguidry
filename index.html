@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MFSMFS9C');</script>
+<!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#ffffff">
@@ -30,6 +37,10 @@
     </script>
 </head>
 <body class="bg-gray-50 text-gray-800">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFSMFS9C"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
     <!-- Header & Navigation -->
     <header class="nav">
@@ -338,7 +349,8 @@
             <!-- Experience Section -->
             <section id="experience" class="py-24 bg-white">
                 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 class="text-3xl font-bold text-center mb-12">Professional Experience</h2>
+                    <h2 class="text-3xl font-bold text-center mb-4">Professional Experience</h2>
+                    <p class="text-center text-gray-600 text-lg italic mb-12">Select a company logo below to explore my experience.</p>
                         
                     <!-- Experience Grid -->
                     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
@@ -916,6 +928,28 @@
                 document.body.style.overflow = '';
             });
         });
+
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        }
+
+        function closeModalOnBackdrop(event, modalId) {
+            if (event.target === document.getElementById(modalId)) {
+                closeModal(modalId);
+            }
+        }
     </script>
 </body>
 </html>

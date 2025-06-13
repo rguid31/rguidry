@@ -38,4 +38,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial call to set progress bar on page load
     updateProgressBar();
     console.log('Navigation effects initialized');
+
+    // Mobile menu toggle logic
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = mobileMenuButton.querySelector('.mobile-menu-icon');
+    const closeIcon = mobileMenuButton.querySelector('.mobile-menu-close');
+
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('nav-mobile--hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+    }
+
+    // Ensure scroll restoration is 'auto' for back/forward navigation
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'auto';
+    }
 }); 

@@ -278,27 +278,28 @@ body {
 
 .card-header-top {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .card-icon-title {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .card-icon-wrapper {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     width: 3rem;
     height: 3rem;
     border-radius: 0.75rem;
-    margin: 0 auto;
+    margin: 0;
+    flex-shrink: 0;
 }
 
 .card-icon-wrapper svg {
@@ -307,23 +308,18 @@ body {
 }
 
 .card-badge {
-    background-color: #f3f4f6; /* bg-gray-200 */
-    color: #1f2937; /* text-gray-800 */
-    font-size: 0.75rem; /* text-xs */
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px; /* rounded-full */
-    font-weight: 500;
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #6366f1;
+    background: #eef2ff;
+    border-radius: 0.5rem;
+    padding: 0.15rem 0.75rem;
+    margin-bottom: 0.25rem;
 }
 
 .card-external-link {
-    height: 1rem; /* h-4 */
-    width: 1rem; /* w-4 */
-    color: #9ca3af; /* text-gray-400 */
-    transition: color 0.2s;
-}
-
-.card:hover .card-external-link {
-    color: #4b5563; /* group-hover:text-gray-600 */
+    display: none !important;
 }
 
 .card-content {
@@ -334,23 +330,38 @@ body {
 }
 
 .card-content ul {
-    flex: 1;
-    margin-bottom: 1.5rem;
+    list-style: disc outside;
+    padding-left: 1.25rem;
+    margin: 0;
+    margin-bottom: 0;
+}
+
+.card-content li {
+    color: #4B5563;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    padding-left: 0;
+    display: list-item;
+    /* Remove flex and gap so text wraps under the first line, not the bullet */
 }
 
 .card-title {
     font-size: 1.25rem;
     font-weight: 600;
     color: #1F2937;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
+    margin-top: 0;
+    text-align: left;
 }
 
 .card-description {
     color: #6B7280;
-    font-size: 0.875rem;
+    font-size: 0.95rem;
     line-height: 1.5;
-    margin-bottom: 1rem;
-    flex: 1;
+    margin-bottom: 0.25rem;
+    text-align: center;
 }
 
 .card-button {

@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "Tools for creating professional documentation",
           "Templates for different types of technical content",
           "Medium articles and insights",
-          "Writing style guides",
+          "Writing style guides"
         ],
         color: "color-indigo",
         iconColor: "icon-color-indigo",
@@ -171,7 +171,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const contentList = resource.content
                 .map(item => `
                     <li>
-                        <span class="card-list-icon">•</span>
                         <span>${item}</span>
                     </li>
                 `)
@@ -181,20 +180,16 @@ document.addEventListener("DOMContentLoaded", () => {
             return `
                 <div class="card ${resource.color}">
                     <div class="card-header">
-                        <div class="card-header-top">
-                            <div class="card-icon-title">
+                        <div class="card-header-top flex items-center gap-4">
+                            <div class="card-icon-title flex items-center gap-4">
                                 <div class="card-icon-wrapper ${resource.iconColor}">
                                     ${icons[resource.icon]}
                                 </div>
-                                <span class="card-badge">
-                                    ${resource.id === 9 ? "BONUS" : `Topic ${resource.id}`}
-                                </span>
+                                <div>
+                                    <h3 class="card-title mb-0">${resource.title}</h3>
+                                </div>
                             </div>
-                            <span class="card-external-link">
-                                ${icons.ExternalLink}
-                            </span>
                         </div>
-                        <h3 class="card-title">${resource.title}</h3>
                         <p class="card-description">${resource.description}</p>
                     </div>
                     <div class="card-content">
