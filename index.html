@@ -43,45 +43,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
     <!-- Header & Navigation -->
-    <header class="nav">
-        <nav class="nav__container">
-            <div class="text-2xl font-bold text-gray-900">
-                <!-- Logo and Name -->
-                <a href="index.html" class="flex items-center space-x-3">
-                    <img src="/images/ui/rg-logomark.svg" alt="RG Logo" class="h-10 rounded-lg" loading="lazy">
-                    <span>Ryan Guidry</span>
-                </a>
-            </div>
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="index.html#about" class="nav__link">About</a>
-                <a href="index.html#portfolio" class="nav__link">Portfolio</a>
-                <a href="index.html#experience" class="nav__link">Experience</a>
-                <a href="index.html#skills" class="nav__link">Skills</a>
-                <a href="resources.html" class="nav__link">Resources</a>
-                <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact">Contact</a>
-            </div>
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Toggle mobile menu">
-                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path class="mobile-menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    <path class="mobile-menu-close hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
-        </nav>
-        <!-- Mobile Menu -->
-        <nav id="mobile-menu" class="nav-mobile nav-mobile--hidden md:hidden" aria-label="Mobile navigation">
-            <div class="container mx-auto px-6 py-4 space-y-4">
-                <a href="index.html#about" class="nav__link block py-2">About</a>
-                <a href="index.html#portfolio" class="nav__link block py-2">Portfolio</a>
-                <a href="index.html#experience" class="nav__link block py-2">Experience</a>
-                <a href="index.html#skills" class="nav__link block py-2">Skills</a>
-                <a href="resources.html" class="nav__link block py-2">Resources</a>
-                <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact block py-2 text-center">Contact</a>
-            </div>
-        </nav>
+    <header class="nav fixed top-0 left-0 right-0 z-50">
+        <div class="max-w-7xl mx-auto">
+            <nav class="nav__container">
+                <div class="text-2xl font-bold text-gray-900">
+                    <!-- Logo and Name -->
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="/images/ui/rg-logomark.svg" alt="RG Logo" class="h-10 rounded-lg" loading="lazy">
+                        <span>Ryan Guidry</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html#about" class="nav__link nav__link--active">About</a>
+                    <a href="index.html#portfolio" class="nav__link">Portfolio</a>
+                    <a href="index.html#experience" class="nav__link">Experience</a>
+                    <a href="index.html#skills" class="nav__link">Skills</a>
+                    <a href="resources.html" class="nav__link">Resources</a>
+                    <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Toggle mobile menu">
+                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path class="mobile-menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path class="mobile-menu-close hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </nav>
+            <!-- Mobile Menu -->
+            <nav id="mobile-menu" class="nav-mobile nav-mobile--hidden md:hidden" aria-label="Mobile navigation">
+                <div class="container mx-auto px-6 py-4 space-y-4">
+                    <a href="index.html#about" class="nav__link nav__link--active block py-2">About</a>
+                    <a href="index.html#portfolio" class="nav__link block py-2">Portfolio</a>
+                    <a href="index.html#experience" class="nav__link block py-2">Experience</a>
+                    <a href="index.html#skills" class="nav__link block py-2">Skills</a>
+                    <a href="resources.html" class="nav__link block py-2">Resources</a>
+                    <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact block py-2 text-center">Contact</a>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <main class="container mx-auto px-6">
+    <main class="pt-0 container mx-auto px-6">
 
         <!-- Landing Page Section -->
         <section id="hero" class="relative min-h-screen w-full flex flex-col justify-center items-center text-center py-20">
@@ -111,7 +113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </section>
 
         <!-- Content Wrapper -->
-        <div class="relative z-10 bg-white rounded-2xl overflow-hidden shadow-lg">
+        <div class="relative z-10 bg-white rounded-2xl shadow-lg">
             <!-- About Me Section -->
             <section id="about" class="py-24 bg-white">
                 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -282,69 +284,436 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </section>
 
             <!-- Portfolio Section -->
-            <section id="portfolio" class="py-24 bg-gray-50">
-                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <section id="portfolio" class="relative py-24 bg-gray-50 px-4 sm:px-6 lg:px-8">
+                <div class="max-w-6xl mx-auto relative">
                     <h2 class="text-3xl font-bold text-center mb-12">Portfolio</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                        <!-- Portfolio Item 1 -->
-                        <button onclick="openModal('interactive-media-modal')" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 text-left flex flex-col">
-                            <div class="relative overflow-hidden w-full">
-                                <img src="images/portfolio/interactive-media.png" alt="Interactive Media Project Screenshot" class="w-full h-48 md:h-56 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                                    <p class="text-white p-4 text-sm">Click to view details</p>
-                                </div>
-                            </div>
-                            <div class="p-6 flex-grow">
-                                <h3 class="text-xl font-bold mb-2">Cross-disciplinary Interactive Media Portfolio</h3>
-                                <p class="text-gray-600 mb-4 line-clamp-3">Engineered a dynamic, responsive web platform that seamlessly integrates creative content with technical functionality. Leveraged modern web technologies to create an immersive user experience, resulting in a 15% increase in web traffic and 20% higher engagement.</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Web Development</span>
-                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">UI/UX Design</span>
-                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Data Analytics</span>
-                                </div>
-                            </div>
-                        </button>
+                    
+                    <!-- Navigation Arrows -->
+                    <button id="portfolio-prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 z-50 bg-white/95 backdrop-blur-sm rounded-full p-4 shadow-xl hover:shadow-2xl transition-all duration-300 hover:bg-blue-50 border-2 border-gray-200 hover:border-blue-300 group portfolio-arrow portfolio-arrow--left" aria-label="Previous projects">
+                        <svg class="w-8 h-8 text-gray-700 group-hover:text-blue-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+                    
+                    <button id="portfolio-next" class="absolute right-0 top-1/2 transform -translate-y-1/2 z-50 bg-white/95 backdrop-blur-sm rounded-full p-4 shadow-xl hover:shadow-2xl transition-all duration-300 hover:bg-blue-50 border-2 border-gray-200 hover:border-blue-300 group portfolio-arrow portfolio-arrow--right" aria-label="Next projects">
+                        <svg class="w-8 h-8 text-gray-700 group-hover:text-blue-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
 
-                        <!-- Portfolio Item 2 -->
-                        <button onclick="openModal('automation-modal')" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 text-left flex flex-col">
-                            <div class="relative overflow-hidden w-full">
-                                <img src="images/portfolio/automation.png" alt="IT Automation Project Screenshot" class="w-full h-48 md:h-56 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                                    <p class="text-white p-4 text-sm">Click to view details</p>
+                    <!-- Carousel Container -->
+                    <div class="relative">
+                        <!-- Projects Container with overflow hidden -->
+                        <div class="overflow-hidden">
+                            <!-- Projects Container -->
+                            <div id="portfolio-container" class="flex transition-transform duration-500 ease-in-out gap-8">
+                                <!-- Portfolio Item 1 -->
+                                <div class="portfolio-item flex-shrink-0">
+                                    <button onclick="openModal('interactive-media-modal')" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 text-left flex flex-col h-full">
+                                        <div class="relative overflow-hidden w-full">
+                                            <img src="images/portfolio/interactive-media.png" alt="Interactive Media Project Screenshot" class="w-full h-48 md:h-56 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                                <p class="text-white p-4 text-sm">Click to view details</p>
+                                            </div>
+                                        </div>
+                                        <div class="p-6 flex-grow">
+                                            <h3 class="text-xl font-bold mb-2">Cross-disciplinary Interactive Media Portfolio</h3>
+                                            <p class="text-gray-600 mb-4 line-clamp-3">Engineered a dynamic, responsive web platform that seamlessly integrates creative content with technical functionality. Leveraged modern web technologies to create an immersive user experience, resulting in a 15% increase in web traffic and 20% higher engagement.</p>
+                                            <div class="flex flex-wrap gap-2">
+                                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Web Development</span>
+                                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">UI/UX Design</span>
+                                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Data Analytics</span>
+                                            </div>
+                                        </div>
+                                    </button>
                                 </div>
-                            </div>
-                            <div class="p-6 flex-grow">
-                                <h3 class="text-xl font-bold mb-2">IT Automation: Windows Server Update Service</h3>
-                                <p class="text-gray-600 mb-4 line-clamp-3">Led initiative to automate Windows updates across 1200 virtual machines by establishing a WSUS, streamlining enforcement of security measures and reducing manual labor.</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">IT Infrastructure</span>
-                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Automation</span>
-                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">System Administration</span>
-                                </div>
-                            </div>
-                        </button>
 
-                        <!-- Portfolio Item 3 -->
-                        <button onclick="openModal('data-analytics-modal')" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 text-left flex flex-col">
-                            <div class="relative overflow-hidden w-full">
-                                <img src="images/portfolio/data-analytics.png" alt="Data Analytics Project Screenshot" class="w-full h-48 md:h-56 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                                    <p class="text-white p-4 text-sm">Click to view details</p>
+                                <!-- Portfolio Item 2 -->
+                                <div class="portfolio-item flex-shrink-0">
+                                    <button onclick="openModal('automation-modal')" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 text-left flex flex-col h-full">
+                                        <div class="relative overflow-hidden w-full">
+                                            <img src="images/portfolio/automation.png" alt="IT Automation Project Screenshot" class="w-full h-48 md:h-56 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                                <p class="text-white p-4 text-sm">Click to view details</p>
+                                            </div>
+                                        </div>
+                                        <div class="p-6 flex-grow">
+                                            <h3 class="text-xl font-bold mb-2">IT Automation: Windows Server Update Service</h3>
+                                            <p class="text-gray-600 mb-4 line-clamp-3">Led initiative to automate Windows updates across 1200 virtual machines by establishing a WSUS, streamlining enforcement of security measures and reducing manual labor.</p>
+                                            <div class="flex flex-wrap gap-2">
+                                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">IT Infrastructure</span>
+                                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Automation</span>
+                                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">System Administration</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+
+                                <!-- Portfolio Item 3 -->
+                                <div class="portfolio-item flex-shrink-0">
+                                    <button onclick="openModal('data-analytics-modal')" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 text-left flex flex-col h-full">
+                                        <div class="relative overflow-hidden w-full">
+                                            <img src="images/portfolio/data-analytics.png" alt="Data Analytics Project Screenshot" class="w-full h-48 md:h-56 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                                <p class="text-white p-4 text-sm">Click to view details</p>
+                                            </div>
+                                        </div>
+                                        <div class="p-6 flex-grow">
+                                            <h3 class="text-xl font-bold mb-2">Advanced Data Analytics & Visualization Platform</h3>
+                                            <p class="text-gray-600 mb-4 line-clamp-3">Developed a comprehensive data analytics platform, integrating advanced statistical models and interactive visualizations. Implemented ETL processes and leveraged machine learning algorithms to uncover key insights, leading to a 25% improvement in operational efficiency.</p>
+                                            <div class="flex flex-wrap gap-2">
+                                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Data Science</span>
+                                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Machine Learning</span>
+                                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Data Visualization</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+
+                                <!-- Portfolio Item 4 -->
+                                <div class="portfolio-item flex-shrink-0">
+                                    <button onclick="openModal('machine-learning-modal')" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 text-left flex flex-col h-full">
+                                        <div class="relative overflow-hidden w-full">
+                                            <img src="images/portfolio/machine-learning.png" alt="Machine Learning Project Screenshot" class="w-full h-48 md:h-56 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                                <p class="text-white p-4 text-sm">Click to view details</p>
+                                            </div>
+                                        </div>
+                                        <div class="p-6 flex-grow">
+                                            <h3 class="text-xl font-bold mb-2">Predictive Maintenance System with Machine Learning</h3>
+                                            <p class="text-gray-600 mb-4 line-clamp-3">Designed and deployed a predictive maintenance system using machine learning models to forecast equipment failures. Integrated sensor data and historical performance logs to minimize downtime and optimize maintenance schedules, reducing costs by 18%.</p>
+                                            <div class="flex flex-wrap gap-2">
+                                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Machine Learning</span>
+                                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Predictive Analytics</span>
+                                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">IoT Integration</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+
+                                <!-- Portfolio Item 5 -->
+                                <div class="portfolio-item flex-shrink-0">
+                                    <button onclick="openModal('data-visualization-modal')" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 text-left flex flex-col h-full">
+                                        <div class="relative overflow-hidden w-full">
+                                            <img src="images/portfolio/data-visualization.png" alt="Data Visualization Project Screenshot" class="w-full h-48 md:h-56 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                                <p class="text-white p-4 text-sm">Click to view details</p>
+                                            </div>
+                                        </div>
+                                        <div class="p-6 flex-grow">
+                                            <h3 class="text-xl font-bold mb-2">Interactive Business Intelligence Dashboards</h3>
+                                            <p class="text-gray-600 mb-4 line-clamp-3">Developed and implemented interactive business intelligence dashboards to provide real-time insights into key performance indicators. Utilized advanced visualization techniques to transform complex datasets into actionable information, facilitating data-driven decision-making.</p>
+                                            <div class="flex flex-wrap gap-2">
+                                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Business Intelligence</span>
+                                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Data Storytelling</span>
+                                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Dashboard Design</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+
+                                <!-- Portfolio Item 6 -->
+                                <div class="portfolio-item flex-shrink-0">
+                                    <button onclick="openModal('process-optimization-modal')" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 text-left flex flex-col h-full">
+                                        <div class="relative overflow-hidden w-full">
+                                            <img src="images/portfolio/process-optimization.png" alt="Process Optimization Project Screenshot" class="w-full h-48 md:h-56 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                                <p class="text-white p-4 text-sm">Click to view details</p>
+                                            </div>
+                                        </div>
+                                        <div class="p-6 flex-grow">
+                                            <h3 class="text-xl font-bold mb-2">Supply Chain Process Optimization using Simulation</h3>
+                                            <p class="text-gray-600 mb-4 line-clamp-3">Analyzed and optimized complex supply chain processes using discrete-event simulation and mathematical modeling. Identified bottlenecks and proposed data-driven solutions, leading to a 10% reduction in lead times and significant cost savings.</p>
+                                            <div class="flex flex-wrap gap-2">
+                                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Operations Research</span>
+                                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Simulation Modeling</span>
+                                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Logistics Optimization</span>
+                                            </div>
+                                        </div>
+                                    </button>
                                 </div>
                             </div>
-                            <div class="p-6 flex-grow">
-                                <h3 class="text-xl font-bold mb-2">Production Cost Analysis via Plant Data</h3>
-                                <p class="text-gray-600 mb-4 line-clamp-3">Utilized Pi ProcessBook and Pi DataLink to acquire and analyze plant data, correlating trends between acid neutralization and annual production costs to identify inefficiencies.</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Data Analysis</span>
-                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Process Optimization</span>
-                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Cost Analysis</span>
-                                </div>
+                            
+                            <!-- Carousel Indicators -->
+                            <div class="flex justify-center mt-8 space-x-3">
+                                <button class="carousel-indicator w-10 h-10 rounded-full bg-blue-600 text-white font-semibold text-sm transition-all duration-300 hover:bg-blue-500 hover:scale-110 shadow-md" aria-label="Go to slide 1">1</button>
+                                <button class="carousel-indicator w-10 h-10 rounded-full bg-gray-300 text-gray-700 font-semibold text-sm hover:bg-gray-400 hover:scale-110 transition-all duration-300 shadow-md" aria-label="Go to slide 2">2</button>
+                                <button class="carousel-indicator w-10 h-10 rounded-full bg-gray-300 text-gray-700 font-semibold text-sm hover:bg-gray-400 hover:scale-110 transition-all duration-300 shadow-md" aria-label="Go to slide 3">3</button>
+                                <button class="carousel-indicator w-10 h-10 rounded-full bg-gray-300 text-gray-700 font-semibold text-sm hover:bg-gray-400 hover:scale-110 transition-all duration-300 shadow-md" aria-label="Go to slide 4">4</button>
+                                <button class="carousel-indicator w-10 h-10 rounded-full bg-gray-300 text-gray-700 font-semibold text-sm hover:bg-gray-400 hover:scale-110 transition-all duration-300 shadow-md" aria-label="Go to slide 5">5</button>
+                                <button class="carousel-indicator w-10 h-10 rounded-full bg-gray-300 text-gray-700 font-semibold text-sm hover:bg-gray-400 hover:scale-110 transition-all duration-300 shadow-md" aria-label="Go to slide 6">6</button>
                             </div>
-                        </button>
+                            
+                            <!-- Explore Gallery Button -->
+                            <div class="text-center mt-12">
+                                <a href="gallery.html" class="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                                    </svg>
+                                    Explore My Project Gallery
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
+
+            <!-- Test script for portfolio buttons -->
+            <script>
+                console.log('Testing portfolio buttons...');
+                setTimeout(() => {
+                    const prevBtn = document.getElementById('portfolio-prev');
+                    const nextBtn = document.getElementById('portfolio-next');
+                    console.log('Inline test - Prev button:', prevBtn);
+                    console.log('Inline test - Next button:', nextBtn);
+                    
+                    // Add a visible alert to confirm the script is running
+                    if (prevBtn && nextBtn) {
+                        console.log('Buttons found - adding test listeners');
+                        
+                        prevBtn.addEventListener('click', () => {
+                            console.log('INLINE TEST: Prev button clicked!');
+                        });
+                        
+                        nextBtn.addEventListener('click', () => {
+                            console.log('INLINE TEST: Next button clicked!');
+                        });
+                    } else {
+                        console.log('Portfolio buttons NOT found! prevBtn: ' + prevBtn + ', nextBtn: ' + nextBtn);
+                    }
+                }, 2000);
+            </script>
+
+            <!-- Portfolio Modals -->
+            <!-- Interactive Media Modal -->
+            <div id="interactive-media-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'interactive-media-modal')">
+                <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center gap-4">
+                            <img src="images/portfolio/interactive-media.png" alt="Interactive Media Project" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900">Cross-disciplinary Interactive Media Portfolio</h3>
+                                <p class="text-lg text-gray-700">Web Development Project</p>
+                                <p class="text-gray-600">2024</p>
+                            </div>
+                        </div>
+                        <button onclick="closeModal('interactive-media-modal')" class="text-gray-400 hover:text-gray-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="space-y-4 text-gray-700">
+                        <p>Engineered a dynamic, responsive web platform that seamlessly integrates creative content with technical functionality. This project demonstrates the intersection of web development, UI/UX design, and data analytics.</p>
+                        <h4 class="font-semibold text-gray-900">Key Achievements:</h4>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>15% increase in web traffic through improved user experience</li>
+                            <li>20% higher engagement rates with interactive elements</li>
+                            <li>Responsive design optimized for all device types</li>
+                            <li>Integration of modern web technologies and frameworks</li>
+                        </ul>
+                        <h4 class="font-semibold text-gray-900">Technologies Used:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">HTML5</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">CSS3</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">React</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Automation Modal -->
+            <div id="automation-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'automation-modal')">
+                <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center gap-4">
+                            <img src="images/portfolio/automation.png" alt="IT Automation Project" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900">IT Automation: Windows Server Update Service</h3>
+                                <p class="text-lg text-gray-700">Infrastructure Project</p>
+                                <p class="text-gray-600">2023</p>
+                            </div>
+                        </div>
+                        <button onclick="closeModal('automation-modal')" class="text-gray-400 hover:text-gray-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="space-y-4 text-gray-700">
+                        <p>Led initiative to automate Windows updates across 1200 virtual machines by establishing a Windows Server Update Service (WSUS), streamlining enforcement of security measures and reducing manual labor.</p>
+                        <h4 class="font-semibold text-gray-900">Key Achievements:</h4>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>Automated updates across 1200+ virtual machines</li>
+                            <li>Reduced manual update time by 80%</li>
+                            <li>Improved security compliance through centralized management</li>
+                            <li>Established standardized update deployment procedures</li>
+                        </ul>
+                        <h4 class="font-semibold text-gray-900">Technologies Used:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Windows Server</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">WSUS</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">PowerShell</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Active Directory</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Analytics Modal -->
+            <div id="data-analytics-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'data-analytics-modal')">
+                <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center gap-4">
+                            <img src="images/portfolio/data-analytics.png" alt="Data Analytics Project" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900">Production Cost Analysis via Plant Data</h3>
+                                <p class="text-lg text-gray-700">Data Analysis Project</p>
+                                <p class="text-gray-600">2022</p>
+                            </div>
+                        </div>
+                        <button onclick="closeModal('data-analytics-modal')" class="text-gray-400 hover:text-gray-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="space-y-4 text-gray-700">
+                        <p>Utilized Pi ProcessBook and Pi DataLink to acquire and analyze plant data, correlating trends between acid neutralization and annual production costs to identify inefficiencies and optimization opportunities.</p>
+                        <h4 class="font-semibold text-gray-900">Key Achievements:</h4>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>Identified 15% cost reduction opportunities in acid neutralization process</li>
+                            <li>Correlated production data with cost metrics for better decision making</li>
+                            <li>Established automated data collection and analysis workflows</li>
+                            <li>Created predictive models for cost forecasting</li>
+                        </ul>
+                        <h4 class="font-semibold text-gray-900">Technologies Used:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Pi ProcessBook</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Pi DataLink</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Excel</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Statistical Analysis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Machine Learning Modal -->
+            <div id="machine-learning-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'machine-learning-modal')">
+                <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center gap-4">
+                            <img src="images/portfolio/machine-learning.png" alt="Machine Learning Project" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900">Predictive Maintenance System</h3>
+                                <p class="text-lg text-gray-700">Machine Learning Project</p>
+                                <p class="text-gray-600">2024</p>
+                            </div>
+                        </div>
+                        <button onclick="closeModal('machine-learning-modal')" class="text-gray-400 hover:text-gray-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="space-y-4 text-gray-700">
+                        <p>Developed a machine learning model to predict equipment failures in industrial settings, reducing downtime by 30% and saving $500K annually in maintenance costs through proactive maintenance scheduling.</p>
+                        <h4 class="font-semibold text-gray-900">Key Achievements:</h4>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>30% reduction in equipment downtime through predictive maintenance</li>
+                            <li>$500K annual savings in maintenance costs</li>
+                            <li>95% accuracy in failure prediction within 48-hour window</li>
+                            <li>Real-time monitoring and alert system implementation</li>
+                        </ul>
+                        <h4 class="font-semibold text-gray-900">Technologies Used:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Scikit-learn</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">TensorFlow</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Pandas</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">NumPy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Visualization Modal -->
+            <div id="data-visualization-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'data-visualization-modal')">
+                <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center gap-4">
+                            <img src="images/portfolio/data-visualization.png" alt="Data Visualization Project" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900">Interactive Business Intelligence Dashboard</h3>
+                                <p class="text-lg text-gray-700">Data Visualization Project</p>
+                                <p class="text-gray-600">2023</p>
+                            </div>
+                        </div>
+                        <button onclick="closeModal('data-visualization-modal')" class="text-gray-400 hover:text-gray-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="space-y-4 text-gray-700">
+                        <p>Created a comprehensive BI dashboard using Tableau and Power BI, providing real-time insights into key performance indicators and enabling data-driven decision making across the organization.</p>
+                        <h4 class="font-semibold text-gray-900">Key Achievements:</h4>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>40% faster decision making through real-time data access</li>
+                            <li>Interactive dashboards with drill-down capabilities</li>
+                            <li>Automated data refresh and KPI tracking</li>
+                            <li>User-friendly interface for non-technical stakeholders</li>
+                        </ul>
+                        <h4 class="font-semibold text-gray-900">Technologies Used:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Tableau</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Power BI</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">SQL</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">DAX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Process Optimization Modal -->
+            <div id="process-optimization-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'process-optimization-modal')">
+                <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center gap-4">
+                            <img src="images/portfolio/process-optimization.png" alt="Process Optimization Project" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900">Chemical Process Optimization</h3>
+                                <p class="text-lg text-gray-700">Process Engineering Project</p>
+                                <p class="text-gray-600">2022</p>
+                            </div>
+                        </div>
+                        <button onclick="closeModal('process-optimization-modal')" class="text-gray-400 hover:text-gray-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="space-y-4 text-gray-700">
+                        <p>Implemented advanced process control strategies and optimization algorithms to improve efficiency in chemical manufacturing, achieving 25% reduction in energy consumption while maintaining product quality standards.</p>
+                        <h4 class="font-semibold text-gray-900">Key Achievements:</h4>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>25% reduction in energy consumption</li>
+                            <li>15% improvement in process efficiency</li>
+                            <li>Maintained product quality standards throughout optimization</li>
+                            <li>Implemented advanced control algorithms for real-time optimization</li>
+                        </ul>
+                        <h4 class="font-semibold text-gray-900">Technologies Used:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Process Control</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">DCS Systems</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">MATLAB</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Simulation Software</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- Experience Section -->
             <section id="experience" class="py-24 bg-gray-50">
@@ -831,7 +1200,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white mt-24">
+    <footer class="bg-gray-900 text-white mt-16">
         <div class="container mx-auto px-6 py-12">
             <!-- Quick Navigation -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -899,6 +1268,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </footer>
 
     <!-- Link to your new script file -->
+    <script>
+        console.log('Inline script test - JavaScript is working!');
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

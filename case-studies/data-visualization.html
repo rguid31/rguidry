@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization: Interactive BI Dashboards - Case Study | Ryan Guidry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg+xml" href="../images/ui/rg-logomark.svg" loading="lazy">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header & Navigation -->
+    <header class="nav fixed top-0 left-0 right-0 z-50">
+        <div class="max-w-7xl mx-auto">
+            <nav class="nav__container">
+                <div class="text-2xl font-bold text-gray-900">
+                    <a href="../index.html" class="flex items-center space-x-3">
+                        <img src="/images/ui/rg-logomark.svg" alt="RG Logo" class="h-10 rounded-lg" loading="lazy">
+                        <span>Ryan Guidry</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="../index.html#about" class="nav__link">About</a>
+                    <a href="../index.html#portfolio" class="nav__link nav__link--active">Portfolio</a>
+                    <a href="../index.html#experience" class="nav__link">Experience</a>
+                    <a href="../index.html#skills" class="nav__link">Skills</a>
+                    <a href="../resources.html" class="nav__link">Resources</a>
+                    <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-0">
+        <!-- Hero Section -->
+        <section class="relative py-24 bg-gradient-to-br from-teal-600 to-teal-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Data Visualization: Interactive BI Dashboards</h1>
+                    <p class="text-xl text-teal-100 max-w-3xl mx-auto mb-8">
+                        Created comprehensive business intelligence dashboards with interactive visualizations, real-time data updates, and drill-down capabilities
+                    </p>
+                    
+                    <!-- Live Links -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                        <a href="#" class="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-teal-50 transition duration-300 shadow-lg">
+                            View Live Dashboard
+                        </a>
+                        <a href="#" class="bg-teal-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-600 transition duration-300 shadow-lg">
+                            Download Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Study Content -->
+        <section class="py-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Overview Section -->
+                <div class="bg-white rounded-xl p-8 shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">The Overview</h2>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">The Problem/Goal</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        The organization struggled with static reports and disconnected data sources that made it difficult for business users to gain insights quickly. Decision-makers needed interactive, real-time dashboards that could provide actionable insights across multiple business functions.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        The goal was to build a comprehensive business intelligence platform with interactive visualizations, real-time data integration, and user-friendly dashboards that would enable data-driven decision making across all levels of the organization.
+                    </p>
+                </div>
+
+                <!-- Role & Technologies Section -->
+                <div class="bg-white rounded-xl p-8 shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">My Role & Technologies Used</h2>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">My Role</h3>
+                            <p class="text-gray-600 mb-4">Lead Data Visualization Engineer & BI Developer</p>
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• Dashboard design and user experience</li>
+                                <li>• Interactive visualization development</li>
+                                <li>• Data pipeline integration</li>
+                                <li>• Real-time data streaming</li>
+                                <li>• User training and adoption</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Tech Stack</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Visualization Libraries</h4>
+                                    <p class="text-gray-600 text-sm">D3.js, Chart.js & Plotly</p>
+                                    <p class="text-gray-500 text-sm mt-1">Chosen for flexibility, interactivity, and customization capabilities. D3.js for custom visualizations, Chart.js for standard charts, Plotly for scientific plotting.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">BI Platform</h4>
+                                    <p class="text-gray-600 text-sm">Tableau & Power BI</p>
+                                    <p class="text-gray-500 text-sm mt-1">Selected for enterprise-grade BI capabilities, user-friendly interface, and extensive data source connectivity for business users.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Frontend Framework</h4>
+                                    <p class="text-gray-600 text-sm">React.js & TypeScript</p>
+                                    <p class="text-gray-500 text-sm mt-1">Used for building responsive, interactive dashboard components with type safety and excellent developer experience.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Real-time Data</h4>
+                                    <p class="text-gray-600 text-sm">WebSocket & Server-Sent Events</p>
+                                    <p class="text-gray-500 text-sm mt-1">Implemented for live data updates and real-time dashboard refreshes without page reloads.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Process & Challenges Section -->
+                <div class="bg-white rounded-xl p-8 shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">The Process & Challenges</h2>
+                    
+                    <div class="space-y-12">
+                        <!-- Challenge 1 -->
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Challenge 1: Creating Interactive Visualizations with Real-Time Updates</h3>
+                            <p class="text-gray-600 mb-4">
+                                Business users needed interactive charts that could update in real-time and provide drill-down capabilities for detailed analysis. Static visualizations were insufficient for dynamic business requirements.
+                            </p>
+                            
+                            <h4 class="font-semibold text-gray-900 mb-3">Solution Approach</h4>
+                            <p class="text-gray-600 mb-4">
+                                I developed a custom visualization framework using D3.js with WebSocket integration for real-time updates and interactive features like filtering, zooming, and drill-down capabilities.
+                            </p>
+                            
+                            <div class="bg-gray-900 rounded-lg p-4 mb-4">
+                                <pre><code class="language-javascript">// Interactive real-time dashboard component
+class InteractiveDashboard {
+    constructor(containerId, dataSource) {
+        this.container = d3.select(containerId);
+        this.dataSource = dataSource;
+        this.charts = {};
+        this.filters = {};
+        this.init();
+    }
+    
+    init() {
+        this.setupWebSocket();
+        this.createLayout();
+        this.setupCharts();
+        this.setupFilters();
+    }
+    
+    setupWebSocket() {
+        this.ws = new WebSocket(this.dataSource);
+        this.ws.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+            this.updateCharts(data);
+        };
+    }
+    
+    createLayout() {
+        // Create responsive grid layout
+        this.container
+            .style('display', 'grid')
+            .style('grid-template-columns', 'repeat(auto-fit, minmax(400px, 1fr))')
+            .style('gap', '20px')
+            .style('padding', '20px');
+    }
+    
+    setupCharts() {
+        // Sales trend chart
+        this.charts.salesTrend = this.container
+            .append('div')
+            .attr('class', 'chart-container')
+            .style('background', 'white')
+            .style('border-radius', '8px')
+            .style('padding', '20px')
+            .style('box-shadow', '0 2px 4px rgba(0,0,0,0.1)');
+        
+        this.createSalesTrendChart();
+    }
+    
+    createSalesTrendChart() {
+        const margin = {top: 20, right: 30, bottom: 40, left: 60};
+        const width = 400 - margin.left - margin.right;
+        const height = 300 - margin.top - margin.bottom;
+        
+        const svg = this.charts.salesTrend
+            .append('svg')
+            .attr('width', width + margin.left + margin.right)
+            .attr('height', height + margin.top + margin.bottom)
+            .append('g')
+            .attr('transform', `translate(${margin.left},${margin.top})`);
+        
+        // Scales
+        const xScale = d3.scaleTime()
+            .range([0, width]);
+        
+        const yScale = d3.scaleLinear()
+            .range([height, 0]);
+        
+        // Line generator
+        const line = d3.line()
+            .x(d => xScale(d.date))
+            .y(d => yScale(d.value))
+            .curve(d3.curveMonotoneX);
+        
+        // Add zoom behavior
+        const zoom = d3.zoom()
+            .scaleExtent([0.5, 5])
+            .on('zoom', (event) => {
+                svg.selectAll('.line').attr('d', line);
+                svg.select('.x-axis').call(d3.axisBottom(xScale));
+                svg.select('.y-axis').call(d3.axisLeft(yScale));
+            });
+        
+        svg.call(zoom);
+        
+        // Store references for updates
+        this.charts.salesTrend.svg = svg;
+        this.charts.salesTrend.xScale = xScale;
+        this.charts.salesTrend.yScale = yScale;
+        this.charts.salesTrend.line = line;
+    }
+    
+    updateCharts(data) {
+        // Update sales trend
+        if (data.salesTrend) {
+            this.updateSalesTrend(data.salesTrend);
+        }
+        
+        // Update summary metrics
+        if (data.summary) {
+            this.updateSummaryMetrics(data.summary);
+        }
+    }
+    
+    updateSalesTrend(data) {
+        const svg = this.charts.salesTrend.svg;
+        const xScale = this.charts.salesTrend.xScale;
+        const yScale = this.charts.salesTrend.yScale;
+        const line = this.charts.salesTrend.line;
+        
+        // Update scales
+        xScale.domain(d3.extent(data, d => new Date(d.date)));
+        yScale.domain([0, d3.max(data, d => d.value)]);
+        
+        // Update line
+        svg.selectAll('.line')
+            .data([data])
+            .join('path')
+            .attr('class', 'line')
+            .attr('fill', 'none')
+            .attr('stroke', '#3B82F6')
+            .attr('stroke-width', 2)
+            .attr('d', line);
+        
+        // Add data points
+        svg.selectAll('.data-point')
+            .data(data)
+            .join('circle')
+            .attr('class', 'data-point')
+            .attr('cx', d => xScale(new Date(d.date)))
+            .attr('cy', d => yScale(d.value))
+            .attr('r', 4)
+            .attr('fill', '#3B82F6')
+            .on('mouseover', function(event, d) {
+                d3.select(this).attr('r', 6);
+                // Show tooltip
+            })
+            .on('mouseout', function() {
+                d3.select(this).attr('r', 4);
+                // Hide tooltip
+            });
+    }
+}</code></pre>
+                            </div>
+                            
+                            <p class="text-gray-600">
+                                This implementation provided real-time updates with sub-30-second refresh rates and enabled users to interact with data through zooming, filtering, and drill-down capabilities.
+                            </p>
+                        </div>
+
+                        <!-- Challenge 2 -->
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Challenge 2: Optimizing Performance for Large Datasets</h3>
+                            <p class="text-gray-600 mb-4">
+                                The dashboards needed to handle large datasets with thousands of data points while maintaining smooth interactions and fast loading times. Traditional rendering approaches caused performance issues.
+                            </p>
+                            
+                            <h4 class="font-semibold text-gray-900 mb-3">Solution Approach</h4>
+                            <p class="text-gray-600 mb-4">
+                                I implemented data virtualization, lazy loading, and efficient rendering techniques to handle large datasets while maintaining responsive user experience.
+                            </p>
+                            
+                            <div class="bg-gray-900 rounded-lg p-4 mb-4">
+                                <pre><code class="language-javascript">// Performance optimization for large datasets
+class OptimizedDataRenderer {
+    constructor() {
+        this.virtualScroller = null;
+        this.dataCache = new Map();
+        this.renderQueue = [];
+    }
+    
+    setupVirtualScrolling(container, data, itemHeight = 50) {
+        const containerHeight = container.node().getBoundingClientRect().height;
+        const visibleItems = Math.ceil(containerHeight / itemHeight);
+        
+        // Create virtual scroller
+        this.virtualScroller = new VirtualScroller({
+            container: container.node(),
+            itemHeight: itemHeight,
+            totalItems: data.length,
+            visibleItems: visibleItems,
+            renderItem: (index) => this.renderDataItem(data[index], index)
+        });
+    }
+    
+    renderDataItem(item, index) {
+        const div = document.createElement('div');
+        div.className = 'data-item';
+        div.style.height = '50px';
+        div.style.display = 'flex';
+        div.style.alignItems = 'center';
+        div.style.padding = '0 16px';
+        div.style.borderBottom = '1px solid #e5e7eb';
+        
+        // Lazy load images and heavy content
+        if (item.image) {
+            const img = new Image();
+            img.loading = 'lazy';
+            img.src = item.image;
+            img.style.width = '32px';
+            img.style.height = '32px';
+            img.style.borderRadius = '4px';
+            div.appendChild(img);
+        }
+        
+        const text = document.createElement('span');
+        text.textContent = item.name;
+        text.style.marginLeft = '12px';
+        text.style.flex = '1';
+        div.appendChild(text);
+        
+        const value = document.createElement('span');
+        value.textContent = this.formatValue(item.value);
+        value.style.fontWeight = '600';
+        value.style.color = '#059669';
+        div.appendChild(value);
+        
+        return div;
+    }
+    
+    // Efficient chart rendering with data sampling
+    createOptimizedChart(data, maxPoints = 1000) {
+        if (data.length <= maxPoints) {
+            return this.renderFullChart(data);
+        }
+        
+        // Sample data for large datasets
+        const sampledData = this.sampleData(data, maxPoints);
+        return this.renderFullChart(sampledData);
+    }
+    
+    sampleData(data, maxPoints) {
+        if (data.length <= maxPoints) return data;
+        
+        const step = Math.floor(data.length / maxPoints);
+        const sampled = [];
+        
+        for (let i = 0; i < data.length; i += step) {
+            sampled.push(data[i]);
+            if (sampled.length >= maxPoints) break;
+        }
+        
+        return sampled;
+    }
+    
+    // Debounced update function
+    debounceUpdate(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+    
+    // Batch DOM updates
+    batchDOMUpdates(updates) {
+        // Use requestAnimationFrame for smooth updates
+        requestAnimationFrame(() => {
+            updates.forEach(update => {
+                update();
+            });
+        });
+    }
+}</code></pre>
+                            </div>
+                            
+                            <p class="text-gray-600">
+                                These optimizations enabled the dashboard to handle datasets with 100,000+ records while maintaining sub-100ms response times and smooth user interactions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div class="bg-white rounded-xl p-8 shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Results & Impact</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-teal-50 rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-teal-900 mb-2">User Adoption</h3>
+                            <p class="text-3xl font-bold text-teal-600">85%</p>
+                            <p class="text-sm text-teal-700">Dashboard adoption rate</p>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-blue-900 mb-2">Decision Speed</h3>
+                            <p class="text-3xl font-bold text-blue-600">60%</p>
+                            <p class="text-sm text-blue-700">Faster decision making</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        The interactive BI dashboards successfully achieved 85% user adoption across the organization, with 60% faster decision-making processes and significant improvements in data accessibility.
+                    </p>
+                    <p class="text-gray-600">
+                        Key achievements included real-time data updates, interactive drill-down capabilities, and establishment of a scalable visualization framework that supported multiple business units.
+                    </p>
+                </div>
+
+                <!-- Lessons Learned Section -->
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Lessons Learned & Next Steps</h2>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Key Learnings</h3>
+                            <ul class="text-gray-600 space-y-3">
+                                <li>• <strong>User-Centric Design:</strong> Understanding user workflows was crucial for adoption</li>
+                                <li>• <strong>Performance is Key:</strong> Fast loading times and smooth interactions drove usage</li>
+                                <li>• <strong>Mobile Responsiveness:</strong> Mobile access significantly increased adoption</li>
+                                <li>• <strong>Data Quality:</strong> Clean, reliable data was essential for user trust</li>
+                                <li>• <strong>Training Matters:</strong> User training and documentation improved adoption rates</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Future Enhancements</h3>
+                            <ul class="text-gray-600 space-y-3">
+                                <li>• <strong>AI-Powered Insights:</strong> Adding automated anomaly detection and recommendations</li>
+                                <li>• <strong>Advanced Interactivity:</strong> Implementing voice commands and natural language queries</li>
+                                <li>• <strong>Augmented Reality:</strong> AR/VR visualizations for immersive data exploration</li>
+                                <li>• <strong>Predictive Analytics:</strong> Integrating forecasting and trend analysis</li>
+                                <li>• <strong>Collaborative Features:</strong> Adding sharing, commenting, and collaborative analysis</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Back to Gallery Button -->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <a href="../gallery.html" class="inline-flex items-center gap-2 bg-gray-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    Back to Project Gallery
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-16">
+        <div class="container mx-auto px-6 py-12">
+            <!-- Quick Navigation -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center md:text-left">
+                    <h3 class="text-lg font-semibold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="../index.html#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
+                        <li><a href="../index.html#portfolio" class="text-gray-400 hover:text-white transition duration-300">Portfolio</a></li>
+                        <li><a href="../index.html#experience" class="text-gray-400 hover:text-white transition duration-300">Experience</a></li>
+                        <li><a href="../index.html#skills" class="text-gray-400 hover:text-white transition duration-300">Skills</a></li>
+                        <li><a href="../resources.html" class="text-gray-400 hover:text-white transition duration-300">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                    <div class="flex justify-center space-x-6 mb-4">
+                        <a href="https://www.linkedin.com/in/ryanguidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="LinkedIn Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/rguidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="GitHub Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="https://medium.com/@guidry_ryan" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="Medium Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 .38-.16.85-.44 1.12l-3.13 3.09c-.28.27-.7.27-1 0l-3.13-3.09c-.28-.27-.44-.74-.44-1.12s.16-.85.44-1.12l3.13-3.09c.28-.27.7-.27 1 0l3.13 3.09c.28.27.44.74.44 1.12zM0 12c0 .38.16.85.44 1.12l3.13 3.09c.28.27.7.27 1 0l3.13-3.09c.28-.27.44-.74.44-1.12s-.16-.85-.44-1.12L4.57 7.79c-.28-.27-.7-.27-1 0L.44 10.88C.16 11.15 0 11.62 0 12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://x.com/ryne_guidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="X (Twitter) Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="https://unsplash.com/@ryne_guidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="Unsplash Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M7.5 6.75V0h9v6.75h-9zm9 3.75h6.75V9H16.5v1.5zM7.5 9v1.5H.75V9H7.5zm0 3.75H.75v1.5H7.5v-1.5zm9 0v1.5h6.75v-1.5H16.5zM7.5 17.25H.75V24H7.5v-6.75zm9 0V24h6.75v-6.75H16.5z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">
+                        <a href="mailto:inquireryan@gmail.com" class="hover:text-white transition duration-300">inquireryan@gmail.com</a>
+                    </p>
+                </div>
+                <div class="text-center md:text-right">
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../privacy.html" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+                        <li><a href="../sitemap.html" class="text-gray-400 hover:text-white transition duration-300">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="flex justify-center items-center mb-4">
+                <div class="text-gray-400 text-sm text-center">
+                    <p class="mb-2">We improve our products and advertising by using Microsoft Clarity to see how you use our website. By using our site, you agree that we and Microsoft can collect and use this data. Our privacy statement <a href="../privacy.html" class="text-blue-400 hover:text-white transition duration-300">here</a> has more details.</p>
+                    <p>&copy; 2025 Ryan Guidry 🦄. All rights reserved 💜.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

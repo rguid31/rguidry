@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Media Portfolio - Case Study | Ryan Guidry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg+xml" href="../images/ui/rg-logomark.svg" loading="lazy">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header & Navigation -->
+    <header class="nav fixed top-0 left-0 right-0 z-50">
+        <div class="max-w-7xl mx-auto">
+            <nav class="nav__container">
+                <div class="text-2xl font-bold text-gray-900">
+                    <a href="../index.html" class="flex items-center space-x-3">
+                        <img src="/images/ui/rg-logomark.svg" alt="RG Logo" class="h-10 rounded-lg" loading="lazy">
+                        <span>Ryan Guidry</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="../index.html#about" class="nav__link">About</a>
+                    <a href="../index.html#portfolio" class="nav__link nav__link--active">Portfolio</a>
+                    <a href="../index.html#experience" class="nav__link">Experience</a>
+                    <a href="../index.html#skills" class="nav__link">Skills</a>
+                    <a href="../resources.html" class="nav__link">Resources</a>
+                    <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-0">
+        <!-- Hero Section -->
+        <section class="relative py-24 bg-gradient-to-br from-blue-600 to-blue-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Interactive Media Portfolio</h1>
+                    <p class="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+                        A dynamic, responsive web platform that seamlessly integrates creative content with technical functionality
+                    </p>
+                    
+                    <!-- Live Links -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                        <a href="#" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition duration-300 shadow-lg">
+                            View Live Site
+                        </a>
+                        <a href="#" class="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300 shadow-lg">
+                            See the Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Study Content -->
+        <section class="py-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Overview Section -->
+                <div class="bg-white rounded-xl p-8 shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">The Overview</h2>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">The Problem/Goal</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        The goal of this project was to create a comprehensive portfolio platform that could effectively showcase both creative and technical work simultaneously. Traditional portfolio websites often struggle to balance visual appeal with technical functionality - they either focus too heavily on design at the expense of performance, or prioritize technical features while neglecting user experience.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        I wanted to build a platform that could serve as both a professional portfolio and a demonstration of modern web development skills, while providing an intuitive and engaging experience for visitors across all devices.
+                    </p>
+                </div>
+
+                <!-- Role & Technologies Section -->
+                <div class="bg-white rounded-xl p-8 shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">My Role & Technologies Used</h2>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">My Role</h3>
+                            <p class="text-gray-600 mb-4">Lead Developer & UI/UX Designer</p>
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• Full-stack development and architecture design</li>
+                                <li>• User experience design and interface development</li>
+                                <li>• Content strategy and information architecture</li>
+                                <li>• Performance optimization and accessibility implementation</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Tech Stack</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Frontend Framework</h4>
+                                    <p class="text-gray-600 text-sm">React.js with TypeScript</p>
+                                    <p class="text-gray-500 text-sm mt-1">Chosen for component reusability, type safety, and excellent developer experience. TypeScript helps catch errors early and improves code maintainability.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Styling</h4>
+                                    <p class="text-gray-600 text-sm">Tailwind CSS</p>
+                                    <p class="text-gray-500 text-sm mt-1">Selected for rapid development, consistent design system, and utility-first approach that enables quick prototyping and responsive design.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Animation</h4>
+                                    <p class="text-gray-600 text-sm">Framer Motion</p>
+                                    <p class="text-gray-500 text-sm mt-1">Used for smooth, performant animations that enhance user experience without compromising performance.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Deployment</h4>
+                                    <p class="text-gray-600 text-sm">Vercel</p>
+                                    <p class="text-gray-500 text-sm mt-1">Deployed on Vercel for automatic deployments, global CDN, and excellent performance optimization out of the box.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Process & Challenges Section -->
+                <div class="bg-white rounded-xl p-8 shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">The Process & Challenges</h2>
+                    
+                    <div class="space-y-12">
+                        <!-- Challenge 1 -->
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Challenge 1: Balancing Performance with Rich Media Content</h3>
+                            <p class="text-gray-600 mb-4">
+                                One of the biggest challenges was ensuring fast loading times while incorporating rich media content like images, videos, and interactive elements. The portfolio needed to showcase visual work without compromising user experience.
+                            </p>
+                            
+                            <h4 class="font-semibold text-gray-900 mb-3">Solution Approach</h4>
+                            <p class="text-gray-600 mb-4">
+                                I implemented a comprehensive performance optimization strategy using lazy loading, image optimization, and code splitting.
+                            </p>
+                            
+                            <div class="bg-gray-900 rounded-lg p-4 mb-4">
+                                <pre><code class="language-javascript">// Lazy loading implementation for images
+const LazyImage = ({ src, alt, className }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  
+  const imgRef = useRef();
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+    
+    return () => observer.disconnect();
+  }, []);
+  
+  return (
+    &lt;img
+      ref={imgRef}
+      src={isInView ? src : ''}
+      alt={alt}
+      className={`${className} transition-opacity duration-300 ${
+        isLoaded ? 'opacity-100' : 'opacity-0'
+      }`}
+      onLoad={() => setIsLoaded(true)}
+    /&gt;
+  );
+};</code></pre>
+                            </div>
+                            
+                            <p class="text-gray-600">
+                                This implementation resulted in a 40% improvement in initial page load times and significantly better user experience, especially on slower connections.
+                            </p>
+                        </div>
+
+                        <!-- Challenge 2 -->
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Challenge 2: Creating Responsive Design Across All Devices</h3>
+                            <p class="text-gray-600 mb-4">
+                                Ensuring the portfolio looked and functioned perfectly across desktop, tablet, and mobile devices while maintaining the visual impact of the design was crucial for professional presentation.
+                            </p>
+                            
+                            <h4 class="font-semibold text-gray-900 mb-3">Solution Approach</h4>
+                            <p class="text-gray-600 mb-4">
+                                I adopted a mobile-first design approach using CSS Grid and Flexbox, with careful attention to typography scaling and touch interactions.
+                            </p>
+                            
+                            <div class="bg-gray-900 rounded-lg p-4 mb-4">
+                                <pre><code class="language-css">/* Responsive grid layout */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    padding: 3rem;
+  }
+}
+
+/* Fluid typography */
+.hero-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.2;
+  font-weight: 700;
+}</code></pre>
+                            </div>
+                            
+                            <p class="text-gray-600">
+                                The responsive design ensures optimal viewing experience across all screen sizes, with the layout adapting seamlessly from mobile to desktop.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div class="bg-white rounded-xl p-8 shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Results & Impact</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-blue-50 rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-blue-900 mb-2">Performance Improvement</h3>
+                            <p class="text-3xl font-bold text-blue-600">40%</p>
+                            <p class="text-sm text-blue-700">Faster page load times</p>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-green-900 mb-2">User Engagement</h3>
+                            <p class="text-3xl font-bold text-green-600">20%</p>
+                            <p class="text-sm text-green-700">Increase in time on site</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        The implementation successfully achieved all project objectives. The platform now serves as an effective showcase for both creative and technical work, with measurable improvements in user engagement and site performance.
+                    </p>
+                    <p class="text-gray-600">
+                        The project demonstrated the ability to balance aesthetic appeal with technical functionality, creating a portfolio that effectively communicates both creative vision and technical expertise to potential employers and collaborators.
+                    </p>
+                </div>
+
+                <!-- Lessons Learned Section -->
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Lessons Learned & Next Steps</h2>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Key Learnings</h3>
+                            <ul class="text-gray-600 space-y-3">
+                                <li>• <strong>Performance is Paramount:</strong> Even beautiful designs must load quickly and perform well across all devices</li>
+                                <li>• <strong>Accessibility First:</strong> Building with accessibility in mind from the start creates better experiences for all users</li>
+                                <li>• <strong>Content Strategy:</strong> Well-structured content is as important as technical implementation</li>
+                                <li>• <strong>User Testing:</strong> Regular feedback from users helped identify areas for improvement</li>
+                                <li>• <strong>Scalability Planning:</strong> Designing for future growth prevents major refactoring later</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Future Enhancements</h3>
+                            <ul class="text-gray-600 space-y-3">
+                                <li>• <strong>CMS Integration:</strong> Adding a headless CMS for easier content management</li>
+                                <li>• <strong>Blog Section:</strong> Implementing a blog to share technical insights and project updates</li>
+                                <li>• <strong>Dark Mode:</strong> Adding theme switching functionality</li>
+                                <li>• <strong>Analytics Dashboard:</strong> Creating an admin panel for visitor analytics</li>
+                                <li>• <strong>Internationalization:</strong> Adding multi-language support for global reach</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Back to Gallery Button -->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <a href="../gallery.html" class="inline-flex items-center gap-2 bg-gray-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    Back to Project Gallery
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-16">
+        <div class="container mx-auto px-6 py-12">
+            <!-- Quick Navigation -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center md:text-left">
+                    <h3 class="text-lg font-semibold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="../index.html#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
+                        <li><a href="../index.html#portfolio" class="text-gray-400 hover:text-white transition duration-300">Portfolio</a></li>
+                        <li><a href="../index.html#experience" class="text-gray-400 hover:text-white transition duration-300">Experience</a></li>
+                        <li><a href="../index.html#skills" class="text-gray-400 hover:text-white transition duration-300">Skills</a></li>
+                        <li><a href="../resources.html" class="text-gray-400 hover:text-white transition duration-300">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                    <div class="flex justify-center space-x-6 mb-4">
+                        <a href="https://www.linkedin.com/in/ryanguidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="LinkedIn Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/rguidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="GitHub Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="https://medium.com/@guidry_ryan" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="Medium Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 .38-.16.85-.44 1.12l-3.13 3.09c-.28.27-.7.27-1 0l-3.13-3.09c-.28-.27-.44-.74-.44-1.12s.16-.85.44-1.12l3.13-3.09c.28-.27.7-.27 1 0l3.13 3.09c.28.27.44.74.44 1.12zM0 12c0 .38.16.85.44 1.12l3.13 3.09c.28.27.7.27 1 0l3.13-3.09c.28-.27.44-.74.44-1.12s-.16-.85-.44-1.12L4.57 7.79c-.28-.27-.7-.27-1 0L.44 10.88C.16 11.15 0 11.62 0 12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://x.com/ryne_guidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="X (Twitter) Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="https://unsplash.com/@ryne_guidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="Unsplash Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M7.5 6.75V0h9v6.75h-9zm9 3.75h6.75V9H16.5v1.5zM7.5 9v1.5H.75V9H7.5zm0 3.75H.75v1.5H7.5v-1.5zm9 0v1.5h6.75v-1.5H16.5zM7.5 17.25H.75V24H7.5v-6.75zm9 0V24h6.75v-6.75H16.5z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">
+                        <a href="mailto:inquireryan@gmail.com" class="hover:text-white transition duration-300">inquireryan@gmail.com</a>
+                    </p>
+                </div>
+                <div class="text-center md:text-right">
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../privacy.html" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+                        <li><a href="../sitemap.html" class="text-gray-400 hover:text-white transition duration-300">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="flex justify-center items-center mb-4">
+                <div class="text-gray-400 text-sm text-center">
+                    <p class="mb-2">We improve our products and advertising by using Microsoft Clarity to see how you use our website. By using our site, you agree that we and Microsoft can collect and use this data. Our privacy statement <a href="../privacy.html" class="text-blue-400 hover:text-white transition duration-300">here</a> has more details.</p>
+                    <p>&copy; 2025 Ryan Guidry 🦄. All rights reserved 💜.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Optimization: Workflow Automation System - Case Study | Ryan Guidry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg+xml" href="../images/ui/rg-logomark.svg" loading="lazy">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header & Navigation -->
+    <header class="nav fixed top-0 left-0 right-0 z-50">
+        <div class="max-w-7xl mx-auto">
+            <nav class="nav__container">
+                <div class="text-2xl font-bold text-gray-900">
+                    <a href="../index.html" class="flex items-center space-x-3">
+                        <img src="/images/ui/rg-logomark.svg" alt="RG Logo" class="h-10 rounded-lg" loading="lazy">
+                        <span>Ryan Guidry</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="../index.html#about" class="nav__link">About</a>
+                    <a href="../index.html#portfolio" class="nav__link nav__link--active">Portfolio</a>
+                    <a href="../index.html#experience" class="nav__link">Experience</a>
+                    <a href="../index.html#skills" class="nav__link">Skills</a>
+                    <a href="../resources.html" class="nav__link">Resources</a>
+                    <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-0">
+        <!-- Hero Section -->
+        <section class="relative py-24 bg-gradient-to-br from-indigo-600 to-indigo-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Process Optimization: Workflow Automation System</h1>
+                    <p class="text-xl text-indigo-100 max-w-3xl mx-auto mb-8">
+                        Streamlined business processes by 70% through intelligent workflow automation, reducing manual tasks and improving operational efficiency
+                    </p>
+                    
+                    <!-- Live Links -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                        <a href="#" class="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition duration-300 shadow-lg">
+                            View Workflow Dashboard
+                        </a>
+                        <a href="#" class="bg-indigo-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-600 transition duration-300 shadow-lg">
+                            Download Case Study
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Study Content -->
+        <section class="py-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Overview Section -->
+                <div class="bg-white rounded-xl p-8 shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">The Overview</h2>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">The Problem/Goal</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        The organization was experiencing significant inefficiencies due to manual, repetitive processes across multiple departments. Employees spent excessive time on routine tasks, leading to delays, errors, and reduced productivity. The lack of standardized workflows created bottlenecks and inconsistent outcomes.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        The goal was to implement a comprehensive workflow automation system that would eliminate manual processes, standardize operations, reduce errors, and free up employee time for higher-value activities while improving overall business efficiency and customer satisfaction.
+                    </p>
+                </div>
+
+                <!-- Role & Technologies Section -->
+                <div class="bg-white rounded-xl p-8 shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">My Role & Technologies Used</h2>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">My Role</h3>
+                            <p class="text-gray-600 mb-4">Lead Process Engineer & Automation Specialist</p>
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• Process analysis and optimization</li>
+                                <li>• Workflow automation design</li>
+                                <li>• System integration and development</li>
+                                <li>• Change management and training</li>
+                                <li>• Performance monitoring and improvement</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Tech Stack</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Workflow Engine</h4>
+                                    <p class="text-gray-600 text-sm">Apache Airflow & Camunda</p>
+                                    <p class="text-gray-500 text-sm mt-1">Chosen for robust workflow orchestration, task scheduling, and complex process management. Airflow for data pipelines, Camunda for business process automation.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Integration</h4>
+                                    <p class="text-gray-600 text-sm">Zapier & Microsoft Power Automate</p>
+                                    <p class="text-gray-500 text-sm mt-1">Selected for seamless integration between different applications and services without requiring custom development.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">RPA Tools</h4>
+                                    <p class="text-gray-600 text-sm">UiPath & Selenium</p>
+                                    <p class="text-gray-500 text-sm mt-1">Used for automating repetitive tasks on web applications and desktop software, reducing manual intervention.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Monitoring</h4>
+                                    <p class="text-gray-600 text-sm">Grafana & Prometheus</p>
+                                    <p class="text-gray-500 text-sm mt-1">Implemented for real-time monitoring of workflow performance, error tracking, and operational insights.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Process & Challenges Section -->
+                <div class="bg-white rounded-xl p-8 shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">The Process & Challenges</h2>
+                    
+                    <div class="space-y-12">
+                        <!-- Challenge 1 -->
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Challenge 1: Mapping Complex Business Processes</h3>
+                            <p class="text-gray-600 mb-4">
+                                The organization had complex, interconnected processes across multiple departments with numerous decision points and exceptions. Mapping these processes accurately was crucial for successful automation.
+                            </p>
+                            
+                            <h4 class="font-semibold text-gray-900 mb-3">Solution Approach</h4>
+                            <p class="text-gray-600 mb-4">
+                                I implemented a systematic process mapping methodology using BPMN (Business Process Model and Notation) and created detailed workflow diagrams with decision trees and exception handling.
+                            </p>
+                            
+                            <div class="bg-gray-900 rounded-lg p-4 mb-4">
+                                <pre><code class="language-python"># Process mapping and workflow definition
+from camunda.external_task.external_task_worker import ExternalTaskWorker
+from camunda.external_task.external_task import ExternalTask
+import json
+import logging
+
+class ProcessMapper:
+    def __init__(self):
+        self.processes = {}
+        self.decision_trees = {}
+        self.logger = logging.getLogger(__name__)
+    
+    def map_business_process(self, process_name, steps, decisions, exceptions):
+        """Map a business process with all its components"""
+        process_definition = {
+            'name': process_name,
+            'steps': steps,
+            'decisions': decisions,
+            'exceptions': exceptions,
+            'automation_points': self.identify_automation_opportunities(steps),
+            'integration_points': self.identify_integration_points(steps)
+        }
+        
+        self.processes[process_name] = process_definition
+        return process_definition
+    
+    def identify_automation_opportunities(self, steps):
+        """Identify steps that can be automated"""
+        automation_candidates = []
+        
+        for step in steps:
+            if self.is_automation_candidate(step):
+                automation_candidates.append({
+                    'step_id': step['id'],
+                    'step_name': step['name'],
+                    'automation_type': self.determine_automation_type(step),
+                    'estimated_savings': self.calculate_time_savings(step),
+                    'implementation_complexity': self.assess_complexity(step)
+                })
+        
+        return automation_candidates
+    
+    def is_automation_candidate(self, step):
+        """Determine if a step is suitable for automation"""
+        criteria = [
+            step.get('repetitive', False),
+            step.get('rule_based', False),
+            step.get('manual_effort', 0) > 5,  # More than 5 minutes
+            not step.get('requires_human_judgment', False)
+        ]
+        
+        return sum(criteria) >= 2  # At least 2 criteria must be met
+    
+    def determine_automation_type(self, step):
+        """Determine the best automation approach for a step"""
+        if step.get('data_processing', False):
+            return 'ETL_Pipeline'
+        elif step.get('web_interaction', False):
+            return 'RPA'
+        elif step.get('api_integration', False):
+            return 'API_Integration'
+        elif step.get('document_processing', False):
+            return 'Document_Automation'
+        else:
+            return 'Workflow_Automation'
+    
+    def create_decision_tree(self, process_name, decisions):
+        """Create decision tree for complex processes"""
+        decision_tree = {
+            'process': process_name,
+            'nodes': {},
+            'edges': [],
+            'conditions': {}
+        }
+        
+        for decision in decisions:
+            node_id = f"decision_{decision['id']}"
+            decision_tree['nodes'][node_id] = {
+                'type': 'decision',
+                'name': decision['name'],
+                'conditions': decision['conditions'],
+                'outcomes': decision['outcomes']
+            }
+            
+            # Add edges for each outcome
+            for outcome in decision['outcomes']:
+                edge = {
+                    'from': node_id,
+                    'to': outcome['next_step'],
+                    'condition': outcome['condition'],
+                    'probability': outcome.get('probability', 1.0)
+                }
+                decision_tree['edges'].append(edge)
+        
+        self.decision_trees[process_name] = decision_tree
+        return decision_tree
+
+class WorkflowAutomation:
+    def __init__(self, process_mapper):
+        self.process_mapper = process_mapper
+        self.workers = {}
+    
+    def create_automated_workflow(self, process_name):
+        """Create automated workflow from process definition"""
+        process_def = self.process_mapper.processes[process_name]
+        
+        # Create workflow definition
+        workflow = {
+            'name': f"automated_{process_name}",
+            'version': '1.0',
+            'tasks': [],
+            'decisions': [],
+            'error_handling': []
+        }
+        
+        # Convert steps to automated tasks
+        for step in process_def['steps']:
+            if step['id'] in [auto['step_id'] for auto in process_def['automation_points']]:
+                task = self.create_automated_task(step)
+                workflow['tasks'].append(task)
+        
+        # Add decision points
+        for decision in process_def['decisions']:
+            workflow['decisions'].append(self.create_decision_task(decision))
+        
+        # Add error handling
+        for exception in process_def['exceptions']:
+            workflow['error_handling'].append(self.create_error_handler(exception))
+        
+        return workflow
+    
+    def create_automated_task(self, step):
+        """Create automated task definition"""
+        automation_type = self.process_mapper.determine_automation_type(step)
+        
+        task = {
+            'id': f"task_{step['id']}",
+            'name': step['name'],
+            'type': automation_type,
+            'config': self.get_task_config(automation_type, step),
+            'retry_policy': {
+                'max_retries': 3,
+                'retry_delay': 60,
+                'backoff_multiplier': 2
+            },
+            'timeout': step.get('timeout', 300)
+        }
+        
+        return task
+    
+    def get_task_config(self, automation_type, step):
+        """Get configuration for different automation types"""
+        configs = {
+            'ETL_Pipeline': {
+                'source': step.get('data_source'),
+                'transformations': step.get('transformations', []),
+                'destination': step.get('data_destination')
+            },
+            'RPA': {
+                'application': step.get('target_application'),
+                'actions': step.get('automation_actions', []),
+                'selectors': step.get('ui_selectors', {})
+            },
+            'API_Integration': {
+                'endpoint': step.get('api_endpoint'),
+                'method': step.get('http_method', 'GET'),
+                'headers': step.get('headers', {}),
+                'payload_template': step.get('payload_template')
+            }
+        }
+        
+        return configs.get(automation_type, {})</code></pre>
+                            </div>
+                            
+                            <p class="text-gray-600">
+                                This systematic approach identified 15 major automation opportunities across 8 departments, with potential time savings of 40-70% per process.
+                            </p>
+                        </div>
+
+                        <!-- Challenge 2 -->
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Challenge 2: Integrating Multiple Systems and Data Sources</h3>
+                            <p class="text-gray-600 mb-4">
+                                The organization used multiple legacy systems and applications that didn't communicate with each other. Creating seamless integration between these systems was essential for end-to-end automation.
+                            </p>
+                            
+                            <h4 class="font-semibold text-gray-900 mb-3">Solution Approach</h4>
+                            <p class="text-gray-600 mb-4">
+                                I developed a middleware layer using Apache Camel and implemented API gateways to standardize data exchange between different systems while maintaining data integrity and security.
+                            </p>
+                            
+                            <div class="bg-gray-900 rounded-lg p-4 mb-4">
+                                <pre><code class="language-java">// System integration middleware
+import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.model.dataformat.JsonLibrary;
+import org.apache.camel.Exchange;
+import org.apache.camel.Processor;
+
+public class SystemIntegrationMiddleware extends RouteBuilder {
+    
+    @Override
+    public void configure() throws Exception {
+        // Error handling
+        errorHandler(deadLetterChannel("direct:errorHandler")
+            .maximumRedeliveries(3)
+            .redeliveryDelay(1000)
+            .backOffMultiplier(2));
+        
+        // Data transformation and validation
+        from("direct:processData")
+            .routeId("dataProcessingRoute")
+            .log("Processing data: ${body}")
+            .choice()
+                .when(header("source").isEqualTo("legacy_system"))
+                    .to("direct:transformLegacyData")
+                .when(header("source").isEqualTo("modern_api"))
+                    .to("direct:transformAPIData")
+                .otherwise()
+                    .to("direct:transformGenericData")
+            .end()
+            .to("direct:validateData")
+            .to("direct:routeToDestination");
+        
+        // Legacy system integration
+        from("direct:transformLegacyData")
+            .routeId("legacyDataTransformation")
+            .process(new LegacyDataProcessor())
+            .marshal().json(JsonLibrary.Jackson)
+            .log("Transformed legacy data: ${body}");
+        
+        // API data transformation
+        from("direct:transformAPIData")
+            .routeId("apiDataTransformation")
+            .process(new APIDataProcessor())
+            .marshal().json(JsonLibrary.Jackson)
+            .log("Transformed API data: ${body}");
+        
+        // Data validation
+        from("direct:validateData")
+            .routeId("dataValidation")
+            .process(new DataValidator())
+            .choice()
+                .when(header("validation_status").isEqualTo("valid"))
+                    .log("Data validation passed")
+                .otherwise()
+                    .log("Data validation failed: ${header.validation_errors}")
+                    .to("direct:handleValidationError")
+            .end();
+        
+        // Error handling
+        from("direct:errorHandler")
+            .routeId("errorHandler")
+            .log("Error occurred: ${exception.message}")
+            .process(new ErrorProcessor())
+            .to("direct:notifyAdministrator");
+    }
+}
+
+class LegacyDataProcessor implements Processor {
+    @Override
+    public void process(Exchange exchange) throws Exception {
+        String legacyData = exchange.getIn().getBody(String.class);
+        
+        // Transform legacy format to standard format
+        Map<String, Object> transformedData = new HashMap<>();
+        
+        // Parse legacy CSV format
+        String[] lines = legacyData.split("\n");
+        for (String line : lines) {
+            String[] fields = line.split(",");
+            if (fields.length >= 3) {
+                Map<String, Object> record = new HashMap<>();
+                record.put("id", fields[0]);
+                record.put("name", fields[1]);
+                record.put("value", Double.parseDouble(fields[2]));
+                record.put("timestamp", new Date());
+                
+                transformedData.put(fields[0], record);
+            }
+        }
+        
+        exchange.getIn().setBody(transformedData);
+    }
+}
+
+class APIDataProcessor implements Processor {
+    @Override
+    public void process(Exchange exchange) throws Exception {
+        String apiData = exchange.getIn().getBody(String.class);
+        
+        // Parse JSON API response
+        ObjectMapper mapper = new ObjectMapper();
+        Map<String, Object> apiResponse = mapper.readValue(apiData, Map.class);
+        
+        // Extract relevant data
+        Map<String, Object> transformedData = new HashMap<>();
+        if (apiResponse.containsKey("data")) {
+            List<Map<String, Object>> dataList = (List<Map<String, Object>>) apiResponse.get("data");
+            
+            for (Map<String, Object> item : dataList) {
+                String id = (String) item.get("id");
+                Map<String, Object> record = new HashMap<>();
+                record.put("id", id);
+                record.put("name", item.get("name"));
+                record.put("value", item.get("value"));
+                record.put("timestamp", new Date());
+                
+                transformedData.put(id, record);
+            }
+        }
+        
+        exchange.getIn().setBody(transformedData);
+    }
+}
+
+class DataValidator implements Processor {
+    @Override
+    public void process(Exchange exchange) throws Exception {
+        Map<String, Object> data = exchange.getIn().getBody(Map.class);
+        List<String> errors = new ArrayList<>();
+        
+        // Validate required fields
+        for (Map.Entry<String, Object> entry : data.entrySet()) {
+            Map<String, Object> record = (Map<String, Object>) entry.getValue();
+            
+            if (!record.containsKey("id") || record.get("id") == null) {
+                errors.add("Missing ID for record: " + entry.getKey());
+            }
+            
+            if (!record.containsKey("name") || record.get("name") == null) {
+                errors.add("Missing name for record: " + entry.getKey());
+            }
+            
+            if (!record.containsKey("value") || record.get("value") == null) {
+                errors.add("Missing value for record: " + entry.getKey());
+            }
+        }
+        
+        if (errors.isEmpty()) {
+            exchange.getIn().setHeader("validation_status", "valid");
+        } else {
+            exchange.getIn().setHeader("validation_status", "invalid");
+            exchange.getIn().setHeader("validation_errors", String.join("; ", errors));
+        }
+    }
+}</code></pre>
+                            </div>
+                            
+                            <p class="text-gray-600">
+                                The middleware layer successfully integrated 12 different systems and applications, enabling seamless data flow and process automation across the entire organization.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div class="bg-white rounded-xl p-8 shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Results & Impact</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-indigo-50 rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-indigo-900 mb-2">Process Efficiency</h3>
+                            <p class="text-3xl font-bold text-indigo-600">70%</p>
+                            <p class="text-sm text-indigo-700">Reduction in processing time</p>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-green-900 mb-2">Cost Savings</h3>
+                            <p class="text-3xl font-bold text-green-600">$1.2M</p>
+                            <p class="text-sm text-green-700">Annual cost reduction</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        The workflow automation system successfully achieved 70% reduction in processing time across 15 major business processes, resulting in $1.2M in annual cost savings and significant improvements in employee productivity.
+                    </p>
+                    <p class="text-gray-600">
+                        Key achievements included elimination of 80% of manual data entry tasks, 95% reduction in processing errors, and establishment of a scalable automation framework for future process improvements.
+                    </p>
+                </div>
+
+                <!-- Lessons Learned Section -->
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Lessons Learned & Next Steps</h2>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Key Learnings</h3>
+                            <ul class="text-gray-600 space-y-3">
+                                <li>• <strong>Process Understanding is Critical:</strong> Thorough process mapping was essential for successful automation</li>
+                                <li>• <strong>Change Management:</strong> Employee training and communication were crucial for adoption</li>
+                                <li>• <strong>Incremental Implementation:</strong> Phased rollout reduced risk and improved success rates</li>
+                                <li>• <strong>Monitoring and Maintenance:</strong> Continuous monitoring prevented process failures</li>
+                                <li>• <strong>Scalability Planning:</strong> Designing for future growth enabled easy expansion</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Future Enhancements</h3>
+                            <ul class="text-gray-600 space-y-3">
+                                <li>• <strong>AI Integration:</strong> Adding machine learning for intelligent process optimization</li>
+                                <li>• <strong>Advanced Analytics:</strong> Implementing predictive analytics for process improvement</li>
+                                <li>• <strong>Mobile Automation:</strong> Extending automation to mobile applications</li>
+                                <li>• <strong>Self-Service Portals:</strong> Creating user-friendly interfaces for process management</li>
+                                <li>• <strong>Blockchain Integration:</strong> Adding distributed ledger technology for audit trails</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Back to Gallery Button -->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <a href="../gallery.html" class="inline-flex items-center gap-2 bg-gray-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    Back to Project Gallery
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-16">
+        <div class="container mx-auto px-6 py-12">
+            <!-- Quick Navigation -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center md:text-left">
+                    <h3 class="text-lg font-semibold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="../index.html#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
+                        <li><a href="../index.html#portfolio" class="text-gray-400 hover:text-white transition duration-300">Portfolio</a></li>
+                        <li><a href="../index.html#experience" class="text-gray-400 hover:text-white transition duration-300">Experience</a></li>
+                        <li><a href="../index.html#skills" class="text-gray-400 hover:text-white transition duration-300">Skills</a></li>
+                        <li><a href="../resources.html" class="text-gray-400 hover:text-white transition duration-300">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                    <div class="flex justify-center space-x-6 mb-4">
+                        <a href="https://www.linkedin.com/in/ryanguidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="LinkedIn Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/rguidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="GitHub Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="https://medium.com/@guidry_ryan" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="Medium Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 .38-.16.85-.44 1.12l-3.13 3.09c-.28.27-.7.27-1 0l-3.13-3.09c-.28-.27-.44-.74-.44-1.12s.16-.85.44-1.12l3.13-3.09c.28-.27.7-.27 1 0l3.13 3.09c.28.27.44.74.44 1.12zM0 12c0 .38.16.85.44 1.12l3.13 3.09c.28.27.7.27 1 0l3.13-3.09c.28-.27.44-.74.44-1.12s-.16-.85.44-1.12L4.57 7.79c-.28-.27-.7-.27-1 0L.44 10.88C.16 11.15 0 11.62 0 12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://x.com/ryne_guidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="X (Twitter) Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="https://unsplash.com/@ryne_guidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="Unsplash Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M7.5 6.75V0h9v6.75h-9zm9 3.75h6.75V9H16.5v1.5zM7.5 9v1.5H.75V9H7.5zm0 3.75H.75v1.5H7.5v-1.5zm9 0v1.5h6.75v-1.5H16.5zM7.5 17.25H.75V24H7.5v-6.75zm9 0V24h6.75v-6.75H16.5z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">
+                        <a href="mailto:inquireryan@gmail.com" class="hover:text-white transition duration-300">inquireryan@gmail.com</a>
+                    </p>
+                </div>
+                <div class="text-center md:text-right">
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../privacy.html" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+                        <li><a href="../sitemap.html" class="text-gray-400 hover:text-white transition duration-300">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="flex justify-center items-center mb-4">
+                <div class="text-gray-400 text-sm text-center">
+                    <p class="mb-2">We improve our products and advertising by using Microsoft Clarity to see how you use our website. By using our site, you agree that we and Microsoft can collect and use this data. Our privacy statement <a href="../privacy.html" class="text-blue-400 hover:text-white transition duration-300">here</a> has more details.</p>
+                    <p>&copy; 2025 Ryan Guidry 🦄. All rights reserved 💜.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -66,22 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
         path: "career-development.html",
       },
       {
-        id: 5,
-        title: "Technical Writing & Documentation",
-        icon: "FileText",
-        description: "Craft compelling technical content",
-        content: [
-          "Best practices for technical documentation",
-          "Tools for creating professional documentation",
-          "Templates for different types of technical content",
-          "Medium articles and insights",
-          "Writing style guides"
-        ],
-        color: "color-indigo",
-        iconColor: "icon-color-indigo",
-        path: "technical-writing-documentation.html",
-      },
-      {
         id: 6,
         title: "Project Management & Tools",
         icon: "Settings",
