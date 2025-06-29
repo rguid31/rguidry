@@ -147,6 +147,9 @@ case $REPLY in
         echo "✅ Branch pushed successfully!"
         ;;
     3)
+        # Store the current feature branch name before switching
+        feature_branch=$current_branch
+        
         # Determine main branch
         if git show-ref --verify --quiet refs/heads/main; then
             main_branch="main"
@@ -161,13 +164,22 @@ case $REPLY in
         git checkout $main_branch
         git pull origin $main_branch 2>/dev/null || echo "⚠️  Could not pull from remote"
         
-        if git merge $current_branch; then
+        if git merge $feature_branch; then
             echo "✅ Branch merged successfully into $main_branch!"
-            read -p "Delete the feature branch '$current_branch'? (y/N): " -n 1 -r
+            echo ""
+            echo "📤 Push merged changes to remote?"
+            read -p "Push $main_branch to remote? (Y/n): " -n 1 -r
+            echo ""
+            if [[ ! $REPLY =~ ^[Nn]$ ]]; then
+                git push origin $main_branch
+                echo "✅ Changes pushed to remote!"
+            fi
+            echo ""
+            read -p "Delete the feature branch '$feature_branch'? (y/N): " -n 1 -r
             echo ""
             if [[ $REPLY =~ ^[Yy]$ ]]; then
-                git branch -d $current_branch
-                echo "✅ Feature branch deleted."
+                git branch -d $feature_branch
+                echo "✅ Feature branch '$feature_branch' deleted."
             fi
         else
             echo "❌ Merge failed. Please resolve conflicts manually."
@@ -185,6 +197,9 @@ case $REPLY in
         fi
         ;;
     5)
+        # Store the current feature branch name
+        feature_branch=$current_branch
+        
         echo "🗑️  Deleting feature branch..."
         if git show-ref --verify --quiet refs/heads/main; then
             git checkout main
@@ -192,11 +207,11 @@ case $REPLY in
             git checkout master
         fi
         
-        read -p "Are you sure you want to delete '$current_branch'? This cannot be undone! (y/N): " -n 1 -r
+        read -p "Are you sure you want to delete '$feature_branch'? This cannot be undone! (y/N): " -n 1 -r
         echo ""
         if [[ $REPLY =~ ^[Yy]$ ]]; then
-            git branch -D $current_branch
-            echo "✅ Feature branch deleted."
+            git branch -D $feature_branch
+            echo "✅ Feature branch '$feature_branch' deleted."
         else
             echo "❌ Branch deletion cancelled."
         fi
