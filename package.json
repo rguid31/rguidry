@@ -4,10 +4,11 @@
   "description": "Ryan Guidry's personal portfolio website",
   "main": "index.html",
   "scripts": {
-    "dev": "./dev-server.sh",
+    "build": "node build.js",
+    "dev": "npm run build && ./dev-server.sh",
     "start": "./dev-server.sh",
     "serve": "./dev-server.sh",
-    "build": "echo 'Static site - no build step needed'",
+    "watch": "npm run build && npx nodemon --watch src --ext html,js --exec 'npm run build'",
     "preview": "./dev-server.sh 4173"
   },
   "keywords": [

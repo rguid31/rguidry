@@ -20,7 +20,7 @@
                 <div class="text-2xl font-bold text-gray-900">
                     <!-- Logo and Name -->
                     <a href="index.html" class="flex items-center space-x-3">
-                        <img src="/images/ui/rg-logomark.svg" alt="RG Logo" class="h-10 rounded-lg" loading="lazy">
+                        <img src="/images/ui/rg-logomark.svg" alt="Ryan Guidry personal brand logo" class="h-10 rounded-lg" loading="lazy">
                         <span>Ryan Guidry</span>
                     </a>
                 </div>
@@ -61,7 +61,7 @@
         <section class="relative min-h-[calc(100vh-6rem)] w-full flex flex-col justify-start items-center text-center">
             <!-- Background Image Container -->
             <div class="absolute inset-0 w-full h-full">
-                <img src="Images/background/portfolio-gallery.png" alt="Portfolio Gallery Background" class="w-full h-full object-cover" loading="lazy">
+                <img src="Images/background/portfolio-gallery.png" alt="Abstract background with geometric patterns and data visualization elements representing portfolio showcase" class="w-full h-full object-cover" loading="lazy">
             </div>
             
             <!-- Project Gallery Title Container -->
@@ -110,15 +110,15 @@
                         </p>
                     </div>
                     
-                    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="main" aria-label="Portfolio case studies grid">
                         <!-- Project 1: Interactive Media Portfolio -->
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-gray-200">
+                        <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-gray-200" role="article" aria-labelledby="project-1-title">
                             <div class="relative overflow-hidden">
-                                <img src="images/portfolio/interactive-media.png" alt="Interactive Media Portfolio" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+                                <img src="images/portfolio/interactive-media.png" alt="Screenshot of interactive media portfolio showing responsive web design with modern layout and navigation" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
                             <div class="p-6 flex flex-col flex-grow">
-                                <h3 class="text-xl font-bold text-gray-900 mb-3">Cross-disciplinary Interactive Media Portfolio</h3>
+                                <h3 id="project-1-title" class="text-xl font-bold text-gray-900 mb-3">Cross-disciplinary Interactive Media Portfolio</h3>
                                 <p class="text-gray-600 mb-4 flex-grow">A dynamic, responsive web platform that seamlessly integrates creative content with technical functionality, resulting in a 15% increase in web traffic and 20% higher engagement.</p>
                                 
                                 <!-- Technology Badges -->
@@ -131,20 +131,20 @@
                                 
                                 <!-- Action Buttons -->
                                 <div class="flex flex-col sm:flex-row gap-3 mt-auto">
-                                    <a href="case-studies/interactive-media.html" class="flex-1 bg-blue-600 text-white text-center py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200">
+                                    <a href="case-studies/interactive-media.html" class="flex-1 bg-blue-600 text-white text-center py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" aria-describedby="project-1-title">
                                         Case Study
                                     </a>
-                                    <a href="#" class="flex-1 bg-gray-100 text-gray-700 text-center py-2 px-4 rounded-lg font-medium hover:bg-gray-200 transition-colors duration-200">
+                                    <a href="#" class="flex-1 bg-gray-100 text-gray-700 text-center py-2 px-4 rounded-lg font-medium hover:bg-gray-200 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2" aria-label="View live demo of interactive media portfolio">
                                         View Live
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
                         <!-- Project 2: IT Automation -->
                         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-gray-200">
                             <div class="relative overflow-hidden">
-                                <img src="images/portfolio/automation.png" alt="IT Automation Project" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+                                <img src="images/portfolio/automation.png" alt="Windows Server Update Service automation dashboard showing 1200+ virtual machines management interface" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
                             <div class="p-6 flex flex-col flex-grow">
@@ -174,7 +174,7 @@
                         <!-- Project 3: Data Analytics -->
                         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-gray-200">
                             <div class="relative overflow-hidden">
-                                <img src="images/portfolio/data-analytics.png" alt="Data Analytics Platform" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+                                <img src="images/portfolio/data-analytics.png" alt="Advanced data analytics platform dashboard with interactive charts, KPIs, and statistical models" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
                             <div class="p-6 flex flex-col flex-grow">
@@ -204,7 +204,7 @@
                         <!-- Project 4: Machine Learning -->
                         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-gray-200">
                             <div class="relative overflow-hidden">
-                                <img src="images/portfolio/machine-learning.png" alt="Machine Learning Project" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+                                <img src="images/portfolio/machine-learning.png" alt="Predictive maintenance machine learning interface showing equipment failure forecasting models and real-time monitoring" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
                             <div class="p-6 flex flex-col flex-grow">
@@ -234,7 +234,7 @@
                         <!-- Project 5: Data Visualization -->
                         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-gray-200">
                             <div class="relative overflow-hidden">
-                                <img src="images/portfolio/data-visualization.png" alt="Data Visualization Project" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+                                <img src="images/portfolio/data-visualization.png" alt="Interactive business intelligence dashboard with real-time KPI tracking, charts, and drill-down capabilities" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
                             <div class="p-6 flex flex-col flex-grow">
@@ -264,7 +264,7 @@
                         <!-- Project 6: Process Optimization -->
                         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-gray-200">
                             <div class="relative overflow-hidden">
-                                <img src="images/portfolio/process-optimization.png" alt="Process Optimization Project" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+                                <img src="images/portfolio/process-optimization.png" alt="Supply chain process optimization simulation showing flow diagrams, bottleneck analysis, and performance metrics" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
                             <div class="p-6 flex flex-col flex-grow">

@@ -192,6 +192,75 @@ input, textarea, select {
     }
 }
 
+/* Lazy loading styles */
+.lazy-load {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.lazy-load:not([src]) {
+    opacity: 0;
+}
+
+img:not(.lazy-load) {
+    opacity: 1;
+}
+
+/* Improve image loading performance */
+img {
+    height: auto;
+    max-width: 100%;
+    image-rendering: optimizeQuality;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+/* Optimize for web fonts */
+@font-face {
+    font-display: swap;
+}
+
+/* Performance optimizations */
+.performance-optimized {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .portfolio-arrow:hover {
+        transform: translateY(-50%) scale(1);
+    }
+    
+    .card:hover {
+        transform: none;
+    }
+}
+
+/* Preload critical resources */
+.critical-resource {
+    font-display: swap;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* Optimize background images */
+.bg-optimized {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 /* Button Styles */
 /* ----------- */
 .btn {
@@ -310,31 +379,46 @@ input, textarea, select {
 /* Portfolio Carousel Styles */
 /* ----------------------- */
 :root {
-    --portfolio-gap-desktop: 2rem; /* Default gap for desktop, corresponds to Tailwind's gap-8 (32px) */
-    --portfolio-gap-mobile: 1rem;  /* Default gap for mobile, corresponds to Tailwind's gap-4 (16px) */
-    /* Calculated total gap for 3 items in view on desktop (2 gaps) */
-    --portfolio-total-gap-desktop: calc(var(--portfolio-gap-desktop) * 2); 
+    --portfolio-gap-desktop: 2rem;
+    --portfolio-gap-mobile: 1rem;
+    --portfolio-total-gap-desktop: calc(var(--portfolio-gap-desktop) * 2);
 }
 
 #portfolio-container {
     display: flex;
-    gap: var(--portfolio-gap-desktop); /* Use CSS variable for gap */
+    gap: var(--portfolio-gap-desktop);
     transition: transform 0.5s ease-in-out;
-    flex-wrap: nowrap; /* Ensure items don't wrap to maintain single line for scrolling */
-    /* min-width: max-content; ensures the container is wide enough to hold all items without wrapping, allowing smooth translate */
-    min-width: max-content; 
+    flex-wrap: nowrap;
+    min-width: max-content;
+    will-change: transform;
 }
 
 .portfolio-item {
-    flex-shrink: 0; /* Prevent items from shrinking */
+    flex-shrink: 0;
     transition: all 0.3s ease;
-    /* 
-     * Calculate width for desktop: (100% of visible area - total gaps) / number of items.
-     * Here, 3 items are shown, so there are 2 gaps.
-     */
-    width: calc((100% - var(--portfolio-total-gap-desktop)) / 3); 
-    max-width: 400px; /* Optional: Maximum width for an item on very large screens */
-    min-width: 300px; /* Optional: Minimum width for an item before it becomes too squished */
+    width: calc((100% - var(--portfolio-total-gap-desktop)) / 3);
+    max-width: 400px;
+    min-width: 300px;
+}
+
+/* Improved portfolio container for mobile */
+@media (max-width: 1023px) {
+    .portfolio-item {
+        width: calc((100% - var(--portfolio-gap-desktop)) / 2);
+        min-width: 280px;
+    }
+}
+
+@media (max-width: 767px) {
+    .portfolio-item {
+        width: calc(100vw - 4rem);
+        min-width: 280px;
+        max-width: 400px;
+    }
+    
+    #portfolio-container {
+        gap: var(--portfolio-gap-mobile);
+    }
 }
 
 /* Carousel container wrapper - this class is on the parent of #portfolio-container */
@@ -399,26 +483,29 @@ input, textarea, select {
     transform: scale(1.2);
 }
 
-/* Responsive carousel adjustments */
+/* Enhanced mobile carousel adjustments */
 @media (max-width: 768px) {
-    .portfolio-item {
-        /* 
-         * On mobile, typically one item is shown. 
-         * The width calculation `calc(100vw - 2rem)` seems to account for 1rem padding on each side of the page container.
-         * If items are meant to have a gap between them when scrolling, this needs to be handled by the container's padding or item margin.
-         * For a single item view, this width should make it take up most of the viewport width, respecting global padding.
-         */
-        width: calc(100vw - 2rem); /* Assumes 1rem page padding left & right */
-        min-width: 280px; /* Minimum readable width */
-        max-width: none; /* Allow it to take full calculated width */
+    .portfolio-arrow {
+        padding: 0.75rem;
+        min-width: 50px;
+        min-height: 50px;
     }
     
-    #portfolio-container {
-        gap: var(--portfolio-gap-mobile); /* Use CSS variable for gap on mobile */
+    .portfolio-arrow svg {
+        width: 1.5rem;
+        height: 1.5rem;
     }
     
-    #portfolio-prev,
-    #portfolio-next {
-        transform: scale(0.8);
+    /* Improve touch targets */
+    .carousel-indicator {
+        min-width: 44px;
+        min-height: 44px;
+        margin: 0.25rem;
+    }
+    
+    /* Better spacing on mobile */
+    #portfolio {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }

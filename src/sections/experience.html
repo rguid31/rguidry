@@ -1,0 +1,410 @@
+<!-- Experience Section -->
+<section id="experience" class="py-24 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">Professional Experience</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-8">A journey through my professional roles, highlighting key achievements and growth in both engineering and data analysis.</p>
+            <!-- Download Resume Button -->
+            <a href="files/resume/ryan-guidry-resume.pdf" 
+               download="Ryan_Guidry_Resume.pdf"
+               class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 shadow-lg hover:shadow-xl mb-8">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                Download Resume
+            </a>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            <!-- Outlier AI (June 2024 – Present) -->
+            <button onclick="openModal('outlier-modal')" class="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+                <div class="aspect-square flex items-center justify-center">
+                    <img src="images/experience/professional/outlier-ai.png" alt="Outlier AI Logo" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-105 transition-transform duration-200">
+                </div>
+            </button>
+
+            <!-- ACBL (October 2023 – March 2024) -->
+            <button onclick="openModal('acbl-modal')" class="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+                <div class="aspect-square flex items-center justify-center">
+                    <img src="images/experience/professional/acbl.png" alt="ACBL Logo" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-105 transition-transform duration-200">
+                </div>
+            </button>
+
+            <!-- Tracerco (April 2024 – May 2024) -->
+            <button onclick="openModal('tracerco-modal')" class="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+                <div class="aspect-square flex items-center justify-center">
+                    <img src="images/experience/professional/tracerco.png" alt="Tracerco Logo" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-105 transition-transform duration-200">
+                </div>
+            </button>
+
+            <!-- Emerson (June 2022 – August 2022) -->
+            <button onclick="openModal('emerson-modal')" class="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+                <div class="aspect-square flex items-center justify-center">
+                    <img src="images/experience/professional/emerson.png" alt="Emerson Logo" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-105 transition-transform duration-200">
+                </div>
+            </button>
+
+            <!-- TotalEnergies (June 2021 – August 2021) -->
+            <button onclick="openModal('total-modal')" class="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+                <div class="aspect-square flex items-center justify-center">
+                    <img src="images/experience/professional/total.png" alt="TotalEnergies Logo" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-105 transition-transform duration-200">
+                </div>
+            </button>
+
+            <!-- DWL Technology (May 2019 – September 2019) -->
+            <button onclick="openModal('dwl-modal')" class="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+                <div class="aspect-square flex items-center justify-center">
+                    <img src="images/experience/professional/dwl-logo.png" alt="DWL Technology Logo" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-105 transition-transform duration-200">
+                </div>
+            </button>
+
+            <!-- Nalco Champion (May 2018 – August 2018) -->
+            <button onclick="openModal('nalco-modal')" class="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+                <div class="aspect-square flex items-center justify-center">
+                    <img src="images/experience/professional/nalco.png" alt="Nalco Champion Logo" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-105 transition-transform duration-200">
+                </div>
+            </button>
+
+            <!-- Cornerstone Chemical (December 2017 – January 2018) -->
+            <button onclick="openModal('cornerstone-modal')" class="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+                <div class="aspect-square flex items-center justify-center">
+                    <img src="images/experience/professional/cornerstone.png" alt="Cornerstone Chemical Logo" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-105 transition-transform duration-200">
+                </div>
+            </button>
+
+            <!-- New Orleans Original Daiquiris (July 2017 – September 2017) -->
+            <button onclick="openModal('daiquiris-modal')" class="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+                <div class="aspect-square flex items-center justify-center">
+                    <img src="images/experience/professional/daiquiris.png" alt="New Orleans Original Daiquiris Logo" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-105 transition-transform duration-200">
+                </div>
+            </button>
+
+            <!-- Georgia-Pacific (December 2016 – January 2017) -->
+            <button onclick="openModal('gp-modal')" class="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+                <div class="aspect-square flex items-center justify-center">
+                    <img src="images/experience/professional/gp.png" alt="Georgia-Pacific Logo" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-105 transition-transform duration-200">
+                </div>
+            </button>
+
+            <!-- Home Servicing (May 2015 – August 2015) -->
+            <button onclick="openModal('home-servicing-modal')" class="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+                <div class="aspect-square flex items-center justify-center">
+                    <img src="images/experience/professional/home-servicing.png" alt="Home Servicing, LLC Logo" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-105 transition-transform duration-200">
+                </div>
+            </button>
+
+            <!-- SCPPS (May 2013 – August 2013, May 2014 – August 2014) -->
+            <button onclick="openModal('scpps-modal')" class="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+                <div class="aspect-square flex items-center justify-center">
+                    <img src="images/experience/professional/scpps.jpg" alt="SCPPS Logo" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-105 transition-transform duration-200">
+                </div>
+            </button>
+        </div>
+
+        <!-- Experience Modals -->
+        <!-- Outlier AI Modal -->
+        <div id="outlier-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'outlier-modal')">
+            <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex items-center gap-4">
+                        <img src="images/experience/professional/outlier-ai.png" alt="Outlier AI Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900">AI Math Specialist</h3>
+                            <p class="text-lg text-gray-700">Outlier AI</p>
+                            <p class="text-gray-600">Baton Rouge, LA | June 2024 – Present</p>
+                        </div>
+                    </div>
+                    <button onclick="closeModal('outlier-modal')" class="text-gray-400 hover:text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="list-disc list-inside space-y-3 text-gray-700">
+                    <li>Supported AI model development through precise generation and refinement of training data, ensuring adherence to system standards and improving model performance.</li>
+                    <li>Performed rigorous evaluations and systematic troubleshooting of AI model responses to enhance accuracy and system reliability.</li>
+                    <li>Trained AI models by rating, reviewing, and rewriting responses from AI models to enhance their accuracy.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tracerco Modal -->
+        <div id="tracerco-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'tracerco-modal')">
+            <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex items-center gap-4">
+                        <img src="images/experience/professional/tracerco.png" alt="Tracerco Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900">Field Technician</h3>
+                            <p class="text-lg text-gray-700">Tracerco</p>
+                            <p class="text-gray-600">Baton Rouge, LA | April 2024 – May 2024</p>
+                        </div>
+                    </div>
+                    <button onclick="closeModal('tracerco-modal')" class="text-gray-400 hover:text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="list-disc list-inside space-y-3 text-gray-700">
+                    <li>Acted as a subject matter expert in scanning and instrumentation technologies, optimizing operational procedures for maximum efficiency.</li>
+                    <li>Provided technical leadership in scanning, tracer technologies, nucleonic instrumentation, and subsea technologies.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Emerson Modal -->
+        <div id="emerson-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'emerson-modal')">
+            <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex items-center gap-4">
+                        <img src="images/experience/professional/emerson.png" alt="Emerson Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900">Intern, Application Engineer (AUTOSOL/PSS)</h3>
+                            <p class="text-lg text-gray-700">Emerson Automation Solutions</p>
+                            <p class="text-gray-600">Baton Rouge, LA | June 2022 – August 2022</p>
+                        </div>
+                    </div>
+                    <button onclick="closeModal('emerson-modal')" class="text-gray-400 hover:text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="list-disc list-inside space-y-3 text-gray-700">
+                    <li>Successfully implemented and meticulously configured the AgileOps software suite on diverse customer control system platforms, including precise configuration of Microsoft SQL and MS Server.</li>
+                    <li>Led initiative to automate Windows updates across 1200 virtual machines by establishing a WSUS.</li>
+                    <li>Developed Excel macros to enhance user experience and refine usability.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TotalEnergies Modal -->
+        <div id="total-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'total-modal')">
+            <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex items-center gap-4">
+                        <img src="images/experience/professional/total.png" alt="TotalEnergies Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900">Intern, Project Development Engineer</h3>
+                            <p class="text-lg text-gray-700">TotalEnergies</p>
+                            <p class="text-gray-600">Port Arthur, TX | June 2021 – August 2021</p>
+                        </div>
+                    </div>
+                    <button onclick="closeModal('total-modal')" class="text-gray-400 hover:text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="list-disc list-inside space-y-3 text-gray-700">
+                    <li>Led pre-FEED planning for a project to increase condensate splitter unit utilization by defining design scope and creating project schedule.</li>
+                    <li>Conducted feasibility studies for CSU modifications to improve corrosion control and pump reliability.</li>
+                    <li>Created a working model of refinery's Cooling Water System (CWS) piping network using SimSci Pipephase software.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- DWL Technology Modal -->
+        <div id="dwl-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'dwl-modal')">
+            <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex items-center gap-4">
+                        <img src="images/experience/professional/dwl-logo.png" alt="DWL Technology Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900">Intern, Industrial Equipment Sales</h3>
+                            <p class="text-lg text-gray-700">DWL Technology, LLC</p>
+                            <p class="text-gray-600">Walker, LA | May 2019 – September 2019</p>
+                        </div>
+                    </div>
+                    <button onclick="closeModal('dwl-modal')" class="text-gray-400 hover:text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="list-disc list-inside space-y-3 text-gray-700">
+                    <li>Managed, organized, inventoried, and sold surplus industrial engineering parts and chemical laboratory glassware.</li>
+                    <li>Established an e-commerce sales presence, achieving 100% positive customer feedback and Top-Rated Seller status on eBay.</li>
+                    <li>Managed e-commerce sales metrics and KPIs to improve listing SEO and increase overall sales performance.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Nalco Champion Modal -->
+        <div id="nalco-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+            <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex items-center gap-4">
+                        <img src="images/experience/professional/nalco.png" alt="Nalco Champion Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900">Intern, Oilfield Chemical Sales</h3>
+                            <p class="text-lg text-gray-700">NALCO Champion</p>
+                            <p class="text-gray-600">Houston, TX | May 2018 – August 2018</p>
+                        </div>
+                    </div>
+                    <button onclick="closeModal('nalco-modal')" class="text-gray-400 hover:text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="list-disc list-inside space-y-3 text-gray-700">
+                    <li>Conducted daily upstream oilfield surveys across diverse customer sites, providing specialized chemical additive recommendations to enhance equipment integrity and implement preventative maintenance protocols.</li>
+                    <li>Revamped pipeline corrosion monitoring services by implementing advanced microbial analysis procedures and computer modeling of chemical flow dynamics, enabling accurate forecasting of flowline failures through data correlation.</li>
+                    <li>Prioritized safety and risk management by conducting comprehensive site assessments and integrating safety protocols into customer service objectives.</li>
+                    <li>Leveraged technical expertise in process safety, data analysis, and chemical engineering to optimize customer solutions and drive operational excellence.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SCPPS Modal -->
+        <div id="scpps-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'scpps-modal')">
+            <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex items-center gap-4">
+                        <img src="images/experience/professional/scpps.jpg" alt="SCPPS Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900">Computer Technician</h3>
+                            <p class="text-lg text-gray-700">St. Charles Parish Public Schools</p>
+                            <p class="text-gray-600">Luling, LA | May 2013 – August 2013, May 2014 – August 2014</p>
+                        </div>
+                    </div>
+                    <button onclick="closeModal('scpps-modal')" class="text-gray-400 hover:text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="list-disc list-inside space-y-3 text-gray-700">
+                    <li>Provided technical support and troubleshooting for hardware, software, and network issues.</li>
+                    <li>Managed user accounts, permissions, and assisted with data backup, recovery, and security protocols.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ACBL Modal -->
+        <div id="acbl-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'acbl-modal')">
+            <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex items-center gap-4">
+                        <img src="images/experience/professional/acbl.png" alt="ACBL Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900">Safety and Training Coordinator</h3>
+                            <p class="text-lg text-gray-700">American Commercial Barge Line (ACBL)</p>
+                            <p class="text-gray-600">Harahan, LA | October 2023 – March 2024</p>
+                        </div>
+                    </div>
+                    <button onclick="closeModal('acbl-modal')" class="text-gray-400 hover:text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="list-disc list-inside space-y-3 text-gray-700">
+                    <li>Pioneered a proactive culture surrounding safety initiatives, resulting in improved compliance ratings and lower incident rates.</li>
+                    <li>Executed detailed risk assessments and strategic hazard mitigation plans, enhancing workplace safety across operational processes.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Cornerstone Chemical Modal -->
+        <div id="cornerstone-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'cornerstone-modal')">
+            <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex items-center gap-4">
+                        <img src="images/experience/professional/cornerstone.png" alt="Cornerstone Chemical Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900">Intern, Process Engineering</h3>
+                            <p class="text-lg text-gray-700">Cornerstone Chemical Company</p>
+                            <p class="text-gray-600">Waggaman, LA | December 2017 – January 2018</p>
+                        </div>
+                    </div>
+                    <button onclick="closeModal('cornerstone-modal')" class="text-gray-400 hover:text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="list-disc list-inside space-y-3 text-gray-700">
+                    <li>Utilized Pi ProcessBook and Pi DataLink to analyze plant data, focusing on acid neutralization processes and production cost optimization.</li>
+                    <li>Collaborated with lead process engineer to verify P&ID accuracy and gain comprehensive understanding of combustion reactor symbology and operations.</li>
+                    <li>Conducted detailed examination of industrial turbines and compressors to identify and understand equipment failure mechanisms.</li>
+                    <li>Developed expertise in data analysis, process engineering, and equipment troubleshooting while ensuring compliance with safety and environmental standards.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- New Orleans Original Daiquiris Modal -->
+        <div id="daiquiris-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'daiquiris-modal')">
+            <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex items-center gap-4">
+                        <img src="images/experience/professional/daiquiris.png" alt="New Orleans Original Daiquiris Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900">Bartender</h3>
+                            <p class="text-lg text-gray-700">New Orleans Original Daiquiris</p>
+                            <p class="text-gray-600">Baton Rouge, LA | July 2017 – September 2017</p>
+                        </div>
+                    </div>
+                    <button onclick="closeModal('daiquiris-modal')" class="text-gray-400 hover:text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="list-disc list-inside space-y-3 text-gray-700">
+                    <li>Developed customer relations through effective social interaction and assurance of customer satisfaction in a fast-paced environment.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Georgia-Pacific Modal -->
+        <div id="gp-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'gp-modal')">
+            <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex items-center gap-4">
+                        <img src="images/experience/professional/gp.png" alt="Georgia-Pacific Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900">Intern, Chemical Sales Engineer</h3>
+                            <p class="text-lg text-gray-700">Georgia-Pacific LLC</p>
+                            <p class="text-gray-600">Hasbrouck Heights, NJ | December 2016 – January 2017</p>
+                        </div>
+                    </div>
+                    <button onclick="closeModal('gp-modal')" class="text-gray-400 hover:text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="list-disc list-inside space-y-3 text-gray-700">
+                    <li>Created PFDs of paper making processes at various mills for optimal additive injection locations.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Home Servicing Modal -->
+        <div id="home-servicing-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" onclick="closeModalOnBackdrop(event, 'home-servicing-modal')">
+            <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex items-center gap-4">
+                        <img src="images/experience/professional/home-servicing.png" alt="Home Servicing, LLC Logo" class="h-16 w-16 object-contain bg-gray-50 rounded-lg p-2">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900">Mortgage Lender</h3>
+                            <p class="text-lg text-gray-700">Home Servicing, LLC</p>
+                            <p class="text-gray-600">Baton Rouge, LA | May 2015 – August 2015</p>
+                        </div>
+                    </div>
+                    <button onclick="closeModal('home-servicing-modal')" class="text-gray-400 hover:text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="list-disc list-inside space-y-3 text-gray-700">
+                    <li>Communicated with homeowners and agents regarding property taxes, insurance payments, and mortgages.</li>
+                    <li>Organized and filed documents into computer databases and physical libraries for easy access.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
