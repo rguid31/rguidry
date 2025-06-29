@@ -1,0 +1,24 @@
+{
+  "name": "rguidry-portfolio",
+  "version": "1.0.0",
+  "description": "Ryan Guidry's personal portfolio website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "./dev-server.sh",
+    "start": "./dev-server.sh",
+    "serve": "./dev-server.sh",
+    "build": "echo 'Static site - no build step needed'",
+    "preview": "./dev-server.sh 4173"
+  },
+  "keywords": [
+    "portfolio",
+    "personal",
+    "website",
+    "static"
+  ],
+  "author": "Ryan Guidry",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+} 

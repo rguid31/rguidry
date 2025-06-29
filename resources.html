@@ -1,262 +1,209 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Resources Page</title>
+document.addEventListener("DOMContentLoaded", () => {
+    // Data for the resource cards
+    const resources = [
+      {
+        id: 1,
+        title: "Data Science & Artificial Intelligence",
+        icon: "Brain",
+        description: "From zero to hero in data science and AI",
+        content: [
+          "Curated list of free/paid courses for beginners to advanced",
+          "Essential tools and libraries (Python, SQL, Tableau)",
+          "AI/ML resources for practical applications",
+          "Data visualization best practices",
+          "Personal project examples and lessons learned",
+        ],
+        color: "color-blue",
+        iconColor: "icon-color-blue",
+        path: "data-science-artificial-intelligence.html",
+      },
+      {
+        id: 2,
+        title: "Engineering & Design Resources",
+        icon: "FlaskConical",
+        description: "Industry insights and practical tools",
+        content: [
+          "Process simulation software tutorials",
+          "Safety and compliance guidelines",
+          "Industry-specific tools and calculators",
+          "Case studies from real experience",
+          "Technical documentation templates",
+        ],
+        color: "color-green",
+        iconColor: "icon-color-green",
+        path: "engineering-and-design-resources.html",
+      },
+      {
+        id: 3,
+        title: "Web Development Toolkit",
+        icon: "Code",
+        description: "Modern web development essentials",
+        content: [
+          "Modern web development stack recommendations",
+          "UI/UX design principles",
+          "Performance optimization techniques",
+          "Accessibility guidelines",
+          "Code snippets and templates",
+        ],
+        color: "color-purple",
+        iconColor: "icon-color-purple",
+        path: "web-development-toolkit.html",
+      },
+      {
+        id: 4,
+        title: "Career Development",
+        icon: "TrendingUp",
+        description: "Level up your professional journey",
+        content: [
+          "Resume building tips",
+          "Interview preparation guides",
+          "Industry-specific certifications",
+          "Professional networking strategies",
+          "Portfolio development advice",
+        ],
+        color: "color-orange",
+        iconColor: "icon-color-orange",
+        path: "career-development.html",
+      },
+      {
+        id: 5, // Added new resource category for Technical Writing
+        title: "Technical Writing & Documentation",
+        icon: "FileText",
+        description: "Craft clear and effective technical content",
+        content: [
+          "Best practices for documentation",
+          "Tools for professional documentation",
+          "Templates for technical content",
+          "Insights from Medium articles",
+          "Style guides and standards",
+        ],
+        color: "color-cyan", // Example color - can be adjusted
+        iconColor: "icon-color-cyan",
+        path: "technical-writing-documentation.html",
+      },
+      {
+        id: 6,
+        title: "Project Management & Tools",
+        icon: "Settings",
+        description: "Streamline your workflow and productivity",
+        content: [
+          "Agile/Scrum methodologies",
+          "Project management software comparisons",
+          "Collaboration tools",
+          "Version control best practices",
+          "Real-world tool experiences",
+        ],
+        color: "color-teal",
+        iconColor: "icon-color-teal",
+        path: "project-management-tools.html",
+      },
+      {
+        id: 7,
+        title: "Industry-Specific Resources",
+        icon: "Factory",
+        description: "Deep dive into specialized knowledge",
+        content: [
+          "Chemical manufacturing insights",
+          "Data analytics in process industries",
+          "Safety protocols and best practices",
+          "Regulatory compliance resources",
+          "Industry trends and innovations",
+        ],
+        color: "color-red",
+        iconColor: "icon-color-red",
+        path: "industry-specific-resources.html",
+      },
+      {
+        id: 8,
+        title: "Learning & Development",
+        icon: "GraduationCap",
+        description: "Continuous growth and skill building",
+        content: [
+          "Online learning platforms comparison",
+          "Certification programs",
+          "Professional development resources",
+          "Industry conferences and events",
+          "Curated reading recommendations",
+        ],
+        color: "color-yellow",
+        iconColor: "icon-color-yellow",
+        path: "learning-development.html",
+      },
+      {
+        id: 9,
+        title: "BONUS: Coolest Sites on the Interweb",
+        icon: "Sparkles",
+        description: "Hidden gems discovered in the digital wilderness",
+        content: [
+          "Mind-blowing interactive websites",
+          "Useful tools you never knew existed",
+          "Creative portfolios and showcases",
+          "Educational platforms with a twist",
+          "Fun and quirky discoveries",
+        ],
+        color: "color-pink",
+        iconColor: "icon-color-pink",
+        path: "coolest-sites-on-the-interweb.html",
+      },
+    ];
+  
+    // SVG strings for icons
+    const icons = {
+      Brain: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.97-3.44 2.5 2.5 0 0 1-2.03-3.01 2.5 2.5 0 0 1 2.02-3.01 2.5 2.5 0 0 1 2.98-3.44A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.97-3.44 2.5 2.5 0 0 0 2.03-3.01 2.5 2.5 0 0 0-2.02-3.01 2.5 2.5 0 0 0-2.98-3.44A2.5 2.5 0 0 0 14.5 2Z"/></svg>`,
+      FlaskConical: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 2h7"/><path d="M14 2v7.5L20.5 22h-17L10 9.5V2"/><path d="M8.5 2h7M10 9.5L20.5 22"/></svg>`,
+      Code: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
+      TrendingUp: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>`,
+      FileText: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>`,
+      Settings: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 0 2l-.15.08a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.38a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1 0-2l.15-.08a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>`,
+      Factory: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1"/><path d="M12 18h1"/><path d="M7 18h1"/></svg>`,
+      GraduationCap: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>`,
+      Sparkles: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.93 2.57a1.5 1.5 0 0 0-1.86 0L6.6 4A1.5 1.5 0 0 0 6 5.2V7.4a1.5 1.5 0 0 0 1.5 1.5h2.2a1.5 1.5 0 0 0 1.5-1.5V5.2A1.5 1.5 0 0 0 10.4 4l-1.47-1.43zM14 15.07a1.5 1.5 0 0 0-1.4-1.43h-2.2a1.5 1.5 0 0 0-1.5 1.5v2.2a1.5 1.5 0 0 0 1.5 1.5h2.2a1.5 1.5 0 0 0 1.4-1.43L14 15.07zM18.07 9.93a1.5 1.5 0 0 0 0-1.86L16.6 6.6A1.5 1.5 0 0 0 15.4 6H13.2a1.5 1.5 0 0 0-1.5 1.5v2.2a1.5 1.5 0 0 0 1.5 1.5h2.2a1.5 1.5 0 0 0 1.2-1.5l1.47-1.47zM4.93 18.07a1.5 1.5 0 0 0 1.86 0L8.2 16.6A1.5 1.5 0 0 0 8.6 15.4V13.2a1.5 1.5 0 0 0-1.5-1.5H4.9a1.5 1.5 0 0 0-1.5 1.5v2.2a1.5 1.5 0 0 0 1.5 1.5h0z"/></svg>`,
+      ExternalLink: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`,
+      ArrowRight: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>`,
+    };
+  
+    const grid = document.querySelector(".resources-grid");
+  
+    if (grid) {
+        // Create all cards HTML at once
+        const cardsHTML = resources.map(resource => {
+            // Create a list of content items
+            const contentList = resource.content
+                .map(item => `
+                    <li>
+                        <span>${item}</span>
+                    </li>
+                `)
+                .join("");
     
-        <!-- Tailwind CSS -->
-        <script src="https://cdn.tailwindcss.com"></script>
-    
-        <!-- Google Fonts: Inter -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-        <!-- Link to your main stylesheet -->
-        <link rel="stylesheet" href="style.css">
-
-        <link rel="stylesheet" href="css/resources.css">
-    
-        <!-- Add main.js for navigation and scroll effects -->
-        <script src="js/main.js" defer></script>
-
-        <script src="js/resources.js" defer></script>
-
-        <script type="text/javascript">
-            (function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "rxo9fqpdyr");
-        </script>
-</head>
-<body class="bg-gray-50 text-gray-800">
-    <!-- Background Image Container -->
-    <div class="fixed top-0 left-0 w-screen h-screen -z-10">
-        <!-- Abstract analytical background image -->
-        <img 
-            src="/images/background/analytical-bg.jpg" 
-            alt="Abstract Analytical Background" 
-            class="absolute top-0 left-0 w-full h-full object-cover object-center"
-            style="min-width: 100vw; min-height: 100vh; width: 100vw; height: 100vh;" loading="lazy">
-        <!-- Gradient overlay for better text readability -->
-        <div class="absolute inset-0 bg-gradient-to-b from-gray-900/90 via-gray-900/70 to-gray-900/90"></div>
-    </div>
-
-    <!-- Header & Navigation -->
-    <header class="nav fixed top-0 left-0 right-0 z-50">
-        <div class="max-w-7xl mx-auto">
-            <nav class="nav__container">
-                <div class="text-2xl font-bold text-gray-900">
-                    <!-- Logo and Name -->
-                    <a href="index.html" class="flex items-center space-x-3">
-                        <img src="/images/ui/rg-logomark.svg" alt="RG Logo" class="h-10 rounded-lg" loading="lazy">
-                        <span>Ryan Guidry</span>
-                    </a>
-                </div>
-                <div class="hidden md:flex items-center space-x-6">
-                    <a href="index.html#about" class="nav__link">About</a>
-                    <a href="index.html#portfolio" class="nav__link">Portfolio</a>
-                    <a href="index.html#experience" class="nav__link">Experience</a>
-                    <a href="index.html#skills" class="nav__link">Skills</a>
-                    <a href="resources.html" class="nav__link nav__link--active">Resources</a>
-                    <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact">Contact</a>
-                </div>
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Toggle mobile menu">
-                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path class="mobile-menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        <path class="mobile-menu-close hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </nav>
-            <!-- Mobile Menu -->
-            <nav id="mobile-menu" class="nav-mobile nav-mobile--hidden md:hidden" aria-label="Mobile navigation">
-                <div class="container mx-auto px-6 py-4 space-y-4">
-                    <a href="index.html#about" class="nav__link block py-2">About</a>
-                    <a href="index.html#portfolio" class="nav__link block py-2">Portfolio</a>
-                    <a href="index.html#experience" class="nav__link block py-2">Experience</a>
-                    <a href="index.html#skills" class="nav__link block py-2">Skills</a>
-                    <a href="resources.html" class="nav__link nav__link--active block py-2">Resources</a>
-                    <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact block py-2 text-center">Contact</a>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Add padding to main content to account for fixed header -->
-    <main class="pt-0">
-    <div class="page">
-        <!-- Hero Section -->
-        <section class="relative min-h-[calc(100vh-6rem)] w-full flex flex-col justify-center items-center text-center">
-            <!-- Background Image Container -->
-            <div class="absolute inset-0 w-full h-full">
-                <img src="/images/background/analytical-bg.jpg" alt="Abstract Analytical Background" class="w-full h-full object-cover" loading="lazy">
-                <div class="absolute inset-0 bg-gradient-to-br from-gray-900/90 to-gray-800/90"></div>
-            </div>
-            
-            <!-- Hero Content -->
-            <div class="relative z-10 max-w-4xl mx-auto px-4">
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-black bg-white/90 backdrop-blur-sm px-8 py-4 rounded-2xl shadow-2xl inline-block border-4 border-gray-800 mb-8 leading-tight">Your hub for exploring the internet's top resources</h1>
-                <p class="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-12 leading-relaxed">
-                    Welcome to a carefully curated universe of knowledge, tools, and hidden gems. Each section below is a rabbit hole of fascinating resources, battle-tested tools, and insider secrets that will transform how you learn, work, and explore the digital world.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                    <a href="#resources-grid" class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition duration-300 shadow-lg hover:shadow-xl">Explore Resources</a>
-                    <a href="#contact" class="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold text-lg border-2 border-white/20 hover:bg-white/20 transition duration-300 shadow-lg hover:shadow-xl">Let's Connect</a>
-                </div>
-                <div class="text-gray-300 text-lg">
-                    <span>9 curated collections</span>
-                    <span class="mx-2">•</span>
-                    <span>Hundreds of resources</span>
-                    <span class="mx-2">•</span>
-                    <span>Endless possibilities</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Content Wrapper -->
-        <div class="relative z-10 bg-white rounded-2xl overflow-hidden shadow-lg mx-4 md:mx-8 lg:mx-auto max-w-7xl -mt-32 mb-8">
-            <!-- Resources Grid Section -->
-            <section id="resources-grid" class="py-24 px-4 sm:px-6 lg:px-8">
-                <div class="resources-grid">
-                    <!-- Resource cards will be injected here by JavaScript -->
-                </div>
-            </section>
-        </div>
-    </div>
-    </main>
-
-    <!-- Footer -->
-    <footer id="contact" class="bg-gray-900 text-white mt-16">
-        <div class="container mx-auto px-6 py-12">
-            <!-- Quick Navigation -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div class="text-center md:text-left">
-                    <h3 class="text-lg font-semibold mb-4">Navigation</h3>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
-                        <li><a href="index.html#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
-                        <li><a href="index.html#portfolio" class="text-gray-400 hover:text-white transition duration-300">Portfolio</a></li>
-                        <li><a href="index.html#experience" class="text-gray-400 hover:text-white transition duration-300">Experience</a></li>
-                        <li><a href="index.html#skills" class="text-gray-400 hover:text-white transition duration-300">Skills</a></li>
-                        <li><a href="resources.html" class="text-gray-400 hover:text-white transition duration-300">Resources</a></li>
-                    </ul>
-                </div>
-                <div class="text-center">
-                    <h3 class="text-lg font-semibold mb-4">Connect</h3>
-                    <div class="flex justify-center space-x-6 mb-4">
-                        <a href="https://www.linkedin.com/in/ryanguidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="LinkedIn Profile">
-                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                            </svg>
-                        </a>
-                        <a href="https://github.com/rguidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="GitHub Profile">
-                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
-                            </svg>
-                        </a>
-                        <a href="https://medium.com/@guidry_ryan" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="Medium Profile">
-                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 .38-.16.85-.44 1.12l-3.13 3.09c-.28.27-.7.27-1 0l-3.13-3.09c-.28-.27-.44-.74-.44-1.12s.16-.85.44-1.12l3.13-3.09c.28-.27.7-.27 1 0l3.13 3.09c.28.27.44.74.44 1.12zM0 12c0 .38.16.85.44 1.12l3.13 3.09c.28.27.7.27 1 0l3.13-3.09c.28-.27.44-.74.44-1.12s-.16-.85-.44-1.12L4.57 7.79c-.28-.27-.7-.27-1 0L.44 10.88C.16 11.15 0 11.62 0 12z"/>
-                            </svg>
-                        </a>
-                        <a href="https://x.com/ryne_guidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="X (Twitter) Profile">
-                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                            </svg>
-                        </a>
-                        <a href="https://unsplash.com/@ryne_guidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="Unsplash Profile">
-                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M7.5 6.75V0h9v6.75h-9zm9 3.75h6.75V9H16.5v1.5zM7.5 9v1.5H.75V9H7.5zm0 3.75H.75v1.5H7.5v-1.5zm9 0v1.5h6.75v-1.5H16.5zM7.5 17.25H.75V24H7.5v-6.75zm9 0V24h6.75v-6.75H16.5z"/>
-                            </svg>
-                        </a>
+            // Create the card HTML
+            return `
+                <div class="card ${resource.color}">
+                    <div class="card-header">
+                        <div class="card-header-top flex items-center gap-4">
+                            <div class="card-icon-title flex items-center gap-4">
+                                <div class="card-icon-wrapper ${resource.iconColor}">
+                                    ${icons[resource.icon]}
+                                </div>
+                                <div>
+                                    <h3 class="card-title mb-0">${resource.title}</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="card-description">${resource.description}</p>
                     </div>
-                    <p class="text-gray-400">
-                        <a href="mailto:inquireryan@gmail.com" class="hover:text-white transition duration-300">inquireryan@gmail.com</a>
-                    </p>
+                    <div class="card-content">
+                        <ul>${contentList}</ul>
+                        <button class="card-button" onclick="location.href='resources/${resource.path}'">
+                            Explore Resources
+                            <span class="card-button-icon">•</span>
+                        </button>
+                    </div>
                 </div>
-                <div class="text-center md:text-right">
-                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
-                    <ul class="space-y-2">
-                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
-                        <li><a href="sitemap.html" class="text-gray-400 hover:text-white transition duration-300">Sitemap</a></li>
-                    </ul>
-                </div>
-            </div>
+            `;
+        }).join("");
 
-            <!-- Copyright -->
-            <div class="flex justify-center items-center mb-4">
-                <div class="text-gray-400 text-sm text-center">
-                    <p class="mb-2">We improve our products and advertising by using Microsoft Clarity to see how you use our website. By using our site, you agree that we and Microsoft can collect and use this data. Our privacy statement <a href="privacy.html" class="text-blue-400 hover:text-white transition duration-300">here</a> has more details.</p>
-                    <p>&copy; 2025 Ryan Guidry 🦄. All rights reserved 💜.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            try {
-                const mobileMenuButton = document.getElementById('mobile-menu-button');
-                const mobileMenu = document.getElementById('mobile-menu');
-                
-                if (mobileMenuButton && mobileMenu) {
-                    const menuIcon = mobileMenuButton.querySelector('.mobile-menu-icon');
-                    const closeIcon = mobileMenuButton.querySelector('.mobile-menu-close');
-                    
-                    if (!menuIcon || !closeIcon) {
-                        throw new Error('Mobile menu icons not found');
-                    }
-
-                    mobileMenuButton.addEventListener('click', () => {
-                        try {
-                            mobileMenu.classList.toggle('nav-mobile--hidden');
-                            menuIcon.classList.toggle('hidden');
-                            closeIcon.classList.toggle('hidden');
-                            // Prevent body scroll when menu is open
-                            document.body.style.overflow = mobileMenu.classList.contains('nav-mobile--hidden') ? '' : 'hidden';
-                        } catch (error) {
-                            console.error('Error toggling mobile menu:', error);
-                        }
-                    });
-
-                    // Close mobile menu when clicking outside
-                    document.addEventListener('click', (e) => {
-                        try {
-                            if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target) && !mobileMenu.classList.contains('nav-mobile--hidden')) {
-                                mobileMenu.classList.add('nav-mobile--hidden');
-                                menuIcon.classList.remove('hidden');
-                                closeIcon.classList.add('hidden');
-                                document.body.style.overflow = '';
-                            }
-                        } catch (error) {
-                            console.error('Error handling mobile menu click outside:', error);
-                        }
-                    });
-
-                    // Close mobile menu when clicking a link
-                    mobileMenu.querySelectorAll('a').forEach(link => {
-                        link.addEventListener('click', () => {
-                            try {
-                                mobileMenu.classList.add('nav-mobile--hidden');
-                                menuIcon.classList.remove('hidden');
-                                closeIcon.classList.add('hidden');
-                                document.body.style.overflow = '';
-                            } catch (error) {
-                                console.error('Error handling mobile menu link click:', error);
-                            }
-                        });
-                    });
-                }
-            } catch (error) {
-                console.error('Error initializing mobile menu:', error);
-            }
-        });
-    </script>
-
-</body>
-</html>
+        // Add all cards to the grid at once
+        grid.innerHTML = cardsHTML;
+    }
+  });

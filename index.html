@@ -113,7 +113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </section>
 
         <!-- Content Wrapper -->
-        <div class="relative z-10 bg-white rounded-2xl shadow-lg">
+        <div class="relative z-10 bg-white rounded-2xl shadow-lg overflow-hidden -mt-20">
             <!-- About Me Section -->
             <section id="about" class="py-24 bg-white">
                 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -457,32 +457,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
             </section>
-
-            <!-- Test script for portfolio buttons -->
-            <script>
-                console.log('Testing portfolio buttons...');
-                setTimeout(() => {
-                    const prevBtn = document.getElementById('portfolio-prev');
-                    const nextBtn = document.getElementById('portfolio-next');
-                    console.log('Inline test - Prev button:', prevBtn);
-                    console.log('Inline test - Next button:', nextBtn);
-                    
-                    // Add a visible alert to confirm the script is running
-                    if (prevBtn && nextBtn) {
-                        console.log('Buttons found - adding test listeners');
-                        
-                        prevBtn.addEventListener('click', () => {
-                            console.log('INLINE TEST: Prev button clicked!');
-                        });
-                        
-                        nextBtn.addEventListener('click', () => {
-                            console.log('INLINE TEST: Next button clicked!');
-                        });
-                    } else {
-                        console.log('Portfolio buttons NOT found! prevBtn: ' + prevBtn + ', nextBtn: ' + nextBtn);
-                    }
-                }, 2000);
-            </script>
 
             <!-- Portfolio Modals -->
             <!-- Interactive Media Modal -->
@@ -1268,9 +1242,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </footer>
 
     <!-- Link to your new script file -->
-    <script>
-        console.log('Inline script test - JavaScript is working!');
-    </script>
     <script src="script.js"></script>
 </body>
 </html>

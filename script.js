@@ -1,19 +1,21 @@
-console.log('Script.js loaded successfully!');
+// console.log('Script.js loaded successfully!');
+
+/**
+ * @file script.js
+ * @description Main JavaScript file for the portfolio website, handling dynamic content,
+ * navigation, modals, and the portfolio carousel.
+ */
 
 // This function runs once the entire page is loaded
 window.onload = function() {
     
     // Set the current year in the footer dynamically
-    // This means you won't have to update it manually every year
     const yearSpan = document.getElementById('year');
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
 
-    // You can add more interactive elements here later.
-    // For example, a "scroll to top" button, portfolio filters,
-    // or animations that trigger on scroll.
-    console.log("Portfolio ready and running from script.js!");
+    // console.log("Portfolio ready and running from script.js!");
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -49,11 +51,48 @@ window.onload = function() {
 
 // Execute JavaScript after the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOMContentLoaded event fired!');
+    // console.log('DOMContentLoaded event fired!');
     initializePortfolioCarousel();
+    initializePortfolioButtonTest(); 
 });
 
-// Portfolio Carousel functionality
+/**
+ * @function initializePortfolioButtonTest
+ * @description Initializes a test script for portfolio buttons.
+ * This function was moved from an inline script in index.html.
+ * It logs button presence and adds dummy click listeners for testing purposes.
+ */
+function initializePortfolioButtonTest() {
+    // console.log('Testing portfolio buttons from script.js...');
+    setTimeout(() => {
+        const prevBtn = document.getElementById('portfolio-prev');
+        const nextBtn = document.getElementById('portfolio-next');
+        // console.log('External script test - Prev button:', prevBtn);
+        // console.log('External script test - Next button:', nextBtn);
+
+        if (prevBtn && nextBtn) {
+            // console.log('Buttons found - adding test listeners from external script');
+
+            prevBtn.addEventListener('click', () => {
+                // Note: These listeners are for testing and will log to console.
+                // The actual carousel functionality is handled by initializePortfolioCarousel.
+                // console.log('EXTERNAL SCRIPT TEST: Prev button clicked!');
+            });
+
+            nextBtn.addEventListener('click', () => {
+                // console.log('EXTERNAL SCRIPT TEST: Next button clicked!');
+            });
+        } else {
+            // console.log('Portfolio buttons NOT found by external script! prevBtn: ' + prevBtn + ', nextBtn: ' + nextBtn);
+        }
+    }, 2000); // Original timeout kept
+}
+
+/**
+ * @function initializePortfolioCarousel
+ * @description Sets up the portfolio items carousel, including navigation,
+ * indicators, infinite scroll effect, and keyboard navigation.
+ */
 function initializePortfolioCarousel() {
     const container = document.getElementById('portfolio-container');
     const prevBtn = document.getElementById('portfolio-prev');
@@ -61,56 +100,64 @@ function initializePortfolioCarousel() {
     const indicators = document.querySelectorAll('.carousel-indicator');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
     
-    console.log('Initializing portfolio carousel...');
-    console.log('Container found:', container);
-    console.log('Prev button found:', prevBtn);
-    console.log('Next button found:', nextBtn);
-    console.log('Portfolio items found:', portfolioItems.length);
+    // console.log('Initializing portfolio carousel...');
+    // console.log('Container found:', container);
+    // console.log('Prev button found:', prevBtn);
+    // console.log('Next button found:', nextBtn);
+    // console.log('Portfolio items found:', portfolioItems.length);
 
     if (!container || !prevBtn || !nextBtn || portfolioItems.length === 0) {
         console.error('Carousel elements not found. Initialization aborted.');
         return;
     }
     
-    // Duplicate the portfolio items for infinite scroll
+    // Duplicate the portfolio items for a basic "infinite" scroll illusion
     const originalItems = Array.from(portfolioItems);
     originalItems.forEach(item => {
         const clone = item.cloneNode(true);
         container.appendChild(clone);
     });
     
-    // Get all items after duplication
-    const allItems = document.querySelectorAll('.portfolio-item');
-    const totalItems = allItems.length; // Should be 12 (6 original + 6 duplicates)
-    const originalCount = originalItems.length; // 6 original items
+    const allItems = document.querySelectorAll('.portfolio-item'); // Re-query to include clones
+    const originalCount = originalItems.length; 
     
-    console.log(`Carousel initialized: ${totalItems} items (${originalCount} original + ${originalCount} duplicates)`);
+    // console.log(`Carousel initialized: ${allItems.length} items (${originalCount} original + ${originalCount} duplicates)`);
     
     let currentSlide = 0;
-    const itemsPerView = 3; // Show 3 items at a time
-    const maxSlides = originalCount; // We can scroll through all 6 original positions
-    
-    // Function to get the computed gap value in pixels
+    // const itemsPerView = 3; // Currently not used directly in logic, but good for context
+    const maxSlides = originalCount; // Controls the logical number of "pages" or positions
+
+    /**
+     * @function getGapValue
+     * @description Retrieves the computed gap value (in pixels) of the carousel container.
+     * @param {HTMLElement} element - The carousel container element.
+     * @returns {number} The gap value in pixels. Defaults to 0 if not found or not a number.
+     */
     function getGapValue(element) {
         const style = window.getComputedStyle(element);
-        return parseFloat(style.gap) || 32; // Default to 32px if gap is not found
+        const gap = parseFloat(style.gap);
+        return !isNaN(gap) ? gap : 0; // Default to 0px if gap is not a number (e.g., "normal")
     }
 
-    // Function to update carousel position
+    /**
+     * @function updateCarousel
+     * @description Updates the carousel's position, indicators, and navigation button states.
+     */
     function updateCarousel() {
-        // Get the current item width and gap value
-        const itemWidth = allItems[0].offsetWidth;
+        if (allItems.length === 0) return; // Should not happen if initialization was successful
+
+        const itemWidth = allItems[0].offsetWidth; // Assumes all items have the same width
         const gapValue = getGapValue(container);
         
-        console.log(`itemWidth: ${itemWidth}, gapValue: ${gapValue}`);
+        // console.log(`itemWidth: ${itemWidth}, gapValue: ${gapValue}`);
 
-        // Calculate the translateX in pixels
-        // We move by the width of one item plus its right gap
+        // Calculate the translateX amount in pixels.
+        // This moves the container by the width of one item plus its associated gap.
         const translateX = -(currentSlide * (itemWidth + gapValue));
-        console.log(`currentSlide: ${currentSlide}, translateX: ${translateX}`);
+        // console.log(`currentSlide: ${currentSlide}, translateX: ${translateX}`);
         container.style.transform = `translateX(${translateX}px)`;
         
-        // Update indicators (if we have them)
+        // Update indicators
         if (indicators.length > 0) {
             // Highlight the indicator corresponding to the current position
             const indicatorIndex = currentSlide % originalCount;
@@ -125,7 +172,7 @@ function initializePortfolioCarousel() {
             });
         }
         
-        // Navigation buttons are always enabled for infinite scroll
+        // Navigation buttons are always enabled due to the "infinite" scroll behavior
         prevBtn.disabled = false;
         nextBtn.disabled = false;
         prevBtn.classList.remove('opacity-50', 'cursor-not-allowed');
@@ -133,80 +180,83 @@ function initializePortfolioCarousel() {
     }
     
     // Event listeners for navigation buttons
-    console.log('Adding event listeners to buttons...');
+    // console.log('Adding event listeners to buttons...');
     
     prevBtn.addEventListener('click', () => {
-        console.log('Previous button clicked!');
+        // console.log('Previous button clicked!');
         currentSlide--;
-        // Wrap around to the last position when going below 0
         if (currentSlide < 0) {
-            currentSlide = maxSlides - 1; // Show the last position (5)
+            // To achieve seamless wrap-around with translate,
+            // you might need to quickly jump to the equivalent slide in the cloned set
+            // and then transition. For this basic setup, it just jumps.
+            currentSlide = maxSlides - 1; 
         }
-        console.log(`Previous clicked: currentSlide = ${currentSlide}`);
+        // console.log(`Previous clicked: currentSlide = ${currentSlide}`);
         updateCarousel();
     });
     
     nextBtn.addEventListener('click', () => {
-        console.log('Next button clicked!');
+        // console.log('Next button clicked!');
         currentSlide++;
-        // Wrap around to the first position when going past the max
         if (currentSlide >= maxSlides) {
-            currentSlide = 0; // Reset to show first 3 items
+            // Similar to prev, for seamless wrap-around, more complex logic is needed.
+            // This basic setup resets to the beginning.
+            currentSlide = 0; 
         }
-        console.log(`Next clicked: currentSlide = ${currentSlide}`);
+        // console.log(`Next clicked: currentSlide = ${currentSlide}`);
         updateCarousel();
     });
     
-    console.log('Event listeners added successfully');
+    // console.log('Event listeners added successfully');
     
-    // Event listeners for indicators (if we have them)
+    // Event listeners for indicators
     indicators.forEach((indicator, index) => {
         indicator.addEventListener('click', () => {
-            currentSlide = index; // Use the indicator index directly
-            console.log(`Indicator ${index} clicked: currentSlide = ${currentSlide}`);
+            currentSlide = index; 
+            // console.log(`Indicator ${index} clicked: currentSlide = ${currentSlide}`);
             updateCarousel();
         });
     });
     
-    // Initialize carousel on window resize to adjust positions
+    // Initialize carousel on window resize to adjust positions and item widths
     window.addEventListener('resize', updateCarousel);
 
-    // Initialize carousel
+    // Initial setup of the carousel
     updateCarousel();
     
-    // Add keyboard navigation
+    // Add keyboard navigation for accessibility
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') {
-            e.preventDefault(); // Prevent default scroll behavior
-            currentSlide--;
-            if (currentSlide < 0) {
-                currentSlide = maxSlides - 1; // Show the last position (5)
+        if (document.activeElement && document.activeElement.closest('#portfolio')) { // Only if focus is within portfolio
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault(); // Prevent default window scroll
+                prevBtn.click(); // Simulate click for consistent behavior
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault(); // Prevent default window scroll
+                nextBtn.click(); // Simulate click for consistent behavior
             }
-            console.log(`Left arrow pressed: currentSlide = ${currentSlide}`);
-            updateCarousel();
-        } else if (e.key === 'ArrowRight') {
-            e.preventDefault(); // Prevent default scroll behavior
-            currentSlide++;
-            if (currentSlide >= maxSlides) {
-                currentSlide = 0; // Reset to show first 3 items
-            }
-            console.log(`Right arrow pressed: currentSlide = ${currentSlide}`);
-            updateCarousel();
         }
     });
 }
 
-// Function to open a modal
+/**
+ * @function openModal
+ * @description Opens a modal dialog by its ID.
+ * @param {string} modalId - The ID of the modal element to open.
+ */
 function openModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.classList.remove('hidden');
-        modal.classList.add('flex');
+        modal.classList.add('flex'); // Assuming 'flex' is used to display it
         document.body.style.overflow = 'hidden'; // Prevent background scrolling
     }
 }
 
-// Function to close a modal
+/**
+ * @function closeModal
+ * @description Closes a modal dialog by its ID.
+ * @param {string} modalId - The ID of the modal element to close.
+ */
 function closeModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
@@ -216,9 +266,14 @@ function closeModal(modalId) {
     }
 }
 
-// Function to close a modal when clicking the backdrop
+/**
+ * @function closeModalOnBackdrop
+ * @description Closes a modal if a click event occurs directly on its backdrop.
+ * @param {Event} event - The click event.
+ * @param {string} modalId - The ID of the modal to check against.
+ */
 function closeModalOnBackdrop(event, modalId) {
-    // Only close if the click was directly on the backdrop (modal element)
+    // Only close if the click was directly on the backdrop (the modal element itself)
     if (event.target.id === modalId) {
         closeModal(modalId);
     }

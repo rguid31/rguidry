@@ -439,6 +439,10 @@ body {
 .color-pink:hover { background-color: #fce7f3; }
 .icon-color-pink { color: #db2777; }
 
+.color-cyan { background-color: #ecfeff; border-color: #a5f3fc; }
+.color-cyan:hover { background-color: #cffafe; }
+.icon-color-cyan { color: #0891b2; }
+
 /* Call to Action Section */
 .cta-section {
     width: 100%;
