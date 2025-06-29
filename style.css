@@ -21,6 +21,49 @@ html {
     color: #2563eb; /* Blue highlight on hover for section headers */
 }
 
+/* Project Filter Styles */
+/* -------------------- */
+.filter-btn {
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+}
+
+.filter-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.filter-btn.active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.filter-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.filter-btn:hover::before {
+    left: 100%;
+}
+
+/* Project Cards Animation */
+.project-card {
+    transition: all 0.3s ease;
+}
+
+.project-card.filtered-out {
+    opacity: 0;
+    transform: scale(0.9) translateY(-10px);
+}
+
 /* Navigation Styles */
 /* --------------- */
 .nav {

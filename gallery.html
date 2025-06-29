@@ -105,14 +105,30 @@
                     <!-- Case Studies Title -->
                     <div class="text-center mb-16">
                         <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Case Studies</h2>
-                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
                             Detailed analysis of engineering and data projects showcasing technical expertise and problem-solving methodologies.
                         </p>
+                        
+                        <!-- Project Filter Buttons -->
+                        <div class="flex flex-wrap justify-center gap-3 mb-8">
+                            <button class="filter-btn active bg-gray-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2" data-filter="all">
+                                All Projects
+                            </button>
+                            <button class="filter-btn bg-white text-gray-700 border border-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" data-filter="web">
+                                Web Development
+                            </button>
+                            <button class="filter-btn bg-white text-gray-700 border border-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2" data-filter="engineering">
+                                Engineering
+                            </button>
+                            <button class="filter-btn bg-white text-gray-700 border border-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2" data-filter="data-analysis">
+                                Data Analysis
+                            </button>
+                        </div>
                     </div>
                     
                     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="main" aria-label="Portfolio case studies grid">
                         <!-- Project 1: Interactive Media Portfolio -->
-                        <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-gray-200" role="article" aria-labelledby="project-1-title">
+                        <article class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-gray-200" data-category="web" role="article" aria-labelledby="project-1-title">
                             <div class="relative overflow-hidden">
                                 <img src="images/portfolio/interactive-media.png" alt="Screenshot of interactive media portfolio showing responsive web design with modern layout and navigation" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
@@ -142,7 +158,7 @@
                         </article>
 
                         <!-- Project 2: IT Automation -->
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-gray-200">
+                        <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-gray-200" data-category="engineering">
                             <div class="relative overflow-hidden">
                                 <img src="images/portfolio/automation.png" alt="Windows Server Update Service automation dashboard showing 1200+ virtual machines management interface" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
@@ -172,7 +188,7 @@
                         </div>
 
                         <!-- Project 3: Data Analytics -->
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-gray-200">
+                        <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-gray-200" data-category="data-analysis">
                             <div class="relative overflow-hidden">
                                 <img src="images/portfolio/data-analytics.png" alt="Advanced data analytics platform dashboard with interactive charts, KPIs, and statistical models" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
@@ -202,7 +218,7 @@
                         </div>
 
                         <!-- Project 4: Machine Learning -->
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-gray-200">
+                        <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-gray-200" data-category="data-analysis">
                             <div class="relative overflow-hidden">
                                 <img src="images/portfolio/machine-learning.png" alt="Predictive maintenance machine learning interface showing equipment failure forecasting models and real-time monitoring" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
@@ -232,7 +248,7 @@
                         </div>
 
                         <!-- Project 5: Data Visualization -->
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-gray-200">
+                        <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-gray-200" data-category="data-analysis">
                             <div class="relative overflow-hidden">
                                 <img src="images/portfolio/data-visualization.png" alt="Interactive business intelligence dashboard with real-time KPI tracking, charts, and drill-down capabilities" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
@@ -262,7 +278,7 @@
                         </div>
 
                         <!-- Project 6: Process Optimization -->
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-gray-200">
+                        <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full border border-gray-200" data-category="engineering">
                             <div class="relative overflow-hidden">
                                 <img src="images/portfolio/process-optimization.png" alt="Supply chain process optimization simulation showing flow diagrams, bottleneck analysis, and performance metrics" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
@@ -366,5 +382,53 @@
     </footer>
 
     <script src="script.js"></script>
+    
+    <script>
+        // Project filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Update active button state
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active', 'bg-gray-900', 'text-white');
+                        btn.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+                    });
+                    
+                    this.classList.add('active', 'bg-gray-900', 'text-white');
+                    this.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+                    
+                    // Filter projects with smooth animation
+                    projectCards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'block';
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            
+                            // Animate in
+                            setTimeout(() => {
+                                card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 50);
+                        } else {
+                            card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(-20px)';
+                            
+                            // Hide after animation
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html> 
