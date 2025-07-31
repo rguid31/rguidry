@@ -26,3 +26,4 @@ vendor/
 dist/
 build/
 *.log 
+.vercel
