@@ -259,6 +259,8 @@ img {
 
 /* Optimize for web fonts */
 @font-face {
+    font-family: 'GenericFont';
+    src: url('fonts/GenericFont.woff2') format('woff2');
     font-display: swap;
 }
 
@@ -490,13 +492,6 @@ img {
     min-height: 60px; /* Ensure minimum clickable area */
 }
 
-.portfolio-arrow--left {
-    /* Positioned by Tailwind classes in HTML */
-}
-
-.portfolio-arrow--right {
-    /* Positioned by Tailwind classes in HTML */
-}
 
 .portfolio-arrow:hover {
     background-color: #EFF6FF;
