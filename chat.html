@@ -101,26 +101,89 @@
         // Fill this with information about yourself, your skills, projects, and answers to common questions.
         // The more detail you provide, the smarter your chatbot will be.
         const KNOWLEDGE_BASE = `
-            About Ryan Guidry:
-            - A 29-year-old self-taught web developer and programmer from Baton Rouge, Louisiana.
-            - Holds a Google Data Analytics Professional Certificate.
-            - Passionate about building clean, efficient, and user-friendly web applications.
-            - Currently working on his portfolio website: https://www.rguidry.dev.
+            ABOUT RYAN GUIDRY:
+            - 29-year-old self-taught web developer and programmer from Baton Rouge, Louisiana
+            - Holds a Google Data Analytics Professional Certificate
+            - Passionate about building clean, efficient, and user-friendly web applications
+            - Currently working on his portfolio website: https://www.rguidry.dev
+            - Strong background in problem-solving and analytical thinking
+            - Quick learner who enjoys exploring new technologies and frameworks
+            - Professional yet approachable personality
+            - Values clean code, good UX design, and data-driven decision making
 
-            Skills:
-            - Frontend: HTML, CSS, JavaScript.
-            - Data Analytics: SQL, R, Tableau, Spreadsheets.
-            - Strong problem-solving and analytical skills.
-            - Quick learner, always exploring new technologies.
+            TECHNICAL SKILLS:
+            Frontend Development:
+            - HTML5, CSS3, JavaScript (ES6+)
+            - Responsive web design and mobile-first development
+            - Modern CSS frameworks and methodologies
+            - Cross-browser compatibility and web standards
+            - UI/UX design principles
+            
+            Data Analytics:
+            - SQL for database querying and data manipulation
+            - R programming for statistical analysis
+            - Tableau for data visualization and dashboards
+            - Google Sheets/Excel for data analysis
+            - Statistical analysis and data interpretation
+            - Data cleaning and preprocessing
+            
+            General Skills:
+            - Version control with Git
+            - Problem-solving and debugging
+            - Project management and organization
+            - Technical documentation
+            - Continuous learning and adaptation
 
-            Projects:
-            - Personal Portfolio (rguidry.dev): A showcase of his work and skills, built from scratch.
-            - (Add more projects here with brief descriptions and links if available)
+            PROJECTS & PORTFOLIO:
+            - Personal Portfolio Website (rguidry.dev): A comprehensive showcase of skills and projects, built from scratch using modern web technologies
+            - Interactive chat assistant: AI-powered chatbot for visitor engagement
+            - Various data analysis projects demonstrating statistical and visualization skills
+            - Clean, responsive web designs focusing on user experience
+            - All projects emphasize clean code, accessibility, and performance
 
-            Contact & Professional Goals:
-            - Looking for opportunities in web development or data analytics where he can contribute and grow.
-            - The best way to contact him is via the form on his website.
-            - He is open to freelance projects and full-time roles.
+            PROFESSIONAL BACKGROUND:
+            - Self-taught developer with strong foundation in web technologies
+            - Google Data Analytics Professional Certificate holder
+            - Experience in both technical development and data analysis
+            - Proven ability to learn new technologies quickly and independently
+            - Strong attention to detail and commitment to quality work
+
+            CAREER GOALS & INTERESTS:
+            - Seeking opportunities in web development or data analytics
+            - Interested in roles where he can contribute meaningfully while continuing to grow
+            - Open to both freelance projects and full-time positions
+            - Passionate about creating solutions that make a real impact
+            - Enjoys collaborating with teams and learning from experienced developers
+            - Interested in modern web frameworks, data visualization, and emerging technologies
+
+            PERSONALITY & WORK STYLE:
+            - Analytical and detail-oriented approach to problem-solving
+            - Strong communication skills and ability to explain technical concepts clearly
+            - Collaborative team player who also works well independently
+            - Proactive learner who stays current with industry trends
+            - Values clean, maintainable code and good documentation
+            - User-focused mindset in all development work
+
+            CONTACT & AVAILABILITY:
+            - Best contacted through the contact form on his website (rguidry.dev)
+            - Email: inquireryan@gmail.com
+            - Based in Baton Rouge, Louisiana
+            - Available for freelance projects and full-time opportunities
+            - Open to remote work and local opportunities
+            - Responsive to inquiries and professional communications
+
+            COMMON QUESTIONS:
+            Q: What makes Ryan different from other developers?
+            A: Ryan combines technical web development skills with strong data analytics capabilities, giving him a unique perspective on building data-driven web applications. His self-taught background demonstrates strong motivation and learning ability.
+            
+            Q: What types of projects is Ryan most interested in?
+            A: Ryan is particularly interested in projects that combine web development with data visualization, user-friendly interfaces for complex data, and applications that solve real-world problems.
+            
+            Q: What is Ryan's experience level?
+            A: While Ryan is self-taught and building his professional portfolio, he has demonstrated proficiency in multiple technologies and holds industry-recognized certifications. He brings fresh perspectives and strong foundational skills.
+            
+            Q: Is Ryan available for hire?
+            A: Yes, Ryan is actively seeking both freelance projects and full-time opportunities in web development and data analytics roles.
         `;
 
         // --- CHAT HISTORY ---
@@ -252,7 +315,18 @@
                 ]
             };
             
-            const apiKey = ""; // Leave this empty, it will be handled by the environment
+            // TO GET YOUR FREE API KEY:
+            // 1. Go to https://aistudio.google.com/app/apikey
+            // 2. Sign in with your Google account
+            // 3. Click "Create API Key"
+            // 4. Copy the key and paste it below (replace "YOUR_API_KEY_HERE")
+            const apiKey = "AIzaSyB6zzGoh3PIPi5YVr54-xJarpwhBrNNA-w"; // Replace with your actual Gemini API key
+            
+            // If no API key is provided, use a simple fallback system
+            if (!apiKey || apiKey === "YOUR_API_KEY_HERE" || apiKey === "") {
+                return getSimpleFallbackResponse(userPrompt);
+            }
+            
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
 
             const response = await fetch(apiUrl, {
@@ -262,7 +336,8 @@
             });
 
             if (!response.ok) {
-                throw new Error(`API request failed with status ${response.status}`);
+                console.error(`API request failed with status ${response.status}`);
+                return getSimpleFallbackResponse(userPrompt);
             }
 
             const result = await response.json();
@@ -273,6 +348,62 @@
             chatHistory.push({ role: "model", parts: [{ text: botText }] });
 
             return botText;
+        }
+
+        /**
+         * Simple fallback response system that works without an API key
+         * Uses keyword matching to provide relevant responses from the knowledge base
+         */
+        function getSimpleFallbackResponse(userInput) {
+            const input = userInput.toLowerCase();
+            
+            // Skills-related questions
+            if (input.includes('skill') || input.includes('technology') || input.includes('programming') || input.includes('language')) {
+                return "Ryan has strong skills in frontend development (HTML, CSS, JavaScript), data analytics (SQL, R, Tableau), and general programming. He's also experienced with Git, responsive design, and data visualization. He's always learning new technologies!";
+            }
+            
+            // Experience and background
+            if (input.includes('experience') || input.includes('background') || input.includes('work') || input.includes('job')) {
+                return "Ryan is a self-taught web developer and programmer with a Google Data Analytics Professional Certificate. While building his professional portfolio, he has strong foundational skills and brings fresh perspectives to development work.";
+            }
+            
+            // Projects
+            if (input.includes('project') || input.includes('portfolio') || input.includes('work') || input.includes('built')) {
+                return "Ryan's main project is his personal portfolio website (rguidry.dev), built from scratch using modern web technologies. He's also created this interactive chat assistant and various data analysis projects. All his work emphasizes clean code and good user experience.";
+            }
+            
+            // Contact and availability
+            if (input.includes('contact') || input.includes('hire') || input.includes('available') || input.includes('email')) {
+                return "You can contact Ryan through the contact form on his website (rguidry.dev) or email him at inquireryan@gmail.com. He's available for both freelance projects and full-time opportunities in web development and data analytics.";
+            }
+            
+            // Location
+            if (input.includes('location') || input.includes('where') || input.includes('live') || input.includes('based')) {
+                return "Ryan is based in Baton Rouge, Louisiana. He's open to both remote work and local opportunities.";
+            }
+            
+            // Education and learning
+            if (input.includes('education') || input.includes('learn') || input.includes('study') || input.includes('certificate')) {
+                return "Ryan is self-taught in web development and holds a Google Data Analytics Professional Certificate. He's a quick learner who enjoys exploring new technologies and staying current with industry trends.";
+            }
+            
+            // Personality and work style
+            if (input.includes('personality') || input.includes('work style') || input.includes('team') || input.includes('collaborate')) {
+                return "Ryan has an analytical and detail-oriented approach to problem-solving. He's a collaborative team player who also works well independently, with strong communication skills and a user-focused mindset in all his development work.";
+            }
+            
+            // Goals and interests
+            if (input.includes('goal') || input.includes('interest') || input.includes('future') || input.includes('want')) {
+                return "Ryan is seeking opportunities in web development or data analytics where he can contribute meaningfully while continuing to grow. He's particularly interested in projects that combine web development with data visualization and solve real-world problems.";
+            }
+            
+            // Greeting responses
+            if (input.includes('hello') || input.includes('hi') || input.includes('hey') || input.includes('good morning') || input.includes('good afternoon')) {
+                return "Hello! I'm Ryan's digital assistant. I can tell you about his skills, projects, experience, and availability. What would you like to know about Ryan?";
+            }
+            
+            // Default response
+            return "I can help you learn about Ryan Guidry's skills, projects, experience, and availability. Try asking about his technical skills, background, projects, or how to contact him. What would you like to know?";
         }
 
     </script>
