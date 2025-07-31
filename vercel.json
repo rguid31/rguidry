@@ -16,6 +16,17 @@
     {
       "src": "/chat",
       "dest": "/chat.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "http://rguidry.dev",
+      "destination": "https://rguidry.dev",
+      "permanent": true
     }
   ]
 } 
