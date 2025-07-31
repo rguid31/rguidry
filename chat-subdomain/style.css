@@ -1,0 +1,554 @@
+/* Base Styles and Reset */
+/* -------------------- */
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+    padding-top: 4.5rem;  /* Adjust based on nav height */
+}
+
+/* Smooth Scrolling and Animations */
+/* ----------------------------- */
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+}
+
+/* Section Header Animations */
+.section__title {
+    transition: color 0.3s ease-in-out;
+}
+
+.section__title:hover {
+    color: #2563eb; /* Blue highlight on hover for section headers */
+}
+
+/* Project Filter Styles */
+/* -------------------- */
+.filter-btn {
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+}
+
+.filter-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.filter-btn.active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.filter-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.filter-btn:hover::before {
+    left: 100%;
+}
+
+/* Project Cards Animation */
+.project-card {
+    transition: all 0.3s ease;
+}
+
+.project-card.filtered-out {
+    opacity: 0;
+    transform: scale(0.9) translateY(-10px);
+}
+
+/* Navigation Styles */
+/* --------------- */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: rgba(255, 255, 255, 0.85);  /* More transparent white */
+    backdrop-filter: blur(12px);  /* Stronger blur effect */
+    -webkit-backdrop-filter: blur(12px);  /* For Safari support */
+    border-bottom: 1px solid rgba(229, 231, 235, 0.5);  /* More transparent border */
+    transition: all 0.3s ease;
+    --scroll-progress: 0;
+    --scroll-transform: scaleX(0);
+}
+
+/* Progress bar container */
+.nav::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;  /* Position it at the bottom of the nav */
+    left: 0;
+    width: 100%;
+    height: 2px;  /* Height of the progress bar */
+    background: linear-gradient(to right, #2563EB, #4F46E5);  /* Gradient color */
+    transform-origin: 0 50%;  /* Scale from left to right */
+    transform: var(--scroll-transform);
+    transition: transform 0.1s ease-out;  /* Smooth transition for progress updates */
+    will-change: transform;  /* Optimize for animations */
+}
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.nav__link {
+    color: #4B5563;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav__link:hover {
+    color: #2563EB;
+}
+
+.nav__link--contact {
+    background-color: #2563EB;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.nav__link--contact:hover {
+    background-color: #1D4ED8;
+    color: white;
+}
+
+/* Mobile Menu Animation and Layout */
+/* ----------------------------- */
+.nav-mobile {
+    background-color: white;
+    border-top: 1px solid #e5e7eb;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-mobile--hidden {
+    display: none;
+}
+
+/* Responsive Design and Mobile Optimizations */
+/* ---------------------------------------- */
+@media (max-width: 768px) {
+    /* Touch Target Optimization */
+    /* Ensures all interactive elements meet minimum size requirements for touch */
+    .btn,
+    .nav__link {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Typography Scaling */
+    /* Adjusts text sizes for better readability on mobile */
+    .hero__title {
+        font-size: 1.75rem;
+        line-height: 2rem;
+    }
+
+    .section__title {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+    }
+
+    .section__subtitle {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+
+    /* Container Spacing */
+    /* Adds consistent padding for mobile containers */
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Section Spacing */
+    /* Improves vertical rhythm between sections on mobile */
+    .section {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Responsive Images */
+    /* Ensures images scale properly on mobile */
+    .img--responsive {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Mobile Color Contrast */
+    /* Enhances readability and accessibility on mobile */
+    .btn--primary {
+        background-color: #2563eb;
+    }
+
+    .text--secondary {
+        color: #4b5563;
+    }
+
+    /* Touch Feedback */
+    /* Provides visual feedback for touch interactions */
+    .btn:active,
+    .nav__link:active {
+        opacity: 0.8;
+    }
+}
+
+/* Layout Prevention */
+/* --------------- */
+/* Prevents horizontal scroll on mobile devices */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Improve form elements on mobile */
+input, textarea, select {
+    font-size: 16px; /* Prevents iOS zoom on focus */
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+}
+
+/* Add safe area insets for modern mobile browsers */
+@supports (padding: max(0px)) {
+    body {
+        padding-left: min(0vmin, env(safe-area-inset-left));
+        padding-right: min(0vmin, env(safe-area-inset-right));
+        padding-bottom: min(0vmin, env(safe-area-inset-bottom));
+    }
+}
+
+/* Lazy loading styles */
+.lazy-load {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.lazy-load:not([src]) {
+    opacity: 0;
+}
+
+img:not(.lazy-load) {
+    opacity: 1;
+}
+
+/* Improve image loading performance */
+img {
+    height: auto;
+    max-width: 100%;
+    image-rendering: optimizeQuality;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+/* Optimize for web fonts */
+@font-face {
+    font-display: swap;
+}
+
+/* Performance optimizations */
+.performance-optimized {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .portfolio-arrow:hover {
+        transform: translateY(-50%) scale(1);
+    }
+    
+    .card:hover {
+        transform: none;
+    }
+}
+
+/* Preload critical resources */
+.critical-resource {
+    font-display: swap;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* Optimize background images */
+.bg-optimized {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Button Styles */
+/* ----------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn--primary {
+    background-color: #3B82F6;
+    color: white;
+}
+
+.btn--primary:hover {
+    background-color: #2563eb;
+}
+
+.btn--secondary {
+    background-color: #F3F4F6;
+    color: #1F2937;
+}
+
+.btn--secondary:hover {
+    background-color: #E5E7EB;
+}
+
+/* Card Styles */
+/* --------- */
+.card {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card__content {
+    padding: 1.5rem;
+}
+
+.card__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1F2937;
+    margin-bottom: 0.5rem;
+}
+
+.card__description {
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/* Modal Styles */
+/* ---------- */
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.modal--active {
+    display: flex;
+}
+
+.modal__content {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal__header {
+    margin-bottom: 1rem;
+}
+
+.modal__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1F2937;
+}
+
+.modal__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem;
+    color: #6B7280;
+    transition: color 0.3s ease;
+}
+
+.modal__close:hover {
+    color: #1F2937;
+}
+
+/* Optional: Add shadow when scrolling */
+.nav--scrolled {
+    background-color: rgba(255, 255, 255, 0.95);  /* Slightly more opaque when scrolled */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Portfolio Carousel Styles */
+/* ----------------------- */
+:root {
+    --portfolio-gap-desktop: 2rem;
+    --portfolio-gap-mobile: 1rem;
+    --portfolio-total-gap-desktop: calc(var(--portfolio-gap-desktop) * 2);
+}
+
+#portfolio-container {
+    display: flex;
+    gap: var(--portfolio-gap-desktop);
+    transition: transform 0.5s ease-in-out;
+    flex-wrap: nowrap;
+    min-width: max-content;
+    will-change: transform;
+}
+
+.portfolio-item {
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    width: calc((100% - var(--portfolio-total-gap-desktop)) / 3);
+    max-width: 400px;
+    min-width: 300px;
+}
+
+/* Improved portfolio container for mobile */
+@media (max-width: 1023px) {
+    .portfolio-item {
+        width: calc((100% - var(--portfolio-gap-desktop)) / 2);
+        min-width: 280px;
+    }
+}
+
+@media (max-width: 767px) {
+    .portfolio-item {
+        width: calc(100vw - 4rem);
+        min-width: 280px;
+        max-width: 400px;
+    }
+    
+    #portfolio-container {
+        gap: var(--portfolio-gap-mobile);
+    }
+}
+
+/* Carousel container wrapper - this class is on the parent of #portfolio-container */
+.relative.max-w-7xl.mx-auto {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Carousel Navigation */
+.portfolio-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50; /* Increase z-index to ensure it's above everything */
+    background-color: white; /* Make background fully opaque */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 9999px;
+    padding: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* More pronounced shadow */
+    border: 2px solid rgba(229, 231, 235, 1);
+    transition: all 0.3s ease;
+    cursor: pointer; /* Ensure cursor shows pointer */
+    pointer-events: auto; /* Ensure clicks are captured */
+    min-width: 60px; /* Ensure minimum clickable area */
+    min-height: 60px; /* Ensure minimum clickable area */
+}
+
+.portfolio-arrow--left {
+    /* Positioned by Tailwind classes in HTML */
+}
+
+.portfolio-arrow--right {
+    /* Positioned by Tailwind classes in HTML */
+}
+
+.portfolio-arrow:hover {
+    background-color: #EFF6FF;
+    border-color: #93C5FD;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Enhanced shadow on hover */
+}
+
+.portfolio-arrow:active {
+    transform: translateY(-50%) scale(0.95); /* Visual feedback when clicked */
+}
+
+.portfolio-arrow:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Carousel Indicators */
+.carousel-indicator {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.carousel-indicator:hover {
+    transform: scale(1.2);
+}
+
+/* Enhanced mobile carousel adjustments */
+@media (max-width: 768px) {
+    .portfolio-arrow {
+        padding: 0.75rem;
+        min-width: 50px;
+        min-height: 50px;
+    }
+    
+    .portfolio-arrow svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    
+    /* Improve touch targets */
+    .carousel-indicator {
+        min-width: 44px;
+        min-height: 44px;
+        margin: 0.25rem;
+    }
+    
+    /* Better spacing on mobile */
+    #portfolio {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
