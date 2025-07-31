@@ -1,8 +1,10 @@
 {
   "version": 2,
+  "buildCommand": "",
+  "outputDirectory": ".",
   "builds": [
     {
-      "src": "*.html",
+      "src": "**/*",
       "use": "@vercel/static"
     }
   ],
@@ -14,10 +16,6 @@
     {
       "src": "/chat",
       "dest": "/chat.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
     }
   ]
 } 
