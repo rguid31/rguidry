@@ -9,6 +9,19 @@ echo "================================="
 # Default port
 PORT=${1:-3000}
 
+# Ensure dist exists
+if [ ! -d "dist" ]; then
+  echo "🛠️  dist/ not found. Running build first..."
+  if command -v node &> /dev/null; then
+    node build.js || { echo "❌ Build failed"; exit 1; }
+  else
+    echo "❌ Node.js not installed. Cannot build dist/"
+    exit 1
+  fi
+fi
+
+cd dist || { echo "❌ Failed to enter dist/"; exit 1; }
+
 # Check if Python 3 is available
 if command -v python3 &> /dev/null; then
     echo "📡 Using Python 3 HTTP server on port $PORT"

@@ -8,7 +8,7 @@
     "dev": "npm run build && ./dev-server.sh",
     "start": "./dev-server.sh",
     "serve": "./dev-server.sh",
-    "watch": "npm run build && npx nodemon --watch src --ext html,js --exec 'npm run build'",
+    "watch": "npx nodemon --watch src --ext html,js,css --exec 'node build.js'",
     "preview": "./dev-server.sh 4173"
   },
   "keywords": [
@@ -20,6 +20,7 @@
   "author": "Ryan Guidry",
   "license": "MIT",
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "nodemon": "^3.1.0"
   }
 } 
