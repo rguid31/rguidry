@@ -6,7 +6,7 @@
     <title>Chat with Ryan's Digital Assistant</title>
 
     <!-- 1. Link to your EXISTING stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../../style.css">
 
     <!-- 2. Link to Tailwind CSS (required for the chatbot's layout) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -44,9 +44,56 @@
         .send-btn:disabled { background-color: #93C5FD; cursor: not-allowed; }
     </style>
 </head>
-<body class="flex items-center justify-center min-h-screen bg-gray-50">
-
-    <div id="chatbot" class="chat-container w-full max-w-2xl h-[90vh] max-h-[700px] bg-white rounded-2xl flex flex-col mx-4">
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header & Navigation (copied from main site) -->
+    <header class="nav fixed top-0 left-0 right-0 z-50">
+        <div class="max-w-7xl mx-auto">
+            <nav class="nav__container">
+                <div class="text-2xl font-bold text-gray-900">
+                    <!-- Logo and Name -->
+                    <a href="https://www.rguidry.dev" class="flex items-center space-x-3">
+                        <img src="../../../images/ui/rg-logomark.svg" alt="RG Logo" class="h-10 rounded-lg" loading="lazy">
+                        <span>Ryan Guidry</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="https://www.rguidry.dev#index.html#about" class="nav__link">About</a>
+                    <a href="https://www.rguidry.dev#index.html#portfolio" class="nav__link">Portfolio</a>
+                    <a href="https://www.rguidry.dev#index.html#experience" class="nav__link">Experience</a>
+                    <a href="https://www.rguidry.dev#index.html#skills" class="nav__link">Skills</a>
+                    <a href="https://www.rguidry.dev/resources.html" class="nav__link">Resources</a>
+                    <span class="nav__link nav__link--active cursor-default text-blue-600">Chat</span>
+                    <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Toggle mobile menu">
+                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path class="mobile-menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path class="mobile-menu-close hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </nav>
+            <!-- Mobile Menu -->
+            <nav id="mobile-menu" class="nav-mobile nav-mobile--hidden md:hidden" aria-label="Mobile navigation">
+                <div class="container mx-auto px-6 py-4 space-y-4">
+                    <a href="https://www.rguidry.dev#index.html#about" class="nav__link block py-2">About</a>
+                    <a href="https://www.rguidry.dev#index.html#portfolio" class="nav__link block py-2">Portfolio</a>
+                    <a href="https://www.rguidry.dev#index.html#experience" class="nav__link block py-2">Experience</a>
+                    <a href="https://www.rguidry.dev#index.html#skills" class="nav__link block py-2">Skills</a>
+                    <a href="https://www.rguidry.dev/resources.html" class="nav__link block py-2">Resources</a>
+                    <span class="nav__link nav__link--active block py-2 text-blue-600 cursor-default">Chat</span>
+                    <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact block py-2 text-center">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Background image and overlay (copied from main site) -->
+    <div class="fixed top-0 left-0 w-screen h-screen -z-10">
+        <img src="../../../images/background/analytical-bg.jpg" alt="Abstract Analytical Background" class="absolute top-0 left-0 w-full h-full object-cover object-center" style="min-width: 100vw; min-height: 100vh; width: 100vw; height: 100vh;" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-b from-gray-900/90 via-gray-900/70 to-gray-900/90"></div>
+    </div>
+    <main class="flex items-center justify-center min-h-screen pt-32">
+        <div id="chatbot" class="chat-container w-full max-w-2xl h-[90vh] max-h-[700px] bg-white rounded-2xl flex flex-col mx-4">
         
         <!-- Chat Header -->
         <div class="p-4 border-b border-gray-200 flex items-center space-x-4 flex-shrink-0">

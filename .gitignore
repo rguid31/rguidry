@@ -27,3 +27,4 @@ dist/
 build/
 *.log 
 .vercel
+.env*.local

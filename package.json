@@ -5,11 +5,12 @@
   "main": "index.html",
   "scripts": {
     "build": "node build.js",
-    "dev": "npm run build && ./dev-server.sh",
-    "start": "./dev-server.sh",
-    "serve": "./dev-server.sh",
-    "watch": "npm run build && npx nodemon --watch src --ext html,js --exec 'npm run build'",
-    "preview": "./dev-server.sh 4173"
+    "predev": "npm run build",
+    "dev": "http-server dist -p 3000 -o",
+    "start": "npm run dev",
+    "serve": "npm run dev",
+    "watch": "npm run build && npx nodemon --watch src --ext html,js --exec \"npm run build\"",
+    "preview": "http-server dist -p 4173 -o"
   },
   "keywords": [
     "portfolio",

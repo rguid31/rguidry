@@ -47,6 +47,28 @@ window.onload = function() {
             }
         }
     });
+
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+            const closeIcon = mobileMenuButton.querySelector('.mobile-menu-close');
+            const burgerIcon = mobileMenuButton.querySelector('.mobile-menu-icon');
+            const isHidden = mobileMenu.classList.contains('nav-mobile--hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('nav-mobile--hidden');
+                mobileMenu.style.display = 'block';
+                if (closeIcon) closeIcon.classList.remove('hidden');
+                if (burgerIcon) burgerIcon.classList.add('hidden');
+            } else {
+                mobileMenu.classList.add('nav-mobile--hidden');
+                mobileMenu.style.display = 'none';
+                if (closeIcon) closeIcon.classList.add('hidden');
+                if (burgerIcon) burgerIcon.classList.remove('hidden');
+            }
+        });
+    }
 };
 
 // Execute JavaScript after the DOM is fully loaded

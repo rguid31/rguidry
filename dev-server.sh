@@ -13,11 +13,11 @@ PORT=${1:-3000}
 if command -v python3 &> /dev/null; then
     echo "📡 Using Python 3 HTTP server on port $PORT"
     echo "🌐 Open your browser to: http://localhost:$PORT"
-    echo "📁 Serving files from: $(pwd)"
+echo "📁 Serving files from: $(pwd)/dist"
     echo ""
     echo "💡 Press Ctrl+C to stop the server"
     echo ""
-    python3 -m http.server $PORT
+    cd dist && python3 -m http.server $PORT
 elif command -v python &> /dev/null; then
     echo "📡 Using Python HTTP server on port $PORT"
     echo "🌐 Open your browser to: http://localhost:$PORT"
@@ -25,7 +25,7 @@ elif command -v python &> /dev/null; then
     echo ""
     echo "💡 Press Ctrl+C to stop the server"
     echo ""
-    python -m SimpleHTTPServer $PORT
+    cd dist && python -m SimpleHTTPServer $PORT
 elif command -v php &> /dev/null; then
     echo "📡 Using PHP development server on port $PORT"
     echo "🌐 Open your browser to: http://localhost:$PORT"
@@ -33,7 +33,7 @@ elif command -v php &> /dev/null; then
     echo ""
     echo "💡 Press Ctrl+C to stop the server"
     echo ""
-    php -S localhost:$PORT
+    cd dist && php -S localhost:$PORT
 elif command -v node &> /dev/null; then
     echo "📡 Using Node.js http-server on port $PORT"
     echo "🌐 Open your browser to: http://localhost:$PORT"
@@ -41,7 +41,7 @@ elif command -v node &> /dev/null; then
     echo ""
     echo "💡 Press Ctrl+C to stop the server"
     echo ""
-    npx http-server -p $PORT -o
+    npx http-server dist -p $PORT -o
 else
     echo "❌ No suitable server found!"
     echo ""
