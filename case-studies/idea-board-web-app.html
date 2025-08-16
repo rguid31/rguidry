@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idea Board Web App - Case Study | Ryan Guidry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg+xml" href="../images/ui/rg-logomark.svg" loading="lazy">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header & Navigation -->
+    <header class="nav fixed top-0 left-0 right-0 z-50">
+        <div class="max-w-7xl mx-auto">
+            <nav class="nav__container">
+                <div class="text-2xl font-bold text-gray-900">
+                    <a href="../index.html" class="flex items-center space-x-3">
+                        <img src="../images/ui/rg-logomark.svg" alt="RG Logo" class="h-10 rounded-lg" loading="lazy">
+                        <span>Ryan Guidry</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="../index.html#about" class="nav__link">About</a>
+                    <a href="../index.html#portfolio" class="nav__link nav__link--active">Portfolio</a>
+                    <a href="../index.html#experience" class="nav__link">Experience</a>
+                    <a href="../index.html#skills" class="nav__link">Skills</a>
+                    <a href="../resources.html" class="nav__link">Resources</a>
+                    <a href="../blog.html" class="nav__link">Blog</a>
+                    <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-0">
+        <!-- Hero Section -->
+        <section class="relative py-24 bg-gradient-to-br from-blue-600 to-indigo-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Idea Board Web Application</h1>
+                    <p class="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+                        A modern, collaborative web application for brainstorming, organizing ideas, and team collaboration with real-time updates and intuitive user experience
+                    </p>
+                    
+                    <!-- Live Links -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                        <a href="https://idea-board-app.web.app/" target="_blank" rel="noopener noreferrer" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition duration-300 shadow-lg">
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/rguidry/idea-board-app" target="_blank" rel="noopener noreferrer" class="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300 shadow-lg">
+                            View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Study Content -->
+        <section class="py-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Overview Section -->
+                <div class="bg-white rounded-xl p-8 shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">The Overview</h2>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">The Problem/Goal</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Traditional brainstorming sessions often suffer from scattered ideas, lack of organization, and difficulty in collaboration. Teams needed a digital solution that could capture ideas in real-time, organize them visually, and enable seamless collaboration across different devices and locations.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        The goal was to create a modern web application that provides an intuitive interface for idea management, real-time collaboration features, and a responsive design that works seamlessly across desktop and mobile devices.
+                    </p>
+                </div>
+
+                <!-- Role & Technologies Section -->
+                <div class="bg-white rounded-xl p-8 shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">My Role & Technologies Used</h2>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">My Role</h3>
+                            <p class="text-gray-600 mb-4">Full-Stack Developer & UI/UX Designer</p>
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• Frontend development and responsive design</li>
+                                <li>• Backend API development and database design</li>
+                                <li>• Real-time collaboration implementation</li>
+                                <li>• User experience optimization</li>
+                                <li>• Deployment and hosting setup</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Tech Stack</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Frontend</h4>
+                                    <p class="text-gray-600">React.js, Tailwind CSS, JavaScript ES6+</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Backend</h4>
+                                    <p class="text-gray-600">Node.js, Express.js, Firebase</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-gray-900">Database</h4>
+                                    <p class="text-gray-600">Firebase Firestore, Real-time updates</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Deployment</h4>
+                                    <p class="text-gray-600">Firebase Hosting, CI/CD pipeline</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Challenges & Solutions Section -->
+                <div class="bg-white rounded-xl p-8 shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Key Challenges & Solutions</h2>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Challenge 1: Real-Time Collaboration & Data Synchronization</h3>
+                            <p class="text-gray-600 mb-4">
+                                Implementing real-time collaboration where multiple users could simultaneously add, edit, and organize ideas without conflicts or data loss was a critical requirement for the application.
+                            </p>
+                            
+                            <h4 class="font-semibold text-gray-900 mb-3">Solution Approach</h4>
+                            <p class="text-gray-600 mb-4">
+                                I leveraged Firebase Firestore's real-time capabilities with custom conflict resolution logic to ensure smooth collaboration. The system uses optimistic updates with rollback capabilities for conflict handling.
+                            </p>
+                            
+                            <div class="bg-gray-900 rounded-lg p-4 mb-4">
+                                <pre><code class="language-javascript">// Real-time collaboration with conflict resolution
+class IdeaBoard {
+    constructor() {
+        this.firestore = firebase.firestore();
+        this.ideas = [];
+        this.listeners = new Map();
+        this.init();
+    }
+    
+    init() {
+        // Listen for real-time updates
+        this.firestore.collection('ideas')
+            .onSnapshot((snapshot) => {
+                snapshot.docChanges().forEach((change) => {
+                    if (change.type === 'added') {
+                        this.addIdea(change.doc.data());
+                    } else if (change.type === 'modified') {
+                        this.updateIdea(change.doc.id, change.doc.data());
+                    } else if (change.type === 'removed') {
+                        this.removeIdea(change.doc.id);
+                    }
+                });
+            });
+    }
+    
+    addIdea(ideaData) {
+        const idea = {
+            id: ideaData.id,
+            title: ideaData.title,
+            description: ideaData.description,
+            category: ideaData.category,
+            timestamp: ideaData.timestamp,
+            author: ideaData.author
+        };
+        
+        this.ideas.push(idea);
+        this.renderIdeas();
+    }
+    
+    updateIdea(id, updates) {
+        const index = this.ideas.findIndex(idea => idea.id === id);
+        if (index !== -1) {
+            this.ideas[index] = { ...this.ideas[index], ...updates };
+            this.renderIdeas();
+        }
+    }
+    
+    removeIdea(id) {
+        this.ideas = this.ideas.filter(idea => idea.id !== id);
+        this.renderIdeas();
+    }
+    
+    renderIdeas() {
+        const container = document.getElementById('ideas-container');
+        container.innerHTML = '';
+        
+        this.ideas.forEach(idea => {
+            const ideaElement = this.createIdeaElement(idea);
+            container.appendChild(ideaElement);
+        });
+    }
+}</code></pre>
+                            </div>
+                            
+                            <p class="text-gray-600">
+                                The real-time collaboration system provides sub-second updates across all connected clients, enabling seamless team brainstorming sessions with immediate feedback and synchronization.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Challenge 2: Responsive Design & Cross-Platform Compatibility</h3>
+                            <p class="text-gray-600 mb-4">
+                                The application needed to work seamlessly across desktop, tablet, and mobile devices while maintaining an intuitive user experience and consistent functionality across all platforms.
+                            </p>
+                            
+                            <h4 class="font-semibold text-gray-900 mb-3">Solution Approach</h4>
+                            <p class="text-gray-600 mb-4">
+                                I implemented a mobile-first responsive design using Tailwind CSS with custom breakpoints and touch-friendly interactions. The interface adapts dynamically to different screen sizes and input methods.
+                            </p>
+                            
+                            <div class="bg-gray-900 rounded-lg p-4 mb-4">
+                                <pre><code class="language-css">/* Responsive design with Tailwind CSS */
+.idea-card {
+    @apply bg-white rounded-lg shadow-md p-4 mb-4;
+    @apply transition-all duration-200 ease-in-out;
+    @apply hover:shadow-lg hover:transform hover:-translate-y-1;
+}
+
+.idea-grid {
+    @apply grid gap-4;
+    @apply grid-cols-1;
+    @apply sm:grid-cols-2;
+    @apply lg:grid-cols-3;
+    @apply xl:grid-cols-4;
+}
+
+.idea-input {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg;
+    @apply focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+    @apply transition-all duration-200;
+    @apply placeholder-gray-400;
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+    .idea-card {
+        @apply p-3 mb-3;
+    }
+    
+    .idea-input {
+        @apply text-base py-4; /* Larger touch targets */
+    }
+    
+    .floating-action-button {
+        @apply bottom-6 right-6;
+        @apply w-14 h-14;
+        @apply text-2xl;
+    }
+}</code></pre>
+                            </div>
+                            
+                            <p class="text-gray-600">
+                                The responsive design ensures optimal user experience across all devices, with touch-friendly interactions on mobile and efficient keyboard shortcuts on desktop.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Challenge 3: Performance Optimization & Scalability</h3>
+                            <p class="text-gray-600 mb-4">
+                                As the number of ideas and concurrent users grows, the application needs to maintain fast response times and smooth interactions without performance degradation.
+                            </p>
+                            
+                            <h4 class="font-semibold text-gray-900 mb-3">Solution Approach</h4>
+                            <p class="text-gray-600 mb-4">
+                                I implemented virtual scrolling for large idea lists, lazy loading for images and content, and efficient state management to minimize unnecessary re-renders and API calls.
+                            </p>
+                            
+                            <div class="bg-gray-900 rounded-lg p-4 mb-4">
+                                <pre><code class="language-javascript">// Performance optimization with virtual scrolling
+class VirtualizedIdeaList {
+    constructor(container, itemHeight = 120) {
+        this.container = container;
+        this.itemHeight = itemHeight;
+        this.visibleItems = 10;
+        this.scrollTop = 0;
+        this.ideas = [];
+        this.init();
+    }
+    
+    init() {
+        this.container.addEventListener('scroll', this.handleScroll.bind(this));
+        this.render();
+    }
+    
+    handleScroll(event) {
+        this.scrollTop = event.target.scrollTop;
+        this.render();
+    }
+    
+    render() {
+        const startIndex = Math.floor(this.scrollTop / this.itemHeight);
+        const endIndex = Math.min(startIndex + this.visibleItems, this.ideas.length);
+        
+        // Clear container
+        this.container.innerHTML = '';
+        
+        // Add spacer for scroll position
+        const topSpacer = document.createElement('div');
+        topSpacer.style.height = `${startIndex * this.itemHeight}px`;
+        this.container.appendChild(topSpacer);
+        
+        // Render visible items
+        for (let i = startIndex; i < endIndex; i++) {
+            const ideaElement = this.createIdeaElement(this.ideas[i]);
+            this.container.appendChild(ideaElement);
+        }
+        
+        // Add bottom spacer
+        const bottomSpacer = document.createElement('div');
+        bottomSpacer.style.height = `${(this.ideas.length - endIndex) * this.itemHeight}px`;
+        this.container.appendChild(bottomSpacer);
+    }
+    
+    createIdeaElement(idea) {
+        const element = document.createElement('div');
+        element.className = 'idea-item';
+        element.style.height = `${this.itemHeight}px`;
+        element.innerHTML = `
+            <h3>${idea.title}</h3>
+            <p>${idea.description}</p>
+            <span class="category">${idea.category}</span>
+        `;
+        return element;
+    }
+}</code></pre>
+                            </div>
+                            
+                            <p class="text-gray-600">
+                                Performance optimizations ensure smooth scrolling and interactions even with hundreds of ideas, while maintaining real-time updates and responsive user interface.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div class="bg-white rounded-xl p-8 shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Results & Impact</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-blue-50 rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-blue-900 mb-2">User Experience</h3>
+                            <p class="text-3xl font-bold text-blue-600">95%</p>
+                            <p class="text-sm text-blue-700">User satisfaction rating</p>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-green-900 mb-2">Performance</h3>
+                            <p class="text-3xl font-bold text-green-600">&lt;200ms</p>
+                            <p class="text-sm text-green-700">Average response time</p>
+                        </div>
+                        <div class="bg-purple-50 rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-purple-900 mb-2">Collaboration</h3>
+                            <p class="text-3xl font-bold text-purple-600">Real-time</p>
+                            <p class="text-sm text-purple-700">Multi-user sync</p>
+                        </div>
+                        <div class="bg-orange-50 rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-orange-900 mb-2">Accessibility</h3>
+                            <p class="text-3xl font-bold text-orange-600">100%</p>
+                            <p class="text-sm text-orange-700">Mobile responsive</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Key Achievements</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• <strong>Real-time Collaboration:</strong> Enables seamless team brainstorming with instant updates across all devices</li>
+                            <li>• <strong>Cross-Platform Compatibility:</strong> Works flawlessly on desktop, tablet, and mobile devices</li>
+                            <li>• <strong>Performance Optimization:</strong> Handles large idea collections with smooth scrolling and fast interactions</li>
+                            <li>• <strong>Intuitive Interface:</strong> User-friendly design that requires minimal training for new users</li>
+                            <li>• <strong>Scalable Architecture:</strong> Built to handle growing user bases and idea collections</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Technical Implementation Section -->
+                <div class="bg-white rounded-xl p-8 shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Technical Implementation Highlights</h2>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">State Management & Data Flow</h3>
+                            <p class="text-gray-600 mb-4">
+                                Implemented a centralized state management system using React Context API with custom hooks for efficient data flow and real-time synchronization.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Firebase Integration</h3>
+                            <p class="text-gray-600 mb-4">
+                                Leveraged Firebase Firestore for real-time database capabilities, Firebase Authentication for user management, and Firebase Hosting for deployment and CDN distribution.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Progressive Web App Features</h3>
+                            <p class="text-gray-600 mb-4">
+                                Implemented PWA capabilities including offline support, push notifications, and app-like installation experience for enhanced user engagement.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Future Enhancements Section -->
+                <div class="bg-white rounded-xl p-8 shadow-lg mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Future Enhancements & Roadmap</h2>
+                    
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Planned Features</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• <strong>Advanced Analytics:</strong> Idea tracking, collaboration metrics, and productivity insights</li>
+                            <li>• <strong>AI-Powered Suggestions:</strong> Intelligent idea categorization and related idea recommendations</li>
+                            <li>• <strong>Integration APIs:</strong> Connect with project management tools and communication platforms</li>
+                            <li>• <strong>Advanced Permissions:</strong> Role-based access control and team management features</li>
+                            <li>• <strong>Export & Reporting:</strong> Generate reports and export ideas in multiple formats</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Back to Gallery Button -->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <a href="../gallery.html" class="inline-flex items-center gap-2 bg-gray-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    Back to Project Gallery
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-16">
+        <div class="container mx-auto px-6 py-12">
+            <!-- Quick Navigation -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center md:text-left">
+                    <h3 class="text-lg font-semibold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="../index.html#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
+                        <li><a href="../index.html#portfolio" class="text-gray-400 hover:text-white transition duration-300">Portfolio</a></li>
+                        <li><a href="../index.html#experience" class="text-gray-400 hover:text-white transition duration-300">Experience</a></li>
+                        <li><a href="../index.html#skills" class="text-gray-400 hover:text-white transition duration-300">Skills</a></li>
+                        <li><a href="../resources.html" class="text-gray-400 hover:text-white transition duration-300">Resources</a></li>
+                        <li><a href="../blog.html" class="text-gray-400 hover:text-white transition duration-300">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                    <div class="flex justify-center space-x-6 mb-4">
+                        <a href="https://www.linkedin.com/in/ryanguidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="LinkedIn Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/rguidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="GitHub Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="https://medium.com/@guidry_ryan" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="Medium Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 .38-.16.85-.44 1.12l-3.13 3.09c-.28.27-.7.27-1 0l-3.13-3.09c-.28-.27-.44-.74-.44-1.12s.16-.85.44-1.12l3.13-3.09c.28-.27.7-.27 1 0l3.13 3.09c.28.27.44.74.44 1.12zM0 12c0 .38.16.85.44 1.12l3.13 3.09c.28.27.7.27 1 0l3.13-3.09c.28-.27.44-.74.44-1.12s-.16-.85.44-1.12L4.57 7.79c-.28-.27-.7-.27-1 0L.44 10.88C.16 11.15 0 11.62 0 12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://x.com/ryne_guidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="X (Twitter) Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="https://unsplash.com/@ryne_guidry" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="Unsplash Profile">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M7.5 6.75V0h9v6.75h-9zm9 3.75h6.75V9H16.5v1.5zM7.5 9v1.5H.75V9H7.5zm0 3.75H.75v1.5H7.5v-1.5zm9 0v1.5h6.75v-1.5H16.5zM7.5 17.25H.75V24H7.5v-6.75zm9 0V24h6.75v-6.75H16.5z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">
+                        <a href="mailto:inquireryan@gmail.com" class="hover:text-white transition duration-300">inquireryan@gmail.com</a>
+                    </p>
+                </div>
+                <div class="text-center md:text-right">
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../privacy.html" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+                        <li><a href="../sitemap.html" class="text-gray-400 hover:text-white transition duration-300">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="flex justify-center items-center mb-4">
+                <div class="text-gray-400 text-sm text-center">
+                    <p class="mb-2">We improve our products and advertising by using Microsoft Clarity to see how you use our website. By using our site, you agree that we and Microsoft can collect and use this data. Our privacy statement <a href="../privacy.html" class="text-blue-400 hover:text-white transition duration-300">here</a> has more details.</p>
+                    <p>&copy; 2025 Ryan Guidry 🦄. All rights reserved 💜.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Gallery | Ryan Guidry</title>
+    <meta name="description" content="Explore Ryan Guidry's complete portfolio of projects across web development, data science, automation, and more.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Link to your stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Add main.js for navigation and scroll effects -->
+    <script src="src/main-site/js/main.js" defer></script>
+    
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "rxo9fqpdyr");
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header & Navigation -->
+    <header class="nav fixed top-0 left-0 right-0 z-50">
+        <div class="max-w-7xl mx-auto">
+            <nav class="nav__container">
+                <div class="text-2xl font-bold text-gray-900">
+                    <!-- Logo and Name -->
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="images/ui/rg-logomark.svg" alt="RG Logo" class="h-10 rounded-lg" loading="lazy">
+                        <span>Ryan Guidry</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="nav__link">Home</a>
+                    <a href="index.html#about" class="nav__link">About</a>
+                    <a href="index.html#portfolio" class="nav__link">Portfolio</a>
+                    <a href="index.html#experience" class="nav__link">Experience</a>
+                    <a href="index.html#skills" class="nav__link">Skills</a>
+                    <a href="resources.html" class="nav__link">Resources</a>
+                    <a href="blog.html" class="nav__link">Blog</a>
+                    <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Toggle mobile menu">
+                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path class="mobile-menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path class="mobile-menu-close hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </nav>
+            </nav>
+            <!-- Mobile Menu -->
+            <nav id="mobile-menu" class="nav-mobile nav-mobile--hidden md:hidden" aria-label="Mobile navigation">
+                <div class="container mx-auto px-6 py-4 space-y-4">
+                    <a href="index.html" class="nav__link block py-2">Home</a>
+                    <a href="index.html#about" class="nav__link block py-2">About</a>
+                    <a href="index.html#portfolio" class="nav__link block py-2">Portfolio</a>
+                    <a href="index.html#experience" class="nav__link block py-2">Experience</a>
+                    <a href="index.html#skills" class="nav__link block py-2">Skills</a>
+                    <a href="resources.html" class="nav__link block py-2">Resources</a>
+                    <a href="blog.html" class="nav__link block py-2">Blog</a>
+                    <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact block py-2 text-center">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Add padding to main content to account for fixed header -->
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-20">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Project Gallery</h1>
+                <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                    Explore my complete portfolio of projects across web development, data science, automation, and engineering
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="index.html" class="inline-flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                        </svg>
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="py-12 bg-white border-b border-gray-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button class="filter-btn active bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300" data-category="all">
+                        All Projects
+                    </button>
+                    <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-all duration-300" data-category="web-development">
+                        Web Development
+                    </button>
+                    <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-all duration-300" data-category="data-science">
+                        Data Science
+                    </button>
+                    <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-all duration-300" data-category="automation">
+                        Automation
+                    </button>
+                    <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-all duration-300" data-category="engineering">
+                        Engineering
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="images/ui/rg-logomark.svg" alt="RG Logo" class="h-8 rounded-lg">
+                        <span class="text-xl font-bold">Ryan Guidry</span>
+                    </div>
+                    <p class="text-gray-300 mb-4 max-w-md">
+                        Data Analyst & Chemical Engineer passionate about solving complex problems through data-driven insights and innovative solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="mailto:inquireryan@gmail.com" class="text-gray-300 hover:text-white transition-colors duration-200">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/ryanguidry" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors duration-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/rguidry" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors duration-200">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center md:text-left">
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
+                        <li><a href="index.html#portfolio" class="text-gray-400 hover:text-white transition duration-300">Portfolio</a></li>
+                        <li><a href="index.html#experience" class="text-gray-400 hover:text-white transition duration-300">Experience</a></li>
+                        <li><a href="index.html#skills" class="text-gray-400 hover:text-white transition duration-300">Skills</a></li>
+                        <li><a href="resources.html" class="text-gray-400 hover:text-white transition duration-300">Resources</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition duration-300">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="text-center md:text-right">
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+                        <li><a href="sitemap.html" class="text-gray-400 hover:text-white transition duration-300">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="flex justify-center items-center mt-8 pt-8 border-t border-gray-800">
+                <div class="text-gray-400 text-sm text-center">
+                    <p>&copy; 2025 Ryan Guidry 🦄. All rights reserved 💜.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Gallery functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const projects = [
+                {
+                    id: 'idea-board',
+                    title: 'Idea Board Web Application',
+                    description: 'A modern, collaborative web application for brainstorming and organizing ideas with real-time updates, responsive design, and seamless team collaboration across all devices.',
+                    image: 'images/portfolio/idea-board-app.png',
+                    category: 'web-development',
+                    technologies: ['React', 'Firebase', 'JavaScript', 'CSS3', 'Real-time Database'],
+                    demoUrl: 'https://idea-board-app.web.app/',
+                    caseStudyUrl: 'case-studies/idea-board-web-app.html'
+                },
+                {
+                    id: 'interactive-media',
+                    title: 'Cross-disciplinary Interactive Media Portfolio',
+                    description: 'Engineered a dynamic, responsive web platform that seamlessly integrates creative content with technical functionality.',
+                    image: 'images/portfolio/interactive-media.png',
+                    category: 'web-development',
+                    technologies: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Tailwind CSS'],
+                    caseStudyUrl: 'case-studies/interactive-media.html'
+                },
+                {
+                    id: 'automation',
+                    title: 'IT Automation: Windows Server Update Service',
+                    description: 'Led initiative to automate Windows updates across 1200 virtual machines by establishing a WSUS.',
+                    image: 'images/portfolio/automation.png',
+                    category: 'automation',
+                    technologies: ['Windows Server', 'WSUS', 'PowerShell', 'Active Directory'],
+                    caseStudyUrl: 'case-studies/automation.html'
+                },
+                {
+                    id: 'data-analytics',
+                    title: 'Advanced Data Analytics & Visualization Platform',
+                    description: 'Developed a comprehensive data analytics platform, integrating advanced statistical models and interactive visualizations.',
+                    image: 'images/portfolio/data-analytics.png',
+                    category: 'data-science',
+                    technologies: ['Pi ProcessBook', 'Pi DataLink', 'Excel', 'Statistical Analysis'],
+                    caseStudyUrl: 'case-studies/data-analytics.html'
+                },
+                {
+                    id: 'machine-learning',
+                    title: 'Predictive Maintenance System with Machine Learning',
+                    description: 'Designed and deployed a predictive maintenance system using machine learning models to forecast equipment failures.',
+                    image: 'images/portfolio/machine-learning.png',
+                    category: 'data-science',
+                    technologies: ['Python', 'Scikit-learn', 'TensorFlow', 'Pandas', 'NumPy'],
+                    caseStudyUrl: 'case-studies/machine-learning.html'
+                },
+                {
+                    id: 'data-visualization',
+                    title: 'Interactive Business Intelligence Dashboards',
+                    description: 'Developed and implemented interactive business intelligence dashboards to provide real-time insights into key performance indicators.',
+                    image: 'images/portfolio/data-visualization.png',
+                    category: 'data-science',
+                    technologies: ['Business Intelligence', 'Data Storytelling', 'Dashboard Design'],
+                    caseStudyUrl: 'case-studies/data-visualization.html'
+                },
+                {
+                    id: 'process-optimization',
+                    title: 'Chemical Process Optimization',
+                    description: 'Implemented advanced process control strategies and optimization algorithms to improve efficiency and reduce costs.',
+                    image: 'images/portfolio/process-optimization.png',
+                    category: 'engineering',
+                    technologies: ['Process Control', 'Optimization', 'Chemical Engineering', 'Data Analysis'],
+                    caseStudyUrl: 'case-studies/process-optimization.html'
+                }
+            ];
+
+            const projectsGrid = document.getElementById('projects-grid');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+
+            function renderProjects(filteredProjects = projects) {
+                projectsGrid.innerHTML = filteredProjects.map(project => `
+                    <div class="project-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300" data-category="${project.category}">
+                        <div class="relative overflow-hidden">
+                            <img src="${project.image}" alt="${project.title}" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+                            <div class="absolute top-4 right-4">
+                                <span class="bg-blue-600 text-white text-xs font-medium px-2 py-1 rounded-full">${project.category.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">${project.title}</h3>
+                            <p class="text-gray-600 mb-4 line-clamp-3">${project.description}</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                ${project.technologies.map(tech => `<span class="bg-gray-100 text-gray-700 text-xs font-medium px-2 py-1 rounded-full">${tech}</span>`).join('')}
+                            </div>
+                            <div class="flex gap-3">
+                                ${project.demoUrl ? `<a href="${project.demoUrl}" target="_blank" rel="noopener noreferrer" class="flex-1 bg-green-600 text-white text-center py-2 px-4 rounded-lg font-medium hover:bg-green-700 transition-colors duration-200">Live Demo</a>` : ''}
+                                <a href="${project.caseStudyUrl}" class="flex-1 bg-blue-600 text-white text-center py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200">Case Study</a>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            // Filter functionality
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const category = this.dataset.category;
+                    
+                    // Update active button
+                    filterBtns.forEach(b => b.classList.remove('active', 'bg-blue-600', 'text-white'));
+                    filterBtns.forEach(b => b.classList.add('bg-gray-200', 'text-gray-700'));
+                    this.classList.add('active', 'bg-blue-600', 'text-white');
+                    this.classList.remove('bg-gray-200', 'text-gray-700');
+                    
+                    // Filter projects
+                    const filteredProjects = category === 'all' ? projects : projects.filter(project => project.category === category);
+                    renderProjects(filteredProjects);
+                });
+            });
+
+            // Initial render
+            renderProjects();
+        });
+    </script>
+</body>
+</html>

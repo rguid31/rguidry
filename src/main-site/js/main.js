@@ -115,6 +115,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Ensure carousel is initialized after DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof initializePortfolioCarousel === 'function') {
+        initializePortfolioCarousel();
+    }
+});
+
 // Lazy Loading Implementation
 function initializeLazyLoading() {
     // Check if Intersection Observer is supported
@@ -144,19 +151,46 @@ function initializeLazyLoading() {
 
 // Portfolio Carousel Functionality
 function initializePortfolioCarousel() {
+    console.log('🔧 Initializing portfolio carousel from main.js...');
+    
     const container = document.getElementById('portfolio-container');
     const prevBtn = document.getElementById('portfolio-prev');
     const nextBtn = document.getElementById('portfolio-next');
     const indicators = document.querySelectorAll('.carousel-indicator');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
     
+    console.log('🔍 Carousel elements found:', {
+        container: !!container,
+        prevBtn: !!prevBtn,
+        nextBtn: !!nextBtn,
+        indicators: indicators.length,
+        portfolioItems: portfolioItems.length
+    });
+    
+    // Debug: Log all portfolio items
+    console.log('📋 Portfolio items found:', portfolioItems);
+    portfolioItems.forEach((item, index) => {
+        console.log(`Item ${index}:`, item.textContent?.trim().substring(0, 50));
+    });
+    
     if (!container || !prevBtn || !nextBtn || portfolioItems.length === 0) {
-        console.log('Portfolio carousel elements not found, skipping initialization');
+        console.log('❌ Portfolio carousel elements not found, skipping initialization');
         return;
     }
     
+    console.log('✅ All carousel elements found, proceeding with initialization');
+    
+    // Debug: Check if idea-board-item exists
+    const ideaBoardItem = document.getElementById('idea-board-item');
+    console.log('🔍 Idea Board Item found:', !!ideaBoardItem);
+    if (ideaBoardItem) {
+        console.log('📋 Idea Board Item content:', ideaBoardItem.textContent?.trim().substring(0, 50));
+    }
+    
     let currentSlide = 0;
-    const totalSlides = portfolioItems.length; // 6 items total
+    const totalSlides = portfolioItems.length; // 7 items total
+    
+    console.log(`📊 Carousel setup: ${totalSlides} total slides`);
     
     function getItemsPerView() {
         return window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
@@ -164,36 +198,40 @@ function initializePortfolioCarousel() {
     
     function getMaxSlide() {
         const itemsPerView = getItemsPerView();
-        // For 6 items showing 3 at a time: max slide = 6 - 3 = 3 (slides 0,1,2,3)
-        // For 6 items showing 2 at a time: max slide = 6 - 2 = 4 (slides 0,1,2,3,4)  
-        // For 6 items showing 1 at a time: max slide = 6 - 1 = 5 (slides 0,1,2,3,4,5)
-        return Math.max(0, totalSlides - itemsPerView);
+        // For 7 items: allow navigation to show last items
+        // Desktop (3 items): max slide = 4 (shows items 4,5,6)
+        // Tablet (2 items): max slide = 5 (shows items 5,6)  
+        // Mobile (1 item): max slide = 6 (shows item 6)
+        return totalSlides - 1;
     }
     
     function updateCarousel() {
         // Wait for DOM to be ready and get actual computed width
         setTimeout(() => {
-            const containerRect = container.parentElement.getBoundingClientRect();
-            const containerWidth = containerRect.width;
             const itemsPerView = getItemsPerView();
             
-            // Calculate gap based on CSS variables
-            const style = getComputedStyle(container);
-            const gap = parseFloat(style.gap) || (window.innerWidth >= 768 ? 32 : 16);
-            
-            // Calculate item width based on visible container width
+            // Use fixed item width calculation that matches CSS
             let itemWidth;
+            let gap;
+            
             if (itemsPerView === 3) {
-                itemWidth = (containerWidth - (gap * 2)) / 3;
+                // Desktop: 3 items per view with 2rem gap
+                itemWidth = 400; // max-width from CSS
+                gap = 32; // 2rem = 32px
             } else if (itemsPerView === 2) {
-                itemWidth = (containerWidth - gap) / 2;
+                // Tablet: 2 items per view with 2rem gap
+                itemWidth = 400; // max-width from CSS
+                gap = 32; // 2rem = 32px
             } else {
-                itemWidth = containerWidth;
+                // Mobile: 1 item per view with 1rem gap
+                itemWidth = 400; // max-width from CSS
+                gap = 16; // 1rem = 16px
             }
             
             const translateX = -(currentSlide * (itemWidth + gap));
             
-            console.log(`Debug: currentSlide=${currentSlide}, itemsPerView=${itemsPerView}, maxSlide=${getMaxSlide()}, translateX=${translateX}`);
+            console.log(`Debug: currentSlide=${currentSlide}, itemsPerView=${itemsPerView}, maxSlide=${getMaxSlide()}, translateX=${translateX}, totalSlides=${totalSlides}`);
+            console.log(`Debug: itemWidth=${itemWidth}, gap=${gap}`);
             
             container.style.transform = `translateX(${translateX}px)`;
             
@@ -210,9 +248,11 @@ function initializePortfolioCarousel() {
             
             const maxSlide = getMaxSlide();
             
-            // Update button states
+            // Update button states - Fix: Allow navigation to all slides
             prevBtn.disabled = currentSlide === 0;
             nextBtn.disabled = currentSlide >= maxSlide;
+            
+            console.log(`Debug: Button states - prev disabled: ${prevBtn.disabled}, next disabled: ${nextBtn.disabled}, maxSlide: ${maxSlide}`);
             
             if (prevBtn.disabled) {
                 prevBtn.classList.add('opacity-50', 'cursor-not-allowed');
@@ -249,9 +289,8 @@ function initializePortfolioCarousel() {
     // Indicator event listeners - each represents starting at that item
     indicators.forEach((indicator, index) => {
         indicator.addEventListener('click', () => {
-            const maxSlide = getMaxSlide();
-            console.log(`Indicator ${index} clicked, max slide:`, maxSlide);
-            currentSlide = Math.min(index, maxSlide);
+            console.log(`Indicator ${index} clicked - setting currentSlide to ${index}`);
+            currentSlide = index;
             updateCarousel();
         });
         
@@ -259,8 +298,8 @@ function initializePortfolioCarousel() {
         indicator.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
-                const maxSlide = getMaxSlide();
-                currentSlide = Math.min(index, maxSlide);
+                console.log(`Indicator ${index} activated via keyboard - setting currentSlide to ${index}`);
+                currentSlide = index;
                 updateCarousel();
             }
         });
