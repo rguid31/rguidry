@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Ryan Guidry - Engineering & Data Analyst Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Link to your stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Add main.js for navigation and scroll effects -->
+    <script src="js/main.js" defer></script>
+
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "rxo9fqpdyr");
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header & Navigation -->
+    <header class="nav fixed top-0 left-0 right-0 z-50">
+        <div class="max-w-7xl mx-auto">
+            <nav class="nav__container">
+                <div class="text-2xl font-bold text-gray-900">
+                    <!-- Logo and Name -->
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="images/ui/rg-logomark.svg" alt="RG Logo" class="h-10 rounded-lg" loading="lazy">
+                        <span>Ryan Guidry</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="nav__link">Home</a>
+                    <a href="index.html#about" class="nav__link">About</a>
+                    <a href="index.html#portfolio" class="nav__link">Portfolio</a>
+                    <a href="index.html#experience" class="nav__link">Experience</a>
+                    <a href="index.html#skills" class="nav__link">Skills</a>
+                    <a href="resources.html" class="nav__link">Resources</a>
+                    <a href="blog.html" class="nav__link nav__link--active">Blog</a>
+                    <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Toggle mobile menu">
+                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path class="mobile-menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path class="mobile-menu-close hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </nav>
+            <!-- Mobile Menu -->
+            <nav id="mobile-menu" class="nav-mobile nav-mobile--hidden md:hidden" aria-label="Mobile navigation">
+                <div class="container mx-auto px-6 py-4 space-y-4">
+                    <a href="index.html" class="nav__link block py-2">Home</a>
+                    <a href="index.html#about" class="nav__link block py-2">About</a>
+                    <a href="index.html#portfolio" class="nav__link block py-2">Portfolio</a>
+                    <a href="index.html#experience" class="nav__link block py-2">Experience</a>
+                    <a href="index.html#skills" class="nav__link block py-2">Skills</a>
+                    <a href="resources.html" class="nav__link block py-2">Resources</a>
+                    <a href="blog.html" class="nav__link nav__link--active block py-2">Blog</a>
+                    <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact block py-2 text-center">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Add padding to main content to account for fixed header -->
+    <main class="pt-0">
+        <div class="container mx-auto px-6 py-12">
+            <!-- Hero Section -->
+            <section class="max-w-6xl mx-auto text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Insights & Analysis</h1>
+                <p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                    Sharing thoughts on data science, engineering, and the intersection of technology and business. 
+                    From practical tips to industry insights, explore the latest in my professional journey.
+                </p>
+            </section>
+
+            <!-- Blog Posts Grid -->
+            <section class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Blog Post 1 -->
+                    <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Data Science</span>
+                                <span class="text-gray-500 text-sm ml-auto">Dec 15, 2024</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">
+                                <a href="#" class="hover:text-blue-600 transition-colors duration-200">
+                                    The Power of Data Visualization in Chemical Engineering
+                                </a>
+                            </h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                How modern data visualization techniques are revolutionizing process optimization and safety monitoring in chemical plants. Real-world examples from my experience.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">5 min read</span>
+                                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read more →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 2 -->
+                    <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-3 py-1 rounded-full">Engineering</span>
+                                <span class="text-gray-500 text-sm ml-auto">Dec 10, 2024</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">
+                                <a href="#" class="hover:text-blue-600 transition-colors duration-200">
+                                    Process Safety Management: Lessons from the Field
+                                </a>
+                            </h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Key insights from implementing PSM systems in industrial settings. Practical approaches to risk assessment and mitigation strategies.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">8 min read</span>
+                                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read more →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 3 -->
+                    <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-3 py-1 rounded-full">AI/ML</span>
+                                <span class="text-gray-500 text-sm ml-auto">Dec 5, 2024</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">
+                                <a href="#" class="hover:text-blue-600 transition-colors duration-200">
+                                    Machine Learning for Predictive Maintenance
+                                </a>
+                            </h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Exploring how ML algorithms can predict equipment failures before they happen, saving costs and improving safety in industrial operations.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">6 min read</span>
+                                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read more →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 4 -->
+                    <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-orange-100 text-orange-800 text-xs font-medium px-3 py-1 rounded-full">Career</span>
+                                <span class="text-gray-500 text-sm ml-auto">Nov 28, 2024</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">
+                                <a href="#" class="hover:text-blue-600 transition-colors duration-200">
+                                    Transitioning from Engineering to Data Science
+                                </a>
+                            </h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                My personal journey from chemical engineering to data analysis. Skills that transfer, challenges faced, and advice for others making similar transitions.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">7 min read</span>
+                                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read more →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 5 -->
+                    <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-teal-100 text-teal-800 text-xs font-medium px-3 py-1 rounded-full">Tools</span>
+                                <span class="text-gray-500 text-sm ml-auto">Nov 20, 2024</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">
+                                <a href="#" class="hover:text-blue-600 transition-colors duration-200">
+                                    Essential Data Analysis Tools for Engineers
+                                </a>
+                            </h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                A comprehensive guide to the tools and software that every engineer should know for effective data analysis and visualization.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">4 min read</span>
+                                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read more →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 6 -->
+                    <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-3 py-1 rounded-full">Industry</span>
+                                <span class="text-gray-500 text-sm ml-auto">Nov 15, 2024</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">
+                                <a href="#" class="hover:text-blue-600 transition-colors duration-200">
+                                    The Future of Chemical Manufacturing
+                                </a>
+                            </h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                How digital transformation, IoT, and advanced analytics are reshaping the chemical industry landscape and what it means for professionals.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">9 min read</span>
+                                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium text-sm">Read more →</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="text-center mt-12">
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 hover:shadow-lg">
+                        Load More Posts
+                    </button>
+                </div>
+            </section>
+
+            <!-- Newsletter Signup -->
+            <section class="max-w-4xl mx-auto mt-20">
+                <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-center text-white">
+                    <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
+                    <p class="text-blue-100 mb-6 text-lg">
+                        Get the latest insights on data science, engineering, and industry trends delivered to your inbox.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                        <input 
+                            type="email" 
+                            placeholder="Enter your email" 
+                            class="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+                        >
+                        <button class="bg-white text-blue-600 font-medium px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="images/ui/rg-logomark.svg" alt="RG Logo" class="h-8 rounded-lg">
+                        <span class="text-xl font-bold">Ryan Guidry</span>
+                    </div>
+                    <p class="text-gray-300 mb-4 max-w-md">
+                        Data Analyst & Chemical Engineer passionate about solving complex problems through data-driven insights and innovative solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="mailto:inquireryan@gmail.com" class="text-gray-300 hover:text-white transition-colors duration-200">
+                            <span class="sr-only">Email</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors duration-200">Home</a></li>
+                        <li><a href="index.html#about" class="text-gray-300 hover:text-white transition-colors duration-200">About</a></li>
+                        <li><a href="index.html#portfolio" class="text-gray-300 hover:text-white transition-colors duration-200">Portfolio</a></li>
+                        <li><a href="resources.html" class="text-gray-300 hover:text-white transition-colors duration-200">Resources</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="blog.html" class="text-gray-300 hover:text-white transition-colors duration-200">Blog</a></li>
+                        <li><a href="resources.html" class="text-gray-300 hover:text-white transition-colors duration-200">Learning</a></li>
+                        <li><a href="resources.html" class="text-gray-300 hover:text-white transition-colors duration-200">Tools</a></li>
+                        <li><a href="resources.html" class="text-gray-300 hover:text-white transition-colors duration-200">Career</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Ryan Guidry. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

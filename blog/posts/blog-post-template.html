@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources | Ryan Guidry - Engineering & Data Analyst Portfolio</title>
+    <title>Blog Post Title | Ryan Guidry - Engineering & Data Analyst Portfolio</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,11 +14,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Link to your stylesheet -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/resources.css">
+    <link rel="stylesheet" href="../style.css">
 
     <!-- Add main.js for navigation and scroll effects -->
-    <script src="src/main-site/js/main.js" defer></script>
+    <script src="../src/main-site/js/main.js" defer></script>
 
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
@@ -35,19 +34,19 @@
             <nav class="nav__container">
                 <div class="text-2xl font-bold text-gray-900">
                     <!-- Logo and Name -->
-                    <a href="index.html" class="flex items-center space-x-3">
-                        <img src="images/ui/rg-logomark.svg" alt="RG Logo" class="h-10 rounded-lg" loading="lazy">
+                    <a href="../index.html" class="flex items-center space-x-3">
+                        <img src="../images/ui/rg-logomark.svg" alt="RG Logo" class="h-10 rounded-lg" loading="lazy">
                         <span>Ryan Guidry</span>
                     </a>
                 </div>
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="index.html" class="nav__link">Home</a>
-                    <a href="index.html#about" class="nav__link">About</a>
-                    <a href="index.html#portfolio" class="nav__link">Portfolio</a>
-                    <a href="index.html#experience" class="nav__link">Experience</a>
-                    <a href="index.html#skills" class="nav__link">Skills</a>
-                    <a href="resources.html" class="nav__link nav__link--active">Resources</a>
-                    <a href="blog.html" class="nav__link">Blog</a>
+                    <a href="../index.html" class="nav__link">Home</a>
+                    <a href="../index.html#about" class="nav__link">About</a>
+                    <a href="../index.html#portfolio" class="nav__link">Portfolio</a>
+                    <a href="../index.html#experience" class="nav__link">Experience</a>
+                    <a href="../index.html#skills" class="nav__link">Skills</a>
+                    <a href="../resources.html" class="nav__link">Resources</a>
+                    <a href="../blog.html" class="nav__link nav__link--active">Blog</a>
                     <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact">Contact</a>
                 </div>
                 <!-- Mobile Menu Button -->
@@ -61,13 +60,13 @@
             <!-- Mobile Menu -->
             <nav id="mobile-menu" class="nav-mobile nav-mobile--hidden md:hidden" aria-label="Mobile navigation">
                 <div class="container mx-auto px-6 py-4 space-y-4">
-                    <a href="index.html" class="nav__link block py-2">Home</a>
-                    <a href="index.html#about" class="nav__link block py-2">About</a>
-                    <a href="index.html#portfolio" class="nav__link block py-2">Portfolio</a>
-                    <a href="index.html#experience" class="nav__link block py-2">Experience</a>
-                    <a href="index.html#skills" class="nav__link block py-2">Skills</a>
-                    <a href="resources.html" class="nav__link nav__link--active block py-2">Resources</a>
-                    <a href="blog.html" class="nav__link block py-2">Blog</a>
+                    <a href="../index.html" class="nav__link block py-2">Home</a>
+                    <a href="../index.html#about" class="nav__link block py-2">About</a>
+                    <a href="../index.html#portfolio" class="nav__link block py-2">Portfolio</a>
+                    <a href="../index.html#experience" class="nav__link block py-2">Experience</a>
+                    <a href="../index.html#skills" class="nav__link block py-2">Skills</a>
+                    <a href="../resources.html" class="nav__link block py-2">Resources</a>
+                    <a href="../blog.html" class="nav__link nav__link--active block py-2">Blog</a>
                     <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact block py-2 text-center">Contact</a>
                 </div>
             </nav>
@@ -76,29 +75,30 @@
 
     <!-- Add padding to main content to account for fixed header -->
     <main class="pt-0">
-        <div class="page">
-            <!-- Hero Section -->
-            <section class="hero">
-                <div class="hero__overlay"></div>
-                <div class="hero__container">
-                    <h1 class="hero__title">
-                        <span class="hero__text--gradient">Resources</span>
-                    </h1>
-                    <p class="hero__subtitle">
-                        Curated tools, guides, and insights to accelerate your growth in data science, engineering, and technology
-                    </p>
-                                </div>
-            </section>
-
-            <!-- Resources Grid Section -->
-            <section class="resources-section">
-                <div class="container">
-                    <div class="resources-grid">
-                        <!-- Resources will be dynamically loaded here by JavaScript -->
-                                </div>
-                            </div>
-            </section>
-                        </div>
+        <div class="container mx-auto px-6 py-12">
+            <!-- Blog Post Content -->
+            <article class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8 md:p-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Blog Post Title</h1>
+                <div class="flex items-center text-gray-500 text-sm mb-8">
+                    <span class="mr-3">Dec 15, 2024</span>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Category</span>
+                </div>
+                <div class="prose prose-lg max-w-none text-gray-700">
+                    <!-- Your blog post content goes here -->
+                    <p>This is where the detailed content of your blog post will be. You can write about anything related to data science, engineering, technology, or your professional experiences.</p>
+                    <p>Feel free to add paragraphs, images, code snippets, and other HTML elements to make your post engaging and informative.</p>
+                    <h2>Subheading Example</h2>
+                    <p>This is a subheading. You can use multiple subheadings to organize your content effectively.</p>
+                    <h3>Another Subheading</h3>
+                    <ul>
+                        <li>List item 1</li>
+                        <li>List item 2</li>
+                        <li>List item 3</li>
+                    </ul>
+                    <p>Thank you for reading!</p>
+                </div>
+            </article>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -107,7 +107,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="col-span-1 md:col-span-2">
                     <div class="flex items-center space-x-3 mb-4">
-                        <img src="images/ui/rg-logomark.svg" alt="RG Logo" class="h-8 rounded-lg">
+                        <img src="../images/ui/rg-logomark.svg" alt="RG Logo" class="h-8 rounded-lg">
                         <span class="text-xl font-bold">Ryan Guidry</span>
                     </div>
                     <p class="text-gray-300 mb-4 max-w-md">
@@ -126,19 +126,19 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors duration-200">Home</a></li>
-                        <li><a href="index.html#about" class="text-gray-300 hover:text-white transition-colors duration-200">About</a></li>
-                        <li><a href="index.html#portfolio" class="text-gray-300 hover:text-white transition-colors duration-200">Portfolio</a></li>
-                        <li><a href="resources.html" class="text-white">Resources</a></li>
+                        <li><a href="../index.html" class="text-gray-300 hover:text-white transition-colors duration-200">Home</a></li>
+                        <li><a href="../index.html#about" class="text-gray-300 hover:text-white transition-colors duration-200">About</a></li>
+                        <li><a href="../index.html#portfolio" class="text-gray-300 hover:text-white transition-colors duration-200">Portfolio</a></li>
+                        <li><a href="../resources.html" class="text-gray-300 hover:text-white transition-colors duration-200">Resources</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Resources</h3>
                     <ul class="space-y-2">
-                        <li><a href="blog.html" class="text-gray-300 hover:text-white transition-colors duration-200">Blog</a></li>
-                        <li><a href="resources.html" class="text-white">Learning</a></li>
-                        <li><a href="resources.html" class="text-white">Tools</a></li>
-                        <li><a href="resources.html" class="text-white">Career</a></li>
+                        <li><a href="../blog.html" class="text-gray-300 hover:text-white transition-colors duration-200">Blog</a></li>
+                        <li><a href="../resources.html" class="text-gray-300 hover:text-white transition-colors duration-200">Learning</a></li>
+                        <li><a href="../resources.html" class="text-gray-300 hover:text-white transition-colors duration-200">Tools</a></li>
+                        <li><a href="../resources.html" class="text-gray-300 hover:text-white transition-colors duration-200">Career</a></li>
                     </ul>
                 </div>
             </div>
@@ -147,8 +147,5 @@
             </div>
         </div>
     </footer>
-
-    <!-- Load the resources JavaScript -->
-    <script src="src/main-site/js/resources.js"></script>
 </body>
 </html>
