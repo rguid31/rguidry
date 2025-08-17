@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Testing - Ryan Guidry Portfolio</title>
+    <meta name="description" content="Test page for accessibility features including color contrast and focus indicators">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter - Optimized for Accessibility -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Accessibility-focused CSS -->
+    <link rel="stylesheet" href="css/accessibility.css">
+    
+    <!-- Font Loading Optimization Script -->
+    <script>
+        if ('fonts' in document) {
+            Promise.all([
+                new FontFace('Inter', 'url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2)', { weight: '400' }),
+                new FontFace('Inter', 'url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2)', { weight: '500' }),
+                new FontFace('Inter', 'url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2)', { weight: '600' }),
+                new FontFace('Inter', 'url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2)', { weight: '700' })
+            ]).then(fonts => {
+                fonts.forEach(font => document.fonts.add(font));
+                document.body.classList.add('font-loaded');
+            }).catch(() => {
+                document.body.classList.add('font-loading');
+            });
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200" role="banner">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3">
+                    <img src="images/ui/rg-logomark.svg" alt="RG Logo" class="h-8 w-8">
+                    <h1 class="text-xl font-bold text-gray-900">Accessibility Testing</h1>
+                </div>
+                <nav class="flex space-x-4" role="navigation" aria-label="Testing navigation">
+                    <a href="index.html" class="nav__link">Back to Home</a>
+                    <a href="about.html" class="nav__link">About</a>
+                    <a href="gallery.html" class="nav__link">Gallery</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8" role="main">
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Color Contrast & Focus Indicators Testing</h2>
+            <p class="text-lg text-gray-600 mb-8">This page demonstrates all accessibility improvements including color contrast, focus indicators, and interactive elements.</p>
+        </section>
+
+        <!-- Color Contrast Testing -->
+        <section class="mb-12" aria-labelledby="color-contrast-title">
+            <h3 id="color-contrast-title" class="text-2xl font-semibold text-gray-900 mb-6">Color Contrast Testing</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Text Contrast Examples -->
+                <div class="card p-6">
+                    <h4 class="text-lg font-semibold mb-4">Text Contrast</h4>
+                    <div class="space-y-3">
+                        <div class="text-contrast-primary">Primary Text (High Contrast)</div>
+                        <div class="text-contrast-secondary">Secondary Text (Good Contrast)</div>
+                        <div class="text-contrast-muted">Muted Text (Medium Contrast)</div>
+                        <div class="text-contrast-inverse bg-contrast-dark p-2 rounded">Inverse Text (High Contrast)</div>
+                    </div>
+                </div>
+
+                <!-- Background Contrast Examples -->
+                <div class="card p-6">
+                    <h4 class="text-lg font-semibold mb-4">Background Contrast</h4>
+                    <div class="space-y-3">
+                        <div class="bg-contrast-primary p-2 rounded">Primary Background</div>
+                        <div class="bg-contrast-secondary p-2 rounded">Secondary Background</div>
+                        <div class="bg-contrast-tertiary p-2 rounded">Tertiary Background</div>
+                        <div class="bg-contrast-dark text-contrast-inverse p-2 rounded">Dark Background</div>
+                    </div>
+                </div>
+
+                <!-- Status Colors -->
+                <div class="card p-6">
+                    <h4 class="text-lg font-semibold mb-4">Status Colors</h4>
+                    <div class="space-y-3">
+                        <div class="text-success">Success Text</div>
+                        <div class="text-warning">Warning Text</div>
+                        <div class="text-error">Error Text</div>
+                        <div class="text-info">Info Text</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Focus Indicators Testing -->
+        <section class="mb-12" aria-labelledby="focus-indicators-title">
+            <h3 id="focus-indicators-title" class="text-2xl font-semibold text-gray-900 mb-6">Focus Indicators Testing</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Button Testing -->
+                <div class="card p-6">
+                    <h4 class="text-lg font-semibold mb-4">Button Focus States</h4>
+                    <div class="space-y-3">
+                        <button class="btn btn-primary px-4 py-2">Primary Button</button>
+                        <button class="btn btn-secondary px-4 py-2">Secondary Button</button>
+                        <button class="btn btn-success px-4 py-2">Success Button</button>
+                        <button class="btn btn-warning px-4 py-2">Warning Button</button>
+                        <button class="btn btn-error px-4 py-2">Error Button</button>
+                    </div>
+                </div>
+
+                <!-- Link Testing -->
+                <div class="card p-6">
+                    <h4 class="text-lg font-semibold mb-4">Link Focus States</h4>
+                    <div class="space-y-3">
+                        <a href="#" class="nav__link inline-block px-4 py-2">Navigation Link</a>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 underline">Regular Link</a>
+                        <a href="#" class="btn btn-primary inline-block px-4 py-2">Button Link</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Testing -->
+        <section class="mb-12" aria-labelledby="form-testing-title">
+            <h3 id="form-testing-title" class="text-2xl font-semibold text-gray-900 mb-6">Form Accessibility Testing</h3>
+            
+            <div class="max-w-2xl">
+                <form class="space-y-6">
+                    <div class="form-group">
+                        <label for="name" class="required">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        <div class="form-help">Please enter your legal name as it appears on official documents.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="required">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        <div class="form-help">We'll never share your email with anyone else.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Enter your message"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" name="category">
+                            <option value="">Select a category</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="project">Project Discussion</option>
+                            <option value="collaboration">Collaboration</option>
+                        </select>
+                    </div>
+
+                    <div class="flex space-x-4">
+                        <button type="submit" class="btn btn-primary px-6 py-3">Submit Form</button>
+                        <button type="reset" class="btn btn-secondary px-6 py-3">Reset Form</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Status Messages Testing -->
+        <section class="mb-12" aria-labelledby="status-messages-title">
+            <h3 id="status-messages-title" class="text-2xl font-semibold text-gray-900 mb-6">Status Messages Testing</h3>
+            
+            <div class="space-y-4">
+                <div class="status-message success">
+                    <strong>Success!</strong> Your form has been submitted successfully.
+                </div>
+                
+                <div class="status-message warning">
+                    <strong>Warning!</strong> Please review your information before submitting.
+                </div>
+                
+                <div class="status-message error">
+                    <strong>Error!</strong> Please correct the errors below and try again.
+                </div>
+                
+                <div class="status-message info">
+                    <strong>Info:</strong> This is an informational message for your reference.
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Elements Testing -->
+        <section class="mb-12" aria-labelledby="interactive-elements-title">
+            <h3 id="interactive-elements-title" class="text-2xl font-semibold text-gray-900 mb-6">Interactive Elements Testing</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Portfolio Item Simulation -->
+                <div class="card p-6">
+                    <h4 class="text-lg font-semibold mb-4">Portfolio Item Focus</h4>
+                    <div class="portfolio-item p-4 border border-gray-200 rounded-lg cursor-pointer">
+                        <h5 class="font-semibold mb-2">Sample Project</h5>
+                        <p class="text-sm text-gray-600 mb-3">This simulates a portfolio item to test focus states.</p>
+                        <button class="btn btn-primary text-sm px-3 py-1">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Modal Simulation -->
+                <div class="card p-6">
+                    <h4 class="text-lg font-semibold mb-4">Modal Focus</h4>
+                    <div class="modal p-4 border border-gray-200 rounded-lg bg-white">
+                        <h5 class="font-semibold mb-2">Sample Modal</h5>
+                        <p class="text-sm text-gray-600 mb-3">This simulates a modal to test focus states.</p>
+                        <div class="flex space-x-2">
+                            <button class="btn btn-primary text-sm px-3 py-1">Confirm</button>
+                            <button class="btn btn-secondary text-sm px-3 py-1">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accessibility Information -->
+        <section class="mb-12" aria-labelledby="accessibility-info-title">
+            <h3 id="accessibility-info-title" class="text-2xl font-semibold text-gray-900 mb-6">Accessibility Features Implemented</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card p-6">
+                    <h4 class="text-lg font-semibold mb-4">Color Contrast</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>✅ WCAG AA compliant color ratios (4.5:1 minimum)</li>
+                        <li>✅ High contrast text combinations</li>
+                        <li>✅ Semantic color coding (success, warning, error, info)</li>
+                        <li>✅ High contrast mode support</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6">
+                    <h4 class="text-lg font-semibold mb-4">Focus Indicators</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>✅ 3px focus rings with 3px offset</li>
+                        <li>✅ High visibility focus colors</li>
+                        <li>✅ Context-aware focus states</li>
+                        <li>✅ Keyboard navigation support</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6">
+                    <h4 class="text-lg font-semibold mb-4">Interactive Elements</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>✅ Enhanced button states</li>
+                        <li>✅ Form validation feedback</li>
+                        <li>✅ Hover and active states</li>
+                        <li>✅ Smooth transitions</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6">
+                    <h4 class="text-lg font-semibold mb-4">Typography</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>✅ 16px minimum body text</li>
+                        <li>✅ Optimal line heights</li>
+                        <li>✅ Clear font hierarchy</li>
+                        <li>✅ Screen-optimized fonts</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testing Instructions -->
+        <section class="mb-12" aria-labelledby="testing-instructions-title">
+            <h3 id="testing-instructions-title" class="text-2xl font-semibold text-gray-900 mb-6">Testing Instructions</h3>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded">
+                <h4 class="font-semibold text-blue-900 mb-2">How to Test Accessibility Features:</h4>
+                <ol class="list-decimal list-inside space-y-2 text-blue-800">
+                    <li><strong>Keyboard Navigation:</strong> Use Tab key to navigate through all interactive elements</li>
+                    <li><strong>Focus Indicators:</strong> Look for blue focus rings around focused elements</li>
+                    <li><strong>Color Contrast:</strong> Verify all text is readable against backgrounds</li>
+                    <li><strong>Form Validation:</strong> Try submitting the form with invalid data</li>
+                    <li><strong>Screen Reader:</strong> Test with screen reader software</li>
+                    <li><strong>High Contrast Mode:</strong> Enable high contrast mode in your OS</li>
+                </ol>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8" role="contentinfo">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div class="text-center md:text-left">
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-white transition duration-300">Gallery</a></li>
+                        <li><a href="resources.html" class="text-gray-400 hover:text-white transition duration-300">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-lg font-semibold mb-4">Testing</h3>
+                    <ul class="space-y-2">
+                        <li><a href="accessibility-test.html" class="text-white">Accessibility Test</a></li>
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Test Homepage</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition duration-300">Test About Page</a></li>
+                    </ul>
+                </div>
+                <div class="text-center md:text-right">
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+                        <li><a href="sitemap.html" class="text-gray-400 hover:text-white transition duration-300">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p>&copy; 2024 Ryan Guidry. All rights reserved.</p>
+                <p class="mt-2 text-gray-400">Accessibility testing page for portfolio website</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

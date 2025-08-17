@@ -1,9 +1,43 @@
+/* Neuromorphic Color Palette */
+/* ------------------------- */
+:root {
+    /* Primary Palette */
+    --color-bg-primary: #f8fafc;      /* Light slate-50 - Soft neutral base */
+    --color-surface: #ffffff;          /* Pure white - Clean card surfaces */
+    --color-accent: #3b82f6;          /* Blue-500 - Engaging primary color */
+    --color-secondary: #6366f1;       /* Indigo-500 - Complementary accent */
+    
+    /* Depth & Shadow System */
+    --color-shadow-light: #e2e8f0;    /* Slate-200 - Subtle depth */
+    --color-shadow-dark: #475569;     /* Slate-600 - Deeper shadows */
+    --color-border-highlight: #f1f5f9; /* Slate-100 - Top edge lighting */
+    
+    /* Text & Contrast */
+    --color-text-primary: #1e293b;    /* Slate-800 - High contrast, readable */
+    --color-text-secondary: #64748b;  /* Slate-500 - Medium contrast */
+    --color-text-muted: #94a3b8;     /* Slate-400 - Low contrast */
+    
+    /* Interactive States */
+    --color-hover: #1d4ed8;           /* Blue-700 - Hover state */
+    --color-active: #1e40af;          /* Blue-800 - Active state */
+    --color-focus: #dbeafe;           /* Blue-100 - Focus ring */
+}
+
 /* Base Styles and Reset */
 /* -------------------- */
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-primary, 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif);
+    font-size: var(--text-base, 1rem); /* 16px minimum for WCAG AA compliance */
+    line-height: var(--leading-normal, 1.5); /* 1.5 for optimal readability */
+    font-weight: 400; /* Regular weight for body text */
     -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
     padding-top: 4.5rem;  /* Adjust based on nav height */
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(226, 232, 240, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(241, 245, 249, 0.1) 0%, transparent 50%);
+    background-attachment: fixed;
 }
 
 /* Smooth Scrolling and Animations */
@@ -18,7 +52,7 @@ html {
 }
 
 .section__title:hover {
-    color: #2563eb; /* Blue highlight on hover for section headers */
+    color: var(--color-accent); /* Neuromorphic accent color on hover for section headers */
 }
 
 /* Project Filter Styles */
@@ -31,12 +65,16 @@ html {
 
 .filter-btn:hover {
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 
+        6px 6px 12px var(--color-shadow-light),
+        -6px -6px 12px var(--color-surface);
 }
 
 .filter-btn.active {
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    box-shadow: 
+        8px 8px 16px var(--color-shadow-light),
+        -8px -8px 16px var(--color-surface);
 }
 
 .filter-btn::before {
@@ -52,6 +90,93 @@ html {
 
 .filter-btn:hover::before {
     left: 100%;
+}
+
+/* Neuromorphic Components */
+/* ---------------------- */
+.neuromorphic-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-highlight);
+    box-shadow: 
+        8px 8px 16px var(--color-shadow-light),
+        -8px -8px 16px var(--color-surface);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.neuromorphic-card:hover {
+    box-shadow: 
+        12px 12px 20px var(--color-shadow-light),
+        -12px -12px 20px var(--color-surface);
+    transform: translateY(-2px);
+}
+
+/* Neuromorphic variants */
+.neuromorphic-card--subtle {
+    box-shadow: 
+        4px 4px 8px var(--color-shadow-light),
+        -4px -4px 8px var(--color-surface);
+}
+
+.neuromorphic-card--elevated {
+    box-shadow: 
+        16px 16px 32px var(--color-shadow-light),
+        -16px -16px 32px var(--color-surface);
+}
+
+/* Neuromorphic text colors */
+.text-neuromorphic-primary {
+    color: var(--color-text-primary);
+}
+
+.text-neuromorphic-secondary {
+    color: var(--color-text-secondary);
+}
+
+.text-neuromorphic-muted {
+    color: var(--color-text-muted);
+}
+
+.text-neuromorphic-accent {
+    color: var(--color-accent);
+}
+
+.neuromorphic-button {
+    background: linear-gradient(145deg, var(--color-bg-primary), var(--color-shadow-light));
+    border: 1px solid var(--color-border-highlight);
+    box-shadow: 
+        4px 4px 8px var(--color-shadow-light),
+        -4px -4px 8px var(--color-surface);
+    transition: all 0.2s ease;
+    border-radius: 12px;
+    color: var(--color-text-primary);
+    font-weight: 500;
+}
+
+.neuromorphic-button:hover {
+    box-shadow: 
+        2px 2px 4px var(--color-shadow-light),
+        -2px -2px 4px var(--color-surface);
+    transform: translateY(1px);
+}
+
+.neuromorphic-input {
+    background: var(--color-surface);
+    border: 1px solid var(--color-shadow-light);
+    box-shadow: 
+        inset 2px 2px 4px var(--color-shadow-light),
+        inset -2px -2px 4px var(--color-surface);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.neuromorphic-input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 
+        inset 2px 2px 4px var(--color-shadow-light),
+        inset -2px -2px 4px var(--color-surface),
+        0 0 0 3px var(--color-focus);
 }
 
 /* Project Cards Animation */
@@ -72,10 +197,13 @@ html {
     left: 0;
     right: 0;
     z-index: 50;
-    background-color: rgba(255, 255, 255, 0.85);  /* More transparent white */
+    background-color: rgba(248, 250, 252, 0.95);  /* Neuromorphic background */
     backdrop-filter: blur(12px);  /* Stronger blur effect */
     -webkit-backdrop-filter: blur(12px);  /* For Safari support */
-    border-bottom: 1px solid rgba(229, 231, 235, 0.5);  /* More transparent border */
+    border-bottom: 1px solid var(--color-border-highlight);  /* Neuromorphic border */
+    box-shadow: 
+        0 4px 12px rgba(226, 232, 240, 0.3),
+        0 1px 3px rgba(226, 232, 240, 0.1);  /* Neuromorphic shadow */
     transition: all 0.3s ease;
     --scroll-progress: 0;
     --scroll-transform: scaleX(0);
@@ -89,7 +217,7 @@ html {
     left: 0;
     width: 100%;
     height: 2px;  /* Height of the progress bar */
-    background: linear-gradient(to right, #2563EB, #4F46E5);  /* Gradient color */
+    background: linear-gradient(to right, var(--color-accent), var(--color-secondary));  /* Neuromorphic gradient */
     transform-origin: 0 50%;  /* Scale from left to right */
     transform: var(--scroll-transform);
     transition: transform 0.1s ease-out;  /* Smooth transition for progress updates */
@@ -106,35 +234,44 @@ html {
 }
 
 .nav__link {
-    color: #4B5563;
+    color: var(--color-text-secondary);
     text-decoration: none;
     transition: color 0.3s ease;
     font-weight: 500;
 }
 
 .nav__link:hover {
-    color: #2563EB;
+    color: var(--color-accent);
 }
 
 .nav__link--contact {
-    background-color: #2563EB;
-    color: white;
+    background-color: var(--color-accent);
+    color: var(--color-surface);
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 
+        2px 2px 4px var(--color-shadow-light),
+        -2px -2px 4px var(--color-surface);
 }
 
 .nav__link--contact:hover {
-    background-color: #1D4ED8;
-    color: white;
+    background-color: var(--color-hover);
+    color: var(--color-surface);
+    box-shadow: 
+        1px 1px 2px var(--color-shadow-light),
+        -1px -1px 2px var(--color-surface);
+    transform: translateY(1px);
 }
 
 /* Mobile Menu Animation and Layout */
 /* ----------------------------- */
 .nav-mobile {
-    background-color: white;
-    border-top: 1px solid #e5e7eb;
+    background-color: var(--color-surface);
+    border-top: 1px solid var(--color-shadow-light);
     transition: transform 0.3s ease, opacity 0.3s ease;
+    box-shadow: 
+        0 -4px 12px rgba(226, 232, 240, 0.3);
 }
 
 .nav-mobile--hidden {

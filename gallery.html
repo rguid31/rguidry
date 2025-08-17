@@ -9,11 +9,38 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Google Fonts: Inter - Optimized for Accessibility -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    
     <!-- Link to your stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- Accessibility-focused CSS -->
+    <link rel="stylesheet" href="css/accessibility.css">
     
     <!-- Add main.js for navigation and scroll effects -->
     <script src="src/main-site/js/main.js" defer></script>
+    
+    <!-- Font Loading Optimization Script -->
+    <script>
+        // Font loading optimization for accessibility
+        if ('fonts' in document) {
+            Promise.all([
+                new FontFace('Inter', 'url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2)', { weight: '400' }),
+                new FontFace('Inter', 'url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2)', { weight: '500' }),
+                new FontFace('Inter', 'url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2)', { weight: '600' }),
+                new FontFace('Inter', 'url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2)', { weight: '700' })
+            ]).then(fonts => {
+                fonts.forEach(font => document.fonts.add(font));
+                document.body.classList.add('font-loaded');
+            }).catch(() => {
+                // Fallback to system fonts if Inter fails to load
+                document.body.classList.add('font-loading');
+            });
+        }
+    </script>
     
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
@@ -169,6 +196,7 @@
                     <ul class="space-y-2">
                         <li><a href="privacy.html" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
                         <li><a href="sitemap.html" class="text-gray-400 hover:text-white transition duration-300">Sitemap</a></li>
+                        <li><a href="accessibility-test.html" class="text-gray-400 hover:text-white transition duration-300">Accessibility Test</a></li>
                     </ul>
                 </div>
             </div>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Web Accessibility Should Be Built Into Every Website From Day One | rguidry.dev</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Link to your stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Add main.js for navigation and scroll effects -->
+    <script src="../../src/main-site/js/main.js" defer></script>
+
+    <!-- MS Clarity Analytics -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "rxo9fqpdyr");
+    </script>
+    
+    <!-- Custom styles for blog post elements -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        pre {
+            background-color: #282c34;
+            color: #abb2bf;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        /* UPDATED: High-contrast style for inline code */
+        .prose code {
+            font-family: monospace;
+            background-color: #e5e7eb; /* Light gray background (gray-200) */
+            color: #1e40af;       /* Dark blue text (blue-800) for high contrast */
+            font-weight: 600;      /* Make it slightly bolder */
+            padding: 0.2em 0.4em;
+            margin: 0;
+            font-size: 85%;
+            border-radius: 4px;
+        }
+        figure { margin-top: 2rem; margin-bottom: 2rem; }
+        figcaption { margin-top: 0.75rem; font-size: 0.9rem; color: #6b7280; text-align: center; }
+
+        /* Syntax Highlighting Styles for <pre> blocks */
+        .token.comment { color: #5c6370; font-style: italic; }
+        .token.punctuation { color: #abb2bf; }
+        .token.tag, .token.selector { color: #e06c75; }
+        .token.attr-name, .token.property { color: #d19a66; }
+        .token.attr-value, .token.string { color: #98c379; }
+        .token.keyword { color: #c678dd; }
+        .token.function { color: #61afef; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Main Content -->
+    <main class="pt-12"> <!-- Adjusted padding-top as header is removed -->
+        <div class="container mx-auto px-6 py-12">
+            <!-- Blog Post Content -->
+            <article class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8 md:p-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Why Web Accessibility Should Be Built Into Every Website From Day One</h1>
+                <div class="flex items-center text-gray-500 text-sm mb-8">
+                    <span class="mr-3">August 17, 2025</span>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Web Development</span>
+                </div>
+                <div class="prose prose-lg max-w-none text-gray-700">
+                    
+                    <p>Building a website isn’t just about what looks good on your monitor. It’s about who can actually use it. Accessibility isn’t an optional add-on for a “later” sprint. It’s foundational. Whether you’re coding a personal portfolio like <a href="https://www.rguidry.dev" target="_blank"><strong>rguidry.dev</strong></a> or scaling an enterprise platform, the <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer"><strong>Web Content Accessibility Guidelines (WCAG)</strong></a> lay out the roadmap for sites that everyone—not just a fraction of visitors—can navigate and use.</p>
+                    <p>I learned this lesson the hard way when I launched my site’s first version. The design looked sleek on my 27-inch monitor, but when I ran an audit, the accessibility score was embarrassingly low. Missing <code>&lt;main&gt;</code> tags, unlabeled navigation, poor contrast ratios. It wasn’t just that a screen reader user would struggle—it also meant search engines weren’t parsing my content effectively. Accessibility and SEO are more tightly bound than most developers realize.</p>
+    
+                    <h2 class="text-3xl font-bold mt-12 mb-4">The Accessibility-SEO Connection</h2>
+                    <p>Before diving into the checklist of accessibility issues, it’s worth making the SEO link explicit. Search engines crawl sites in ways that parallel how assistive technologies parse content. Clean, semantic HTML, labeled navigation, alt text—all these are signals for both accessibility and discoverability.</p>
+                    <ul class="list-disc list-inside space-y-2 my-4">
+                        <li><strong>Semantic structure = Better indexing:</strong> If your site is missing <code>&lt;main&gt;</code> or <code>&lt;section&gt;</code> tags, crawlers can’t distinguish priority content. Users with screen readers face the same confusion.</li>
+                        <li><strong>Alt text = More than compliance:</strong> Alt attributes help blind users, but they also power Google Images, product discovery, and contextual relevance for keywords.</li>
+                        <li><strong>ARIA roles = Context for machines:</strong> ARIA isn’t just for screen readers. Proper roles reinforce what’s interactive and what isn’t, which impacts usability and crawl clarity.</li>
+                    </ul>
+                    <p>When I patched up my first build of rguidry.dev, I saw two improvements: accessibility audits went green, and pages indexed faster. Accessibility wasn’t charity—it was strategy.</p>
+    
+                    <h2 class="text-3xl font-bold mt-12 mb-4">1. Semantic HTML Structure</h2>
+                    <p>At the core of WCAG compliance is semantic HTML. Think of it as the skeleton of your site. Without it, both humans and machines lose context.</p>
+                     <ul class="list-disc list-inside space-y-2 my-4">
+                        <li><strong>Missing <code>&lt;main&gt;</code> tag:</strong> The main content needs to be explicitly wrapped. Without it, screen readers can’t jump directly to the primary content, and crawlers can’t weigh what’s essential.</li>
+                        <li><strong>Missing <code>&lt;nav&gt;</code> tags:</strong> Wrapping navigation links inside <code>&lt;nav&gt;</code> blocks makes site structure obvious. This matters for both accessibility tree parsing and search engines organizing links.</li>
+                        <li><strong>Missing <code>&lt;section&gt;</code> tags:</strong> Proper <code>&lt;section&gt;</code> elements give meaning to grouped content. That improves heading hierarchy and search indexing.</li>
+                    </ul>
+                    <p>When I first audited rguidry.dev, everything was just <code>&lt;div&gt;</code>. Functionally fine, but invisible to anyone using assistive tech. It also made my analytics confusing: users were bouncing faster because they couldn’t find what they needed.</p>
+                    <pre><code class="language-html"><span class="token tag">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag">&lt;html <span class="token attr-name">lang</span>=<span class="token attr-value">"en"</span>&gt;</span>
+  <span class="token tag">&lt;head&gt;</span>
+    <span class="token tag">&lt;title&gt;</span>My Portfolio<span class="token tag">&lt;/title&gt;</span>
+  <span class="token tag">&lt;/head&gt;</span>
+  <span class="token tag">&lt;body&gt;</span>
+    <span class="token tag">&lt;header&gt;</span>
+      <span class="token tag">&lt;h1&gt;</span>RGuidry.dev<span class="token tag">&lt;/h1&gt;</span>
+    <span class="token tag">&lt;/header&gt;</span>
+
+    <span class="token tag">&lt;nav <span class="token attr-name">aria-label</span>=<span class="token attr-value">"Main navigation"</span>&gt;</span>
+      <span class="token tag">&lt;ul&gt;</span>
+        <span class="token tag">&lt;li&gt;</span><span class="token tag">&lt;a <span class="token attr-name">href</span>=<span class="token attr-value">"/"</span> <span class="token attr-name">aria-current</span>=<span class="token attr-value">"page"</span>&gt;</span>Home<span class="token tag">&lt;/a&gt;</span><span class="token tag">&lt;/li&gt;</span>
+        <span class="token tag">&lt;li&gt;</span><span class="token tag">&lt;a <span class="token attr-name">href</span>=<span class="token attr-value">"/projects"</span>&gt;</span>Projects<span class="token tag">&lt;/a&gt;</span><span class="token tag">&lt;/li&gt;</span>
+        <span class="token tag">&lt;li&gt;</span><span class="token tag">&lt;a <span class="token attr-name">href</span>=<span class="token attr-value">"/contact"</span>&gt;</span>Contact<span class="token tag">&lt;/a&gt;</span><span class="token tag">&lt;/li&gt;</span>
+      <span class="token tag">&lt;/ul&gt;</span>
+    <span class="token tag">&lt;/nav&gt;</span>
+
+    <span class="token tag">&lt;main&gt;</span>
+      <span class="token tag">&lt;section&gt;</span>
+        <span class="token tag">&lt;h2&gt;</span>About Me<span class="token tag">&lt;/h2&gt;</span>
+        <span class="token tag">&lt;p&gt;</span>Developer, builder, problem-solver...<span class="token tag">&lt;/p&gt;</span>
+      <span class="token tag">&lt;/section&gt;</span>
+    <span class="token tag">&lt;/main&gt;</span>
+
+    <span class="token tag">&lt;footer&gt;</span>
+      <span class="token tag">&lt;p&gt;</span>&copy; 2025 rguidry.dev<span class="token tag">&lt;/p&gt;</span>
+    <span class="token tag">&lt;/footer&gt;</span>
+  <span class="token tag">&lt;/body&gt;</span>
+<span class="token tag">&lt;/html&gt;</span></code></pre>
+                    <figure>
+                        <img src="https://placehold.co/1200x600/e0e0e0/333333?text=Semantic+DOM+vs+Div+Soup" alt="Side-by-side comparison of website code, one using only divs and another using semantic tags like main, nav, and section." class="w-full rounded-lg shadow-md">
+                        <figcaption>How semantic HTML clarifies both accessibility trees and SEO parsing.</figcaption>
+                    </figure>
+    
+                    <h2 class="text-3xl font-bold mt-12 mb-4">2. ARIA Labels & Roles</h2>
+                    <p>Semantic HTML solves a lot, but ARIA fills the gaps. Accessible Rich Internet Applications (ARIA) attributes describe roles, states, and properties where HTML falls short.</p>
+                    <ul class="list-disc list-inside space-y-2 my-4">
+                        <li><strong>Missing <code>aria-label</code> for navigation:</strong> Without labels, multiple nav menus are indistinguishable. Adding <code>aria-label="Primary navigation"</code> gives clarity.</li>
+                        <li><strong>Missing <code>aria-current</code> for active states:</strong> A simple <code>aria-current="page"</code> tells users (and bots) where they are in the site.</li>
+                        <li><strong>Missing <code>role</code> attributes:</strong> Interactive elements like custom buttons need explicit roles, or they’ll be invisible to assistive tech.</li>
+                    </ul>
+                    <p>When I added ARIA to my mobile menu toggle on rguidry.dev, the difference was instant. VoiceOver could finally announce “Menu button, collapsed” instead of “button.” That precision is the line between usable and confusing.</p>
+                    <pre><code class="language-html"><span class="token tag">&lt;nav <span class="token attr-name">aria-label</span>=<span class="token attr-value">"Primary navigation"</span>&gt;</span>
+  <span class="token tag">&lt;ul&gt;</span>
+    <span class="token tag">&lt;li&gt;</span><span class="token tag">&lt;a <span class="token attr-name">href</span>=<span class="token attr-value">"/"</span> <span class="token attr-name">aria-current</span>=<span class="token attr-value">"page"</span>&gt;</span>Home<span class="token tag">&lt;/a&gt;</span><span class="token tag">&lt;/li&gt;</span>
+    <span class="token tag">&lt;li&gt;</span><span class="token tag">&lt;a <span class="token attr-name">href</span>=<span class="token attr-value">"/projects"</span>&gt;</span>Projects<span class="token tag">&lt;/a&gt;</span><span class="token tag">&lt;/li&gt;</span>
+    <span class="token tag">&lt;li&gt;</span><span class="token tag">&lt;a <span class="token attr-name">href</span>=<span class="token attr-value">"/contact"</span>&gt;</span>Contact<span class="token tag">&lt;/a&gt;</span><span class="token tag">&lt;/li&gt;</span>
+  <span class="token tag">&lt;/ul&gt;</span>
+<span class="token tag">&lt;/nav&gt;</span>
+
+<span class="token tag">&lt;button 
+  <span class="token attr-name">aria-label</span>=<span class="token attr-value">"Open mobile menu"</span>
+  <span class="token attr-name">aria-controls</span>=<span class="token attr-value">"mobile-menu"</span>
+  <span class="token attr-name">aria-expanded</span>=<span class="token attr-value">"false"</span>
+  <span class="token attr-name">role</span>=<span class="token attr-value">"button"</span>&gt;</span>
+  ☰
+<span class="token tag">&lt;/button&gt;</span></code></pre>
+                    <figure>
+                        <img src="https://placehold.co/1000x500/e0e0e0/333333?text=Screen+Reader+Output+Comparison" alt="Comparison of screen reader announcing 'button' vs 'menu button, collapsed.'" class="w-full rounded-lg shadow-md">
+                        <figcaption>ARIA attributes give context to navigation and states.</figcaption>
+                    </figure>
+
+                    <h2 class="text-3xl font-bold mt-12 mb-4">3. Forms & Interactive Elements</h2>
+                    <p>Forms are often the biggest accessibility pitfall. Without descriptive labels, users are left guessing.</p>
+                    <ul class="list-disc list-inside space-y-2 my-4">
+                        <li><strong>Missing <code>aria-describedby</code> for inputs:</strong> This attribute ties helper text to inputs, clarifying requirements like “Password must be 8 characters.”</li>
+                        <li><strong>Missing <code>aria-expanded</code> for mobile menu toggle:</strong> Screen readers need to know whether content is expanded or collapsed.</li>
+                        <li><strong>Missing <code>aria-controls</code>:</strong> This attribute links a button to the content it toggles, essential for understanding dynamic menus.</li>
+                    </ul>
+                    <p>On my contact form, I initially relied on placeholders as labels. A common mistake. Once a user started typing, the placeholder disappeared, leaving no accessible label. Switching to <code>&lt;label&gt;</code> tags with for attributes fixed it immediately.</p>
+                    <pre><code class="language-html"><span class="token tag">&lt;form&gt;</span>
+  <span class="token tag">&lt;label <span class="token attr-name">for</span>=<span class="token attr-value">"email"</span>&gt;</span>Email address<span class="token tag">&lt;/label&gt;</span>
+  <span class="token tag">&lt;input 
+    <span class="token attr-name">type</span>=<span class="token attr-value">"email"</span> 
+    <span class="token attr-name">id</span>=<span class="token attr-value">"email"</span> 
+    <span class="token attr-name">name</span>=<span class="token attr-value">"email"</span> 
+    <span class="token attr-name">aria-describedby</span>=<span class="token attr-value">"emailHelp"</span>&gt;</span>
+  <span class="token tag">&lt;small <span class="token attr-name">id</span>=<span class="token attr-value">"emailHelp"</span>&gt;</span>We’ll never share your email.<span class="token tag">&lt;/small&gt;</span>
+
+  <span class="token tag">&lt;button <span class="token attr-name">type</span>=<span class="token attr-value">"submit"</span>&gt;</span>Submit<span class="token tag">&lt;/button&gt;</span>
+<span class="token tag">&lt;/form&gt;</span></code></pre>
+                    <figure>
+                        <img src="https://placehold.co/800x600/e0e0e0/333333?text=Properly+Labeled+Form" alt="Two forms side by side: one with placeholder-only labels and one with proper labels and ARIA descriptions." class="w-full rounded-lg shadow-md">
+                        <figcaption>Forms need explicit labels to stay accessible.</figcaption>
+                    </figure>
+
+                    <h2 class="text-3xl font-bold mt-12 mb-4">4. Images & Media</h2>
+                    <p>Alt text is the most obvious accessibility issue, but it’s often mishandled.</p>
+                    <ul class="list-disc list-inside space-y-2 my-4">
+                        <li><strong>Missing <code>alt</code> attributes:</strong> Every image must have an alt attribute. Decorative images should use <code>alt=""</code>.</li>
+                        <li><strong>Missing <code>aria-label</code> for complex images:</strong> Graphs and charts need descriptions that summarize their meaning.</li>
+                        <li><strong>Missing <code>aria-describedby</code> for data visualizations:</strong> Long descriptions can be linked to charts so screen readers provide full context.</li>
+                    </ul>
+                    <p>I once posted a project screenshot without alt text. When testing with a screen reader, all I heard was “image.” Not helpful. Adding descriptive alt text like “Portfolio homepage with hero banner and navigation menu” fixed that.</p>
+                    <pre><code class="language-html"><span class="token comment">&lt;!-- Decorative image --&gt;</span>
+<span class="token tag">&lt;img <span class="token attr-name">src</span>=<span class="token attr-value">"decorative-line.png"</span> <span class="token attr-name">alt</span>=<span class="token attr-value">""</span> <span class="token attr-name">aria-hidden</span>=<span class="token attr-value">"true"</span>&gt;</span>
+
+<span class="token comment">&lt;!-- Informative image --&gt;</span>
+<span class="token tag">&lt;img <span class="token attr-name">src</span>=<span class="token attr-value">"portfolio-home.png"</span> <span class="token attr-name">alt</span>=<span class="token attr-value">"Screenshot of portfolio homepage with hero banner and navigation menu"</span>&gt;</span>
+
+<span class="token comment">&lt;!-- Data visualization --&gt;</span>
+<span class="token tag">&lt;figure&gt;</span>
+  <span class="token tag">&lt;img 
+    <span class="token attr-name">src</span>=<span class="token attr-value">"traffic-growth.png"</span> 
+    <span class="token attr-name">alt</span>=<span class="token attr-value">"Bar chart showing traffic growth per month"</span> 
+    <span class="token attr-name">aria-describedby</span>=<span class="token attr-value">"trafficData"</span>&gt;</span>
+  <span class="token tag">&lt;figcaption <span class="token attr-name">id</span>=<span class="token attr-value">"trafficData"</span>&gt;</span>
+    Site traffic increased steadily from January to June, doubling in total sessions.
+  <span class="token tag">&lt;/figcaption&gt;</span>
+<span class="token tag">&lt;/figure&gt;</span></code></pre>
+                    <figure>
+                        <img src="https://placehold.co/1200x800/e0e0e0/333333?text=Accessible+Bar+Chart" alt="Bar chart showing monthly traffic growth with text labels above each bar." class="w-full rounded-lg shadow-md">
+                        <figcaption>Charts must use text alternatives, not just color.</figcaption>
+                    </figure>
+
+                    <h2 class="text-3xl font-bold mt-12 mb-4">5. Color & Contrast Guidelines</h2>
+                    <p>Color choices often make or break accessibility. WCAG requires a contrast ratio of at least 4.5:1 for normal text.</p>
+                    <ul class="list-disc list-inside space-y-2 my-4">
+                        <li><strong>Color-only indicators:</strong> If a chart relies only on color, color-blind users miss the message. Use patterns or labels.</li>
+                        <li><strong>Potential low contrast:</strong> Light gray text on a colored background fails audits. Always check ratios.</li>
+                    </ul>
+                    <p>I had a hero section on rguidry.dev with white text over a bright orange background. Looked fine to me. But when I ran it through a contrast checker, it failed WCAG standards. Switching to a darker overlay fixed it without killing the design.</p>
+                    <pre><code class="language-css"><span class="token comment">/* BAD contrast */</span>
+<span class="token selector">.low-contrast</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token string">#fff</span><span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token string">#ffcc66</span><span class="token punctuation">;</span> <span class="token comment">/* Fails WCAG AA */</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* GOOD contrast */</span>
+<span class="token selector">.high-contrast</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token string">#fff</span><span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token string">#cc6600</span><span class="token punctuation">;</span> <span class="token comment">/* Passes WCAG AA */</span>
+<span class="token punctuation">}</span></code></pre>
+                    <figure>
+                        <img src="https://placehold.co/1200x600/e0e0e0/333333?text=High+vs+Low+Contrast" alt="White text on light orange background compared to white text on dark overlay background." class="w-full rounded-lg shadow-md">
+                        <figcaption>Contrast ratios directly affect readability and compliance.</figcaption>
+                    </figure>
+    
+                    <h2 class="text-3xl font-bold mt-12 mb-4">6. Keyboard Navigation</h2>
+                    <p>Accessibility isn’t just about screen readers. Users who navigate by keyboard need focusable, visible states.</p>
+                    <ul class="list-disc list-inside space-y-2 my-4">
+                        <li><strong>Missing focus indicators:</strong> If links and buttons don’t show focus, users can’t tell where they are.</li>
+                        <li><strong>Missing skip links:</strong> A “Skip to main content” link is simple to add and high impact.</li>
+                        <li><strong>Missing keyboard shortcuts:</strong> Offering shortcut keys improves usability for power users.</li>
+                    </ul>
+                    <p>Testing rguidry.dev with only a keyboard was revealing. I couldn’t tell which button was selected. After adding clear focus outlines, the navigation flow finally made sense.</p>
+                    <pre><code class="language-html"><span class="token tag">&lt;a <span class="token attr-name">href</span>=<span class="token attr-value">"#main-content"</span> <span class="token attr-name">class</span>=<span class="token attr-value">"skip-link"</span>&gt;</span>Skip to main content<span class="token tag">&lt;/a&gt;</span>
+<span class="token tag">&lt;nav&gt;</span>
+  <span class="token comment">&lt;!-- ... navigation ... --&gt;</span>
+<span class="token tag">&lt;/nav&gt;</span>
+<span class="token tag">&lt;main <span class="token attr-name">id</span>=<span class="token attr-value">"main-content"</span>&gt;</span>
+  <span class="token tag">&lt;h1&gt;</span>Welcome<span class="token tag">&lt;/h1&gt;</span>
+<span class="token tag">&lt;/main&gt;</span></code></pre>
+                    <figure>
+                        <img src="https://placehold.co/800x600/e0e0e0/333333?text=Visible+Focus+Rings+(GIF)" alt="Video showing a user tabbing through a website with visible blue focus rings." class="w-full rounded-lg shadow-md">
+                        <figcaption>Focus indicators make keyboard navigation possible.</figcaption>
+                    </figure>
+
+                    <h2 class="text-3xl font-bold mt-12 mb-4">7. Screen Reader Support</h2>
+                    <p>Dynamic content is common, but it often breaks screen reader usability.</p>
+                    <ul class="list-disc list-inside space-y-2 my-4">
+                        <li><strong>Missing <code>aria-live</code> regions:</strong> Dynamic updates (like form validation) must announce changes.</li>
+                        <li><strong>Missing <code>aria-hidden</code> for decorative elements:</strong> Decorative icons shouldn’t clutter the accessibility tree.</li>
+                        <li><strong>Missing <code>aria-label</code> for complex sections:</strong> Landmarks like sidebars or carousels need labels to distinguish them.</li>
+                    </ul>
+                    <p>On my site, I had a “copy email” button that showed “Copied!” after clicking. Without an aria-live region, screen readers didn’t announce the change. Adding it made the feature usable.</p>
+                    <pre><code class="language-html"><span class="token tag">&lt;button <span class="token attr-name">onclick</span>=<span class="token attr-value">"copyEmail()"</span>&gt;</span>Copy Email<span class="token tag">&lt;/button&gt;</span>
+<span class="token tag">&lt;div <span class="token attr-name">id</span>=<span class="token attr-value">"notification"</span> <span class="token attr-name">aria-live</span>=<span class="token attr-value">"polite"</span>&gt;</span><span class="token tag">&lt;/div&gt;</span>
+
+<span class="token tag">&lt;script&gt;</span>
+  <span class="token keyword">function</span> <span class="token function">copyEmail</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Note: In a real app, use a more robust clipboard method.</span>
+    document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"notification"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent <span class="token punctuation">=</span> <span class="token string">"Copied!"</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token tag">&lt;/script&gt;</span></code></pre>
+                    <figure>
+                        <img src="https://placehold.co/1000x500/e0e0e0/333333?text=aria-live+Code+Snippet" alt="Code example of a div with a an aria-live polite attribute wrapping a notification message." class="w-full rounded-lg shadow-md">
+                        <figcaption>ARIA live regions ensure updates are announced to assistive tech.</figcaption>
+                    </figure>
+    
+                    <h2 class="text-3xl font-bold mt-12 mb-4">Accessibility as Ongoing Practice</h2>
+                    <p>Accessibility isn’t a checklist you tick once. Standards evolve, content changes, and new features add risk. Every deployment should include automated and manual accessibility checks.</p>
+                    <p>For rguidry.dev, I set up continuous auditing with Lighthouse and axe-core. Each commit now runs automated scans. If contrast ratios dip or ARIA attributes are missing, the build fails. That feedback loop keeps accessibility a living standard, not a forgotten task.</p>
+
+                    <h2 class="text-3xl font-bold mt-12 mb-4">The Business Case: SEO, Reach, and Reputation</h2>
+                    <p>Some developers see accessibility as overhead. In reality, it’s leverage.</p>
+                    <ul class="list-disc list-inside space-y-2 my-4">
+                        <li><strong>SEO impact:</strong> Clean structure, alt text, and ARIA improve crawlability. Accessibility fixes are SEO fixes.</li>
+                        <li><strong>Market reach:</strong> Over a billion people worldwide live with disabilities. Ignoring accessibility excludes a massive audience.</li>
+                        <li><strong>Reputation:</strong> A site that works for everyone signals professionalism. Clients and recruiters notice.</li>
+                    </ul>
+                    <p>When I rebuilt rguidry.dev with accessibility in mind, recruiters actually commented on it. Not the design polish, but the care taken to make it usable.</p>
+                    <figure>
+                        <img src="https://placehold.co/1200x600/e0e0e0/333333?text=Recruiter+Reviewing+Portfolio" alt="Person reviewing a portfolio website on a laptop and phone." class="w-full rounded-lg shadow-md">
+                        <figcaption>Accessibility improvements stand out to recruiters and clients.</figcaption>
+                    </figure>
+    
+                    <h2 class="text-3xl font-bold mt-12 mb-4">Closing Thoughts</h2>
+                    <p>Accessibility is critical infrastructure for the web. It’s not charity. It’s not optional. It’s how the web should work. WCAG provides the framework. Implementing it means better usability, stronger SEO, and a wider reach.</p>
+                    <p>When you’re building your site—whether it’s a personal project like rguidry.dev or a large-scale app—start with semantic HTML, add ARIA roles, fix forms, write alt text, check contrast, ensure keyboard navigation, and optimize for screen readers. The payoff isn’t just compliance. It’s a website that works for everyone and ranks where it should.</p>
+
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="../../images/ui/rg-logomark.svg" alt="RG Logo" class="h-8 rounded-lg">
+                        <span class="text-xl font-bold">Ryan Guidry</span>
+                    </div>
+                    <p class="text-gray-300 mb-4 max-w-md">
+                        Data Analyst & Chemical Engineer passionate about solving complex problems through data-driven insights and innovative solutions.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-300 hover:text-white transition-colors duration-200">Home</a></li>
+                        <li><a href="../index.html#portfolio" class="text-gray-300 hover:text-white transition-colors duration-200">Portfolio</a></li>
+                        <li><a href="../resources.html" class="text-gray-300 hover:text-white transition-colors duration-200">Resources</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../blog.html" class="text-gray-300 hover:text-white transition-colors duration-200">Blog</a></li>
+                        <li><a href="../resources.html" class="text-gray-300 hover:text-white transition-colors duration-200">Learning</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 🦄 2025 Ryan Guidry 💜 All rights reserved ✌️</p>            </div>
+        </div>
+    </footer>
+</body>
+</html>

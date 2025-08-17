@@ -2,7 +2,10 @@
 /* ----------------------- */
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-primary, 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif);
+    font-size: var(--text-base, 1rem); /* 16px minimum for WCAG AA compliance */
+    line-height: var(--leading-normal, 1.5); /* 1.5 for optimal readability */
+    font-weight: 400; /* Regular weight for body text */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -57,6 +60,11 @@ body {
     width: 100%;
     padding: 6rem 1rem; /* Increased padding for better spacing */
     min-height: 60vh; /* Ensure hero section has good height */
+    background-color: #1e40af; /* Fallback color in case image doesn't load */
+    background-image: url('../images/background/digital-waves.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Hero Gradient Overlay */
@@ -64,8 +72,9 @@ body {
 .hero__overlay {
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
-    /* Subtle gradient for visual interest */
-    background-image: linear-gradient(to right, rgba(59, 130, 246, 0.05), rgba(147, 51, 234, 0.05));
+    /* Enhanced overlay for better text readability over background image */
+    background-image: linear-gradient(135deg, rgba(59, 130, 246, 0.8), rgba(147, 51, 234, 0.8), rgba(16, 185, 129, 0.6));
+    backdrop-filter: blur(1px);
 }
 
 /* Hero Content Layout */
@@ -90,6 +99,7 @@ body {
     line-height: 1.2;
     margin-bottom: 1.5rem;
     color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Gradient Text Effect */
@@ -214,6 +224,13 @@ body {
     .hero__title {
         font-size: 4rem; /* Adjusted for better single-line fit on largest screens */
     }
+}
+
+/* Resources Section Spacing */
+/* ---------------------- */
+.resources-section {
+    padding-top: 2rem; /* Reduced from default spacing */
+    padding-bottom: 4rem;
 }
 
 /* Resources Grid Layout */

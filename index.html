@@ -18,16 +18,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- Google Fonts: Inter -->
+<!-- Google Fonts: Inter - Optimized for Accessibility -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
-<!-- Link to your new stylesheet -->
-    <link rel="stylesheet" href="style.css">
+            <!-- Link to your new stylesheet -->
+            <link rel="stylesheet" href="style.css">
+            <!-- Accessibility-focused CSS -->
+            <link rel="stylesheet" href="css/accessibility.css">
 
             <!-- Add main.js for navigation and scroll effects -->
             <script src="src/main-site/js/main.js" defer></script>
+            
+            <!-- Font Loading Optimization Script -->
+            <script>
+                // Font loading optimization for accessibility
+                if ('fonts' in document) {
+                    Promise.all([
+                        new FontFace('Inter', 'url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2)', { weight: '400' }),
+                        new FontFace('Inter', 'url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2)', { weight: '500' }),
+                        new FontFace('Inter', 'url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2)', { weight: '600' }),
+                        new FontFace('Inter', 'url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2)', { weight: '700' })
+                    ]).then(fonts => {
+                        fonts.forEach(font => document.fonts.add(font));
+                        document.body.classList.add('font-loaded');
+                    }).catch(() => {
+                        // Fallback to system fonts if Inter fails to load
+                        document.body.classList.add('font-loading');
+                    });
+                }
+            </script>
 
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -38,59 +60,64 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 </head>
 <body class="bg-gray-50 text-gray-800">
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-lg z-50">Skip to main content</a>
+    
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFSMFS9C"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
 <!-- Header & Navigation -->
-<header class="nav fixed top-0 left-0 right-0 z-50">
+<header class="nav fixed top-0 left-0 right-0 z-50" role="banner">
     <div class="max-w-7xl mx-auto">
-        <nav class="nav__container">
+        <nav class="nav__container" role="navigation" aria-label="Main navigation">
             <div class="text-2xl font-bold text-gray-900">
                 <!-- Logo and Name -->
-                <a href="index.html" class="flex items-center space-x-3">
+                <a href="index.html" class="flex items-center space-x-3" aria-label="Ryan Guidry Homepage">
                     <img src="../../../images/ui/rg-logomark.svg" alt="RG Logo" class="h-10 rounded-lg" loading="lazy">
                     <span>Ryan Guidry</span>
                 </a>
             </div>
-                            <div class="hidden md:flex items-center space-x-6">
-                    <a href="index.html#about" class="nav__link nav__link--active">About</a>
-                    <a href="index.html#portfolio" class="nav__link">Portfolio</a>
-                    <a href="index.html#experience" class="nav__link">Experience</a>
-                    <a href="index.html#skills" class="nav__link">Skills</a>
-                    <a href="../../../resources.html" class="nav__link">Resources</a>
-                    <a href="../../../blog.html" class="nav__link">Blog</a>
-                    <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact">Contact</a>
+                            <div class="hidden md:flex items-center space-x-6" role="menubar">
+                    <a href="index.html#about" class="nav__link nav__link--active" role="menuitem" aria-current="page">About</a>
+                    <a href="index.html#education" class="nav__link" role="menuitem">Education</a>
+                    <a href="index.html#portfolio" class="nav__link" role="menuitem">Portfolio</a>
+                    <a href="index.html#experience" class="nav__link" role="menuitem">Experience</a>
+                    <a href="index.html#skills" class="nav__link" role="menuitem">Skills</a>
+                    <a href="resources.html" class="nav__link" role="menuitem">Resources</a>
+                    <a href="blog.html" class="nav__link" role="menuitem">Blog</a>
+                    <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact" role="menuitem">Contact</a>
                 </div>
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Toggle mobile menu">
-                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path class="mobile-menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     <path class="mobile-menu-close hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
         </nav>
         <!-- Mobile Menu -->
-        <nav id="mobile-menu" class="nav-mobile nav-mobile--hidden md:hidden" aria-label="Mobile navigation">
-            <div class="container mx-auto px-6 py-4 space-y-4">
-                <a href="index.html#about" class="nav__link nav__link--active block py-2">About</a>
-                <a href="index.html#portfolio" class="nav__link block py-2">Portfolio</a>
-                <a href="index.html#experience" class="nav__link block py-2">Experience</a>
-                <a href="index.html#skills" class="nav__link block py-2">Skills</a>
-                <a href="../../../resources.html" class="nav__link block py-2">Resources</a>
-                <a href="../../../blog.html" class="nav__link block py-2">Blog</a>
-                <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact block py-2 text-center">Contact</a>
+        <nav id="mobile-menu" class="nav-mobile nav-mobile--hidden md:hidden" role="navigation" aria-label="Mobile navigation" aria-hidden="true">
+            <div class="container mx-auto px-6 py-4 space-y-4" role="menu">
+                <a href="index.html#about" class="nav__link nav__link--active block py-2" role="menuitem" aria-current="page">About</a>
+                <a href="index.html#education" class="nav__link block py-2" role="menuitem">Education</a>  
+                <a href="index.html#portfolio" class="nav__link block py-2" role="menuitem">Portfolio</a>
+                <a href="index.html#experience" class="nav__link block py-2" role="menuitem">Experience</a>
+                <a href="index.html#skills" class="nav__link block py-2" role="menuitem">Skills</a>
+                <a href="resources.html" class="nav__link block py-2" role="menuitem">Resources</a>
+                <a href="blog.html" class="nav__link block py-2" role="menuitem">Blog</a>
+                <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact block py-2 text-center" role="menuitem">Contact</a>
             </div>
         </nav>
     </div>
 </header>
 
-    <main class="pt-0 container mx-auto px-6">
+    <main id="main-content" class="pt-0 container mx-auto px-6" role="main">
 <!-- Landing Page Section -->
-<section id="hero" class="relative min-h-screen w-full flex flex-col justify-center items-center text-center py-20">
+<section id="hero" class="relative min-h-screen w-full flex flex-col justify-center items-center text-center py-20" aria-labelledby="hero-title">
     <!-- Background Image Container -->
-    <div class="fixed top-0 left-0 w-screen h-screen -z-10">
+    <div class="fixed top-0 left-0 w-screen h-screen -z-10" aria-hidden="true">
         <!-- Abstract analytical background image -->
             <img 
             src="../../../images/background/analytical-bg.jpg" 
@@ -103,7 +130,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
     <!-- Content Container -->
     <div class="relative z-10 max-w-4xl mx-auto px-4">
-        <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
+        <h1 id="hero-title" class="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
             Ryan Guidry
         </h1>
         <h2 class="text-2xl md:text-3xl text-blue-300 mb-8 font-light">
@@ -114,7 +141,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </p>
         
         <!-- Call-to-Action Buttons -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center" role="group" aria-label="Main call-to-action buttons">
             <a href="#about" class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition duration-300 shadow-lg hover:shadow-xl">
                 Learn About Me
             </a>
@@ -122,7 +149,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 View My Work
             </a>
             <a href="../../../files/resume/ryan-guidry-resume.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition duration-300 shadow-md hover:shadow-lg">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                 </svg>
                 Download Resume
@@ -131,9 +158,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 </section>
 <!-- About Me Section -->
-<section id="about" class="py-24 bg-white">
+<section id="about" class="py-24" style="background-color: var(--color-surface);" aria-labelledby="about-title">
     <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-4xl font-bold mb-8">About Me</h2>
+        <h2 id="about-title" class="text-4xl font-bold mb-8">About Me</h2>
         <div class="grid md:grid-cols-2 gap-12 items-center">
             <div class="text-left">
                 <p class="text-lg text-gray-600 mb-6 leading-relaxed">
@@ -142,8 +169,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <p class="text-lg text-gray-600 mb-6 leading-relaxed">
                     With experience spanning process optimization, data visualization, and machine learning applications, I help organizations make informed decisions through comprehensive data analysis and strategic recommendations.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="../../../about.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 text-center">
+                <div class="flex flex-col sm:flex-row gap-4" role="group" aria-label="About section action buttons">
+                    <a href="about.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 text-center">
                         Learn More About Me
                     </a>
                     <a href="mailto:inquireryan@gmail.com" class="bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition duration-300 text-center">
@@ -162,12 +189,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 </section>
 <!-- Education Section -->
-<section id="education" class="py-24 bg-gray-50">
+<section id="education" class="py-24" style="background-color: var(--color-bg-primary);" aria-labelledby="education-title">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center mb-8">Education</h2>
+        <h2 id="education-title" class="text-3xl font-bold text-center mb-8">Education</h2>
         <div class="max-w-3xl mx-auto grid grid-cols-1 gap-6">
             <!-- Mathematics Degree -->
-            <div class="bg-white p-8 rounded-xl shadow-md">
+            <article class="neuromorphic-card p-8 w-full h-64" role="listitem">
                 <div class="flex items-start gap-6">
                     <div class="flex-shrink-0">
                         <div class="aspect-square w-32 flex items-center justify-center">
@@ -187,10 +214,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <p class="text-gray-600 italic">In Progress</p>
                     </div>
                 </div>
-            </div>
+            </article>
 
             <!-- Chemical Engineering Degree -->
-            <div class="bg-white p-8 rounded-xl shadow-md">
+            <div class="neuromorphic-card p-8 w-full h-64">
                 <div class="flex items-start gap-6">
                     <div class="flex-shrink-0">
                         <div class="aspect-square w-32 flex items-center justify-center">
@@ -215,13 +242,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 </section>
 <!-- Certifications Section -->
-<section id="certifications" class="py-24 bg-white">
+<section id="certifications" class="py-24" style="background-color: var(--color-surface);">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl font-bold text-center mb-8">Certifications</h2>
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bg-white p-8 rounded-xl shadow-md">
+            <div class="neuromorphic-card p-8">
                 <div class="flex flex-col items-center text-center">
-                    <button class="group bg-white rounded-xl shadow-md p-4.5 hover:shadow-lg transition-shadow duration-200 mb-4">
+                    <button class="group neuromorphic-card p-4.5 mb-4">
                         <div class="aspect-square w-32 flex items-center justify-center">
                             <img src="../../../images/certifications/gdapc.png" alt="Google Data Analytics Professional Certificate Logo" 
                                  class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200" loading="lazy">
@@ -230,7 +257,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <h3 class="text-xl font-semibold text-gray-900 mb-2">Google Data Analytics Professional Certificate</h3>
                     <p class="text-blue-600 mb-1">Google (Coursera)</p>
                     <p class="text-gray-500 mb-4">Completed: February 2025</p>
-                    <a href="../../../files/certifications/google-data-analytics.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-blue-50 text-blue-600 hover:bg-blue-100 px-4 py-2 rounded-lg font-medium transition-colors duration-200 shadow-sm hover:shadow">
+                    <a href="../../../files/certifications/google-data-analytics.pdf" target="_blank" rel="noopener noreferrer" class="neuromorphic-button inline-flex items-center gap-2 px-4 py-2">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
@@ -239,9 +266,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </a>
                 </div>
             </div>
-            <div class="bg-white p-8 rounded-xl shadow-md">
+            <div class="neuromorphic-card p-8">
                 <div class="flex flex-col items-center text-center">
-                    <button class="group bg-white rounded-xl shadow-md p-4.5 hover:shadow-lg transition-shadow duration-200 mb-4">
+                    <button class="group neuromorphic-card p-4.5 mb-4">
                         <div class="aspect-square w-32 flex items-center justify-center">
                             <img src="../../../images/certifications/google-ai.png" alt="Google AI Essentials Logo" 
                                  class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200" loading="lazy">
@@ -250,7 +277,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <h3 class="text-xl font-semibold text-gray-900 mb-2">Google AI Essentials Certificate</h3>
                     <p class="text-blue-600 mb-1">Google (Coursera)</p>
                     <p class="text-gray-500 mb-4">Completed: February 2025</p>
-                    <a href="../../../files/certifications/google-ai-essentials.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-blue-50 text-blue-600 hover:bg-blue-100 px-4 py-2 rounded-lg font-medium transition-colors duration-200 shadow-sm hover:shadow">
+                    <a href="../../../files/certifications/google-ai-essentials.pdf" target="_blank" rel="noopener noreferrer" class="neuromorphic-button inline-flex items-center gap-2 px-4 py-2">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
@@ -259,9 +286,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </a>
                 </div>
             </div>
-            <div class="bg-white p-8 rounded-xl shadow-md">
+            <div class="neuromorphic-card p-8">
                 <div class="flex flex-col items-center text-center">
-                    <button class="group bg-white rounded-xl shadow-md p-4.5 hover:shadow-lg transition-shadow duration-200 mb-4">
+                    <button class="group neuromorphic-card p-4.5 mb-4">
                         <div class="aspect-square w-32 flex items-center justify-center">
                             <img src="../../../images/certifications/osha.png" alt="OSHA Logo" 
                                  class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200" loading="lazy">
@@ -272,9 +299,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <p class="text-gray-500 mb-4">Issued: 2023</p>
                 </div>
             </div>
-            <div class="bg-white p-8 rounded-xl shadow-md">
+            <div class="neuromorphic-card p-8">
                 <div class="flex flex-col items-center text-center">
-                    <button class="group bg-white rounded-xl shadow-md p-4.5 hover:shadow-lg transition-shadow duration-200 mb-4">
+                    <button class="group neuromorphic-card p-4.5 mb-4">
                         <div class="aspect-square w-32 flex items-center justify-center">
                             <img src="../../../images/certifications/tsa.png" alt="TSA Logo" 
                                  class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200" loading="lazy">
@@ -289,19 +316,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 </section>
 <!-- Portfolio Section -->
-<section id="portfolio" class="relative py-24 bg-gray-50 px-4 sm:px-6 lg:px-8">
+<section id="portfolio" class="relative py-24 px-4 sm:px-6 lg:px-8" style="background-color: var(--color-bg-primary);" aria-labelledby="portfolio-title">
     <div class="max-w-6xl mx-auto relative">
-        <h2 class="text-3xl font-bold text-center mb-12">Portfolio</h2>
+        <h2 id="portfolio-title" class="text-3xl font-bold text-center mb-12">Portfolio</h2>
         
         <!-- Navigation Arrows -->
-        <button id="portfolio-prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 z-50 bg-white/95 backdrop-blur-sm rounded-full p-4 shadow-xl hover:shadow-2xl transition-all duration-300 hover:bg-blue-50 border-2 border-gray-200 hover:border-blue-300 group portfolio-arrow portfolio-arrow--left" aria-label="Previous projects">
-            <svg class="w-8 h-8 text-gray-700 group-hover:text-blue-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button id="portfolio-prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 z-50 neuromorphic-card backdrop-blur-sm rounded-full p-4 transition-all duration-300 group portfolio-arrow portfolio-arrow--left" aria-label="Previous projects">
+            <svg class="w-8 h-8 text-gray-700 group-hover:text-blue-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
             </svg>
         </button>
         
-        <button id="portfolio-next" class="absolute right-0 top-1/2 transform -translate-y-1/2 z-50 bg-white/95 backdrop-blur-sm rounded-full p-4 shadow-xl hover:shadow-2xl transition-all duration-300 hover:bg-blue-50 border-2 border-gray-200 hover:border-blue-300 group portfolio-arrow portfolio-arrow--right" aria-label="Next projects">
-            <svg class="w-8 h-8 text-gray-700 group-hover:text-blue-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button id="portfolio-next" class="absolute right-0 top-1/2 transform -translate-y-1/2 z-50 neuromorphic-card backdrop-blur-sm rounded-full p-4 transition-all duration-300 group portfolio-arrow portfolio-arrow--right" aria-label="Next projects">
+            <svg class="w-8 h-8 text-gray-700 group-hover:text-blue-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
             </svg>
         </button>
@@ -311,20 +338,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <!-- Projects Container with overflow hidden -->
             <div class="overflow-hidden">
                 <!-- Projects Container -->
-                <div id="portfolio-container" class="flex transition-transform duration-500 ease-in-out gap-8">
+                <div id="portfolio-container" class="flex transition-transform duration-500 ease-in-out gap-8" role="list" aria-label="Portfolio projects">
                     <!-- Portfolio Item 1: Idea Board Web App -->
-                    <div id="idea-board-item" class="portfolio-item flex-shrink-0 w-80">
-                        <button onclick="openModal('idea-board-modal')" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 text-left flex flex-col h-full">
+                    <article id="idea-board-item" class="portfolio-item flex-shrink-0 w-80" role="listitem">
+                        <button onclick="openModal('idea-board-modal')" class="group neuromorphic-card overflow-hidden transition-all duration-300 text-left flex flex-col h-full" aria-label="View Idea Board Web Application details">
                             <div class="relative overflow-hidden w-full">
                                 <img src="images/portfolio/idea-board-app.png" alt="Idea Board Web App Screenshot" class="w-full h-48 md:h-56 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end" aria-hidden="true">
                                     <p class="text-white p-4 text-sm">Click to view details</p>
                                 </div>
                             </div>
                             <div class="p-6 flex-grow">
                                 <h3 class="text-xl font-bold mb-2">Idea Board Web Application</h3>
                                 <p class="text-gray-600 mb-4 line-clamp-3">A modern, collaborative web application for brainstorming and organizing ideas with real-time updates, responsive design, and seamless team collaboration across all devices.</p>
-                                <div class="flex flex-wrap gap-2">
+                                <div class="flex flex-wrap gap-2" role="group" aria-label="Technologies used">
                                     <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Web Development</span>
                                     <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">React</span>
                                     <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Firebase</span>
@@ -332,7 +359,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 </div>
                             </div>
                         </button>
-                    </div>
+                    </article>
 
                     <!-- Portfolio Item 2 -->
                     <div class="portfolio-item flex-shrink-0 w-80">
@@ -1362,6 +1389,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <ul class="space-y-2">
                     <li><a href="privacy.html" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
                     <li><a href="sitemap.html" class="text-gray-400 hover:text-white transition duration-300">Sitemap</a></li>
+                    <li><a href="accessibility-test.html" class="text-gray-400 hover:text-white transition duration-300">Accessibility Test</a></li>
                 </ul>
             </div>
         </div>

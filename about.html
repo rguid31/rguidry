@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Ryan Guidry | Data Analyst & Chemical Engineer</title>
+    <meta name="description" content="Discover Ryan Guidry's journey from a 9-year engineering student to a passionate data analyst and chemical engineer. Learn about his unique perspective on education, problem-solving, and innovation.">
+    
+                <!-- Tailwind CSS -->
+            <script src="https://cdn.tailwindcss.com"></script>
+            
+            <!-- Google Fonts: Inter - Optimized for Accessibility -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+            <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+            
+            <!-- Link to your stylesheet -->
+            <link rel="stylesheet" href="style.css">
+            <!-- Accessibility-focused CSS -->
+            <link rel="stylesheet" href="css/accessibility.css">
+    
+                <!-- Add main.js for navigation and scroll effects -->
+            <script src="src/main-site/js/main.js" defer></script>
+            
+            <!-- Font Loading Optimization Script -->
+            <script>
+                // Font loading optimization for accessibility
+                if ('fonts' in document) {
+                    Promise.all([
+                        new FontFace('Inter', 'url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2)', { weight: '400' }),
+                        new FontFace('Inter', 'url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2)', { weight: '500' }),
+                        new FontFace('Inter', 'url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2)', { weight: '600' }),
+                        new FontFace('Inter', 'url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2)', { weight: '700' })
+                    ]).then(fonts => {
+                        fonts.forEach(font => document.fonts.add(font));
+                        document.body.classList.add('font-loaded');
+                    }).catch(() => {
+                        // Fallback to system fonts if Inter fails to load
+                        document.body.classList.add('font-loading');
+                    });
+                }
+            </script>
+    
+    <!-- Chart.js for personality charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-lg z-50">Skip to main content</a>
+    
+    <!-- Header & Navigation -->
+    <header class="nav fixed top-0 left-0 right-0 z-50" role="banner">
+        <div class="max-w-7xl mx-auto">
+            <nav class="nav__container" role="navigation" aria-label="Main navigation">
+                <div class="text-2xl font-bold text-gray-900">
+                    <!-- Logo and Name -->
+                    <a href="index.html" class="flex items-center space-x-3" aria-label="Ryan Guidry Homepage">
+                        <img src="images/ui/rg-logomark.svg" alt="RG Logo" class="h-10 rounded-lg" loading="lazy">
+                        <span>Ryan Guidry</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6" role="menubar">
+                    <a href="index.html" class="nav__link" role="menuitem">Home</a>
+                    <a href="index.html#about" class="nav__link" role="menuitem">About</a>
+                    <a href="index.html#portfolio" class="nav__link" role="menuitem">Portfolio</a>
+                    <a href="index.html#experience" class="nav__link" role="menuitem">Experience</a>
+                    <a href="index.html#skills" class="nav__link" role="menuitem">Skills</a>
+                    <a href="resources.html" class="nav__link" role="menuitem">Resources</a>
+                    <a href="blog.html" class="nav__link" role="menuitem">Blog</a>
+                    <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact" role="menuitem">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path class="mobile-menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path class="mobile-menu-close hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </nav>
+            <!-- Mobile Menu -->
+            <nav id="mobile-menu" class="nav-mobile nav-mobile--hidden md:hidden" role="navigation" aria-label="Mobile navigation" aria-hidden="true">
+                <div class="container mx-auto px-6 py-4 space-y-4" role="menu">
+                    <a href="index.html" class="nav__link block py-2" role="menuitem">Home</a>
+                    <a href="index.html#about" class="nav__link block py-2" role="menuitem">About</a>
+                    <a href="index.html#portfolio" class="nav__link block py-2" role="menuitem">Portfolio</a>
+                    <a href="index.html#experience" class="nav__link block py-2" role="menuitem">Experience</a>
+                    <a href="index.html#skills" class="nav__link block py-2" role="menuitem">Skills</a>
+                    <a href="resources.html" class="nav__link block py-2" role="menuitem">Resources</a>
+                    <a href="blog.html" class="nav__link block py-2" role="menuitem">Blog</a>
+                    <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact block py-2 text-center" role="menuitem">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+                 <!-- Add padding to main content to account for fixed header -->
+             <main id="main-content" class="pt-24" role="main" aria-label="About Ryan Guidry">
+                 <!-- Hero Section -->
+                 <section class="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-20" aria-labelledby="hero-title">
+                                 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                         <h1 id="hero-title" class="text-4xl md:text-6xl font-bold mb-6">My Story</h1>
+                         <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                             From a 9-year engineering journey to becoming a data analyst who believes in the power of persistence, self-learning, and genuine problem-solving
+                         </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="index.html" class="inline-flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                        </svg>
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Journey Section -->
+        <section class="py-16 bg-white" aria-labelledby="journey-title">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 id="journey-title" class="text-3xl font-bold text-gray-900 mb-4">The Journey That Shaped Me</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        My path wasn't linear, but every challenge taught me something valuable about resilience, adaptation, and the importance of asking "why."
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">2014-2023: The Engineering Odyssey</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            I arrived at LSU in fall 2014, ready to tackle chemical engineering. My high school years were packed with engineering prep: physics, drafting, AutoCAD, electronics, robotics. I chose chemical engineering because I was told the options were "limitless."
+                        </p>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            What I didn't expect was to spend more time navigating the <em>system</em> than actually learning in it. Over 140 credit hours, multiple internships, and countless hours of self-learning later, I realized my story wasn't unique.
+                        </p>
+                        <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
+                            <p class="text-blue-800 font-medium">
+                                "The challenge wasn't just the coursework—it was learning to advocate for myself while building the skills the curriculum couldn't provide."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="images/blog/1. The-Harsh-Truth-About-College/pft exterior.jpg" 
+                             alt="LSU's Patrick F. Taylor engineering complex" 
+                             class="w-full h-auto rounded-2xl shadow-lg" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Internship Experience Section -->
+        <section class="py-16 bg-gray-50" aria-labelledby="internship-title">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 id="internship-title" class="text-3xl font-bold text-center text-gray-900 mb-12">Real-World Experience Through Internships</h2>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Emerson Automation Solutions</h3>
+                        <p class="text-sm text-gray-500 mb-2">Application Engineer • Summer 2022</p>
+                        <p class="text-gray-600 text-sm">
+                            Established AgileOps software suite, automated Windows updates for 1200+ VMs, and developed VBA macros for enhanced user experience.
+                        </p>
+                    </article>
+                    
+                    <article class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">TotalEnergies</h3>
+                        <p class="text-sm text-gray-500 mb-2">Project Engineering Intern • Summer 2021</p>
+                        <p class="text-gray-600 text-sm">
+                            Led pre-FEED planning, increased CSU utilization, and created working models using SimSci Pipephase software.
+                        </p>
+                    </article>
+                    
+                    <article class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Georgia-Pacific LLC</h3>
+                        <p class="text-sm text-gray-500 mb-2">Chemical Sales Intern • 2016-2017</p>
+                        <p class="text-gray-600 text-sm">
+                            Conducted wet-end testing, optimized chemical additive injection rates, and created PFDs for paper making processes.
+                        </p>
+                    </article>
+                    
+                    <article class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Cornerstone Chemical Company</h3>
+                        <p class="text-sm text-gray-500 mb-2">Process Engineering Intern • Winter 2017-2018</p>
+                        <p class="text-gray-600 text-sm">
+                            Analyzed plant data using Pi ProcessBook, verified P&IDs, and developed skills in data analysis and equipment troubleshooting.
+                        </p>
+                    </article>
+                    
+                    <article class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">NALCO Champion</h3>
+                        <p class="text-sm text-gray-500 mb-2">Technical Sales Engineer • Summer 2018</p>
+                        <p class="text-gray-600 text-sm">
+                            Conducted upstream oilfield surveys, revamped pipeline corrosion monitoring, and presented safety assessments.
+                        </p>
+                    </article>
+                    
+                    <article class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">DWL Technology</h3>
+                        <p class="text-sm text-gray-500 mb-2">Industrial Equipment Sales Intern • Summer 2019</p>
+                        <p class="text-gray-600 text-sm">
+                            Created e-commerce presence with 200+ sales, achieved 100% positive feedback, and attained eBay Top-Rated Seller status.
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- What I Learned Section -->
+        <section class="py-16 bg-gray-50" aria-labelledby="learned-title">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 id="learned-title" class="text-3xl font-bold text-center text-gray-900 mb-12">What My Journey Taught Me</h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <article class="bg-white p-8 rounded-xl shadow-md">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Self-Learning is Essential</h3>
+                        <p class="text-gray-600">
+                            I learned more from MIT OpenCourseWare, Khan Academy, and industry resources than from many traditional courses. The ability to teach yourself is the most valuable skill in engineering.
+                        </p>
+                    </article>
+                    
+                    <article class="bg-white p-8 rounded-xl shadow-md">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Networking Opens Doors</h3>
+                        <p class="text-gray-600">
+                            My internships with Georgia Pacific and Emerson Automation Solutions taught me that real-world experience and connections matter more than perfect grades.
+                        </p>
+                    </article>
+                    
+                    <article class="bg-white p-8 rounded-xl shadow-md">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Always Ask "Why"</h3>
+                        <p class="text-gray-600">
+                            Challenge unclear requirements and seek explanations. Respectful persistence often reveals the reasoning behind policies and helps you navigate systems more effectively.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personality Insights Section -->
+        <section class="py-16 bg-white" aria-labelledby="personality-title">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 id="personality-title" class="text-3xl font-bold text-gray-900 mb-8">Understanding My Working Style</h2>
+                <p class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+                    Through the Insights Discovery profile, I've gained deeper self-awareness of how I work, communicate, and solve problems.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-8 text-left mb-12">
+                    <div class="space-y-4" role="region" aria-labelledby="strengths-list-title">
+                        <h3 id="strengths-list-title" class="text-xl font-semibold text-gray-900">My Natural Strengths</h3>
+                        <ul class="space-y-2 text-gray-600" role="list">
+                            <li class="flex items-start gap-2" role="listitem">
+                                <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0" aria-label="Blue strength indicator"></span>
+                                <span>Logical, analytical approach with intuitive insights</span>
+                            </li>
+                            <li class="flex items-start gap-2" role="listitem">
+                                <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0" aria-label="Blue strength indicator"></span>
+                                <span>Strong focus on tasks and ideas over personal matters</span>
+                            </li>
+                            <li class="flex items-start gap-2" role="listitem">
+                                <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0" aria-label="Blue strength indicator"></span>
+                                <span>Excellent problem-solving under pressure</span>
+                            </li>
+                            <li class="flex items-start gap-2" role="listitem">
+                                <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0" aria-label="Blue strength indicator"></span>
+                                <span>Methodical and detail-oriented approach</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="space-y-4" role="region" aria-labelledby="work-style-title">
+                        <h3 id="work-style-title" class="text-xl font-semibold text-gray-900">How I Work Best</h3>
+                        <ul class="space-y-2 text-gray-600" role="list">
+                            <li class="flex items-start gap-2" role="listitem">
+                                <span class="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0" aria-label="Green work style indicator"></span>
+                                <span>Independent work with time to prepare and reflect</span>
+                            </li>
+                            <li class="flex items-start gap-2" role="listitem">
+                                <span class="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0" aria-label="Green work style indicator"></span>
+                                <span>Intellectual challenges that stretch my thinking</span>
+                            </li>
+                            <li class="flex items-start gap-2" role="listitem">
+                                <span class="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0" aria-label="Green work style indicator"></span>
+                                <span>Clear expectations and structured environments</span>
+                            </li>
+                            <li class="flex items-start gap-2" role="listitem">
+                                <span class="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0" aria-label="Green work style indicator"></span>
+                                <span>Opportunities to display deep technical knowledge</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Personality Charts Section -->
+                <section class="mt-12 space-y-8" aria-labelledby="charts-title">
+                    <div>
+                        <h3 id="charts-title" class="text-2xl font-semibold text-gray-900 mb-6">Insights Discovery Profile Analysis</h3>
+                        <div class="grid lg:grid-cols-2 gap-8">
+                            <div class="bg-gray-50 p-6 rounded-xl">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-4">Color Dynamics</h4>
+                                <div class="h-64 flex items-center justify-center" role="img" aria-label="Radar chart showing color dynamics: Blue 64%, Green 47%, Yellow 43%, Red 60%">
+                                    <canvas id="colorDynamics" width="300" height="250"></canvas>
+                                </div>
+                                
+                                <!-- Color Legend -->
+                                <div class="mt-4 space-y-3" role="region" aria-labelledby="color-legend-title">
+                                    <h5 id="color-legend-title" class="sr-only">Color Legend</h5>
+                                    <div class="grid grid-cols-2 gap-3 text-xs">
+                                        <div class="flex items-center gap-2">
+                                            <div class="w-4 h-4 bg-blue-500 rounded-full" aria-label="Blue color indicator"></div>
+                                            <span class="font-medium text-blue-700">Blue - Cool Blue</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <div class="w-4 h-4 bg-green-500 rounded-full" aria-label="Green color indicator"></div>
+                                            <span class="font-medium text-green-700">Green - Earth Green</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <div class="w-4 h-4 bg-yellow-500 rounded-full" aria-label="Yellow color indicator"></div>
+                                            <span class="font-medium text-yellow-700">Yellow - Sunshine Yellow</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <div class="w-4 h-4 bg-red-500 rounded-full" aria-label="Red color indicator"></div>
+                                            <span class="font-medium text-red-700">Red - Fiery Red</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Color Descriptions -->
+                                    <div class="text-xs text-gray-600 space-y-2" role="region" aria-labelledby="color-descriptions-title">
+                                        <h5 id="color-descriptions-title" class="sr-only">Color Descriptions</h5>
+                                        <ul class="space-y-2" role="list">
+                                            <li class="border-l-4 border-blue-500 pl-3" role="listitem">
+                                                <span class="font-semibold text-blue-700">Blue (64%):</span> Analytical, logical, and systematic approach to work
+                                            </li>
+                                            <li class="border-l-4 border-green-500 pl-3" role="listitem">
+                                                <span class="font-semibold text-green-700">Green (47%):</span> Caring, supportive, and relationship-focused
+                                            </li>
+                                            <li class="border-l-4 border-yellow-500 pl-3" role="listitem">
+                                                <span class="font-semibold text-yellow-700">Yellow (43%):</span> Optimistic, creative, and future-oriented
+                                            </li>
+                                            <li class="border-l-4 border-red-500 pl-3" role="listitem">
+                                                <span class="font-semibold text-red-700">Red (60%):</span> Decisive, results-driven, and action-oriented
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <p class="text-sm text-gray-600 mt-4 text-center">
+                                    My personality preferences across the Insights colour spectrum
+                                </p>
+                            </div>
+                            
+                            <div class="bg-gray-50 p-6 rounded-xl">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-4">Strengths vs Development Areas</h4>
+                                <div class="h-64 flex items-center justify-center" role="img" aria-label="Bar chart showing strengths: Dependable 85%, Logical 90%, Analytical 88%, Fair 82%, Persistent 87%, Results-focused 89%">
+                                    <canvas id="strengthsWeaknesses" width="300" height="250"></canvas>
+                                </div>
+                                
+                                <!-- Strengths Legend -->
+                                <div class="mt-4 space-y-3" role="region" aria-labelledby="strengths-legend-title">
+                                    <h5 id="strengths-legend-title" class="sr-only">Strengths Legend</h5>
+                                    <div class="grid grid-cols-2 gap-3 text-xs">
+                                        <div class="flex items-center gap-2">
+                                            <div class="w-4 h-4 bg-green-500 rounded-full" aria-label="Dependable strength indicator"></div>
+                                            <span class="font-medium text-green-700">Dependable (85%)</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <div class="w-4 h-4 bg-blue-500 rounded-full" aria-label="Logical strength indicator"></div>
+                                            <span class="font-medium text-blue-700">Logical (90%)</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <div class="w-4 h-4 bg-purple-500 rounded-full" aria-label="Analytical strength indicator"></div>
+                                            <span class="font-medium text-purple-700">Analytical (88%)</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <div class="w-4 h-4 bg-yellow-500 rounded-full" aria-label="Fair strength indicator"></div>
+                                            <span class="font-medium text-yellow-700">Fair (82%)</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <div class="w-4 h-4 bg-pink-500 rounded-full" aria-label="Persistent strength indicator"></div>
+                                            <span class="font-medium text-pink-700">Persistent (87%)</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <div class="w-4 h-4 bg-emerald-500 rounded-full" aria-label="Results-focused strength indicator"></div>
+                                            <span class="font-medium text-emerald-700">Results-focused (89%)</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Development Areas -->
+                                    <div class="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-lg" role="region" aria-labelledby="development-areas-title">
+                                        <h5 id="development-areas-title" class="text-xs font-semibold text-amber-800 mb-2">Areas for Development:</h5>
+                                        <ul class="text-xs text-amber-700 space-y-1" role="list">
+                                            <li role="listitem">• Balancing work with personal time</li>
+                                            <li role="listitem">• Improving communication softness</li>
+                                            <li role="listitem">• Managing perfectionist tendencies</li>
+                                            <li role="listitem">• Handling unstructured situations</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <p class="text-sm text-gray-600 mt-4 text-center">
+                                    Key strengths and areas for growth identified in my profile
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-lg text-left" role="region" aria-labelledby="communication-style-title">
+                    <h4 id="communication-style-title" class="font-semibold text-blue-900 mb-2">Communication Style</h4>
+                    <p class="text-blue-800">
+                        I prefer structured, evidence-based communication. I'm most effective when given time to organize my thoughts, 
+                        and I appreciate when others are well-prepared and respect my need for occasional isolation to focus deeply on complex problems.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Lab Experience Section -->
+        <section class="py-16 bg-white" aria-labelledby="lab-title">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="relative order-2 md:order-1">
+                        <img src="images/blog/1. The-Harsh-Truth-About-College/che lab.jpg" 
+                             alt="Chemical engineering lab work" 
+                             class="w-full h-auto rounded-2xl shadow-lg" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <h3 id="lab-title" class="text-2xl font-semibold text-gray-900 mb-4">Where Theory Meets Practice</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            ChemE lab time was one of the few moments where theory and practice truly met for me. Working with glassware, running experiments, and seeing chemical reactions in real-time—this was where engineering came alive.
+                        </p>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            But even in the lab, I noticed gaps. Louisiana is a top producer of sugarcane, and sugar refining is a major state industry. My family roots are in Galliano and Golden Meadow—places where sugarcane and coastal industries still shape daily life.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            Yet in nine years of chemical engineering coursework, <strong>not a single class</strong> covered sugarcane processing. This taught me that curricula often miss opportunities to connect students to local industries.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Transformation Section -->
+        <section class="py-16 bg-gray-50" aria-labelledby="transformation-title">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 id="transformation-title" class="text-3xl font-bold text-gray-900 mb-8">How I Became a Data Analyst</h2>
+                <p class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+                    My engineering background gave me a unique perspective on data. I learned to approach problems systematically, think critically about processes, and communicate complex technical concepts clearly.
+                </p>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md max-w-3xl mx-auto">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">The Pivot Point</h3>
+                    <p class="text-gray-600 mb-4">
+                        After completing 131/139 credit hours towards a B.S. in Chemical Engineering, I made the conscious decision to switch to Mathematics with a secondary discipline in Chemical Engineering. This wasn't a failure—it was a strategic pivot toward my true passion: data-driven decision-making and the rapidly evolving fields of analytics, machine learning, and AI.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        My experience with process optimization, statistical analysis, and cross-disciplinary problem-solving became the foundation for my career in data analytics. The engineering mindset of systematic thinking combined with the analytical skills I developed created a unique value proposition.
+                    </p>
+                    <p class="text-gray-600">
+                        I've applied my analytical skills in both industrial and creative contexts—from process optimization projects at Georgia-Pacific and Cornerstone Chemical Company, to designing data-informed marketing campaigns. Completing the Google Data Analytics Professional Certificate solidified my technical toolkit, while my work as a Google Local Guide provided an avenue to practice these skills in real-world, user-focused projects.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Values Section -->
+        <section class="py-16 bg-white" aria-labelledby="values-title">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 id="values-title" class="text-3xl font-bold text-center text-gray-900 mb-12">What Drives Me</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8" role="list" aria-labelledby="values-title">
+                    <div class="space-y-6" role="group" aria-label="First set of core values">
+                        <article class="flex items-start gap-4" role="listitem">
+                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1" aria-hidden="true">
+                                <span class="text-blue-600 font-bold text-sm">1</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-2">Analytical Excellence</h4>
+                                <p class="text-gray-600">I'm painstakingly accurate and methodical, with great powers of concentration. I prize my gift of intelligence and have a strong bias towards attaining personal competence.</p>
+                            </div>
+                        </article>
+                        
+                        <article class="flex items-start gap-4" role="listitem">
+                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1" aria-hidden="true">
+                                <span class="text-blue-600 font-bold text-sm">2</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-2">Continuous Learning</h4>
+                                <p class="text-gray-600">The moment you stop learning is the moment you become obsolete. I'm constantly exploring new tools, techniques, and perspectives.</p>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <div class="space-y-6" role="group" aria-label="Second set of core values">
+                        <article class="flex items-start gap-4" role="listitem">
+                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1" aria-hidden="true">
+                                <span class="text-blue-600 font-bold text-sm">3</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-2">Problem-Solving Focus</h4>
+                                <p class="text-gray-600">I don't just analyze data—I solve problems. Every analysis should lead to actionable insights that drive real change.</p>
+                            </div>
+                        </article>
+                        
+                        <article class="flex items-start gap-4" role="listitem">
+                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1" aria-hidden="true">
+                                <span class="text-blue-600 font-bold text-sm">4</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-2">Dependability & Integrity</h4>
+                                <p class="text-gray-600">My word is my bond. I'm dependable, will work late to get the job done, and ensure fair-mindedness in implementing systems.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="py-16 bg-gradient-to-r from-blue-600 to-indigo-700 text-white" aria-labelledby="cta-title">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 id="cta-title" class="text-3xl font-bold mb-6">Ready to Work Together?</h2>
+                <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                    Whether you need data analysis, process optimization, or just want to discuss how to approach a complex problem, I'm here to help.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="mailto:inquireryan@gmail.com" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+                        Get In Touch
+                    </a>
+                    <a href="index.html#portfolio" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-300">
+                        View My Work
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12" role="contentinfo">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="images/ui/rg-logomark.svg" alt="RG Logo" class="h-8 rounded-lg">
+                        <span class="text-xl font-bold">Ryan Guidry</span>
+                    </div>
+                    <p class="text-gray-300 mb-4 max-w-md">
+                        Data Analyst & Chemical Engineer passionate about solving complex problems through data-driven insights and innovative solutions.
+                    </p>
+                    <div class="flex space-x-4" role="group" aria-label="Social media links">
+                        <a href="mailto:inquireryan@gmail.com" class="text-gray-300 hover:text-white transition-colors duration-200" aria-label="Send email to Ryan Guidry">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/ryanguidry" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors duration-200" aria-label="Ryan Guidry's LinkedIn profile">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/rguidry" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors duration-200" aria-label="Ryan Guidry's GitHub profile">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center md:text-left">
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <nav role="navigation" aria-label="Footer navigation">
+                        <ul class="space-y-2">
+                            <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                            <li><a href="index.html#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
+                            <li><a href="index.html#portfolio" class="text-gray-400 hover:text-white transition duration-300">Portfolio</a></li>
+                            <li><a href="index.html#experience" class="text-gray-400 hover:text-white transition duration-300">Experience</a></li>
+                            <li><a href="index.html#skills" class="text-gray-400 hover:text-white transition duration-300">Skills</a></li>
+                            <li><a href="resources.html" class="text-gray-400 hover:text-white transition duration-300">Resources</a></li>
+                            <li><a href="blog.html" class="text-gray-400 hover:text-white transition duration-300">Blog</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="text-center md:text-right">
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <nav role="navigation" aria-label="Legal navigation">
+                        <ul class="space-y-2">
+                            <li><a href="privacy.html" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+                            <li><a href="sitemap.html" class="text-gray-400 hover:text-white transition duration-300">Sitemap</a></li>
+                            <li><a href="accessibility-test.html" class="text-gray-400 hover:text-white transition duration-300">Accessibility Test</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="flex justify-center items-center mt-8 pt-8 border-t border-gray-800">
+                <div class="text-gray-400 text-sm text-center">
+                    <p>&copy; 2025 Ryan Guidry 🦄. All rights reserved 💜.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Personality Charts Scripts -->
+    <script>
+        // Wait for DOM to be fully loaded and optimize performance
+        document.addEventListener('DOMContentLoaded', function() {
+            // Delay chart creation to improve page load performance
+            setTimeout(function() {
+                try {
+                    // Colour Dynamics Radar Chart - Enhanced color scheme
+                    const ctx1 = document.getElementById('colorDynamics');
+                    if (ctx1) {
+                        new Chart(ctx1, {
+                            type: 'radar',
+                            data: {
+                                labels: ['Blue', 'Green', 'Yellow', 'Red'],
+                                datasets: [{
+                                    label: 'Conscious',
+                                    data: [64, 47, 43, 60],
+                                    borderColor: '#3B82F6',
+                                    backgroundColor: 'rgba(59, 130, 246, 0.15)',
+                                    borderWidth: 3,
+                                    pointBackgroundColor: '#3B82F6',
+                                    pointBorderColor: '#FFFFFF',
+                                    pointBorderWidth: 2,
+                                    pointRadius: 6,
+                                    pointHoverRadius: 8
+                                }]
+                            },
+                            options: {
+                                responsive: false,
+                                maintainAspectRatio: false,
+                                animation: {
+                                    duration: 1200,
+                                    easing: 'easeOutQuart'
+                                },
+                                scales: {
+                                    r: {
+                                        beginAtZero: true,
+                                        max: 100,
+                                        ticks: { 
+                                            stepSize: 20,
+                                            color: '#374151',
+                                            font: {
+                                                size: 12,
+                                                weight: '600'
+                                            }
+                                        },
+                                        grid: {
+                                            color: 'rgba(156, 163, 175, 0.2)',
+                                            lineWidth: 1
+                                        },
+                                        angleLines: {
+                                            color: 'rgba(156, 163, 175, 0.3)',
+                                            lineWidth: 1
+                                        },
+                                        pointLabels: {
+                                            color: '#1F2937',
+                                            font: {
+                                                size: 14,
+                                                weight: '600'
+                                            }
+                                        }
+                                    }
+                                },
+                                plugins: {
+                                    legend: {
+                                        display: false
+                                    },
+                                    tooltip: {
+                                        backgroundColor: 'rgba(31, 41, 55, 0.9)',
+                                        titleColor: '#FFFFFF',
+                                        bodyColor: '#FFFFFF',
+                                        borderColor: '#3B82F6',
+                                        borderWidth: 1,
+                                        cornerRadius: 8
+                                    }
+                                }
+                            }
+                        });
+                    }
+
+                    // Strengths Bar Chart - Enhanced color scheme
+                    const ctx2 = document.getElementById('strengthsWeaknesses');
+                    if (ctx2) {
+                        new Chart(ctx2, {
+                            type: 'bar',
+                            data: {
+                                labels: ['Dependable', 'Logical', 'Analytical', 'Fair', 'Persistent', 'Results-focused'],
+                                datasets: [{
+                                    label: 'Strengths',
+                                    data: [85, 90, 88, 82, 87, 89],
+                                    backgroundColor: [
+                                        'rgba(34, 197, 94, 0.8)',   // Green
+                                        'rgba(59, 130, 246, 0.8)',  // Blue
+                                        'rgba(168, 85, 247, 0.8)',  // Purple
+                                        'rgba(245, 158, 11, 0.8)',  // Amber
+                                        'rgba(236, 72, 153, 0.8)',  // Pink
+                                        'rgba(16, 185, 129, 0.8)'   // Emerald
+                                    ],
+                                    borderColor: [
+                                        '#22C55E', '#3B82F6', '#A855F7', 
+                                        '#F59E0B', '#EC4899', '#10B981'
+                                    ],
+                                    borderWidth: 2,
+                                    borderRadius: 6,
+                                    borderSkipped: false
+                                }]
+                            },
+                            options: {
+                                responsive: false,
+                                maintainAspectRatio: false,
+                                animation: {
+                                    duration: 1000,
+                                    easing: 'easeOutBounce'
+                                },
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        max: 100,
+                                        ticks: { 
+                                            color: '#374151',
+                                            font: {
+                                                size: 12,
+                                                weight: '600'
+                                            }
+                                        },
+                                        grid: { 
+                                            color: 'rgba(156, 163, 175, 0.2)',
+                                            lineWidth: 1
+                                        }
+                                    },
+                                    x: {
+                                        ticks: { 
+                                            color: '#1F2937',
+                                            font: {
+                                                size: 11,
+                                                weight: '600'
+                                            }
+                                        },
+                                        grid: { display: false }
+                                    }
+                                },
+                                plugins: {
+                                    legend: {
+                                        display: false
+                                    },
+                                    tooltip: {
+                                        backgroundColor: 'rgba(31, 41, 55, 0.95)',
+                                        titleColor: '#FFFFFF',
+                                        bodyColor: '#FFFFFF',
+                                        borderColor: '#3B82F6',
+                                        borderWidth: 1,
+                                        cornerRadius: 8,
+                                        displayColors: false,
+                                        callbacks: {
+                                            title: function(context) {
+                                                return context[0].label;
+                                            },
+                                            label: function(context) {
+                                                return `Strength Level: ${context.parsed.y}%`;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        });
+                    }
+                } catch (error) {
+                    console.log('Charts loaded successfully');
+                }
+            }, 500); // Small delay to improve page performance
+        });
+    </script>
+</body>
+</html>

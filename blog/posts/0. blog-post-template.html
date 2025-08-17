@@ -19,6 +19,7 @@
     <!-- Add main.js for navigation and scroll effects -->
     <script src="../../src/main-site/js/main.js" defer></script>
 
+    <!-- MS Clarity Analytics -->
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -26,76 +27,85 @@
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "rxo9fqpdyr");
     </script>
+    
+    <!-- Custom styles for blog post elements -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        pre {
+            background-color: #282c34;
+            color: #abb2bf;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .prose code {
+            font-family: monospace;
+            background-color: #e5e7eb; /* Light gray background (gray-200) */
+            color: #1e40af;       /* Dark blue text (blue-800) for high contrast */
+            font-weight: 600;      /* Make it slightly bolder */
+            padding: 0.2em 0.4em;
+            margin: 0;
+            font-size: 85%;
+            border-radius: 4px;
+        }
+        figure { margin-top: 2rem; margin-bottom: 2rem; }
+        figcaption { margin-top: 0.75rem; font-size: 0.9rem; color: #6b7280; text-align: center; }
+
+        /* Syntax Highlighting Styles for <pre> blocks */
+        .token.comment { color: #5c6370; font-style: italic; }
+        .token.punctuation { color: #abb2bf; }
+        .token.tag, .token.selector { color: #e06c75; }
+        .token.attr-name, .token.property { color: #d19a66; }
+        .token.attr-value, .token.string { color: #98c379; }
+        .token.keyword { color: #c678dd; }
+        .token.function { color: #61afef; }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
-    <!-- Header & Navigation -->
-    <header class="nav fixed top-0 left-0 right-0 z-50">
-        <div class="max-w-7xl mx-auto">
-            <nav class="nav__container">
-                <div class="text-2xl font-bold text-gray-900">
-                    <!-- Logo and Name -->
-                    <a href="../index.html" class="flex items-center space-x-3">
-                        <img src="../../images/ui/rg-logomark.svg" alt="RG Logo" class="h-10 rounded-lg" loading="lazy">
-                        <span>Ryan Guidry</span>
-                    </a>
-                </div>
-                <div class="hidden md:flex items-center space-x-6">
-                    <a href="../index.html" class="nav__link">Home</a>
-                    <a href="../index.html#about" class="nav__link">About</a>
-                    <a href="../index.html#portfolio" class="nav__link">Portfolio</a>
-                    <a href="../index.html#experience" class="nav__link">Experience</a>
-                    <a href="../index.html#skills" class="nav__link">Skills</a>
-                    <a href="../resources.html" class="nav__link">Resources</a>
-                    <a href="../blog.html" class="nav__link nav__link--active">Blog</a>
-                    <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact">Contact</a>
-                </div>
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Toggle mobile menu">
-                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path class="mobile-menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        <path class="mobile-menu-close hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </nav>
-            <!-- Mobile Menu -->
-            <nav id="mobile-menu" class="nav-mobile nav-mobile--hidden md:hidden" aria-label="Mobile navigation">
-                <div class="container mx-auto px-6 py-4 space-y-4">
-                    <a href="../index.html" class="nav__link block py-2">Home</a>
-                    <a href="../index.html#about" class="nav__link block py-2">About</a>
-                    <a href="../index.html#portfolio" class="nav__link block py-2">Portfolio</a>
-                    <a href="../index.html#experience" class="nav__link block py-2">Experience</a>
-                    <a href="../index.html#skills" class="nav__link block py-2">Skills</a>
-                    <a href="../resources.html" class="nav__link block py-2">Resources</a>
-                    <a href="../blog.html" class="nav__link nav__link--active block py-2">Blog</a>
-                    <a href="mailto:inquireryan@gmail.com" class="nav__link nav__link--contact block py-2 text-center">Contact</a>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Add padding to main content to account for fixed header -->
-    <main class="pt-0">
+    <!-- Main Content -->
+    <main class="pt-12">
         <div class="container mx-auto px-6 py-12">
             <!-- Blog Post Content -->
             <article class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8 md:p-12">
                 <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Blog Post Title</h1>
                 <div class="flex items-center text-gray-500 text-sm mb-8">
-                    <span class="mr-3">Dec 15, 2024</span>
+                    <span class="mr-3">Month Day, Year</span>
                     <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Category</span>
                 </div>
                 <div class="prose prose-lg max-w-none text-gray-700">
+                    
                     <!-- Your blog post content goes here -->
                     <p>This is where the detailed content of your blog post will be. You can write about anything related to data science, engineering, technology, or your professional experiences.</p>
                     <p>Feel free to add paragraphs, images, code snippets, and other HTML elements to make your post engaging and informative.</p>
+                    
                     <h2>Subheading Example</h2>
                     <p>This is a subheading. You can use multiple subheadings to organize your content effectively.</p>
+                    
+                    <pre><code class="language-html"><span class="token comment">&lt;!-- Example Code Snippet --&gt;</span>
+<span class="token tag">&lt;div <span class="token attr-name">class</span>=<span class="token attr-value">"example"</span>&gt;</span>
+  <span class="token tag">&lt;p&gt;</span>This is a code block.<span class="token tag">&lt;/p&gt;</span>
+<span class="token tag">&lt;/div&gt;</span></code></pre>
+
                     <h3>Another Subheading</h3>
                     <ul>
                         <li>List item 1</li>
                         <li>List item 2</li>
                         <li>List item 3</li>
                     </ul>
+
+                    <figure>
+                        <img src="https://placehold.co/1200x600/e0e0e0/333333?text=Example+Image" alt="Placeholder image with descriptive alt text." class="w-full rounded-lg shadow-md">
+                        <figcaption>This is a caption for an image.</figcaption>
+                    </figure>
+
                     <p>Thank you for reading!</p>
+
                 </div>
             </article>
         </div>
@@ -113,21 +123,11 @@
                     <p class="text-gray-300 mb-4 max-w-md">
                         Data Analyst & Chemical Engineer passionate about solving complex problems through data-driven insights and innovative solutions.
                     </p>
-                    <div class="flex space-x-4">
-                        <a href="mailto:inquireryan@gmail.com" class="text-gray-300 hover:text-white transition-colors duration-200">
-                            <span class="sr-only">Email</span>
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-                            </svg>
-                        </a>
-                    </div>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
                         <li><a href="../index.html" class="text-gray-300 hover:text-white transition-colors duration-200">Home</a></li>
-                        <li><a href="../index.html#about" class="text-gray-300 hover:text-white transition-colors duration-200">About</a></li>
                         <li><a href="../index.html#portfolio" class="text-gray-300 hover:text-white transition-colors duration-200">Portfolio</a></li>
                         <li><a href="../resources.html" class="text-gray-300 hover:text-white transition-colors duration-200">Resources</a></li>
                     </ul>
@@ -137,13 +137,11 @@
                     <ul class="space-y-2">
                         <li><a href="../blog.html" class="text-gray-300 hover:text-white transition-colors duration-200">Blog</a></li>
                         <li><a href="../resources.html" class="text-gray-300 hover:text-white transition-colors duration-200">Learning</a></li>
-                        <li><a href="../resources.html" class="text-gray-300 hover:text-white transition-colors duration-200">Tools</a></li>
-                        <li><a href="../resources.html" class="text-gray-300 hover:text-white transition-colors duration-200">Career</a></li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 Ryan Guidry. All rights reserved.</p>
+              <p>&copy; 🦄 2025 Ryan Guidry 💜 All rights reserved ✌️</p>
             </div>
         </div>
     </footer>
