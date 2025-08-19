@@ -199,6 +199,7 @@ function build() {
     copyDirSync('files', path.join(config.distDir, 'files'));
     copyDirSync('case-studies', path.join(config.distDir, 'case-studies'));
     copyDirSync('resources', path.join(config.distDir, 'resources'));
+    copyDirSync('blog', path.join(config.distDir, 'blog'));
 
     // Copy additional standalone html pages if they exist
     ['privacy.html', 'resources.html', 'sitemap.html', 'about.html', 'profile.html'].forEach((page) => {
