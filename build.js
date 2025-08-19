@@ -165,7 +165,6 @@ function build() {
 
     <main class="pt-0 container mx-auto px-6">
 {{section:hero.html}}
-{{section:about.html}}
 {{section:education.html}}
 {{section:certifications.html}}
 {{section:portfolio.html}}
