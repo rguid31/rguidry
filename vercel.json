@@ -1,21 +1,17 @@
 {
+  "version": 2,
   "builds": [
-    { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "dist" } }
+    {
+      "src": "**/*.html",
+      "use": "@vercel/static"
+    }
   ],
   "cleanUrls": true,
   "trailingSlash": false,
-  "headers": [
+  "rewrites": [
     {
-      "source": "/(.*)\\.(png|jpg|jpeg|svg|gif|webp|ico)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-      ]
-    },
-    {
-      "source": "/(.*)\\.(css|js)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-      ]
+      "source": "/blog",
+      "destination": "/blog.html"
     }
   ]
 }
