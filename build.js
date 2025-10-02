@@ -81,7 +81,7 @@ function emptyDirSync(targetDir) {
 function getAllHtmlRoutes(distDir) {
     const routes = new Set();
     // Top-level pages
-    ['index.html', 'privacy.html', 'resources.html', 'sitemap.html', 'about.html', 'profile.html']
+    ['index.html', 'privacy.html', 'resources.html', 'sitemap.html', 'about.html', 'profile.html', 'blog.html']
         .forEach((file) => {
             const filePath = path.join(distDir, file);
             if (fs.existsSync(filePath)) {
@@ -199,9 +199,10 @@ function build() {
     copyDirSync('files', path.join(config.distDir, 'files'));
     copyDirSync('case-studies', path.join(config.distDir, 'case-studies'));
     copyDirSync('resources', path.join(config.distDir, 'resources'));
+    copyDirSync('blog', path.join(config.distDir, 'blog'));
 
     // Copy additional standalone html pages if they exist
-    ['privacy.html', 'resources.html', 'sitemap.html', 'about.html', 'profile.html'].forEach((page) => {
+    ['privacy.html', 'resources.html', 'sitemap.html', 'about.html', 'profile.html', 'blog.html'].forEach((page) => {
         if (fs.existsSync(page)) {
             copyFileSync(page, path.join(config.distDir, page));
         }
