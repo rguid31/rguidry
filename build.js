@@ -17,14 +17,21 @@ const config = {
     templatesDir: 'src/templates'
 };
 
-// Ensure output directory exists
+/**
+ * Ensures that a directory exists, creating it if necessary.
+ * @param {string} dir - The path to the directory.
+ */
 function ensureDir(dir) {
     if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
     }
 }
 
-// Read file with error handling
+/**
+ * Reads a file with error handling.
+ * @param {string} filePath - The path to the file.
+ * @returns {string} The content of the file, or an empty string if an error occurs.
+ */
 function readFile(filePath) {
     try {
         return fs.readFileSync(filePath, 'utf8');
@@ -34,7 +41,11 @@ function readFile(filePath) {
     }
 }
 
-// Write file with error handling
+/**
+ * Writes content to a file with error handling.
+ * @param {string} filePath - The path to the file.
+ * @param {string} content - The content to write to the file.
+ */
 function writeFile(filePath, content) {
     try {
         fs.writeFileSync(filePath, content);
@@ -44,13 +55,22 @@ function writeFile(filePath, content) {
     }
 }
 
-// Copy utilities
+/**
+ * Copies a single file from a source to a target path.
+ * @param {string} source - The source file path.
+ * @param {string} target - The target file path.
+ */
 function copyFileSync(source, target) {
     ensureDir(path.dirname(target));
     fs.copyFileSync(source, target);
     console.log(`📄 Copied: ${source} -> ${target}`);
 }
 
+/**
+ * Recursively copies a directory.
+ * @param {string} sourceDir - The source directory path.
+ * @param {string} targetDir - The target directory path.
+ */
 function copyDirSync(sourceDir, targetDir) {
     if (!fs.existsSync(sourceDir)) return;
     ensureDir(targetDir);
@@ -65,6 +85,10 @@ function copyDirSync(sourceDir, targetDir) {
     }
 }
 
+/**
+ * Deletes all contents of a directory.
+ * @param {string} targetDir - The path to the directory to empty.
+ */
 function emptyDirSync(targetDir) {
     if (!fs.existsSync(targetDir)) return;
     for (const entry of fs.readdirSync(targetDir, { withFileTypes: true })) {
@@ -78,6 +102,11 @@ function emptyDirSync(targetDir) {
     }
 }
 
+/**
+ * Scans the output directory to find all generated HTML pages and returns their routes.
+ * @param {string} distDir - The path to the distribution directory.
+ * @returns {string[]} An array of URL routes.
+ */
 function getAllHtmlRoutes(distDir) {
     const routes = new Set();
     // Top-level pages
@@ -104,6 +133,10 @@ function getAllHtmlRoutes(distDir) {
     return Array.from(routes).sort();
 }
 
+/**
+ * Generates a sitemap.xml file.
+ * @param {string} distDir - The path to the distribution directory.
+ */
 function generateSitemap(distDir) {
     const baseUrl = process.env.SITE_URL || '';
     const routes = getAllHtmlRoutes(distDir);
@@ -116,13 +149,22 @@ function generateSitemap(distDir) {
     writeFile(path.join(distDir, 'sitemap.xml'), xml);
 }
 
+/**
+ * Generates a robots.txt file.
+ * @param {string} distDir - The path to the distribution directory.
+ */
 function generateRobots(distDir) {
     const baseUrl = process.env.SITE_URL || '';
     const robots = `User-agent: *\nAllow: /\n\nSitemap: ${baseUrl ? baseUrl : ''}/sitemap.xml\n`;
     writeFile(path.join(distDir, 'robots.txt'), robots);
 }
 
-// Template processor - replaces {{include:filename}} with file contents
+/**
+ * Processes template placeholders for partials.
+ * Replaces `{{include:filename}}` with the content of the partial file.
+ * @param {string} template - The template string to process.
+ * @returns {string} The processed template.
+ */
 function processTemplate(template) {
     return template.replace(/\{\{include:([^}]+)\}\}/g, (match, filename) => {
         const filePath = path.join(config.partialsDir, filename);
@@ -131,7 +173,12 @@ function processTemplate(template) {
     });
 }
 
-// Section processor - replaces {{section:filename}} with section contents
+/**
+ * Processes template placeholders for sections.
+ * Replaces `{{section:filename}}` with the content of the section file.
+ * @param {string} template - The template string to process.
+ * @returns {string} The processed template.
+ */
 function processSections(template) {
     return template.replace(/\{\{section:([^}]+)\}\}/g, (match, filename) => {
         const filePath = path.join(config.sectionsDir, filename);
@@ -140,7 +187,9 @@ function processSections(template) {
     });
 }
 
-// Main build function
+/**
+ * Main build function that orchestrates the static site generation.
+ */
 function build() {
     console.log('🚀 Building Ryan Guidry Portfolio...');
     console.log('=====================================');

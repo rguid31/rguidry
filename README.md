@@ -1,90 +1,88 @@
 # Ryan Guidry - Personal Portfolio Website
 
-A modern, responsive personal portfolio website showcasing my journey from Chemical Engineering to Data Science. Built with a focus on clean design, performance, and user experience.
+A modern, responsive personal portfolio website showcasing my journey from Chemical Engineering to Data Science. Built with a focus on clean design, performance, and user experience, this project uses a simple Node.js-based static site generator.
 
 ## 🌟 Features
 
-- **Responsive Design**: Fully responsive layout that works seamlessly across all devices
-- **Modern UI**: Clean, professional design with smooth animations and transitions
-- **Performance Optimized**: Fast loading times and optimized assets
-- **Accessibility**: Built with accessibility best practices in mind
-- **SEO Friendly**: Proper meta tags and semantic HTML structure
-
-## 📁 Project Structure
-
-```
-rguidry/
-├── index.html              # Main landing page
-├── about.html             # Detailed about page
-├── privacy.html           # Privacy policy
-├── profile.html           # Detailed personality profile
-├── sitemap.html           # Website sitemap
-├── images/                # Image assets
-│   ├── about/            # About page images
-│   ├── background/       # Background images
-│   ├── certifications/   # Certification logos
-│   ├── education/        # Education-related images
-│   ├── experience/       # Experience-related images
-│   ├── general/          # General purpose images
-│   ├── personality/      # Personality profile images
-│   ├── portfolio/        # Portfolio project images
-│   └── ui/              # UI elements and logos
-├── files/                # Document files
-│   └── certifications/   # Certification PDFs
-└── README.md            # This file
-```
+- **Responsive Design**: Fully responsive layout that works seamlessly across all devices.
+- **Modern UI**: Clean, professional design with smooth animations and transitions.
+- **Static Site Generation**: Built with a simple, dependency-free Node.js script.
+- **Performance Optimized**: Fast loading times and optimized assets.
+- **Accessibility**: Built with accessibility best practices in mind.
+- **SEO Friendly**: Proper meta tags, semantic HTML, and an auto-generated sitemap.
 
 ## 🛠️ Technologies Used
 
-- **HTML5**: Semantic markup for better accessibility and SEO
-- **Tailwind CSS**: Utility-first CSS framework for rapid UI development
-- **JavaScript**: Vanilla JS for interactive elements
-- **Responsive Images**: Optimized for different screen sizes
-- **Git**: Version control
-- **GitHub Pages**: Hosting
+- **HTML5**: Semantic markup for better accessibility and SEO.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **JavaScript (Vanilla)**: For interactive elements and the portfolio carousel.
+- **Node.js**: Powers the custom static site generator (`build.js`).
+- **Git**: For version control.
 
 ## 🚀 Getting Started
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/rguid31/rguidry.git
-   ```
+To get a local copy up and running, follow these simple steps.
 
-2. Open `index.html` in your browser to view the website locally
+### Prerequisites
 
-3. For development:
-   - Install a local server (e.g., Live Server VS Code extension)
-   - Make changes to the files
-   - Preview changes in real-time
+You need to have [Node.js](https://nodejs.org/) and npm installed on your machine.
 
-## 📱 Pages
+### Installation & Setup
 
-- **Home**: Landing page with key information and navigation
-- **About**: Detailed background and professional journey
-- **Portfolio**: Showcase of projects and achievements
-- **Experience**: Professional experience and education
-- **Skills**: Technical skills and expertise
-- **Profile**: Detailed personality profile and communication style
-- **Privacy**: Privacy policy
-- **Sitemap**: Website structure and navigation
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/rguid31/rguidry.git
+    cd rguidry
+    ```
 
-## 🎨 Design Features
+2.  **Install dependencies:**
+    This project has a single build-time dependency for serving the site locally.
+    ```bash
+    npm install
+    ```
 
-- Clean, modern aesthetic
-- Consistent color scheme
-- Responsive typography
-- Smooth transitions and animations
-- Optimized images and assets
-- Accessible color contrast
-- Mobile-first approach
+3.  **Build the website:**
+    The build script compiles the site from the `src` directory into the `dist` directory.
+    ```bash
+    npm run build
+    ```
+
+4.  **Run the development server:**
+    This command serves the contents of the `dist` directory on a local server.
+    ```bash
+    npm run dev
+    ```
+    The site will be available at `http://localhost:3000`.
+
+5.  **Watch for changes (Optional):**
+    To automatically rebuild the site whenever you make changes to the source files, run:
+    ```bash
+    npm run watch
+    ```
+
+## 📁 Project Structure
+
+The project is organized into source files and a distribution directory. The build process compiles files from `src` and other root-level assets into the `dist` folder, which is what gets deployed.
+
+```
+rguidry/
+├── src/
+│   ├── partials/       # Reusable HTML components (e.g., head, header, footer)
+│   └── sections/       # Content sections for the main page (e.g., about, portfolio)
+├── dist/               # (Generated) The compiled, production-ready website
+├── build.js            # The Node.js static site generator script
+├── script.js           # Main JavaScript file for interactivity
+├── style.css           # Main stylesheet (uses Tailwind CSS)
+├── package.json        # Project configuration and scripts
+└── README.md           # This file
+```
 
 ## 🔒 Privacy & Security
 
-- No tracking or analytics
-- No third-party cookies
-- Secure HTTPS connection
-- Privacy-focused design
-- Clear privacy policy
+- No tracking or analytics.
+- No third-party cookies.
+- Secure HTTPS connection (on deployed site).
+- Clear privacy policy.
 
 ## 📝 License
 
@@ -95,9 +93,3 @@ This project is open source and available under the [MIT License](LICENSE).
 For any questions or collaboration opportunities, please reach out:
 - Email: [inquireryan@gmail.com](mailto:inquireryan@gmail.com)
 - GitHub: [rguid31](https://github.com/rguid31)
-
-## 🙏 Acknowledgments
-
-- Tailwind CSS for the utility-first framework
-- All open-source tools and libraries used
-- Inspiration from the web development community
